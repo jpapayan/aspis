@@ -1,0 +1,11 @@
+PHP Aspis README File
+=====================
+
+To Add to github:
+
+git remote add origin git@github.com:jpapayan/aspis.git
+git push -u origin master
+
+=====================
+Environmental variables used:
+ASPIS_HOME: the installation dir of the project

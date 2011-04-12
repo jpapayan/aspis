@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-int my_main(int, char**,char** , char**,char**, char**);
+int my_main(int,char **, char**,char** , char**,char**, char**);
 
 
 #ifdef	__cplusplus

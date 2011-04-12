@@ -38,6 +38,7 @@
 void yyerror(const char msg[]);
 extern int yylineno;
 
+char * aspis_home=NULL;
 char * outputfilepath=NULL;
 char * taintsfilepath=NULL;
 char * prototypesfilepath=NULL;
@@ -318,7 +319,7 @@ start:
 	top_statement_list	
    {
       if (!is_online) printf("\nPHP Parsing done.\n"); 
-      process_tree(outputfilepath, taintsfilepath, prototypesfilepath,filename, $1);
+      process_tree(aspis_home, outputfilepath, taintsfilepath, prototypesfilepath,filename, $1);
    }
 ;
 
@@ -2301,7 +2302,7 @@ void yyerror (const char* msg)
 
 int main(int argc, char* argv[])
 {
-   my_main(argc,argv,&outputfilepath,&taintsfilepath,&prototypesfilepath,&filename);
+   my_main(argc,argv,&aspis_home,&outputfilepath,&taintsfilepath,&prototypesfilepath,&filename);
    int res=yyparse();
    if (!is_online)  printf("\n>>>yyparse() returned: %d\n",res);
    return 0;

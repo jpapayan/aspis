@@ -43,7 +43,7 @@ prototype * user_methods_prototypes=NULL;
 int user_methods_prototypes_count=0;
 
 // this holds the name of the file where defined functions are logged.
-char *program_function_prototypes=NULL;
+char *prototypes_log_filename=NULL;
 // this holds the name of the file where taints are defined.
 char *taints_filename;
 //this stores a list of the globals imported in an function
@@ -2070,8 +2070,8 @@ void log_superglobal(astp *tree) {
  */
 void store_function_prototype(astp *tree) {
     astp t=*tree;
-    if (program_function_prototypes!=NULL && COLLECT_INFO) {
-        FILE * fp=fopen(program_function_prototypes,"a");
+    if (prototypes_log_filename!=NULL && COLLECT_INFO) {
+        FILE * fp=fopen(prototypes_log_filename,"a");
         if (is_method_declaration) fprintf(fp, "method ");
         fprintf(fp,"%s ( ",t->parameters[1]->text);
         
@@ -3861,19 +3861,17 @@ void edit_node_generic(FILE * out, astp * tree, char * name) {
     }
 }
 
-void ast_transform(FILE * out, char * taints, char * prototypes, char * filename, astp * tree, astp * functions) {
-    //read the list of phpfunctions;
-    //TODO: use environment variables for these params
-    read_php_functions("/data/Dropbox/php/svn_local/php/PhpParserC/phplib/php_functions.txt" ,&functions_list, &functions_count);
-    read_php_functions("/data/Dropbox/php/svn_local/php/PhpParserC/phplib/php_functions_overriden.txt" ,&functions_overriden_list, &functions_overriden_count);
-    read_php_functions("/data/Dropbox/php/svn_local/php/PhpParserC/phplib/php_functions_overriden_partial.txt" ,&functions_overriden_partial_list, &functions_overriden_partial_count);
-    function_prototypes_read("/data/Dropbox/php/svn_local/php/PhpParserC/phplib/php_functions_reference_sorted_easy.txt",&functions_prototypes,&functions_prototypes_count);
+void ast_transform(FILE * out,char * aspis_home, char * taints, char * prototypes, char * filename, astp * tree, astp * functions) {
+    //read the various lists of php functions
+    read_php_functions( path_join(aspis_home, "phplib/php_functions.txt"), &functions_list, &functions_count);
+    read_php_functions( path_join(aspis_home, "phplib/php_functions_overriden.txt"), &functions_overriden_list, &functions_overriden_count);
+    read_php_functions( path_join(aspis_home, "phplib/php_functions_overriden_partial.txt"), &functions_overriden_partial_list, &functions_overriden_partial_count);
+    function_prototypes_read( path_join(aspis_home, "phplib/php_functions_reference_sorted_easy.txt"), &functions_prototypes,&functions_prototypes_count);
 
     if (taints!=NULL && !COLLECT_INFO) {
         is_partial_enabled=1;
         taints_filename=strcpy_malloc(taints);
-        read_php_taints(taints,&functions_tainted_list, &functions_tainted_count,&classes_tainted_list, &classes_tainted_count);
-        printf("%s\n",filename);
+        read_php_taints(taints, &functions_tainted_list, &functions_tainted_count, &classes_tainted_list, &classes_tainted_count);
         is_global_scope_untainted = !is_tainted_function(filename);
     }
     if (prototypes!=NULL && !COLLECT_INFO) {
@@ -3881,8 +3879,11 @@ void ast_transform(FILE * out, char * taints, char * prototypes, char * filename
         user_function_prototypes_read_methods(prototypes, &user_methods_prototypes, &user_methods_prototypes_count);
         has_user_prototypes=1;
     }
-    if (prototypes!=NULL) program_function_prototypes=prototypes;
-    else program_function_prototypes="/data/Dropbox/php/svn_local/php/PhpParserC/taint_propagation/current.prototypes";
+    
+    if (COLLECT_INFO) {
+        if (prototypes != NULL) prototypes_log_filename = prototypes;
+        else prototypes_log_filename = "current.prototypes";
+    }
 
     if (!is_online) {
         printf("Just read %d PHP lib function prototypes..!\n",functions_prototypes_count);
@@ -3893,6 +3894,8 @@ void ast_transform(FILE * out, char * taints, char * prototypes, char * filename
             printf("Just read a list of %d tainted class names..!\n",classes_tainted_count);
         }
     }
+    
+    //let's start the rewriting!
     is_tainted=!is_global_scope_untainted;
     if (is_partial_enabled && is_global_scope_untainted) ast_untainted_edit_bfs(out,tree);
     else ast_edit_bfs(out, tree);

@@ -2,8 +2,6 @@
 <configurationDescriptor version="79">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df name="PhpParserC" root=".">
-      <df name="exploits">
-      </df>
       <df name="misc">
       </df>
       <df name="notes">
@@ -14,11 +12,7 @@
       </df>
       <df name="taint_propagation">
       </df>
-      <df name="TestScripts">
-        <df name="TestResults">
-        </df>
-      </df>
-      <df name="webappstests">
+      <df name="webapps_eval">
         <df name="edited">
           <df name="dbgen">
           </df>
@@ -361,6 +355,8 @@
             </df>
           </df>
         </df>
+        <df name="exploits">
+        </df>
         <df name="original">
           <df name="dbgen">
           </df>
@@ -535,6 +531,254 @@
             </df>
           </df>
         </df>
+        <df name="plugins_backup">
+          <df name="cforms">
+            <df name="____Plugin_Localization">
+            </df>
+            <df name="attachments">
+            </df>
+            <df name="captchabg">
+            </df>
+            <df name="captchafonts">
+            </df>
+            <df name="formpresets">
+            </df>
+            <df name="images">
+            </df>
+            <df name="js">
+              <df name="css">
+                <df name="images">
+                </df>
+              </df>
+              <df name="include">
+              </df>
+              <df name="langs">
+              </df>
+              <df name="src">
+              </df>
+            </df>
+            <df name="phpmailer">
+            </df>
+            <df name="styling">
+            </df>
+          </df>
+          <df name="embedded-video-with-link">
+            <df name="img">
+            </df>
+            <df name="langs">
+            </df>
+          </df>
+          <df name="feedlist">
+          </df>
+          <df name="forum-server">
+            <df name="captcha">
+            </df>
+            <df name="fs-admin">
+            </df>
+            <df name="images">
+            </df>
+            <df name="js">
+            </df>
+            <df name="skins">
+              <df name="bbpress">
+                <df name="images">
+                  <df name="icons">
+                  </df>
+                </df>
+              </df>
+              <df name="exclusive">
+                <df name="images">
+                  <df name="bbc">
+                  </df>
+                  <df name="buttons">
+                  </df>
+                  <df name="english">
+                  </df>
+                  <df name="icons">
+                  </df>
+                  <df name="post">
+                  </df>
+                  <df name="topic">
+                  </df>
+                </df>
+              </df>
+              <df name="smooth">
+                <df name="images">
+                  <df name="bbc">
+                  </df>
+                  <df name="buttons">
+                  </df>
+                  <df name="icons">
+                  </df>
+                  <df name="post">
+                  </df>
+                  <df name="topic">
+                  </df>
+                </df>
+              </df>
+              <df name="wpf-2.0">
+                <df name="images">
+                  <df name="bbc">
+                  </df>
+                  <df name="buttons">
+                  </df>
+                  <df name="english">
+                  </df>
+                  <df name="icons">
+                  </df>
+                  <df name="post">
+                  </df>
+                  <df name="topic">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="mylinksdump">
+            <df name="extra">
+            </df>
+            <df name="images">
+            </df>
+            <df name="inc">
+            </df>
+            <df name="languages">
+            </df>
+            <df name="styles">
+            </df>
+          </df>
+          <df name="nextgen-gallery">
+            <df name="admin">
+              <df name="css">
+              </df>
+              <df name="images">
+              </df>
+              <df name="js">
+                <df name="colorpicker">
+                  <df name="css">
+                  </df>
+                  <df name="images">
+                  </df>
+                  <df name="js">
+                  </df>
+                </df>
+                <df name="Jcrop">
+                  <df name="css">
+                  </df>
+                  <df name="js">
+                  </df>
+                </df>
+              </df>
+              <df name="tinymce">
+                <df name="langs">
+                </df>
+              </df>
+            </df>
+            <df name="css">
+            </df>
+            <df name="fonts">
+            </df>
+            <df name="images">
+            </df>
+            <df name="js">
+            </df>
+            <df name="lang">
+            </df>
+            <df name="lib">
+            </df>
+            <df name="shutter">
+            </df>
+            <df name="view">
+            </df>
+            <df name="widgets">
+            </df>
+            <df name="xml">
+            </df>
+          </df>
+          <df name="register-plus">
+            <df name="datepicker">
+            </df>
+          </df>
+          <df name="rss-feed-reader">
+            <df name="magpie">
+              <df name="extlib">
+              </df>
+              <df name="htdocs">
+              </df>
+              <df name="scripts">
+                <df name="smarty_plugin">
+                </df>
+                <df name="templates">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="statpresscn">
+            <df name="def">
+            </df>
+            <df name="images">
+            </df>
+            <df name="locale">
+            </df>
+            <df name="statpresscn">
+            </df>
+          </df>
+          <df name="wordpress-23-related-posts-plugin">
+            <df name="lang">
+            </df>
+          </df>
+          <df name="wordpress-processing-embed">
+            <df name="data">
+              <df name="open_gl">
+              </df>
+            </df>
+          </df>
+          <df name="wp-recaptcha">
+          </df>
+          <df name="wp-safe-search">
+          </df>
+          <df name="wp-survey-and-quiz-tool">
+            <df name="css">
+            </df>
+            <df name="includes">
+              <df name="admin">
+              </df>
+              <df name="site">
+              </df>
+            </df>
+            <df name="javascript">
+            </df>
+            <df name="pages">
+              <df name="admin">
+                <df name="main">
+                </df>
+                <df name="misc">
+                </df>
+                <df name="questions">
+                </df>
+                <df name="quiz">
+                </df>
+                <df name="results">
+                </df>
+                <df name="shared">
+                </df>
+                <df name="surveys">
+                </df>
+              </df>
+              <df name="custom">
+              </df>
+              <df name="general">
+              </df>
+              <df name="site">
+                <df name="quiz">
+                </df>
+                <df name="shared">
+                </df>
+                <df name="survey">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
       </df>
       <in>ast.c</in>
       <in>ast.h</in>
@@ -575,9 +819,9 @@
       <makefileType>
         <makeTool>
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
-          <buildCommand>$(MAKE) -f Makefile</buildCommand>
-          <cleanCommand>$(MAKE) -f Makefile clean</cleanCommand>
-          <executablePath>./php_parser</executablePath>
+          <buildCommand>make -f Makefile</buildCommand>
+          <cleanCommand>make -f Makefile clean</cleanCommand>
+          <executablePath>./aspis</executablePath>
           <cTool>
             <incDir>
               <pElem>/usr/include</pElem>

@@ -56,8 +56,8 @@ def do_test(path, infile, taints, prototypes):
 
         ##Aspisize the input script
         in_filename=infile
-        out_dir=path+"TestResults";
-        cmd="./php_parser -in "+in_filename+ " -out "+out_dir;
+        out_dir=path+"results";
+        cmd="./aspis -in "+in_filename+ " -out "+out_dir;
 
         if (taints!=""):
             cmd+=" -taints "+taints;
@@ -183,4 +183,8 @@ if __name__ == '__main__':
         p=Popen("cat edited.out", shell=True,cwd=path+"/..")
         p.wait()
         print("\n")
+    p=Popen("rm original.out", shell=True,cwd=path+"/..");
+    p.wait()
+    p=Popen("rm edited.out", shell=True,cwd=path+"/..");
+    p.wait()
 

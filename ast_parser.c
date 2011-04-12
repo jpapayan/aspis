@@ -458,7 +458,7 @@ void print_node_whitespace(FILE * out,astp tree,char * name) {
   }
 }
 
-void process_tree(char* outpath, char * taintspath, char* prototypespath, char *filename, astp tree) {
+void process_tree(char *aspis_home, char* outpath, char * taintspath, char* prototypespath, char *filename, astp tree) {
     FILE * fout = NULL;
     if (outpath != NULL) {
         fout = fopen(outpath, "w");
@@ -485,7 +485,7 @@ void process_tree(char* outpath, char * taintspath, char* prototypespath, char *
         printf("==========================\n\n");
     }
     astp functions_used;
-    ast_transform(stdout, taintspath, prototypespath, filename, &tree, &functions_used);
+    ast_transform(stdout,aspis_home, taintspath, prototypespath, filename, &tree, &functions_used);
 
     if (!is_online) {
         printf("\n\n==========================\n");

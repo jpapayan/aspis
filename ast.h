@@ -19,6 +19,7 @@ typedef struct astnode {
 //Some string manipulation to ease the cruelty of C...
 char * strcat_malloc(const char *,const char *);
 char * strcpy_malloc(const char * );
+char * path_join( char * , char * );
 
 //The ast related onces
 astp ast_new(int , const char * );

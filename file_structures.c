@@ -8,24 +8,27 @@
 /**
  * Reads all bult-in functions of php in an array. The file is sorted in the first place
  */
-void read_php_functions(char * file, char *** flist, int *fcount) {
+void read_php_functions( char * file, char *** flist, int *fcount) {
     FILE * fp = fopen(file, "r");
+    if (fp==NULL) die("Could not open file.");
     if (fp == NULL) die("Failed to read PHP built in functions list\n");
+    *fcount=0;
     while (!feof(fp)) {
         if (fgetc(fp) == '\n') (*fcount)++;
     }
     if (*fcount == 0) die("PHP built in functions list is empty?!\n");
     *flist = (char **) malloc((*fcount) * sizeof (char *));
     if (*flist == NULL) die("Malloc failed to hold all PHP functions\n");
-    char line[500];
+    char line[500]="";
     rewind(fp);
     int i = 0;
-    for (i = 0; !feof(fp); i++) {
+    for (i = 0; i<*fcount; i++) {
         fscanf(fp, "%s", (char*) line);
         (*flist)[i] = (char *) malloc((strlen(line) + 1) * sizeof (char));
+        if ((*flist)[i]==0) die("Malloc failed to store name.");
         strcpy((*flist)[i], line);
     }
-    fclose(fp);
+    if (fclose(fp)!=0) die("Could not close file?");
 }
 /**
  * Reads all taints from the taint file in two arrays. The file is sorted

@@ -25,6 +25,7 @@ char * strcat_malloc(const char * s1,const char * s2) {
    else if (s1 == NULL && s2==NULL) {
        tmp = (char *) malloc(sizeof (char));
    }
+   if (tmp==NULL) die("malloc failed");
    tmp[0]='\0';
    if (s1 != NULL) {
         char *s1d = strdup(s1);
@@ -37,26 +38,46 @@ char * strcat_malloc(const char * s1,const char * s2) {
    if (print) printf("done\n");
    return tmp;
 }
-
 char * strcpy_malloc(const char * s) {
     //printf("start"); fflush(stdout);
     char * tmp=NULL;
     if (s!=NULL) {
         tmp=(char *)malloc(sizeof(char)*(strlen(s)+1));
+        if (tmp==NULL) die("malloc failed");
         strcpy(tmp,s);
     }
     else {
         tmp=(char*)malloc(sizeof(char));
+        if (tmp==NULL) die("malloc failed");
         tmp[0]='\0';
     }
    // printf("stop"); fflush(stdout);
     return tmp;
 }
+char *path_join(char * p1,char * p2) {
+    char * ret=NULL;
+    int p1_len;
+    if (p1==NULL || (p1_len=strlen(p1))==0) return p2;
+    if (p2==NULL || strlen(p2)==0) return p1;
+    if (p1[p1_len-1]=='/') {
+        int i=(p2[0]=='/') ? 1 : 0;
+        p1=strcat_malloc(p1,p2+i);
+        ret=p1;
+    }
+    else {
+        if (p2[0]!='/') p1=strcat_malloc(p1,"/");
+        ret=strcat_malloc(ret,p2);
+    }
+    printf("concat: %s\n",ret);
+    return ret;
+    
+}
+
 
 astp ast_new(int type,const char * text) {
    if (print) { printf("ast_new...%s",text); fflush(stdout);}
    astp res =  (astp) malloc(sizeof(astnode));
-   if (res==NULL) die("malloc");
+   if (res==NULL) die("malloc failed");
    //printf("type=%d\n",type);
    res->type=type;
    res->rewritten=0;

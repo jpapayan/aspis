@@ -24,16 +24,20 @@
       <nativedebugger version="1">
         <engine>gdb</engine>
       </nativedebugger>
-      <runprofile version="8">
+      <runprofile version="9">
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -in TestScripts/test_toy.php -out TestResults</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -in test/test_toy_assign.php -out tests/results</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" -in TestScripts/test_toy.php -out TestResults</runcommand>
-        <rundir>/data/Dropbox/php/PhpParserC</rundir>
+        <runcommand>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results</runcommand>
+        <rundir>/data/Dropbox/php/aspis</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
         <environment>
+          <variable name="ASPIS_HOME" value="/data/Dropbox/php/aspis"/>
         </environment>
       </runprofile>
     </conf>
