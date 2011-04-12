@@ -1,0 +1,271 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Embedded Video with Link in italiano\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-07-20 13:49+0100\n"
+"PO-Revision-Date: 2008-07-20 15:24+0100\n"
+"Last-Translator: Gianni Diurno (aka gidibao) <gidibao@gmail.com>\n"
+"Language-Team: Gianni Diurno | http://gidibao.net/ <gidibao@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: D:\\devel\\Embedded_Video\\trunk\\embedded-video\n"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:304
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:117
+msgid "Embed Video"
+msgstr "Incorpora"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:124
+msgid "Portal video"
+msgstr "Portale"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:125
+msgid "Local video"
+msgstr "Locale"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:126
+msgid "Upload video"
+msgstr "Carica il video"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:127
+msgid "Video URL"
+msgstr "URL del video"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:137
+msgid "Select video portal:"
+msgstr "Seleziona il portale:"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:168
+msgid "Insert video ID:"
+msgstr "Inserisci la ID del video:"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:182
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:240
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:338
+msgid "Show video without link"
+msgstr "Mostra il video senza il link"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:311
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:188
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:246
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:344
+msgid "Link text:"
+msgstr "Testo del link:"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:198
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:256
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:353
+msgid "Insert"
+msgstr "Inserisci"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:200
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:258
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:309
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:355
+msgid "Cancel"
+msgstr "Cancella"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:219
+msgid "Select video file:"
+msgstr "Seleziona il file video:"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:277
+msgid "Local video file:"
+msgstr "Seleziona il file video locale:"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:287
+msgid "Title:"
+msgstr "Titolo:"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:297
+msgid "Description:"
+msgstr "Descrizione:"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:307
+msgid "Upload"
+msgstr "Carica"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video-popup.php:324
+msgid "Insert video URL:"
+msgstr "Inserisci l'URL del video:"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:122
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:332
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:135
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:350
+msgid "embedded by"
+msgstr "incorporato da"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:337
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:135
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:325
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:357
+msgid "plugin page"
+msgstr "pagina del plugin"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:198
+msgid "[There is a video that cannot be displayed in this feed. "
+msgstr "[C'é un video che non può essere mostrato in questo feed."
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:198
+msgid "Visit the blog entry to see the video.]"
+msgstr "Visita la pagina dell'articolo per poter vedere il video.]"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:263
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:274
+msgid "Object width must be set!"
+msgstr "L'oggetto deve essere impostato!"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:263
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:275
+msgid "Object width must be a number between 250 and 800!"
+msgstr "L'oggetto deve essere un numero compreso tra 250 e 800!"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:267
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:279
+msgid "Options updated!"
+msgstr "Opzioni aggiornate!"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:304
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:321
+msgid "Embedded Video"
+msgstr "Video incorporato"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:323
+msgid "Logo by Azzam/OpenSource Solutions Blog"
+msgstr "Logo by Azzam/OpenSource Solutions Blog"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:308
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:325
+msgid "Edit the prefix of the linktext and the width of the embedded flash object!"
+msgstr "Modifica il prefisso del link di testo e la larghezza dell'oggetto flash incorporato!"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:308
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:325
+msgid "For detailed information see the"
+msgstr "Per ulteriori e dettagliate informazioni vedi la"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:310
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:327
+msgid "Examples for the prefix settings:"
+msgstr "Esempi per le impostazioni del prefisso:"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:311
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:312
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:328
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:329
+msgid "If you type in"
+msgstr "Se tu scrivi"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:311
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:312
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:328
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:329
+msgid "and you choose the prefix"
+msgstr "e scegli il prefisso"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:311
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:328
+msgid "- Link to"
+msgstr "- Link to"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:311
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:328
+msgid "with a following space, the linktext will be"
+msgstr "con uno spazio a seguire, il link di testo sarà"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:311
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:328
+msgid "YouTube - Link to super video"
+msgstr "YouTube - Link to super video"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:312
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:329
+msgid "Direct"
+msgstr "Diretto"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:312
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:329
+msgid "without a following space, the linktext will be"
+msgstr "senza uno spazio a seguire, il link di testo sarà"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:312
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:329
+msgid "Sevenload Directdings"
+msgstr "Sevenload Directdings"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:316
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:333
+msgid "Never show the video link (exception: feeds)"
+msgstr "Non mostrare mai il link di testo (eccezione per i feed)"
+
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:334
+msgid "In feed, show link to blog post (video embedding in feed not yet available)"
+msgstr "Mostra nel feed il link all'articolo del blog (il video incorporato nei feed non é al momento disponibile)"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:317
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:335
+msgid "Prefix:"
+msgstr "Prefisso:"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:318
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:336
+msgid "Following space character"
+msgstr "Uno spazio dopo il carattere"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:319
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:337
+msgid "Use smaller font size for link"
+msgstr "Utilizza delle font più piccole per il link"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:320
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:338
+msgid "Video object width"
+msgstr "Larghezza dell'oggetto video"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:321
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:339
+msgid "Show link to plugin page"
+msgstr "Mostra il link alla pagina del plugin"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:322
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:340
+msgid "Save settings"
+msgstr "Salva le impostazioni"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:326
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:344
+msgid "The following video portals are currently supported:"
+msgstr "Sono supportati i seguenti portali video:"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:329
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:347
+msgid "Preview"
+msgstr "Anteprima"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:330
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:349
+msgid "Your current settings produce the following output:"
+msgstr "Le tue impostazioni attuali producono il seguente risultato:"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:337
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:357
+msgid "Check the"
+msgstr "Verifica con regolarità la"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:337
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:357
+msgid "for updates regularly!"
+msgstr "per gli aggiornamenti!"
+
+# H:\xampp\htdocs\wp22de\wp-content\plugins\embedded-video/embedded-video.php:338
+#: D:\devel\Embedded_Video\trunk\embedded-video/embedded-video.php:358
+msgid "Video icon by"
+msgstr "Icone offerte da"
+

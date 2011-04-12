@@ -1,0 +1,1022 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: StatPressCN\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-13 10:43+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: heart5 <baiyefeng@gmail.com>\n"
+"Language-Team: hugo5688 <hugo5688@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: TAIWAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: E:\\documents\\NetBeansProjects\\wordpress\\wp-content\\plugins\\statpresscn\n"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:79
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:81
+msgid "StatPressCN"
+msgstr "總覽"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:83
+msgid "StatPressCN Details"
+msgstr "訪問統計 細節"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:83
+msgid "Details"
+msgstr "細節"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:84
+msgid "StatPressCN Spy"
+msgstr "訪問統計 蜘蛛"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:84
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1436
+msgid "Spy"
+msgstr "蜘蛛"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:85
+msgid "StatPressCN Friends"
+msgstr "訪問統計 朋友來訪"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:85
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1496
+msgid "Friends"
+msgstr "朋友來訪"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:86
+msgid "StatPressCN Mobiler"
+msgstr "訪問統計 移動來訪"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:86
+msgid "Mobiler"
+msgstr "移動來訪"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:88
+msgid "StatPressCN 404"
+msgstr "訪問統計 問題訪問"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:88
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1624
+msgid "404"
+msgstr "問題訪問"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:90
+msgid "StatPressCN Search"
+msgstr "訪問統計 搜尋"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:90
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1652
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1691
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1816
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1867
+msgid "Search"
+msgstr "搜尋"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:92
+msgid "StatPressCN Export"
+msgstr "訪問統計 匯出"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:92
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:796
+msgid "Export"
+msgstr "匯出"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:97
+msgid "StatPressCN BanIP DIY"
+msgstr "訪問統計 加入惡意IP"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:97
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:116
+msgid "BanIP DIY"
+msgstr "加入惡意IP地址"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:100
+msgid "StatPressCN Define IP"
+msgstr "訪問統計 IP命名"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:100
+msgid "DefIP DIY"
+msgstr "IP命名自助編輯"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:103
+msgid "StatPressCN Spider DIY"
+msgstr "訪問統計 封鎖蜘蛛資料庫"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:103
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:275
+msgid "Spider DIY"
+msgstr "封鎖蜘蛛資料庫"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:105
+msgid "StatPressCN Options"
+msgstr "訪問統計 選項"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:105
+msgid "Options"
+msgstr "選項"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:107
+msgid "StatPressCN StatUpdate"
+msgstr "訪問統計 更新"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:107
+msgid "StatUpdate"
+msgstr "訪問統計更新"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:109
+msgid "StatPressCN Debug"
+msgstr "訪問統計 調試信息"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:109
+msgid "Debug"
+msgstr "調試信息"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:110
+msgid "StatPressCN Support"
+msgstr "訪問統計 支援"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:110
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:571
+msgid "Support"
+msgstr "支援"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:129
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:619
+msgid "Saved"
+msgstr "已儲存"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:347
+msgid "Define IP"
+msgstr "IP命名"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:432
+msgid "Debug Info"
+msgstr "調試信息"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:573
+msgid "Thank you for using StatPressCN for visit stats."
+msgstr "感謝您使用StatPressCN來統計訪客數據。"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:574
+msgid "Developing page"
+msgstr "開發頁面"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:575
+msgid "you can make suggestions for the plugin there. Everything is welcomed. May you happy!"
+msgstr "您可以在這提出有關於此外掛的任何意見或話題，並祝您使用愉快!"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:637
+msgid "Frontend Setting"
+msgstr "前端設定"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:639
+msgid "Show HotDepth on the head"
+msgstr "在博文頭部顯示熱度"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:649
+msgid "Show related post at the tail"
+msgstr "在博文尾部顯示相關文章"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:656
+msgid "Show spy on widget, default number is 8"
+msgstr "顯示蜘蛛到Widget中，默認數量是8位"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:657
+msgid "Not show StatPressCN's credit on widget"
+msgstr "不在側欄顯示StatPressCN的版權信息"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:660
+msgid "Backend Setting"
+msgstr "后臺設定"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:661
+msgid "Days in Overview graph"
+msgstr "概觀圖示中顯示的天數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:669
+msgid "Number in Spy"
+msgstr "最近來訪顯示的項目數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:678
+msgid "Number in Friends"
+msgstr "朋友來訪顯示的項目數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:685
+msgid "left details page stat period setting is "
+msgstr "詳情頁面中左欄的統計周期設定為"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:687
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3111
+msgid "month"
+msgstr "月份"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:688
+msgid "weeks"
+msgstr "禮拜"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:689
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3110
+msgid "week"
+msgstr "周"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:690
+msgid "day"
+msgstr "天"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:694
+msgid "Functions Extended"
+msgstr "功能擴充"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:696
+msgid "Show Spider DIY on menu"
+msgstr "顯示加入封鎖蜘蛛資料庫至選單中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:697
+msgid "Show BanIP DIY on menu"
+msgstr "顯示加入惡意IP至選單中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:700
+msgid "Show Export on menu"
+msgstr "顯示統計數據導出至選單中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:701
+msgid "Show StatUpdate on menu"
+msgstr "顯示統計系統升級至選單中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:704
+msgid "Show 404 on menu"
+msgstr "顯示問題訪問至選單中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:705
+msgid "Show Define IP on menu"
+msgstr "顯示IP命名自助編輯至選單中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:707
+msgid "System Setting"
+msgstr "系統設定"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:709
+msgid "Automatically delete records if the size of table is bigger than "
+msgstr "自動刪除拜訪記錄，如果數據表大小大於"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:721
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2025
+msgid "M"
+msgstr "兆"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:722
+msgid "Also collect spiders visits"
+msgstr "也受理蜘蛛瀏覽數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:724
+msgid "Collect data about logged users, too."
+msgstr "同樣也收集已登入的使用者。"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:727
+msgid "But, dont collect me. "
+msgstr "但是不要統計我喲。"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:731
+msgid "The user "
+msgstr "這些用戶"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:737
+msgid "is not being collected now."
+msgstr "的訪問目前沒有被統計。"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:744
+msgid "IP Info Query Tools"
+msgstr "IP信息查尋工具"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:751
+msgid "Minimum capability to view stats"
+msgstr "查看統計數據的最低權限"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:755
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1460
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1552
+msgid "more info"
+msgstr "更多信息"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:760
+msgid "Delete options when deactivating"
+msgstr "停用時刪除設定"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:761
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:765
+msgid "Warning"
+msgstr "敬告"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:761
+msgid "Options or setting will be reset to default when StatpressCN being deactivated"
+msgstr "一旦插件停用，則刪除所有的設定和選項"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:764
+msgid "Delete table when deactivating"
+msgstr "停用時刪除數據表"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:765
+msgid "All record will be deleted when StatpressCN being deactivated, including the table' structure"
+msgstr "一旦插件停用，則刪除所有的訪問記錄，包括數據結構和數據表本身"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:768
+msgid "Save options"
+msgstr "儲存選項"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:791
+msgid "Export stats to text file"
+msgstr "匯出統計數據至純文字檔案"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:793
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3107
+msgid "From"
+msgstr "從"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:794
+msgid "To"
+msgstr "到"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:795
+msgid "Fields delimiter"
+msgstr "分隔符號"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:842
+msgid "Overview"
+msgstr "概觀"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:845
+msgid "Total"
+msgstr "總計"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:847
+msgid "Last year"
+msgstr "去年"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:848
+msgid "This year"
+msgstr "今年"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:849
+msgid "Target This year"
+msgstr "今年預期"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:851
+msgid "Last month"
+msgstr "上個月"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:852
+msgid "This month"
+msgstr "本月"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:853
+msgid "Target This month"
+msgstr "本月目標"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:854
+msgid "Yesterday"
+msgstr "昨日"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:855
+msgid "Today"
+msgstr "今日"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:861
+msgid "Visitors"
+msgstr "拜訪者"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:956
+msgid "Pageviews"
+msgstr "頁面瀏覽數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1040
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1400
+msgid "Spiders"
+msgstr "蜘蛛"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1124
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1397
+msgid "Feeds"
+msgstr "Feeds"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+msgid "Last hits"
+msgstr "近期瀏覽"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+msgid "Time"
+msgstr "時間"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+msgid "IP|Visitor"
+msgstr "來訪者"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1873
+msgid "Page"
+msgstr "網頁"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1409
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1601
+msgid "OS"
+msgstr "作業系統"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1406
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1598
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1645
+msgid "Browser"
+msgstr "瀏覽器"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+msgid "Last search terms"
+msgstr "近期搜尋關鍵字"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+msgid "Terms"
+msgstr "關鍵字"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+msgid "Engine"
+msgstr "引擎"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+msgid "Result"
+msgstr "結果"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1327
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1343
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+msgid "page viewed"
+msgstr "瀏覽頁面"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+msgid "Last referrers"
+msgstr "近期外部來源"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+msgid "URL"
+msgstr "URL"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+msgid "Last feed"
+msgstr "近期Feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+msgid "Last agents"
+msgstr "近期的代理程式"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1640
+msgid "Agent"
+msgstr "代理程式"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1388
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1586
+msgid "Top pages"
+msgstr "熱門頁面"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1391
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1592
+msgid "Top search terms"
+msgstr "熱門搜尋關鍵字"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1394
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1589
+msgid "Top referrer"
+msgstr "熱門外部來源"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1403
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1595
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1643
+msgid "Search engine"
+msgstr "搜尋引擎"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1412
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1604
+msgid "Countries (city)"
+msgstr "國度 (城市)"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1415
+msgid "Top days"
+msgstr "最多人瀏覽"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1418
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1607
+msgid "Top Days - Unique visitors"
+msgstr "最多人瀏覽 (獨立訪客)-"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1421
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1610
+msgid "Top Days - Pageviews"
+msgstr "最多人瀏覽 (頁面瀏覽數)-"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1424
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1613
+msgid "Top IPs - Pageviews"
+msgstr "最常訪問的IP (頁面瀏覽數)-"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1475
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1477
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1567
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1569
+msgid "arrived from"
+msgstr "來自"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1475
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1567
+msgid "searching"
+msgstr "的搜尋"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1477
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1569
+msgid "there"
+msgstr "這裡"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1541
+msgid "has left"
+msgstr "共留下了"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1543
+msgid "comments"
+msgstr "留言"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1543
+msgid "comment"
+msgstr "留言"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1545
+msgid "and the latest is"
+msgstr "最近的一條是"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1547
+msgid "at"
+msgstr "于"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1549
+msgid "has visited"
+msgstr "共訪問了"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "pages"
+msgstr "頁面"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "page"
+msgstr "頁面"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "and the latest"
+msgstr "最近的"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "are at below"
+msgstr "在下面"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "is at below"
+msgstr "在下面"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1638
+msgid "Date"
+msgstr "日期"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1639
+msgid "URL Requested"
+msgstr "URL需求"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1641
+msgid "Referrer"
+msgstr "外部來源"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1642
+msgid "Search terms"
+msgstr "搜尋關鍵字"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1644
+msgid "Operative system"
+msgstr "作業系統"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1646
+msgid "Spider"
+msgstr "爬蟲"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1648
+msgid "Visitor"
+msgstr "來訪者"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1649
+msgid "StatusCode"
+msgstr "訪問狀態代碼"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1657
+msgid "Field"
+msgstr "欄位"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1664
+msgid "Group by"
+msgstr "群組依據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1665
+msgid "Sort by"
+msgstr "排序依據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1666
+msgid "if contains"
+msgstr "如果包含"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1676
+msgid "sort by count if grouped"
+msgstr "如有分組依計數排序"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1677
+msgid "include spiders/crawlers/bot"
+msgstr "包含蜘蛛、爬蟲和機器人"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1678
+msgid "include feed"
+msgstr "包含 feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1685
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3105
+msgid "Limit results to"
+msgstr "搜尋數量最大值為"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1748
+msgid "Results"
+msgstr "結果"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1755
+msgid "Count"
+msgstr "計數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1793
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1795
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1852
+msgid "Home"
+msgstr "首頁"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1799
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1854
+msgid "Category"
+msgstr "類別"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1808
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1810
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1862
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1864
+msgid "Tag"
+msgstr "標籤"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1813
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1856
+msgid "Calendar"
+msgstr "行事曆"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1815
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1858
+msgid "Archive"
+msgstr "封存"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1821
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1823
+msgid "Trackback"
+msgstr "迴響"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1829
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1831
+msgid "Feed"
+msgstr "摘要"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2023
+msgid "there remains"
+msgstr "這裡還有"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2024
+msgid "records to the capacity limit"
+msgstr "條記錄到最高容量限值"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2026
+msgid "records"
+msgstr "記錄"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2053
+msgid "recently"
+msgstr "最近的"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2053
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2078
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3106
+msgid "Visits"
+msgstr "拜訪數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2078
+msgid "all stats days"
+msgstr "所有統計天數"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2365
+msgid "related post"
+msgstr "相關文章"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2526
+msgid "Updating table's struct: "
+msgstr "更新資料表結構中: "
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2528
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2543
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2589
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3222
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3236
+msgid "done"
+msgstr "完成"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2542
+msgid "evil ip"
+msgstr "惡意IP"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2543
+msgid "items have been deleted"
+msgstr "項目已刪除"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2553
+msgid "Updating Feeds"
+msgstr "更新Feeds中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2594
+msgid "Updating OSes"
+msgstr "更新作業系統數據中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2604
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2620
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2635
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2654
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2670
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2686
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2702
+msgid " are updated"
+msgstr "已更新數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2610
+msgid "Updating Browsers"
+msgstr "更新瀏覽器數據中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2625
+msgid "Updating Spiders"
+msgstr "更新蜘蛛數據中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2627
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2643
+msgid " sets is set to blank! "
+msgstr "條記錄被置空"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2641
+msgid "Updating Search engines"
+msgstr "更新搜尋引擎數據中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2645
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2661
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2677
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2715
+msgid " are select-ed"
+msgstr "已選擇"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2659
+msgid "Updating sets for ip info : "
+msgstr "更新所有記錄的IP信息"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2675
+msgid "Updating sets whose ip info is null: "
+msgstr "僅更新那些IP信息為空的記錄"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2691
+msgid "Updating sets whose ip is named in defip.dat: "
+msgstr "更新那些已經在defip.dat中定義了的記錄"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2707
+msgid "Deleting sets whose statuscode is 404: "
+msgstr "刪除所有狀態碼為404的訪問記錄"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2709
+msgid "invalid url requested"
+msgstr "無效的鏈接請求"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2710
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2722
+msgid " are deleted"
+msgstr "項目已刪除"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2713
+msgid "Cleaning spam commenters: "
+msgstr "清理垃圾評論者："
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2721
+msgid "spamer"
+msgstr "爬蟲"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2732
+msgid "Updated"
+msgstr "更新完成"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2750
+msgid "Update all sets for spider"
+msgstr "更新所有蜘蛛的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2751
+msgid "Update all sets based longth you configure"
+msgstr "更新您設定數據存儲時限內的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2754
+msgid "Update all sets for banip"
+msgstr "更新所有惡意IP的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2755
+msgid "Update all sets for urlrequested"
+msgstr "更新所有URL的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2758
+msgid "Update all sets for O.S."
+msgstr "更新所有作業系統的數據。"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2759
+msgid "Update all sets for browser"
+msgstr "更新所有瀏覽器的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2762
+msgid "Update all sets for search engine"
+msgstr "更新所有搜尋引擎的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2763
+msgid "Update all sets for feed"
+msgstr "更新所有Feed的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2766
+msgid "Update all sets for ip info"
+msgstr "更新所有記錄的IP信息"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2767
+msgid "Update sets partly, whose ip info is null"
+msgstr "僅更新那些IP信息為空的記錄"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2770
+msgid "Delete all 404 visits"
+msgstr "刪除所有的問題訪問"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2771
+msgid "Update sets partly, whose name is null"
+msgstr "更新那些name為空的記錄"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2773
+msgid "Update stat data"
+msgstr "更新統計資料"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2785
+msgid "At time"
+msgstr "在"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2786
+msgid "there has"
+msgstr "這裡有"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2787
+msgid "sets been deleted"
+msgstr "項目被刪除"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2788
+msgid "because"
+msgstr "因為"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2836
+msgid "Hot"
+msgstr "熱門"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3052
+msgid "Title:"
+msgstr "標題:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3055
+msgid "Body:"
+msgstr "主體:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3075
+msgid "Powered by"
+msgstr "技術支持來自"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3075
+msgid "Whitime"
+msgstr "天高云淡"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3104
+msgid "Title"
+msgstr "標題"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3109
+msgid "Stats on"
+msgstr "統計開啟"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3112
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3113
+msgid "months"
+msgstr "個月"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3114
+msgid "year"
+msgstr "年"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3115
+msgid "ago to now"
+msgstr "之前到現在"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3169
+msgid "Updating URLes"
+msgstr "更新URL中"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3181
+msgid "select-ed"
+msgstr "已選擇"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3205
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3220
+msgid "sets are updated"
+msgstr "已更新數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3220
+msgid "The permalink structure is set to default"
+msgstr "固定連結的結構已設回預設值"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3230
+msgid "Delete sets that have spider if needed"
+msgstr "如有需要則刪除蜘蛛的數據"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3233
+msgid "spider not allow to record"
+msgstr "不統計爬蟲的訪問"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3279
+msgid "table size limited"
+msgstr "表大小限制"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3311
+msgid "as many as you can"
+msgstr "n"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3343
+msgid "StatPressCN table size"
+msgstr "StatPressCN 資料表大小"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3345
+msgid "Query count"
+msgstr "查尋計數"
+
+#~ msgid "Never delete!"
+#~ msgstr "從不刪除!"
+
+#~ msgid "Delete sets if needed"
+#~ msgstr "如有需要則刪除數據"
+
+#~ msgid "IP"
+#~ msgstr "IP"
+
+#~ msgid "StatPressCN current time"
+#~ msgstr "StatPressCN 當前時間"
+
+#~ msgid "RSS2 url"
+#~ msgstr "RSS2 url"
+
+#~ msgid "Show post's HotDepth"
+#~ msgstr "顯示文章熱門度"
+
+#~ msgid "Domain"
+#~ msgstr "網域"
+
+#~ msgid "What"
+#~ msgstr "作業系統"
+
+#~ msgid "Support by"
+#~ msgstr "技術支援"
+
+#~ msgid "Last spiders"
+#~ msgstr "最近蜘蛛"
+
+#~ msgid "Google Images catched *"
+#~ msgstr "發現來自Google圖像的搜索"
+
+#~ msgid "Google Cache catched *"
+#~ msgstr "發現來自Google緩存的搜索"

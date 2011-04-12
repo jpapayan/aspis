@@ -1,0 +1,46 @@
+/*
+	myLinksDump Plugin Snowball Style.
+	Version: 1.0
+	Copyright © 2009 - 2011
+	Designed By :Web.Riot.ir
+	M. Ali. Taebi
+	http://pat.riot.ir
+	Email:taebi.ali@gmail.com
+*/
+
+.ldWrapper {
+	border:1px solid #DDDDDD;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding:7px !important;
+
+	}
+.ldWrapper ul {
+	margin-right:0px !important;
+	}
+.ldWrapper ul li:before{
+	content:' '!important;
+	}
+.ldWrapper ul li {
+	list-style:none !important;
+	background-image:url(../images/icon_arrow_sm.gif);
+	background-repeat:no-repeat;
+	background-position:center right;
+	padding-right:13px !important;	
+	}
+.ldWrapper ul li a,
+.ldWrapper ul li  a:visited {
+	color:#535355;
+	text-decoration:none;
+	}
+.ldWrapper ul li a:hover {
+	color:#080808;
+	}
+#ldTitle { 
+	font-weight:bold;
+	font-size:11px;
+	color:#8F8F8F;
+	background-color:#EFEFEF;
+	padding:4px;
+	}

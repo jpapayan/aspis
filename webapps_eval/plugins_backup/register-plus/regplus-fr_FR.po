@@ -1,0 +1,975 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Register Plus\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2008-07-29 14:08-0700\n"
+"Last-Translator: Marcus <info@shiftthis.net>\n"
+"Language-Team: Skullbit.com <info@skullbit.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: CANADA\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\SVN\\register-plus\\trunk\n"
+
+# C:\SVN\register-plus\trunk/dash_widget.php:10
+msgid "Invitation Code Tracking"
+msgstr "Tracking des codes d'invitation"
+
+# C:\SVN\register-plus\trunk/register-plus.php:113
+#, fuzzy
+msgid "Register Plus is only compatible with WordPress v2.5 and up.  You are currently using WordPress v."
+msgstr "Register Plus est compatible uniquement avec Wordpress 2.5 ou supérieur."
+
+# C:\SVN\register-plus\trunk/register-plus.php:153
+# C:\SVN\register-plus\trunk/register-plus.php:1313
+#, php-format
+msgid "[%s] Your username and password"
+msgstr "[%s] Identifiant et mot de passe"
+
+# C:\SVN\register-plus\trunk/register-plus.php:158
+# C:\SVN\register-plus\trunk/register-plus.php:1274
+#, php-format
+msgid "[%s] New User Register"
+msgstr "[%s] Nouvelle inscription d'utilisateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:251
+msgid "Settings Saved"
+msgstr "Paramètres enregistrés"
+
+# C:\SVN\register-plus\trunk/register-plus.php:564
+#, fuzzy
+msgid "Users Verified"
+msgstr "Champs définis par l'utilisateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:564
+#, fuzzy
+msgid "Users Deleted"
+msgstr "Champs définis par l'utilisateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:1248
+msgid "Verification URL: "
+msgstr "URL de confirmation:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:1271
+# C:\SVN\register-plus\trunk/register-plus.php:1304
+#, php-format
+msgid "Username: %s"
+msgstr "Identifiant utilisateur: %s"
+
+# C:\SVN\register-plus\trunk/register-plus.php:515
+#, php-format
+msgid "[%s] Verify Account Link"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:518
+msgid "Verification Emails have been re-sent"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:722
+#, fuzzy
+msgid "<strong>Error:</strong> Please select a user to send emails to."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre code d'invitation."
+
+# C:\SVN\register-plus\trunk/register-plus.php:524
+msgid "Your account has now been activated by an administrator."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:528
+#, php-format
+msgid "[%s] User Account Activated"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:539
+msgid "Unverified Users"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:544
+msgid "Verify Checked Users"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:580
+#, fuzzy
+msgid "Resend Verification E-mail"
+msgstr "Personnaliser l'Email envoyé aux utilisateurs"
+
+# C:\SVN\register-plus\trunk/register-plus.php:545
+msgid "Delete"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:556
+msgid "Unverified ID"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:543
+# C:\SVN\register-plus\trunk/register-plus.php:555
+#, fuzzy
+msgid "User Name"
+msgstr "Nom"
+
+# C:\SVN\register-plus\trunk/register-plus.php:1272
+#, fuzzy
+msgid "E-mail"
+msgstr "Email: %s"
+
+# C:\SVN\register-plus\trunk/register-plus.php:559
+msgid "Role"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1272
+#, fuzzy
+msgid "e-mail: "
+msgstr "Email: %s"
+
+# C:\SVN\register-plus\trunk/register-plus.php:423
+# C:\SVN\register-plus\trunk/register-plus.php:478
+msgid "Remove Code"
+msgstr "Supprimer le code"
+
+# C:\SVN\register-plus\trunk/register-plus.php:424
+# C:\SVN\register-plus\trunk/register-plus.php:479
+msgid "Add Code"
+msgstr "Ajouter le code"
+
+# C:\SVN\register-plus\trunk/register-plus.php:431
+# C:\SVN\register-plus\trunk/register-plus.php:570
+msgid "Custom Field"
+msgstr "Champ personnalisé"
+
+# C:\SVN\register-plus\trunk/register-plus.php:434
+# C:\SVN\register-plus\trunk/register-plus.php:571
+msgid "Add Registration Field"
+msgstr "Ajouter le champ lors de l'inscription"
+
+# C:\SVN\register-plus\trunk/register-plus.php:436
+# C:\SVN\register-plus\trunk/register-plus.php:571
+msgid "Add Profile Field"
+msgstr "Ajouter le champ dans le profil"
+
+# C:\SVN\register-plus\trunk/register-plus.php:438
+# C:\SVN\register-plus\trunk/register-plus.php:571
+msgid "Required"
+msgstr "Requis"
+
+# C:\SVN\register-plus\trunk/register-plus.php:440
+# C:\SVN\register-plus\trunk/register-plus.php:573
+msgid "Remove Row"
+msgstr "Supprimer ligne"
+
+# C:\SVN\register-plus\trunk/register-plus.php:441
+# C:\SVN\register-plus\trunk/register-plus.php:574
+msgid "Add Row"
+msgstr "Ajouter ligne"
+
+# C:\SVN\register-plus\trunk/register-plus.php:447
+msgid "Register Plus Settings"
+msgstr "Paramètres de Register Plus"
+
+# C:\SVN\register-plus\trunk/register-plus.php:450
+# C:\SVN\register-plus\trunk/register-plus.php:643
+msgid "Save Changes"
+msgstr "Enregistrer les changements"
+
+# C:\SVN\register-plus\trunk/register-plus.php:454
+msgid "Password"
+msgstr "Mot de passe"
+
+# C:\SVN\register-plus\trunk/register-plus.php:455
+msgid "Allow New Registrations to set their own Password"
+msgstr "Permettre aux nouveaux utilisateurs de choisir leur propre mot de passe"
+
+# C:\SVN\register-plus\trunk/register-plus.php:712
+msgid "Enable Password Strength Meter"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:714
+msgid "Short"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:983
+msgid "Bad"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:984
+msgid "Good"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:985
+msgid "Strong"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:458
+msgid "Custom Logo"
+msgstr "Logo personnalisé"
+
+# C:\SVN\register-plus\trunk/register-plus.php:459
+#, fuzzy
+msgid "Recommended Logo width is 292px, but any height should work."
+msgstr "La taille recommandée du logo est de 292px par 66px, même si toutes les tailles fonctionneront."
+
+# C:\SVN\register-plus\trunk/register-plus.php:642
+msgid "Delete Logo"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:729
+msgid "Having troubles uploading?"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:729
+msgid "Uncheck \"Organize my uploads into month- and year-based folders\" in"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:447
+#, fuzzy
+msgid "Miscellaneous Settings"
+msgstr "Paramètres de Register Plus"
+
+# C:\SVN\register-plus\trunk/register-plus.php:729
+msgid "(You can recheck this option after your logo has uploaded.)"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:462
+msgid "Email Verification"
+msgstr "Confirmation d'email"
+
+# C:\SVN\register-plus\trunk/register-plus.php:463
+msgid "Prevent fake email address registrations."
+msgstr "Empêche les inscriptions avec de fausses adresses email"
+
+# C:\SVN\register-plus\trunk/register-plus.php:464
+msgid "Requires new registrations to click a link in the notification email to enable their account."
+msgstr "Nécessite que les nouveaux inscrits reçoivent un email demandant de cliquer sur un lien pour confirmer leur inscription."
+
+# C:\SVN\register-plus\trunk/register-plus.php:465
+msgid "Grace Period (days)"
+msgstr "Période de grâce (jours)"
+
+# C:\SVN\register-plus\trunk/register-plus.php:466
+msgid "Unverified Users will be automatically deleted after grace period expires"
+msgstr "Les inscrits non confirmés seront automatiquement supprimés une fois la période de grâce expirée"
+
+# C:\SVN\register-plus\trunk/register-plus.php:462
+#, fuzzy
+msgid "Admin Verification"
+msgstr "Confirmation d'email"
+
+# C:\SVN\register-plus\trunk/register-plus.php:656
+msgid "Moderate all user registrations to require admin approval. NOTE: Email Verification must be DISABLED to use this feature."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:470
+msgid "Invitation Code"
+msgstr "Code d'invitation"
+
+# C:\SVN\register-plus\trunk/register-plus.php:471
+msgid "Enable Invitation Code(s)"
+msgstr "Activer les codes d'invitation"
+
+# C:\SVN\register-plus\trunk/register-plus.php:473
+msgid "Enable Invitation Tracking Dashboard Widget"
+msgstr "Activer le widget de suivi des invitations sur le Tableau de bord"
+
+# C:\SVN\register-plus\trunk/register-plus.php:474
+msgid "Require Invitation Code to Register"
+msgstr "Rendre obligatoire le code d'invitation pour pouvoir s'inscrire"
+
+# C:\SVN\register-plus\trunk/register-plus.php:482
+msgid "One of these codes will be required for users to register."
+msgstr "L'un de ces codes d'invitation sera demandé pour que les utilisateurs puissent s'inscrire."
+
+# C:\SVN\register-plus\trunk/register-plus.php:486
+msgid "CAPTCHA"
+msgstr "CAPTCHA"
+
+# C:\SVN\register-plus\trunk/register-plus.php:487
+msgid "None"
+msgstr "Aucun"
+
+# C:\SVN\register-plus\trunk/register-plus.php:487
+msgid "Simple CAPTCHA"
+msgstr "CAPTCHA simple"
+
+# C:\SVN\register-plus\trunk/register-plus.php:487
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+# C:\SVN\register-plus\trunk/register-plus.php:489
+msgid "You may need to add the code <code>&lt;?php session_start(); ?></code> to the top line of the wp_login.php file to enable Simple CAPTCHA to work correctly."
+msgstr "Vous devrez peut-être ajouter le code <code>&lt;?php session_start(); ?></code> tout en haut du fichier wp_login.php afin de permettre le fonctionnement de Simple CAPTCHA."
+
+# C:\SVN\register-plus\trunk/register-plus.php:492
+msgid "reCAPTCHA Public Key:"
+msgstr "Clef publique reCAPTCHA:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:492
+msgid "Sign up &raquo;"
+msgstr "S'inscrire &raquo;"
+
+# C:\SVN\register-plus\trunk/register-plus.php:493
+msgid "reCAPTCHA Private Key:"
+msgstr "Clef privée reCAPTCHA:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:499
+msgid "Disclaimer"
+msgstr "Conditions d'utilisation"
+
+# C:\SVN\register-plus\trunk/register-plus.php:500
+msgid "Enable Disclaimer"
+msgstr "Activer les Conditions d'utilisation"
+
+# C:\SVN\register-plus\trunk/register-plus.php:502
+msgid "Disclaimer Title"
+msgstr "Titre des Conditions d'utilisation"
+
+# C:\SVN\register-plus\trunk/register-plus.php:503
+msgid "Disclaimer Content"
+msgstr "Texte des Conditions d'utilisation"
+
+# C:\SVN\register-plus\trunk/register-plus.php:505
+# C:\SVN\register-plus\trunk/register-plus.php:516
+# C:\SVN\register-plus\trunk/register-plus.php:527
+msgid "Agreement Text"
+msgstr "Texte de confirmation d'accord"
+
+# C:\SVN\register-plus\trunk/register-plus.php:510
+msgid "License Agreement"
+msgstr "Accord de licence"
+
+# C:\SVN\register-plus\trunk/register-plus.php:511
+msgid "Enable License Agreement"
+msgstr "Activer l'Accord de licence"
+
+# C:\SVN\register-plus\trunk/register-plus.php:513
+msgid "License Title"
+msgstr "Titre de licence"
+
+# C:\SVN\register-plus\trunk/register-plus.php:514
+msgid "License Content"
+msgstr "Contenu de la licence"
+
+# C:\SVN\register-plus\trunk/register-plus.php:521
+msgid "Privacy Policy"
+msgstr "Politique de vie privée"
+
+# C:\SVN\register-plus\trunk/register-plus.php:522
+msgid "Enable Privacy Policy"
+msgstr "Activer la Politique de vie privée"
+
+# C:\SVN\register-plus\trunk/register-plus.php:524
+msgid "Privacy Policy Title"
+msgstr "Titre de la Politique de vie privée"
+
+# C:\SVN\register-plus\trunk/register-plus.php:525
+msgid "Privacy Policy Content"
+msgstr "Contenu de la Politique de vie privée"
+
+# C:\SVN\register-plus\trunk/register-plus.php:532
+msgid "Allow Existing Email"
+msgstr "Activer les adresses Email en doublon"
+
+# C:\SVN\register-plus\trunk/register-plus.php:533
+msgid "Allow new registrations to use an email address that has been previously registered"
+msgstr "Permettre les inscriptions avec des adresses email qui se trouvent déjà dans la base de données"
+
+# C:\SVN\register-plus\trunk/register-plus.php:537
+msgid "Additional Profile Fields"
+msgstr "Champs de profil supplémentaires"
+
+# C:\SVN\register-plus\trunk/register-plus.php:538
+msgid "Check the fields you would like to appear on the Registration Page."
+msgstr "Cochez les champs que vous souhaitez afficher sur la Page d'inscription."
+
+# C:\SVN\register-plus\trunk/register-plus.php:542
+msgid "Name"
+msgstr "Prénom et nom"
+
+# C:\SVN\register-plus\trunk/register-plus.php:543
+# C:\SVN\register-plus\trunk/register-plus.php:555
+msgid "First Name"
+msgstr "Prénom"
+
+# C:\SVN\register-plus\trunk/register-plus.php:543
+# C:\SVN\register-plus\trunk/register-plus.php:555
+msgid "Last Name"
+msgstr "Nom"
+
+# C:\SVN\register-plus\trunk/register-plus.php:546
+msgid "Contact Info"
+msgstr "Informations de contact"
+
+# C:\SVN\register-plus\trunk/register-plus.php:547
+# C:\SVN\register-plus\trunk/register-plus.php:555
+msgid "Website"
+msgstr "Site web"
+
+# C:\SVN\register-plus\trunk/register-plus.php:547
+# C:\SVN\register-plus\trunk/register-plus.php:555
+msgid "AIM"
+msgstr "AIM"
+
+# C:\SVN\register-plus\trunk/register-plus.php:547
+# C:\SVN\register-plus\trunk/register-plus.php:555
+msgid "Yahoo IM"
+msgstr "Yahoo IM"
+
+# C:\SVN\register-plus\trunk/register-plus.php:547
+# C:\SVN\register-plus\trunk/register-plus.php:555
+msgid "Jabber / Google Talk"
+msgstr "Jabber / Google Talk"
+
+# C:\SVN\register-plus\trunk/register-plus.php:550
+# C:\SVN\register-plus\trunk/register-plus.php:551
+# C:\SVN\register-plus\trunk/register-plus.php:555
+msgid "About Yourself"
+msgstr "A propos de vous"
+
+# C:\SVN\register-plus\trunk/register-plus.php:554
+msgid "Required Profile Fields"
+msgstr "Champs requis du profil"
+
+# C:\SVN\register-plus\trunk/register-plus.php:558
+msgid "Required Field Style Rules"
+msgstr "Style des champs requis"
+
+# C:\SVN\register-plus\trunk/register-plus.php:564
+msgid "User Defined Fields"
+msgstr "Champs définis par l'utilisateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:565
+msgid "Enter the custom fields you would like to appear on the Registration Page."
+msgstr "Entrez les champs personnalisés que vous souhaitez voir dans la Page d'inscription."
+
+# C:\SVN\register-plus\trunk/register-plus.php:838
+msgid "Enter Extra Options for Select, Checkboxes and Radio Fields as comma seperated values. For example, if you chose a select box for a custom field of \"Gender\", your extra options would be \"Male,Female\"."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:447
+#, fuzzy
+msgid "Date Field Settings"
+msgstr "Paramètres de Register Plus"
+
+# C:\SVN\register-plus\trunk/register-plus.php:813
+msgid "First Day of the Week"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:814
+# C:\SVN\register-plus\trunk/register-plus.php:1399
+msgid "Monday"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:815
+# C:\SVN\register-plus\trunk/register-plus.php:1399
+msgid "Tuesday"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:816
+# C:\SVN\register-plus\trunk/register-plus.php:1399
+msgid "Wednesday"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:817
+# C:\SVN\register-plus\trunk/register-plus.php:1399
+msgid "Thursday"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:818
+# C:\SVN\register-plus\trunk/register-plus.php:1399
+msgid "Friday"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:819
+# C:\SVN\register-plus\trunk/register-plus.php:1399
+msgid "Saturday"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:820
+# C:\SVN\register-plus\trunk/register-plus.php:1399
+msgid "Sunday"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:823
+msgid "Date Format"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:824
+msgid "First Selectable Date"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:825
+msgid "Default Year"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:826
+msgid "Default Month"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:827
+msgid "Current Month"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:828
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Jan"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:829
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Feb"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:830
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Mar"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:831
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Apr"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:832
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "May"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:833
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Jun"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:834
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Jul"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:835
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Aug"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:836
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Sep"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:837
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Oct"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:838
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Nov"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:839
+# C:\SVN\register-plus\trunk/register-plus.php:1402
+msgid "Dec"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:598
+msgid "Auto-Complete Queries"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:599
+msgid "You can now link to the registration page with queries to autocomplete specific fields for the user.  I have included the query keys below and an example of a query URL."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:601
+msgid "For any custom fields, use your custom field label with the text all lowercase, using underscores instead of spaces. For example if your custom field was \"Middle Name\" your query key would be <code>middle_name</code>"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:602
+msgid "Example Query URL"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:580
+msgid "Customize User Notification Email"
+msgstr "Personnaliser l'Email envoyé aux utilisateurs"
+
+# C:\SVN\register-plus\trunk/register-plus.php:584
+msgid "Custom User Email Notification"
+msgstr "Email d'inscription personnalisé pour les utilisateurs"
+
+# C:\SVN\register-plus\trunk/register-plus.php:585
+# C:\SVN\register-plus\trunk/register-plus.php:619
+msgid "Enable"
+msgstr "Activer"
+
+# C:\SVN\register-plus\trunk/register-plus.php:593
+# C:\SVN\register-plus\trunk/register-plus.php:627
+#, fuzzy
+msgid "From Email"
+msgstr "Champs From et Reply-to de l'Email envoyé"
+
+# C:\SVN\register-plus\trunk/register-plus.php:543
+# C:\SVN\register-plus\trunk/register-plus.php:555
+#, fuzzy
+msgid "From Name"
+msgstr "Prénom"
+
+# C:\SVN\register-plus\trunk/register-plus.php:597
+# C:\SVN\register-plus\trunk/register-plus.php:631
+msgid "Subject"
+msgstr "Sujet"
+
+# C:\SVN\register-plus\trunk/register-plus.php:601
+msgid "User Message"
+msgstr "Message à destination de l'utilisateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:603
+# C:\SVN\register-plus\trunk/register-plus.php:637
+msgid "Replacement Keys"
+msgstr "Replacement Keys"
+
+# C:\SVN\register-plus\trunk/register-plus.php:637
+# C:\SVN\register-plus\trunk/register-plus.php:674
+msgid "Send as HTML"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:637
+# C:\SVN\register-plus\trunk/register-plus.php:674
+msgid "Convert new lines to &lt;br/> tags (HTML only)"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:640
+msgid "Login Redirect URL"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:641
+msgid "This will redirect the users login after registration."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:610
+msgid "Customize Admin Notification Email"
+msgstr "Personnaliser l'Email envoyé à l'Administrateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:614
+msgid "Admin Email Notification"
+msgstr "L'Administrateur reçoit les notifications d'inscription"
+
+# C:\SVN\register-plus\trunk/register-plus.php:615
+msgid "Disable"
+msgstr "Désactiver"
+
+# C:\SVN\register-plus\trunk/register-plus.php:618
+msgid "Custom Admin Email Notification"
+msgstr "Email d'inscription personnalisé pour l'Administrateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:635
+msgid "Admin Message"
+msgstr "Message à destination de l'Administrateur"
+
+# C:\SVN\register-plus\trunk/register-plus.php:968
+msgid "Custom CSS for Register & Login Pages"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:969
+msgid "CSS Rule Example:"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:980
+msgid "Custom Register CSS"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:458
+#, fuzzy
+msgid "Custom Login CSS"
+msgstr "Logo personnalisé"
+
+# C:\SVN\register-plus\trunk/register-plus.php:665
+msgid "<strong>ERROR</strong>: Please enter your First Name."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre prénom "
+
+# C:\SVN\register-plus\trunk/register-plus.php:670
+msgid "<strong>ERROR</strong>: Please enter your Last Name."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre nom."
+
+# C:\SVN\register-plus\trunk/register-plus.php:675
+msgid "<strong>ERROR</strong>: Please enter your Website URL."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer l'adresse URL de votre site web."
+
+# C:\SVN\register-plus\trunk/register-plus.php:680
+msgid "<strong>ERROR</strong>: Please enter your AIM username."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre identifiant AIM"
+
+# C:\SVN\register-plus\trunk/register-plus.php:685
+msgid "<strong>ERROR</strong>: Please enter your Yahoo IM username."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre identifiant Yahoo IM."
+
+# C:\SVN\register-plus\trunk/register-plus.php:690
+msgid "<strong>ERROR</strong>: Please enter your Jabber / Google Talk username."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre identifiant Jabber / Google Talk."
+
+# C:\SVN\register-plus\trunk/register-plus.php:695
+msgid "<strong>ERROR</strong>: Please enter some information About Yourself."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer quelques informations A votre propos."
+
+# C:\SVN\register-plus\trunk/register-plus.php:703
+msgid "<strong>ERROR</strong>: Please enter your "
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre "
+
+# C:\SVN\register-plus\trunk/register-plus.php:703
+msgid "label"
+msgstr "label"
+
+# C:\SVN\register-plus\trunk/register-plus.php:703
+msgid "."
+msgstr "."
+
+# C:\SVN\register-plus\trunk/register-plus.php:711
+msgid "<strong>ERROR</strong>: Please enter a Password."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer un mot de passe."
+
+# C:\SVN\register-plus\trunk/register-plus.php:713
+msgid "<strong>ERROR</strong>: Your Password does not match."
+msgstr "<strong>ERREUR</strong>: Les deux mots de passe ne correspondent pas."
+
+# C:\SVN\register-plus\trunk/register-plus.php:715
+msgid "<strong>ERROR</strong>: Your Password must be at least 6 characters in length."
+msgstr "<strong>ERREUR</strong>: Votre mot de passe est trop court. Il doit comporter 6 caractères au minimum."
+
+# C:\SVN\register-plus\trunk/register-plus.php:722
+msgid "<strong>ERROR</strong>: Please enter the Invitation Code."
+msgstr "<strong>ERREUR</strong>: Merci d'entrer votre code d'invitation."
+
+# C:\SVN\register-plus\trunk/register-plus.php:724
+msgid "<strong>ERROR</strong>: Your Invitation Code is incorrect."
+msgstr "<strong>ERREUR</strong>: Votre code d'invitation est incorrect."
+
+# C:\SVN\register-plus\trunk/register-plus.php:732
+msgid "<strong>ERROR</strong>: Image Validation does not match."
+msgstr "<strong>ERREUR</strong>: Le texte de validation d'image ne correspond pas."
+
+# C:\SVN\register-plus\trunk/register-plus.php:745
+msgid "<strong>ERROR:</strong> The reCAPTCHA wasn't entered correctly."
+msgstr "<strong>ERREUR:</strong> Le texte reCAPTCHA est incorrect."
+
+# C:\SVN\register-plus\trunk/register-plus.php:752
+# C:\SVN\register-plus\trunk/register-plus.php:757
+# C:\SVN\register-plus\trunk/register-plus.php:762
+msgid "<strong>ERROR</strong>: Please accept the "
+msgstr "<strong>ERREUR</strong>: Vous devez accepter les "
+
+# C:\SVN\register-plus\trunk/register-plus.php:775
+#, fuzzy
+msgid "Please check your e-mail and click the verification link to activate your account and complete your registration."
+msgstr "Inscription terminée. Ouvrez l'email que nous venons de vous envoyer, et cliquez sur le lien pour confirmer et activer votre compte."
+
+# C:\SVN\register-plus\trunk/register-plus.php:787
+msgid "First Name:"
+msgstr "Entrez votre prénom:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:794
+msgid "Last Name:"
+msgstr "Entrez votre nom:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:801
+msgid "Website:"
+msgstr "Tapez l'adresse de votre site web:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:808
+msgid "AIM:"
+msgstr "AIM:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:815
+msgid "Yahoo IM:"
+msgstr "Yahoo IM:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:822
+msgid "Jabber / Google Talk:"
+msgstr "Jabber / Google Talk:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:829
+msgid "About Yourself:"
+msgstr "A propos de vous:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:831
+msgid "Share a little biographical information to fill out your profile. This may be shown publicly."
+msgstr "Partagez des notes biographiques pour remplir votre profil. Votre biographie peut-être affichée publiquement."
+
+# C:\SVN\register-plus\trunk/register-plus.php:850
+msgid "Password:"
+msgstr "Choisissez un mot de passe:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:850
+#, fuzzy
+msgid "Confirm Password:"
+msgstr "Choisissez un mot de passe:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:854
+msgid "Hint: Use upper and lower case characters, numbers and symbols like !\"?$%^&amp;( in your password."
+msgstr "Astuce: utilisez des caractères minuscules et majuscules, des chiffres et des symboles comme !\"?$%^&amp;( dans votre mot de passe."
+
+# C:\SVN\register-plus\trunk/register-plus.php:859
+msgid "Invitation Code:"
+msgstr "Code d'invitation:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:862
+msgid "This website is currently closed to public registrations.  You will need an invitation code to register."
+msgstr "Les inscriptions à ce site web sont actuellement privées. Vous devez entrer un code d'invitation pour vous inscrire."
+
+# C:\SVN\register-plus\trunk/register-plus.php:864
+msgid "Have an invitation code? Enter it here. (This is not required)"
+msgstr "Vous avez un code d'invitation? Entrez-le ici. (facultatif)"
+
+# C:\SVN\register-plus\trunk/register-plus.php:895
+msgid "Validation Image:"
+msgstr "Image de confirmation:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:898
+msgid "Enter the text from the image."
+msgstr "Entrez le texte qui apparaît sur l'image."
+
+# C:\SVN\register-plus\trunk/register-plus.php:1391
+msgid "Previous year"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1392
+msgid "Previous month"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1393
+msgid "Next year"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1394
+msgid "Next Month"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1395
+msgid "Close"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1396
+msgid "Choose Date"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1400
+msgid "Mon"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1400
+msgid "Tue"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1400
+msgid "Wed"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1400
+msgid "Thu"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1400
+msgid "Fri"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1400
+msgid "Sat"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1400
+msgid "Sun"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "January"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "February"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "March"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "April"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "June"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "July"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "August"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "September"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "October"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "November"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1401
+msgid "December"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1110
+msgid "Additional Information"
+msgstr "Informations supplémentaires"
+
+# C:\SVN\register-plus\trunk/register-plus.php:1413
+msgid "Your account will be reviewed by an administrator and you will be notified when it is activated."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1165
+#, fuzzy
+msgid "Please activate your account using the verification link sent to your email address."
+msgstr "Pour vous connecter, il est nécessaire de confirmer votre compte en cliquant sur le lien qui vient de vous être envoyé par Email."
+
+# C:\SVN\register-plus\trunk/register-plus.php:1178
+#, php-format
+msgid "Thank you %s, your account has been verified, please login."
+msgstr "Merci %s, votre compte a été confirmé; vous pouvez vous connecter maintenant."
+
+# C:\SVN\register-plus\trunk/register-plus.php:1650
+msgid "You have another plugin installed that is conflicting with Register Plus.  This other plugin is overriding the user notification emails.  Please see <a href=\"http://skullbit.com/news/register-plus-conflicts/\">Register Plus Conflicts</a> for more information."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1696
+msgid "If you find this plugin useful, please consider "
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1696
+msgid "donating"
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1515
+msgid "Your account requires activation by an administrator before you will be able to login."
+msgstr ""
+
+# C:\SVN\register-plus\trunk/register-plus.php:1249
+msgid "Please use the link above to verify and activate your account"
+msgstr "Cliquez sur le lien ci-dessous pour confirmer et activer votre compte"
+
+# C:\SVN\register-plus\trunk/register-plus.php:1270
+#, php-format
+msgid "New user Register on your blog %s:"
+msgstr "Nouvelle inscription sur votre blog %s:"
+
+# C:\SVN\register-plus\trunk/register-plus.php:1272
+#, php-format
+msgid "E-mail: %s"
+msgstr "Email: %s"
+
+# C:\SVN\register-plus\trunk/register-plus.php:1305
+#, php-format
+msgid "Password: %s"
+msgstr "Mot de passe: %s"
+

@@ -1,0 +1,3702 @@
+abs
+	mixed
+		number
+acos
+	float
+		float
+acosh
+	float
+		float
+addcslashes
+	string
+	string
+		string
+addslashes
+	string
+		string
+array
+	rp mixed
+		array
+array_change_key_case
+	array
+	p int
+		array
+array_chunk
+	array
+	int
+	p bool
+		array
+array_count_values
+	array
+		array
+array_diff
+	array
+	array
+	rp array
+		array
+array_diff_assoc
+	array
+	array
+	rp array
+		array
+array_diff_key
+	array
+	array
+	rp array
+		array
+array_diff_ukey
+	array
+	array
+	rp array
+	p callback
+		array
+array_fill
+	int
+	int
+	mixed
+		array
+array_filter
+	array
+	p callback
+		array
+array_flip
+	array
+		array
+array_intersect
+	array
+	array
+	rp array
+		array
+array_intersect_assoc
+	array
+	array
+	rp array
+		array
+array_intersect_key
+	array
+	array
+	rp array
+		array
+array_intersect_ukey
+	array
+	array
+	rp array
+	p callback
+		array
+array_key_exists
+	mixed
+	array
+		bool
+array_keys
+	array
+	p mixed
+	p bool
+		array
+array_map
+	callback
+	array
+	rp array
+		array
+array_merge
+	array
+	p array
+	rp array
+		array
+array_merge_recursive
+	array
+	rp array
+		array
+array_multisort
+	array &
+	p mixed
+	rp mixed
+		bool
+array_pad
+	array
+	int
+	mixed
+		array
+array_pop
+	array &
+		mixed
+array_product
+	array
+		number
+array_push
+	array &
+	mixed
+	rp mixed
+		int
+array_rand
+	array
+	p int
+		mixed
+array_reduce
+	array
+	callback
+	p int
+		mixed
+array_reverse
+	array
+	p bool
+		array
+array_search
+	mixed
+	array
+	p bool
+		mixed
+array_shift
+	array &
+		mixed
+array_slice
+	array
+	int
+	p int
+	p bool
+		array
+array_splice
+	array &
+	int
+	p int
+	p array
+		array
+array_sum
+	array
+		number
+array_unique
+	array
+		array
+array_unshift
+	array &
+	mixed
+	rp mixed
+		int
+array_values
+	array
+		array
+array_walk
+	array &
+	callback
+	p mixed
+		bool
+arsort
+	array &
+	p int
+		bool
+asin
+	float
+		float
+asinh
+	float
+		float
+asort
+	array &
+	p int
+		bool
+atan
+	float
+		float
+atan2
+	float
+	float
+		float
+atanh
+	float
+		float
+base64_decode
+	string
+		string
+base64_encode
+	string
+		string
+base_convert
+	string
+	int
+	int
+		string
+basename
+	string
+	p string
+		string
+bin2hex
+	string
+		string
+bindec
+	string
+		number
+cal_days_in_month
+	int
+	int
+	int
+		int
+cal_from_jd
+	int
+	int
+		array
+cal_info
+	p calendar]
+		array
+cal_to_jd
+	int
+	int
+	int
+	int
+		int
+call_user_func
+	callback
+	p mixed
+	rp mixed
+		mixed
+call_user_func_array
+	callback
+	array
+		mixed
+ceil
+	float
+		float
+chdir
+	string
+		bool
+checkdate
+	int
+	int
+	int
+		bool
+checkdnsrr
+	string
+	p string
+		int
+chgrp
+	string
+	mixed
+		bool
+chmod
+	string
+	int
+		bool
+chown
+	string
+	mixed
+		bool
+chr
+	int
+		string
+chroot
+	string
+		bool
+chunk_split
+	string
+	p int
+	p string
+		string
+class_alias
+	string
+	string
+		bool
+class_exists
+	string
+	p bool
+		bool
+clearstatcache
+	void
+		void
+closedir
+	resource
+		void
+closelog
+	void
+		bool
+compact
+	mixed
+	rp mixed
+		array
+connection_aborted
+	void
+		int
+connection_status
+	void
+		int
+connection_timeout
+	void
+		bool
+constant
+	string
+		mixed
+convert_cyr_string
+	string
+	string
+	string
+		string
+copy
+	string
+	string
+		bool
+cos
+	float
+		float
+cosh
+	float
+		float
+count
+	int
+	p int
+		int
+count_chars
+	string
+	p int
+		mixed
+crc32
+	string
+		int
+create_function
+	string
+	string
+		string
+crypt
+	string
+	p string
+		string
+ctype_alnum
+	string
+		bool
+ctype_alpha
+	string
+		bool
+ctype_cntrl
+	string
+		bool
+ctype_digit
+	string
+		bool
+ctype_graph
+	string
+		bool
+ctype_lower
+	string
+		bool
+ctype_print
+	string
+		bool
+ctype_punct
+	string
+		bool
+ctype_space
+	string
+		bool
+ctype_upper
+	string
+		bool
+ctype_xdigit
+	string
+		bool
+current
+	array &
+		mixed
+date
+	string
+	p int
+		string
+date_default_timezone_get
+	void
+		string
+date_default_timezone_set
+	string
+		bool
+dba_close
+	resource
+		void
+dba_delete
+	string
+	resource
+		bool
+dba_exists
+	string
+	resource
+		bool
+dba_fetch
+	string
+	resource
+		string
+dba_firstkey
+	resource
+		string
+dba_handlers
+	p bool
+		array
+dba_insert
+	string
+	string
+	resource
+		bool
+dba_list
+	void
+		array
+dba_nextkey
+	resource
+		string
+dba_open
+	string
+	string
+	p string
+	rp mixed
+		resource
+dba_optimize
+	resource
+		bool
+dba_popen
+	string
+	string
+	p string
+	rp mixed
+		resource
+dba_replace
+	string
+	string
+	resource
+		bool
+debug_zval_dump
+	mixed
+		void
+debugger_off
+	void
+		int
+debugger_on
+	string
+		int
+decbin
+	int
+		string
+dechex
+	int
+		string
+decoct
+	int
+		string
+define
+	string
+	mixed
+	p bool
+		bool
+define_syslog_variables
+	void
+		void
+defined
+	string
+		bool
+deg2rad
+	float
+		float
+die
+	string
+		void
+dio_close
+	resource
+		void
+dio_fcntl
+	resource
+	int
+	p mixed
+		mixed
+dio_open
+	string
+	int
+	p int
+		resource
+dio_read
+	resource
+	p int
+		string
+dio_seek
+	resource
+	int
+	p int
+		int
+dio_stat
+	resource
+		array
+dio_tcsetattr
+	resource
+	array
+		bool
+dio_truncate
+	resource
+	int
+		bool
+dio_write
+	resource
+	string
+	p int
+		int
+dir
+	string
+		object
+dirname
+	string
+		string
+disk_free_space
+	string
+		float
+disk_total_space
+	string
+		float
+each
+	array &
+		array
+easter_date
+	p int
+		int
+easter_days
+	p int
+	p int
+		int
+echo
+	string
+	rp string
+		void
+empty
+	mixed
+		bool
+end
+	array &
+		mixed
+ereg
+	string
+	string
+	p array &
+		int
+ereg_replace
+	string
+	string
+	string
+		string
+eregi
+	string
+	string
+	p array &
+		int
+eregi_replace
+	string
+	string
+	string
+		string
+escapeshellarg
+	string
+		string
+escapeshellcmd
+	string
+		string
+eval
+	string
+		mixed
+exec
+	string
+	p array &
+	p int &
+		string
+exit
+	p string
+		void
+exp
+	float
+		float
+explode
+	string
+	string
+	p int
+		array
+expm1
+	float
+		float
+extract
+	array
+	p int
+	p string
+		int
+ezmlm_hash
+	string
+		int
+fclose
+	resource
+		bool
+feof
+	resource
+		bool
+fflush
+	resource
+		bool
+fgetc
+	resource
+		string
+fgetcsv
+	resource
+	p int
+	p string
+	p string
+		array
+fgets
+	resource
+	p int
+		string
+fgetss
+	resource
+	p int
+	p string
+		string
+file
+	string
+	p int
+	p resource
+		array
+file_exists
+	string
+		bool
+file_get_contents
+	string
+	p bool
+	p resource
+	p int
+	p int
+		string
+fileatime
+	string
+		int
+filectime
+	string
+		int
+filegroup
+	string
+		int
+fileinode
+	string
+		int
+filemtime
+	string
+		int
+fileowner
+	string
+		int
+fileperms
+	string
+		int
+filesize
+	string
+		int
+filetype
+	string
+		string
+floatval
+	mixed
+		float
+flock
+	resource
+	int
+	p int &
+		bool
+floor
+	float
+		float
+flush
+	void
+		void
+fmod
+	float
+	float
+		float
+fnmatch
+	string
+	string
+	p int
+		bool
+fopen
+	string
+	string
+	p bool
+	p resource
+		resource
+fpassthru
+	resource
+		int
+fputcsv
+	resource
+	p array
+	p string
+	p string
+		int
+fputs
+	resource
+	string
+	p int
+		int
+fread
+	resource
+	int
+		string
+frenchtojd
+	int
+	int
+	int
+		int
+fscanf
+	resource
+	string
+	rp mixed &
+		mixed
+fseek
+	resource
+	int
+	p int
+		int
+fsockopen
+	string
+	p int
+	p int &
+	p string &
+	p float
+		resource
+fstat
+	resource
+		array
+ftell
+	resource
+		int
+ftp_cdup
+	resource
+		bool
+ftp_chdir
+	resource
+	string
+		bool
+ftp_close
+	resource
+		bool
+ftp_connect
+	string
+	p int
+	p int
+		resource
+ftp_delete
+	resource
+	string
+		bool
+ftp_exec
+	resource
+	string
+		bool
+ftp_fget
+	resource
+	resource
+	string
+	int
+	p int
+		bool
+ftp_fput
+	resource
+	string
+	resource
+	int
+	p int
+		bool
+ftp_get
+	resource
+	string
+	string
+	int
+	p int
+		bool
+ftp_get_option
+	resource
+	int
+		mixed
+ftp_login
+	resource
+	string
+	string
+		bool
+ftp_mdtm
+	resource
+	string
+		int
+ftp_mkdir
+	resource
+	string
+		string
+ftp_nb_continue
+	resource
+		int
+ftp_nb_fget
+	resource
+	resource
+	string
+	int
+	p int
+		int
+ftp_nb_fput
+	resource
+	string
+	resource
+	int
+	p int
+		int
+ftp_nb_get
+	resource
+	string
+	string
+	int
+	p int
+		int
+ftp_nb_put
+	resource
+	string
+	string
+	int
+	p int
+		int
+ftp_nlist
+	resource
+	string
+		array
+ftp_pasv
+	resource
+	bool
+		bool
+ftp_put
+	resource
+	string
+	string
+	int
+	p int
+		bool
+ftp_pwd
+	resource
+		string
+ftp_rawlist
+	resource
+	string
+	p bool
+		array
+ftp_rename
+	resource
+	string
+	string
+		bool
+ftp_rmdir
+	resource
+	string
+		bool
+ftp_set_option
+	resource
+	int
+	mixed
+		bool
+ftp_site
+	resource
+	string
+		bool
+ftp_size
+	resource
+	string
+		int
+ftp_ssl_connect
+	string
+	p int
+	p int
+		resource
+ftp_systype
+	resource
+		string
+ftruncate
+	resource
+	int
+		bool
+func_get_arg
+	int
+		mixed
+func_get_args
+	void
+		array
+func_num_args
+	void
+		int
+function_exists
+	string
+		bool
+fwrite
+	resource
+	string
+	p int
+		int
+gd_info
+	void
+		array
+get_browser
+	p user_agent
+	p bool
+		mixed
+get_class
+	object
+		string
+get_class_methods
+	object
+		array
+get_class_vars
+	string
+		string
+get_declared_classes
+	void
+		array
+get_declared_interfaces
+	void
+		array
+get_defined_functions
+	void
+		array
+get_defined_vars
+	void
+		array
+get_html_translation_table
+	p int
+	p int
+		array
+get_meta_tags
+	string
+	p bool
+		array
+get_object_vars
+	object
+		int
+get_parent_class
+	int
+		string
+get_resource_type
+	resource
+		string
+getcwd
+	void
+		string
+getdate
+	p int
+		array
+gethostbyaddr
+	string
+		string
+gethostbyname
+	string
+		string
+gethostbynamel
+	string
+		array
+getimagesize
+	string
+	p array &
+		array
+getmxrr
+	string
+	array &
+	p array &
+		bool
+getprotobyname
+	string
+		int
+getprotobynumber
+	int
+		string
+getrandmax
+	void
+		int
+getservbyname
+	string
+	string
+		int
+getservbyport
+	int
+	string
+		string
+gettimeofday
+	p bool
+		mixed
+gettype
+	mixed
+		string
+glob
+	string
+	p int
+		array
+gmdate
+	string
+	p int
+		string
+gmmktime
+	p int
+	p int
+	p int
+	p int
+	p int
+	p int
+	p int
+		int
+gmstrftime
+	string
+	p int
+		string
+gregoriantojd
+	int
+	int
+	int
+		int
+header
+	string
+	p bool
+	p int
+		void
+headers_sent
+	p string &
+	p int &
+		bool
+hebrev
+	string
+	p int
+		string
+hebrevc
+	string
+	p int
+		string
+hexdec
+	string
+		number
+highlight_file
+	string
+	p bool
+		mixed
+highlight_string
+	string
+	p bool
+		mixed
+html_entity_decode
+	string
+	p int
+	p string
+		string
+htmlentities
+	string
+	p int
+	p string
+		string
+htmlspecialchars
+	string
+	p int
+	p string
+		string
+htmlspecialchars_decode
+	string
+	p int
+		string
+hypot
+	float
+	float
+		float
+ignore_user_abort
+	p bool
+		int
+image2wbmp
+	resource
+	p string
+	p int
+		int
+image_type_to_mime_type
+	int
+		string
+imagealphablending
+	resource
+	bool
+		bool
+imageantialias
+	resource
+	bool
+		bool
+imagearc
+	resource
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+		bool
+imagechar
+	resource
+	int
+	int
+	int
+	string
+	int
+		bool
+imagecharup
+	resource
+	int
+	int
+	int
+	string
+	int
+		bool
+imagecolorallocate
+	resource
+	int
+	int
+	int
+		int
+imagecolorallocatealpha
+	resource
+	int
+	int
+	int
+	int
+		int
+imagecolorat
+	resource
+	int
+	int
+		int
+imagecolorclosest
+	resource
+	int
+	int
+	int
+		int
+imagecolorclosestalpha
+	resource
+	int
+	int
+	int
+	int
+		int
+imagecolorclosesthwb
+	resource
+	int
+	int
+	int
+		int
+imagecolordeallocate
+	resource
+	int
+		bool
+imagecolorexact
+	resource
+	int
+	int
+	int
+		int
+imagecolorexactalpha
+	resource
+	int
+	int
+	int
+	int
+		int
+imagecolormatch
+	resource
+	resource
+		bool
+imagecolorresolve
+	resource
+	int
+	int
+	int
+		int
+imagecolorresolvealpha
+	resource
+	int
+	int
+	int
+	int
+		int
+imagecolorset
+	resource
+	int
+	int
+	int
+	int
+		void
+imagecolorsforindex
+	resource
+	int
+		array
+imagecolorstotal
+	resource
+		int
+imagecolortransparent
+	resource
+	p int
+		int
+imageconvolution
+	resource
+	array
+	float
+	float
+		bool
+imagecopy
+	resource
+	resource
+	int
+	int
+	int
+	int
+	int
+	int
+		bool
+imagecopymerge
+	resource
+	resource
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+		bool
+imagecopymergegray
+	resource
+	resource
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+		bool
+imagecopyresampled
+	resource
+	resource
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+		bool
+imagecopyresized
+	resource
+	resource
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+		bool
+imagecreate
+	int
+	int
+		resource
+imagecreatefromgd
+	string
+		resource
+imagecreatefromgd2
+	string
+		resource
+imagecreatefromgd2part
+	string
+	int
+	int
+	int
+	int
+		resource
+imagecreatefromgif
+	string
+		resource
+imagecreatefromjpeg
+	string
+		resource
+imagecreatefrompng
+	string
+		resource
+imagecreatefromstring
+	string
+		resource
+imagecreatefromwbmp
+	string
+		resource
+imagecreatefromxbm
+	string
+		resource
+imagecreatefromxpm
+	string
+		resource
+imagecreatetruecolor
+	int
+	int
+		resource
+imagedashedline
+	resource
+	int
+	int
+	int
+	int
+	int
+		bool
+imagedestroy
+	resource
+		bool
+imageellipse
+	resource
+	int
+	int
+	int
+	int
+	int
+		bool
+imagefill
+	resource
+	int
+	int
+	int
+		bool
+imagefilledarc
+	resource
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+	int
+		bool
+imagefilledellipse
+	resource
+	int
+	int
+	int
+	int
+	int
+		bool
+imagefilledpolygon
+	resource
+	array
+	int
+	int
+		bool
+imagefilledrectangle
+	resource
+	int
+	int
+	int
+	int
+	int
+		bool
+imagefilltoborder
+	resource
+	int
+	int
+	int
+	int
+		bool
+imagefontheight
+	int
+		int
+imagefontwidth
+	int
+		int
+imageftbbox
+	float
+	float
+	string
+	string
+	p array
+		array
+imagefttext
+	resource
+	float
+	float
+	int
+	int
+	int
+	string
+	string
+	p array
+		array
+imagegammacorrect
+	resource
+	float
+	float
+		bool
+imagegd
+	resource
+	p string
+		bool
+imagegd2
+	resource
+	p string
+	p int
+	p int
+		bool
+imagegif
+	resource
+	p string
+		bool
+imageinterlace
+	resource
+	p int
+		int
+imageistruecolor
+	resource
+		bool
+imagejpeg
+	resource
+	p string
+	p int
+		bool
+imagelayereffect
+	resource
+	int
+		bool
+imageline
+	resource
+	int
+	int
+	int
+	int
+	int
+		bool
+imageloadfont
+	string
+		int
+imagepalettecopy
+	resource
+	resource
+		void
+imagepng
+	resource
+	p string
+		bool
+imagepolygon
+	resource
+	array
+	int
+	int
+		bool
+imagepsbbox
+	string
+	int
+	int
+	p int
+	p int
+	p float
+		array
+imagepscopyfont
+	resource
+		int
+imagepsencodefont
+	resource
+	string
+		bool
+imagepsextendfont
+	int
+	float
+		bool
+imagepsfreefont
+	resource
+		bool
+imagepsloadfont
+	string
+		resource
+imagepsslantfont
+	resource
+	float
+		bool
+imagepstext
+	resource
+	string
+	resource
+	int
+	int
+	int
+	int
+	int
+	p int
+	p int
+	p float
+	p int
+		array
+imagerectangle
+	resource
+	int
+	int
+	int
+	int
+	int
+		bool
+imagerotate
+	resource
+	float
+	int
+	p int
+		resource
+imagesavealpha
+	resource
+	bool
+		bool
+imagesetbrush
+	resource
+	resource
+		bool
+imagesetpixel
+	resource
+	int
+	int
+	int
+		bool
+imagesetstyle
+	resource
+	array
+		bool
+imagesetthickness
+	resource
+	int
+		bool
+imagesettile
+	resource
+	resource
+		bool
+imagestring
+	resource
+	int
+	int
+	int
+	string
+	int
+		bool
+imagestringup
+	resource
+	int
+	int
+	int
+	string
+	int
+		bool
+imagesx
+	resource
+		int
+imagesy
+	resource
+		int
+imagetruecolortopalette
+	resource
+	bool
+	int
+		bool
+imagettfbbox
+	float
+	float
+	string
+	string
+		array
+imagettftext
+	resource
+	float
+	float
+	int
+	int
+	int
+	string
+	string
+		array
+imagetypes
+	void
+		int
+imagewbmp
+	resource
+	p string
+	p int
+		bool
+imap_8bit
+	string
+		string
+imap_alerts
+	void
+		array
+imap_append
+	resource
+	string
+	string
+	p string
+		bool
+imap_base64
+	string
+		string
+imap_binary
+	string
+		string
+imap_body
+	resource
+	int
+	p int
+		string
+imap_bodystruct
+	resource
+	int
+	string
+		object
+imap_check
+	resource
+		object
+imap_clearflag_full
+	resource
+	string
+	string
+	p string
+		bool
+imap_close
+	resource
+	p int
+		bool
+imap_createmailbox
+	resource
+	string
+		bool
+imap_delete
+	int
+	int
+	p int
+		bool
+imap_deletemailbox
+	resource
+	string
+		bool
+imap_errors
+	void
+		array
+imap_expunge
+	resource
+		bool
+imap_fetch_overview
+	resource
+	string
+	p int
+		array
+imap_fetchbody
+	resource
+	int
+	string
+	p int
+		string
+imap_fetchheader
+	resource
+	int
+	p int
+		string
+imap_fetchstructure
+	resource
+	int
+	p int
+		object
+imap_get_quota
+	resource
+	string
+		array
+imap_get_quotaroot
+	resource
+	string
+		array
+imap_getmailboxes
+	resource
+	string
+	string
+		array
+imap_getsubscribed
+	resource
+	string
+	string
+		array
+imap_headerinfo
+	resource
+	int
+	p int
+	p int
+	p string
+		object
+imap_headers
+	resource
+		array
+imap_last_error
+	void
+		string
+imap_list
+	resource
+	string
+	string
+		array
+imap_lsub
+	resource
+	string
+	string
+		array
+imap_mail
+	string
+	string
+	string
+	p string
+	p string
+	p string
+	p string
+		bool
+imap_mail_compose
+	array
+	array
+		string
+imap_mail_copy
+	resource
+	string
+	string
+	p int
+		bool
+imap_mail_move
+	resource
+	string
+	string
+	p int
+		bool
+imap_mailboxmsginfo
+	resource
+		object
+imap_mime_header_decode
+	string
+		array
+imap_msgno
+	resource
+	int
+		int
+imap_num_msg
+	resource
+		int
+imap_num_recent
+	resource
+		int
+imap_open
+	string
+	string
+	string
+	p int
+		resource
+imap_ping
+	resource
+		bool
+imap_qprint
+	string
+		string
+imap_renamemailbox
+	resource
+	string
+	string
+		bool
+imap_reopen
+	resource
+	string
+	p int
+		bool
+imap_rfc822_parse_adrlist
+	string
+	string
+		array
+imap_rfc822_parse_headers
+	string
+	p string
+		object
+imap_rfc822_write_address
+	string
+	string
+	string
+		string
+imap_search
+	resource
+	string
+	p int
+	p string
+		array
+imap_set_quota
+	resource
+	string
+	int
+		bool
+imap_setacl
+	resource
+	string
+	string
+	string
+		bool
+imap_setflag_full
+	resource
+	string
+	string
+	p string
+		bool
+imap_sort
+	resource
+	int
+	int
+	p int
+	p string
+	p string
+		array
+imap_status
+	resource
+	string
+	int
+		object
+imap_subscribe
+	resource
+	string
+		bool
+imap_thread
+	resource
+	p int
+		array
+imap_timeout
+	int
+	p int
+		mixed
+imap_uid
+	resource
+	int
+		int
+imap_undelete
+	resource
+	int
+	p int
+		bool
+imap_unsubscribe
+	string
+	string
+		bool
+imap_utf7_decode
+	string
+		string
+imap_utf7_encode
+	string
+		string
+imap_utf8
+	string
+		string
+implode
+	string
+	array
+		string
+import_request_variables
+	string
+	p string
+		bool
+in_array
+	mixed
+	array
+	p bool
+		bool
+inet_ntop
+	string
+		string
+inet_pton
+	string
+		string
+interface_exists
+	string
+	p bool
+		bool
+intval
+	mixed
+	p int
+		int
+ip2long
+	string
+		int
+iptcembed
+	string
+	string
+	p int
+		mixed
+iptcparse
+	string
+		array
+is_a
+	object
+	string
+		bool
+is_array
+	int
+		bool
+is_bool
+	mixed
+		bool
+is_callable
+	mixed
+	p bool
+	p string &
+		bool
+is_dir
+	string
+		bool
+is_executable
+	string
+		bool
+is_file
+	string
+		bool
+is_finite
+	float
+		bool
+is_float
+	mixed
+		bool
+is_infinite
+	float
+		bool
+is_int
+	mixed
+		bool
+is_link
+	string
+		bool
+is_nan
+	float
+		bool
+is_null
+	mixed
+		bool
+is_numeric
+	mixed
+		bool
+is_object
+	int
+		bool
+is_readable
+	string
+		bool
+is_resource
+	mixed
+		bool
+is_scalar
+	mixed
+		bool
+is_string
+	mixed
+		bool
+is_subclass_of
+	object
+	string
+		bool
+is_uploaded_file
+	string
+		bool
+is_writable
+	string
+		bool
+isset
+	mixed
+	p mixed
+	rp mixed
+		bool
+jddayofweek
+	int
+	p int
+		mixed
+jdmonthname
+	int
+	int
+		string
+jdtofrench
+	int
+		string
+jdtogregorian
+	int
+		string
+jdtojewish
+	int
+	p bool
+	p int
+		string
+jdtojulian
+	int
+		string
+jdtounix
+	int
+		int
+jewishtojd
+	int
+	int
+	int
+		int
+jpeg2wbmp
+	string
+	string
+	int
+	int
+	int
+		int
+juliantojd
+	int
+	int
+	int
+		int
+key
+	array &
+		mixed
+key_exists
+	mixed
+	array
+		bool
+krsort
+	array &
+	p int
+		bool
+ksort
+	array &
+	p int
+		bool
+lcg_value
+	void
+		float
+levenshtein
+	string
+	string
+	p int
+	p int
+	p int
+		int
+link
+	string
+	string
+		bool
+linkinfo
+	string
+		int
+list
+	mixed
+	rmixed
+		void
+localeconv
+	void
+		array
+localtime
+	p int
+	p bool
+		array
+log
+	float
+	p float
+		float
+log10
+	float
+		float
+log1p
+	float
+		float
+long2ip
+	int
+		string
+lstat
+	string
+		array
+ltrim
+	string
+	p string
+		string
+mail
+	string
+	string
+	string
+	p string
+	p string
+		bool
+max
+	number
+	number
+	rp number
+		mixed
+md5
+	string
+	p bool
+		string
+md5_file
+	string
+	p bool
+		string
+metaphone
+	string
+	p int
+		string
+method_exists
+	object
+	string
+		bool
+mhash
+	int
+	string
+	p string
+		string
+mhash_count
+	void
+		int
+mhash_get_block_size
+	int
+		int
+mhash_get_hash_name
+	int
+		string
+mhash_keygen_s2k
+	int
+	string
+	string
+	int
+		string
+microtime
+	p bool
+		mixed
+min
+	number
+	number
+	rp number
+		mixed
+mkdir
+	string
+	p int
+	p bool
+	p resource
+		bool
+mktime
+	p int
+	p int
+	p int
+	p int
+	p int
+	p int
+	p int
+		int
+money_format
+	string
+	float
+		string
+move_uploaded_file
+	string
+	string
+		bool
+mssql_bind
+	resource
+	string
+	mixed &
+	int
+	p int
+	p int
+	p int
+		bool
+mssql_close
+	p resource
+		bool
+mssql_connect
+	p string
+	p string
+	p string
+	p bool
+		resource
+mssql_data_seek
+	resource
+	int
+		bool
+mssql_execute
+	resource
+	p bool
+		mixed
+mssql_fetch_array
+	resource
+	p int
+		array
+mssql_fetch_assoc
+	resource
+		array
+mssql_fetch_batch
+	resource
+		int
+mssql_fetch_field
+	resource
+	p int
+		object
+mssql_fetch_object
+	resource
+		object
+mssql_fetch_row
+	resource
+		array
+mssql_field_length
+	resource
+	p int
+		int
+mssql_field_name
+	resource
+	p int
+		string
+mssql_field_seek
+	resource
+	int
+		bool
+mssql_field_type
+	resource
+	p int
+		string
+mssql_free_result
+	resource
+		bool
+mssql_free_statement
+	resource
+		bool
+mssql_get_last_message
+	void
+		string
+mssql_guid_string
+	string
+	p int
+		string
+mssql_init
+	string
+	p resource
+		resource
+mssql_min_error_severity
+	int
+		void
+mssql_min_message_severity
+	int
+		void
+mssql_next_result
+	resource
+		bool
+mssql_num_fields
+	resource
+		int
+mssql_num_rows
+	resource
+		int
+mssql_pconnect
+	p servername
+	p string
+	p string
+	p bool
+		resource
+mssql_query
+	string
+	p resource
+	p int
+		mixed
+mssql_result
+	resource
+	int
+	mixed
+		string
+mssql_rows_affected
+	resource
+		int
+mssql_select_db
+	string
+	p resource
+		bool
+mt_getrandmax
+	void
+		int
+mt_rand
+	p int
+	p int
+		int
+mt_srand
+	p int
+		void
+mysql_affected_rows
+	p resource
+		int
+mysql_change_user
+	string
+	string
+	p string
+	p resource
+		int
+mysql_client_encoding
+	p resource
+		string
+mysql_close
+	p resource
+		bool
+mysql_connect
+	p string
+	p string
+	p string
+	p bool
+	p int
+		resource
+mysql_create_db
+	string
+	p resource
+		bool
+mysql_data_seek
+	resource
+	int
+		bool
+mysql_db_name
+	resource
+	int
+	p mixed
+		string
+mysql_db_query
+	string
+	string
+	p resource
+		resource
+mysql_drop_db
+	string
+	p resource
+		bool
+mysql_errno
+	p resource
+		int
+mysql_error
+	p resource
+		string
+mysql_escape_string
+	string
+		string
+mysql_fetch_array
+	resource
+	p int
+		array
+mysql_fetch_assoc
+	resource
+		array
+mysql_fetch_field
+	resource
+	p int
+		object
+mysql_fetch_lengths
+	resource
+		array
+mysql_fetch_object
+	resource
+		object
+mysql_fetch_row
+	resource
+		array
+mysql_field_flags
+	resource
+	int
+		string
+mysql_field_len
+	resource
+	int
+		int
+mysql_field_name
+	resource
+	int
+		string
+mysql_field_seek
+	resource
+	int
+		bool
+mysql_field_table
+	resource
+	int
+		string
+mysql_field_type
+	resource
+	int
+		string
+mysql_free_result
+	resource
+		bool
+mysql_get_client_info
+	void
+		string
+mysql_get_host_info
+	p resource
+		string
+mysql_get_proto_info
+	p resource
+		int
+mysql_get_server_info
+	p resource
+		string
+mysql_info
+	p resource
+		string
+mysql_insert_id
+	p resource
+		int
+mysql_list_dbs
+	p resource
+		resource
+mysql_list_fields
+	string
+	string
+	p resource
+		resource
+mysql_list_processes
+	p resource
+		resource
+mysql_list_tables
+	string
+	p resource
+		resource
+mysql_num_fields
+	resource
+		int
+mysql_num_rows
+	resource
+		int
+mysql_pconnect
+	p string
+	p string
+	p string
+	p int
+		resource
+mysql_ping
+	p resource
+		bool
+mysql_query
+	string
+	p resource
+		resource
+mysql_real_escape_string
+	string
+	p resource
+		string
+mysql_result
+	resource
+	int
+	p mixed
+		string
+mysql_select_db
+	string
+	p resource
+		bool
+mysql_stat
+	p resource
+		string
+mysql_tablename
+	resource
+	int
+		string
+mysql_thread_id
+	p resource
+		int
+mysql_unbuffered_query
+	string
+	p resource
+		resource
+mysqli_embedded_connect
+	p string
+		mysqli
+mysqli_server_end
+	void
+		void
+mysqli_server_init
+	p array
+	p array
+		bool
+natcasesort
+	array &
+		bool
+natsort
+	array &
+		bool
+next
+	array &
+		mixed
+nl2br
+	string
+		string
+nl_langinfo
+	int
+		string
+number_format
+	float
+	p int
+	p string
+	p string
+		string
+ob_clean
+	void
+		void
+ob_end_clean
+	void
+		bool
+ob_end_flush
+	void
+		bool
+ob_flush
+	void
+		void
+ob_get_clean
+	void
+		string
+ob_get_contents
+	void
+		string
+ob_get_flush
+	void
+		string
+ob_get_length
+	void
+		int
+ob_get_level
+	void
+		int
+ob_get_status
+	p bool
+		array
+ob_gzhandler
+	string
+	int
+		string
+ob_implicit_flush
+	p flag]
+		void
+ob_list_handlers
+	void
+		array
+ob_start
+	p callback
+	p int
+	p bool
+		bool
+octdec
+	string
+		number
+odbc_autocommit
+	resource
+	p bool
+		mixed
+odbc_binmode
+	resource
+	int
+		bool
+odbc_close
+	resource
+		void
+odbc_close_all
+	void
+		void
+odbc_columnprivileges
+	resource
+	string
+	string
+	string
+	string
+		resource
+odbc_columns
+	resource
+	p string
+	p string
+	p string
+	p string
+		resource
+odbc_commit
+	resource
+		bool
+odbc_connect
+	string
+	string
+	string
+	p int
+		resource
+odbc_cursor
+	resource
+		string
+odbc_data_source
+	resource
+	int
+		array
+odbc_do
+	resource
+	string
+		resource
+odbc_error
+	p resource
+		string
+odbc_errormsg
+	p resource
+		string
+odbc_exec
+	resource
+	string
+	p int
+		resource
+odbc_execute
+	resource
+	p array
+		bool
+odbc_fetch_array
+	resource
+	p int
+		array
+odbc_fetch_into
+	resource
+	array &
+	p int
+		int
+odbc_fetch_object
+	resource
+	p int
+		object
+odbc_fetch_row
+	resource
+	p int
+		bool
+odbc_field_len
+	resource
+	int
+		int
+odbc_field_name
+	resource
+	int
+		string
+odbc_field_num
+	resource
+	string
+		int
+odbc_field_precision
+	resource
+	int
+		int
+odbc_field_scale
+	resource
+	int
+		int
+odbc_field_type
+	resource
+	int
+		string
+odbc_foreignkeys
+	resource
+	string
+	string
+	string
+	string
+	string
+	string
+		resource
+odbc_free_result
+	resource
+		bool
+odbc_gettypeinfo
+	resource
+	p int
+		resource
+odbc_longreadlen
+	resource
+	int
+		bool
+odbc_next_result
+	resource
+		bool
+odbc_num_fields
+	resource
+		int
+odbc_num_rows
+	resource
+		int
+odbc_pconnect
+	string
+	string
+	string
+	p int
+		resource
+odbc_prepare
+	resource
+	string
+		resource
+odbc_primarykeys
+	resource
+	string
+	string
+	string
+		resource
+odbc_procedurecolumns
+	resource
+	p string
+	p string
+	p string
+	p string
+		resource
+odbc_procedures
+	resource
+	p string
+	p string
+	p string
+		resource
+odbc_result
+	resource
+	mixed
+		mixed
+odbc_result_all
+	resource
+	p string
+		int
+odbc_rollback
+	resource
+		bool
+odbc_setoption
+	resource
+	int
+	int
+	int
+		bool
+odbc_specialcolumns
+	resource
+	int
+	string
+	string
+	string
+	int
+	int
+		resource
+odbc_statistics
+	resource
+	string
+	string
+	string
+	int
+	int
+		resource
+odbc_tableprivileges
+	resource
+	string
+	string
+	string
+		resource
+odbc_tables
+	resource
+	p string
+	p string
+	p string
+	p string
+		resource
+opendir
+	string
+	p resource
+		resource
+openlog
+	string
+	int
+	int
+		bool
+ord
+	string
+		int
+output_add_rewrite_var
+	string
+	string
+		bool
+output_reset_rewrite_vars
+	void
+		bool
+pack
+	string
+	p mixed
+	rp mixed
+		string
+parse_ini_file
+	string
+	p bool
+		array
+parse_str
+	string
+	p array &
+		void
+parse_url
+	string
+		array
+passthru
+	string
+	p int &
+		void
+pathinfo
+	string
+	p int
+		mixed
+pclose
+	resource
+		int
+pcntl_alarm
+	int
+		int
+pcntl_exec
+	string
+	p array
+	p array
+		void
+pcntl_fork
+	void
+		int
+pcntl_signal
+	int
+	callback
+	p bool
+		bool
+pcntl_waitpid
+	int
+	int &
+	p int
+		int
+pcntl_wexitstatus
+	int
+		int
+pcntl_wifexited
+	int
+		bool
+pcntl_wifsignaled
+	int
+		bool
+pcntl_wifstopped
+	int
+		bool
+pcntl_wstopsig
+	int
+		int
+pcntl_wtermsig
+	int
+		int
+pfsockopen
+	string
+	p int
+	p int &
+	p string &
+	p float
+		resource
+php_check_syntax
+	string
+	p string &
+		bool
+pi
+	void
+		float
+png2wbmp
+	string
+	string
+	int
+	int
+	int
+		int
+popen
+	string
+	string
+		resource
+posix_access
+	string
+	p int
+		bool
+posix_ctermid
+	void
+		string
+posix_get_last_error
+	void
+		int
+posix_getcwd
+	void
+		string
+posix_getegid
+	void
+		int
+posix_geteuid
+	void
+		int
+posix_getgid
+	void
+		int
+posix_getgrgid
+	int
+		array
+posix_getgrnam
+	string
+		array
+posix_getgroups
+	void
+		array
+posix_getlogin
+	void
+		string
+posix_getpgid
+	int
+		int
+posix_getpgrp
+	void
+		int
+posix_getpid
+	void
+		int
+posix_getppid
+	void
+		int
+posix_getpwnam
+	string
+		array
+posix_getpwuid
+	int
+		array
+posix_getrlimit
+	void
+		array
+posix_getsid
+	int
+		int
+posix_getuid
+	void
+		int
+posix_isatty
+	int
+		bool
+posix_kill
+	int
+	int
+		bool
+posix_mkfifo
+	string
+	int
+		bool
+posix_mknod
+	string
+	int
+	p int
+	p int
+		bool
+posix_setegid
+	int
+		bool
+posix_seteuid
+	int
+		bool
+posix_setgid
+	int
+		bool
+posix_setpgid
+	int
+	int
+		bool
+posix_setsid
+	void
+		int
+posix_setuid
+	int
+		bool
+posix_strerror
+	int
+		string
+posix_times
+	void
+		array
+posix_ttyname
+	int
+		string
+posix_uname
+	void
+		array
+pow
+	number
+	number
+		number
+preg_filter
+	mixed
+	mixed
+	mixed
+	p int
+	p int &
+		mixed
+preg_grep
+	string
+	array
+	p int
+		array
+preg_last_error
+	void
+		int
+preg_match
+	string
+	string
+	p array &
+	p int
+	p int
+		int
+preg_match_all
+	string
+	string
+	array &
+	p int
+	p int
+		int
+preg_quote
+	string
+	p string
+		string
+preg_replace
+	mixed
+	mixed
+	mixed
+	p int
+	p int &
+		mixed
+preg_replace_callback
+	mixed
+	callback
+	mixed
+	p int
+	p int &
+		mixed
+preg_split
+	string
+	string
+	p int
+	p int
+		array
+prev
+	array &
+		mixed
+print
+	string
+		int
+print_r
+	mixed
+	p bool
+		bool
+printf
+	string
+	p mixed
+	rp mixed
+		int
+proc_close
+	resource
+		int
+proc_open
+	string
+	array
+	array &
+	p string
+	p array
+	p array
+		resource
+property_exists
+	int
+	string
+		bool
+quoted_printable_decode
+	string
+		string
+quotemeta
+	string
+		string
+rad2deg
+	float
+		float
+rand
+	p int
+	p int
+		int
+range
+	mixed
+	mixed
+	p number
+		array
+rawurldecode
+	string
+		string
+rawurlencode
+	string
+		string
+readdir
+	resource
+		string
+readfile
+	string
+	p bool
+	p resource
+		int
+readlink
+	string
+		string
+realpath
+	string
+		string
+register_shutdown_function
+	callback
+	p mixed
+	rp mixed
+		void
+register_tick_function
+	callback
+	p mixed
+	rp mixed
+		bool
+rename
+	string
+	string
+	p resource
+		bool
+reset
+	array &
+		mixed
+rewind
+	resource
+		bool
+rewinddir
+	resource
+		void
+rmdir
+	string
+	p resource
+		bool
+round
+	float
+	p int
+		float
+rsort
+	array &
+	p int
+		bool
+rtrim
+	string
+	p string
+		string
+scandir
+	string
+	p int
+	p resource
+		array
+serialize
+	mixed
+		string
+session_cache_expire
+	p int
+		int
+session_cache_limiter
+	p string
+		string
+session_decode
+	string
+		bool
+session_destroy
+	void
+		bool
+session_encode
+	void
+		string
+session_get_cookie_params
+	void
+		array
+session_id
+	p string
+		string
+session_is_registered
+	string
+		bool
+session_module_name
+	p string
+		string
+session_name
+	p string
+		string
+session_regenerate_id
+	p bool
+		bool
+session_register
+	mixed
+	rp mixed
+		bool
+session_save_path
+	p string
+		string
+session_set_cookie_params
+	int
+	p string
+	p string
+	p bool
+		void
+session_set_save_handler
+	callback
+	callback
+	callback
+	callback
+	callback
+	callback
+		bool
+session_start
+	void
+		bool
+session_unregister
+	string
+		bool
+session_unset
+	void
+		void
+session_write_close
+	void
+		void
+setcookie
+	string
+	p string
+	p int
+	p string
+	p string
+	p bool
+		bool
+setlocale
+	int
+	string
+	rp string
+		string
+settype
+	mixed &
+	string
+		bool
+sha1
+	string
+	p bool
+		string
+sha1_file
+	string
+	p bool
+		string
+shell_exec
+	string
+		string
+shuffle
+	array &
+		bool
+similar_text
+	string
+	string
+	p float &
+		int
+sin
+	float
+		float
+sinh
+	float
+		float
+sleep
+	int
+		int
+sort
+	array &
+	p int
+		bool
+soundex
+	string
+		string
+split
+	string
+	string
+	p int
+		array
+spliti
+	string
+	string
+	p int
+		array
+sprintf
+	string
+	p mixed
+	rp mixed
+		string
+sql_regcase
+	string
+		string
+sqrt
+	float
+		float
+srand
+	p int
+		void
+sscanf
+	string
+	string
+	rp mixed &
+		mixed
+stat
+	string
+		array
+str_pad
+	string
+	int
+	p string
+	p int
+		string
+str_repeat
+	string
+	int
+		string
+str_replace
+	mixed
+	mixed
+	mixed
+	p int &
+		mixed
+str_rot13
+	string
+		string
+str_shuffle
+	string
+		string
+str_word_count
+	string
+	p int
+	p string
+		mixed
+strcasecmp
+	string
+	string
+		int
+strcmp
+	string
+	string
+		int
+strcoll
+	string
+	string
+		int
+strcspn
+	string
+	string
+	p int
+	p int
+		int
+stream_context_get_options
+	resource
+		array
+stream_context_get_params
+	resource
+		array
+stream_context_set_params
+	resource
+	array
+		bool
+stream_get_filters
+	void
+		array
+stream_get_meta_data
+	resource
+		array
+stream_get_transports
+	void
+		array
+stream_get_wrappers
+	void
+		array
+stream_select
+	array &
+	array &
+	array &
+	int
+	p int
+		int
+stream_socket_pair
+	int
+	int
+	int
+		array
+stream_socket_recvfrom
+	resource
+	int
+	p int
+	p string &
+		string
+stream_socket_server
+	string
+	p int &
+	p string &
+	p int
+	p resource
+		resourse
+strftime
+	string
+	p int
+		string
+strip_tags
+	string
+	p string
+		string
+stripcslashes
+	string
+		string
+stripslashes
+	string
+		string
+stristr
+	string
+	string
+		string
+strlen
+	string
+		int
+strnatcasecmp
+	string
+	string
+		int
+strnatcmp
+	string
+	string
+		int
+strncasecmp
+	string
+	string
+	int
+		int
+strncmp
+	string
+	string
+	int
+		int
+strpos
+	string
+	mixed
+	p int
+		int
+strptime
+	string
+	string
+		array
+strrchr
+	string
+	string
+		string
+strrev
+	string
+		string
+strrpos
+	string
+	string
+	p int
+		int
+strspn
+	string
+	string
+	p int
+	p int
+		int
+strstr
+	string
+	string
+		string
+strtok
+	string
+	string
+		string
+strtolower
+	string
+		string
+strtotime
+	string
+	p int
+		int
+strtoupper
+	string
+		string
+strtr
+	string
+	string
+	string
+		string
+strval
+	mixed
+		string
+substr
+	string
+	int
+	p int
+		string
+substr_count
+	string
+	string
+	p int
+	p int
+		int
+substr_replace
+	mixed
+	string
+	int
+	p int
+		mixed
+symlink
+	string
+	string
+		bool
+syslog
+	int
+	string
+		bool
+system
+	string
+	p int &
+		string
+tan
+	float
+		float
+tanh
+	float
+		float
+tempnam
+	string
+	string
+		string
+time
+	void
+		int
+time_sleep_until
+	float
+		bool
+tmpfile
+	void
+		resource
+touch
+	string
+	p int
+	p int
+		bool
+trim
+	string
+	p string
+		string
+uasort
+	array &
+	callback
+		bool
+ucfirst
+	string
+		string
+ucwords
+	string
+		string
+uksort
+	array &
+	callback
+		bool
+umask
+	p int
+		int
+uniqid
+	p prefix
+	p bool
+		string
+unixtojd
+	p int
+		int
+unlink
+	string
+	p resource
+		bool
+unpack
+	string
+	string
+		array
+unregister_tick_function
+	string
+		void
+unserialize
+	string
+		mixed
+unset
+	mixed
+	p mixed
+	rp mixed
+		void
+urldecode
+	string
+		string
+urlencode
+	string
+		string
+usleep
+	int
+		void
+usort
+	array &
+	callback
+		bool
+var_dump
+	mixed
+	p mixed
+	rp mixed
+		void
+var_export
+	mixed
+	p bool
+		mixed
+vprintf
+	string
+	array
+		int
+vsprintf
+	string
+	array
+		string
+wordwrap
+	string
+	p int
+	p string
+	p bool
+		string
+xml_parse
+	resource
+	string
+	p bool
+		int
+xml_parse_into_struct
+	resource
+	string
+	array &
+	p array &
+		int
+xml_parser_get_option
+	resource
+	int
+		mixed
+xml_parser_set_option
+	resource
+	int
+	mixed
+		mixed
+xml_set_character_data_handler
+	resource
+	callback
+		bool
+xml_set_default_handler
+	resource
+	callback
+		bool
+xml_set_element_handler
+	resource
+	callback
+	callback
+		bool
+xml_set_end_namespace_decl_handler
+	resource
+	callback
+		bool
+xml_set_external_entity_ref_handler
+	resource
+	callback
+		bool
+xml_set_notation_decl_handler
+	resource
+	callback
+		bool
+xml_set_object
+	resource
+	int
+		bool
+xml_set_processing_instruction_handler
+	resource
+	callback
+		bool
+xml_set_start_namespace_decl_handler
+	resource
+	callback
+		bool
+xml_set_unparsed_entity_decl_handler
+	resource
+	callback
+		bool

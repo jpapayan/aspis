@@ -1,0 +1,438 @@
+# Translation of the WordPress plugin   by .
+# Copyright (C) 2010 
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/mylinksdump\n"
+"POT-Creation-Date: 2010-04-18 16:36+0000\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extra/myLDAdd.php:107 myLinksDump.php:313 myLinksDump.php:322
+#: myLinksDump.php:332
+msgid "Link saved."
+msgstr ""
+
+#: extra/myLDAdd.php:111 myLinksDump.php:326
+msgid "Link not saved. Entered link is already in database."
+msgstr ""
+
+#: extra/myLDbranding.php:46
+msgid "Previous Link"
+msgstr ""
+
+#: extra/myLDbranding.php:54
+msgid "Next Link"
+msgstr ""
+
+#: extra/myLDbranding.php:178
+msgid "Home Page"
+msgstr ""
+
+#: extra/myLDbranding.php:184
+msgid "Visit this"
+msgstr ""
+
+#: extra/myLDbranding.php:184 extra/myLDbranding.php:185
+msgid "Send to Yahoo messenger friends"
+msgstr ""
+
+#: extra/myLDbranding.php:187 extra/myLDbranding.php:188
+msgid "RSS Feed"
+msgstr ""
+
+#: extra/myLDbranding.php:190 extra/myLDbranding.php:191
+msgid "Add to Digg"
+msgstr ""
+
+#: extra/myLDbranding.php:193 extra/myLDbranding.php:194
+msgid "Add to Delicious"
+msgstr ""
+
+#: extra/myLDbranding.php:196 extra/myLDbranding.php:197
+msgid "Add to FriendFeed"
+msgstr ""
+
+#: extra/myLDbranding.php:199 extra/myLDbranding.php:200
+msgid "Add to Balatarin"
+msgstr ""
+
+#: extra/myLDbranding.php:202 extra/myLDbranding.php:203
+msgid "Add to Mohandes"
+msgstr ""
+
+#: myLinksDump.php:130 myLinksDump.php:739 myLinksDump.php:1190
+#: myLinksDump.php:1191
+msgid "myLinksDump"
+msgstr ""
+
+#: myLinksDump.php:156 myLinksDump.php:604
+msgid "Are you sure?"
+msgstr ""
+
+#: myLinksDump.php:168
+msgid "Add new link"
+msgstr ""
+
+#: myLinksDump.php:173
+msgid "Link Title"
+msgstr ""
+
+#: myLinksDump.php:180 myLinksDump.php:481
+msgid "Link URL"
+msgstr ""
+
+#: myLinksDump.php:185
+msgid "Please input fully qaulified URL with <code>http://</code>"
+msgstr ""
+
+#: myLinksDump.php:190
+msgid "موضوع"
+msgstr ""
+
+#: myLinksDump.php:222
+msgid "Little Description"
+msgstr ""
+
+#: myLinksDump.php:228
+msgid " Approval "
+msgstr ""
+
+#: myLinksDump.php:243 myLinksDump.php:912 myLinksDump.php:917
+#: myLinksDump.php:932 myLinksDump.php:937 myLinksDump.php:954
+#: myLinksDump.php:959 myLinksDump.php:974 myLinksDump.php:979
+#: myLinksDump.php:994 myLinksDump.php:999 myLinksDump.php:1014
+#: myLinksDump.php:1019 myLinksDump.php:1034 myLinksDump.php:1039
+#: myLinksDump.php:1054 myLinksDump.php:1059 myLinksDump.php:1074
+#: myLinksDump.php:1079
+msgid " Yes "
+msgstr ""
+
+#: myLinksDump.php:245 myLinksDump.php:913 myLinksDump.php:918
+#: myLinksDump.php:933 myLinksDump.php:938 myLinksDump.php:955
+#: myLinksDump.php:960 myLinksDump.php:975 myLinksDump.php:980
+#: myLinksDump.php:995 myLinksDump.php:1000 myLinksDump.php:1015
+#: myLinksDump.php:1020 myLinksDump.php:1035 myLinksDump.php:1040
+#: myLinksDump.php:1055 myLinksDump.php:1060 myLinksDump.php:1075
+#: myLinksDump.php:1080
+msgid " No "
+msgstr ""
+
+#: myLinksDump.php:253 myLinksDump.php:1143
+msgid "Save Changes"
+msgstr ""
+
+#: myLinksDump.php:257
+msgid "Reset Form"
+msgstr ""
+
+#: myLinksDump.php:262 myLinksDump.php:599
+msgid "Delete"
+msgstr ""
+
+#: myLinksDump.php:263
+msgid "Add New Link"
+msgstr ""
+
+#: myLinksDump.php:287
+msgid "Link deleted."
+msgstr ""
+
+#: myLinksDump.php:339
+msgid "Link not saved. Please fill required field."
+msgstr ""
+
+#: myLinksDump.php:348
+msgid "EditLinksDump"
+msgstr ""
+
+#: myLinksDump.php:470
+msgid "List of links"
+msgstr ""
+
+#: myLinksDump.php:473 myLinksDump.php:1511
+msgid "Total Links"
+msgstr ""
+
+#: myLinksDump.php:476
+msgid "Sort by:"
+msgstr ""
+
+#: myLinksDump.php:478
+msgid "Select Column"
+msgstr ""
+
+#: myLinksDump.php:479 myLinksDump.php:503 myLinksDump.php:589
+msgid "Visits"
+msgstr ""
+
+#: myLinksDump.php:480 myLinksDump.php:500 myLinksDump.php:586
+msgid "Title"
+msgstr ""
+
+#: myLinksDump.php:482 myLinksDump.php:502 myLinksDump.php:588
+msgid "Date Added"
+msgstr ""
+
+#: myLinksDump.php:483
+msgid "تاییده"
+msgstr ""
+
+#: myLinksDump.php:486
+msgid "Select Direction"
+msgstr ""
+
+#: myLinksDump.php:487
+msgid "Ascending"
+msgstr ""
+
+#: myLinksDump.php:488
+msgid "Descending"
+msgstr ""
+
+#: myLinksDump.php:492
+msgid "Search"
+msgstr ""
+
+#: myLinksDump.php:501 myLinksDump.php:587
+msgid "Description"
+msgstr ""
+
+#: myLinksDump.php:504 myLinksDump.php:590
+msgid "Edit"
+msgstr ""
+
+#: myLinksDump.php:560 myLinksDump.php:563
+msgid "Edit Link"
+msgstr ""
+
+#: myLinksDump.php:563
+msgid "Approve Link"
+msgstr ""
+
+#: myLinksDump.php:598
+msgid "Bulk Actions"
+msgstr ""
+
+#: myLinksDump.php:600
+msgid "Approve"
+msgstr ""
+
+#: myLinksDump.php:612
+msgid "Apply"
+msgstr ""
+
+#: myLinksDump.php:624 myLinksDump.php:626 myLinksDump.php:1595
+#: myLinksDump.php:1597 myLinksDump.php:1611 myLinksDump.php:1613
+msgid "First"
+msgstr ""
+
+#: myLinksDump.php:624 myLinksDump.php:628 myLinksDump.php:1595
+#: myLinksDump.php:1599 myLinksDump.php:1611 myLinksDump.php:1615
+msgid "Prev"
+msgstr ""
+
+#: myLinksDump.php:630 myLinksDump.php:1601 myLinksDump.php:1617
+msgid "Page"
+msgstr ""
+
+#: myLinksDump.php:630 myLinksDump.php:1601 myLinksDump.php:1617
+msgid "of"
+msgstr ""
+
+#: myLinksDump.php:632 myLinksDump.php:635 myLinksDump.php:1603
+#: myLinksDump.php:1606 myLinksDump.php:1619 myLinksDump.php:1622
+msgid "Next"
+msgstr ""
+
+#: myLinksDump.php:632 myLinksDump.php:636 myLinksDump.php:1603
+#: myLinksDump.php:1607 myLinksDump.php:1619 myLinksDump.php:1623
+msgid "Last"
+msgstr ""
+
+#: myLinksDump.php:647
+msgid "Top 10 Links"
+msgstr ""
+
+#: myLinksDump.php:675
+msgid "Top 10 Links of Month"
+msgstr ""
+
+#: myLinksDump.php:703
+msgid "Top 10 Links of Week"
+msgstr ""
+
+#: myLinksDump.php:820
+msgid "Options saved."
+msgstr ""
+
+#: myLinksDump.php:849
+msgid "myLinksDump Settings"
+msgstr ""
+
+#: myLinksDump.php:856
+msgid "Links Dump Title"
+msgstr ""
+
+#: myLinksDump.php:860
+msgid "Links Dump Title(Widget)"
+msgstr ""
+
+#: myLinksDump.php:864
+msgid "Number of links to display(front-end)"
+msgstr ""
+
+#: myLinksDump.php:867 myLinksDump.php:874 myLinksDump.php:881
+#: myLinksDump.php:888 myLinksDump.php:895
+msgid "Items per page."
+msgstr ""
+
+#: myLinksDump.php:871
+msgid "Number of links to display(widget)"
+msgstr ""
+
+#: myLinksDump.php:878
+msgid "Number of links to display(back-end)"
+msgstr ""
+
+#: myLinksDump.php:885
+msgid "Number of links to display(RSS feed)"
+msgstr ""
+
+#: myLinksDump.php:892
+msgid "Number of days to display(archive)"
+msgstr ""
+
+#: myLinksDump.php:899
+msgid "Archive page ID"
+msgstr ""
+
+#: myLinksDump.php:902
+msgid "If you don't know about this, then read FAQ in readme.txt file."
+msgstr ""
+
+#: myLinksDump.php:906
+msgid "Show counter"
+msgstr ""
+
+#: myLinksDump.php:926
+msgid "Short URL"
+msgstr ""
+
+#: myLinksDump.php:944
+msgid "Whether to show full address upon showing link or just show short form."
+msgstr ""
+
+#: myLinksDump.php:948
+msgid "Show description(front-end)"
+msgstr ""
+
+#: myLinksDump.php:968
+msgid "Show description(widget)"
+msgstr ""
+
+#: myLinksDump.php:988
+msgid "Allow repeated link"
+msgstr ""
+
+#: myLinksDump.php:1008
+msgid "Open links in new window"
+msgstr ""
+
+#: myLinksDump.php:1028
+msgid "Open links with my branding"
+msgstr ""
+
+#: myLinksDump.php:1048
+msgid "Send notification email on user submission"
+msgstr ""
+
+#: myLinksDump.php:1068
+msgid "Auto approve submitted links"
+msgstr ""
+
+#: myLinksDump.php:1088
+msgid "Branding bar background color"
+msgstr ""
+
+#: myLinksDump.php:1092
+msgid "It must be in HEX format without leading # sign."
+msgstr ""
+
+#: myLinksDump.php:1097
+msgid "Links dump style"
+msgstr ""
+
+#: myLinksDump.php:1115
+msgid "This will be used to set style of Link Dump on front-end."
+msgstr ""
+
+#: myLinksDump.php:1120
+msgid "myLinksDump FeedBurner address"
+msgstr ""
+
+#: myLinksDump.php:1125
+msgid "If you leave this field blank, default RSS output will be shown."
+msgstr ""
+
+#: myLinksDump.php:1130
+msgid "myLinksDump RSS description"
+msgstr ""
+
+#: myLinksDump.php:1135
+msgid "Specify your description for myLinksDump RSS feed."
+msgstr ""
+
+#: myLinksDump.php:1150
+msgid "Notes on using quick add feature"
+msgstr ""
+
+#: myLinksDump.php:1151
+msgid ""
+"You can add link to your links dump while you are surfing using your "
+"browser. \r\n"
+"      In order to do this bookmark generated link and press it when ever you "
+"liked a \r\n"
+"      link. When you press this bookmark, you'll be presented with pop-up "
+"window filled with \r\n"
+"      the URL and title of the link you&#39;ve liked. By the time you did "
+"this, you can \r\n"
+"      type your remark on that link and press <strong>Add My Link!</strong> "
+"button."
+msgstr ""
+
+#: myLinksDump.php:1158
+msgid "Generated Bookmard"
+msgstr ""
+
+#: myLinksDump.php:1159
+msgid "myLD Quick Adder"
+msgstr ""
+
+#: myLinksDump.php:1162
+msgid "Click Here to See How"
+msgstr ""
+
+#: myLinksDump.php:1217
+msgid "Widget Title:"
+msgstr ""
+
+#: myLinksDump.php:1223
+msgid "Number of links to display:"
+msgstr ""
+
+#: myLinksDump.php:1522
+msgid "Sort by Visits"
+msgstr ""
+
+#: myLinksDump.php:1522
+msgid "Sort by Title"
+msgstr ""

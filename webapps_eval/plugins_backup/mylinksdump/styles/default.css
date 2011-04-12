@@ -1,0 +1,45 @@
+.ldWrapper{
+ border: 1px solid #0066FF;
+ background-color: #D5E2FF;
+ padding: 5px 10px 5px 10px; 
+ font-family:Tahoma,Arial,Times New Roman;
+ font-size:0.8em;
+ font-weight:normal;
+}
+
+#ldLinksList{
+ direction:rtl;
+ font-family:tahoma;
+ padding:0 15px 10px;
+}
+
+#ldLink{
+ list-style-type: none;
+ vertical-align:middle;
+}
+
+#ldLinkItem{
+ font-weight:normal;
+ font-size: 8pt;
+}
+
+#ldTitle{
+ text-align:center;
+ font-weight:bold;
+}
+
+
+.ArchiveWrapperArea{
+ 
+}
+
+.dateTitleArea{
+background-color:#BC0707;
+border:1px solid #F30505;
+ text-align: center;
+ height:20px;
+ font-size: 0.9em;
+ font-weight: bold;
+ padding: 5px 0 5px 0px;
+ margin:5px 0;
+}

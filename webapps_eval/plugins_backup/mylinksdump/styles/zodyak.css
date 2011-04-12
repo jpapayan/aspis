@@ -1,0 +1,51 @@
+/*
+	myLinksDump Plugin Zodyak Style.
+	Version: 1.0
+	Copyright © 2009 - 2011
+	Designed By :Web.Riot.ir
+	M. Ali. Taebi
+	http://pat.riot.ir
+	Email:taebi.ali@gmail.com
+*/
+
+.ldWrapper {
+	background-color:#F5F5F5;
+	border:2px solid #CDCDCD;
+	-moz-border-radius: 13px;
+	-khtml-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	padding:10px 0px 7px 0px!important;
+
+	}
+.ldWrapper ul {
+	margin-right:0px!important;
+	}
+.ldWrapper ul li a,
+.ldWrapper ul li a:hover,
+.ldWrapper ul li a:visited {
+	text-decoration:none;
+	color:#0066CC;
+	}
+.ldWrapper ul li {
+	display:block!important;
+	padding:5px!important;
+	background-color:#F5F5F5;
+	border-bottom:1px solid #DFDFDF;
+	}
+.ldWrapper ul li:before{
+	content:' '!important;
+	}
+#ldLink:hover {
+	background-color:#FFFFCC;
+	}
+#ldTitle { 
+	padding:5px!important;
+	background-color:#FBFBFB;
+	margin-top:0px!important;
+	text-align:center;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:18px;
+	color:#8C8C8C;
+	cursor:pointer;
+	}

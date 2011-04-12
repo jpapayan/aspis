@@ -1,0 +1,16 @@
+>functions
+/home/papajohn/public_html/wp_edited/wp-content/plugins/register-plus/captcha_aaa.php
+/home/papajohn/public_html/wp_edited/wp-content/plugins/register-plus/dash_widget_aaa.php
+/home/papajohn/public_html/wp_edited/wp-content/plugins/register-plus/register-plus_aaa.php
+RegErrors
+RegForm
+RegMsg
+RegPlusSettings
+RegisterPlusWidget
+WP_MatchesMapRegex
+add_magic_quotes
+edited_setup
+esc_sql
+>classes
+RegisterPlusPlugin
+wpdb

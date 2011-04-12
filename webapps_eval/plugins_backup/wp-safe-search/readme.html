@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Category" content="wordpress,plugins,free,wordpress plugins,free wordpress plugins" />
+<meta name="Classification"content="wordpress,plugins,free,wordpress plugins,free wordpress plugins" />
+</head>
+<title>Wordpress Safe Search Plugin</title>
+</head>
+<body>
+<h2>Wordpress Safe Search Plugin</h2>
+<p>=== Plugin Name ===<br/>
+Contributors: wobeo<br/>
+Donate link:  http://wobeo.com/wordpress-free-plugins/wp-safesearch-filter-wordpress-adult-content/<br/>
+Tags: wordpress, plugin, filter, content, categories, category, tags, tag, widgets, widget<br/>
+Requires at least: 3.0.1<br/>
+Tested up to: 3.0.1<br/>
+Stable tag: 0.7<br/>
+</p>
+
+<p>WP Safe Search acts as a simple filter on posts/pages lists by hiding the posts belonging to categories and tags ids you have marked as restricted.</p>
+
+<h3>== Description ==</h3>
+
+<p>Filtering content becomes a real problem when it comes to "offendant" material mixed with less specific one. Search engines may disallow ALL your content just because you do not have set any proper system to filter a few posts out of the rest. WP Safe Search provides a simple way for your WordPress website to follow such restrictive guidelines just by entering a few categories/tags ids on the plugin settings page and then filtering the corresponding posts. At any moment will your readers be able to switch the filter On/Off, thus letting them choose wether to read or ignore posts you have marked as restricted to a specific audience (provided you properly set up the WP Safe Search widget or template tag).</p>
+
+<h3>== Installation ==</h3>
+
+<p>1. Unzip and upload the wp-safesearch directory to the /wp-content/plugins/ directory.<br/>
+2. Activate the plugin through the "Plugins" section of WordPress admin panel.<br/>
+3. Go to WordPress admin area and list the categories and tags to hide on the Settings page.<br/>
+4. Place &lt;?php if (function_exists('wpss_safesearch')) { echo wpss_safesearch(); } ?&gt; in your templates or use the provided widget.<br/>
+</p>
+
+<h3>== Frequently Asked Questions ==</h3>
+
+<h4>= What is WP Safe Search? =</h4>
+
+<p>WP Safe Search provides your visitors a "safe way" to surf your site by filtering the categories/tags you may not find safe to let them browse without being conscious of the related risk.<br/>
+By activating this plugin, you now have the ability to efficiently hide categories/tags to the first coming visitors, while letting them a chance to access the entire content later.<br/>
+WP Safe Search does not modify your database content, it only slightly changes the way it is rendered.<br/>
+</p>
+
+<h4>= How to filter categories/tags? =</h4>
+
+<p>1. Activate the plugin and go to the settings page<br/>
+2. Enter as many categories and tags ids as wanted in the general options fields. Ensure to separate ids by commas!<br/>
+3. Put the WP Safe Search widget in one of your site's sidebars.<br/>
+4. You may also want to use the following template tag in your theme's files:<br/>
+  &lt;?php if (function_exists('wpss_safesearch')) { echo wpss_safesearch(); } ?&gt;<br/>
+5. To enclose the resulting html code between specific html tags, simply use the before/after parameters:<br/>
+  &lt;?php if (function_exists('wpss_safesearch')) { echo wpss_safesearch('li','li'); } ?&gt;<br/>
+</p>
+
+<h4>= How does it work? =</h4>
+
+<p>In order to set the filter on, the visitor's browser MUST accept cookies.<br/>
+The filter is On as soon you activate the plugin. It means that your visitors MUST deactivate the Safe Search filter first through the link provide by the widget (or the template tag) to access the hidden posts. This makes some sense as the filtered content being supposed to be offendant or risky, it should not be shown prior to the visitor's consent.<br/>
+The plugin does not alter your content in any way, it simply modifies the genuine WP Query whenever the filter is switched On/Off. So if you deactivate the plugin (or set non-existent categories/tags ids), all your original content will be brought back.<br/>
+If a post belongs at least to one of the filtered categories/tags and the visitor's filter is set to On, it won't be shown anywhere.<br/>
+NB: The filtering provided by WP Safe Search doesn't apply to any of the WordPress' RSS feeds.<br/>
+</p>
+
+<h4>= How to remove the WP Safe Search filter? =</h4>
+
+<p>Just deactivate/uninstall the plugin to get your WordPress website go and roll as it used to before!<br/>
+If you need to disable the filter temporarily (for testing purposes by example), you can deactivate it OR set the filtered categories and tags to a non existent value (ie 0) through the plugin settings page...<br/>
+</p>
+
+<h4>= What about caching systems ? =</h4>
+
+<p>As for 0.3 version, the plugin does well even if a caching system is running.<br/>
+The cache systems generally serve plain html files instead of tirelessly running the same queries for any page requested, so the filtered lists/pages/posts are now suffixed by a specific query var (<strong>safesearch=true|false</strong>), thus insuring separately cached files for filtered and unfiltered urls.<br/>
+</p>
+
+<h4>= How to avoid duplicate content =</h4>
+
+<p><strong>Do not forget</strong> to inform the search engine of a possible duplicate content by:<br/>
+- using a canonical url on each post/page created,<br/>
+- adding the plugin added query var as to be ignored by search engines.<br/>
+Example: go to Google Webmaster Tools > Site Configuration > Parameter Handling and add there the plugin parameter <strong>safesearch</strong> with the "action" set to "Ignore", which should prevent the bot to explore the pages twice.<br/>
+</p>
+
+<h4>= How to inform the visitor the content has been filtered? =</h4>
+
+<p>There is no simple way to notify visitors that some posts aren't shown in combined archives (like date archives, searches,...), as safe posts will still be shown while unsafe ones will be effectively filtered. However, for plain filtered categories and tags lists (the archives corresponding to the admin plugin set ids), you will better customize your 404 template to indicate that the archive or search content may be altered by the filter being active.<br/>
+</p>
+
+<h4>= What about custom taxonomies? =</h4>
+
+<p>WP Safe Search does not currently support custom taxonomies.</p>
+
+<h4>= Possible other uses =</h4>
+
+<p>You may also directly use the plugin in your templates file thats way:<br/>
+
+&lt;?php<br/>
+ if ( function_exists('wpss_getcookie') )<br/>
+ {<br/>
+	// the plugin is active, we will test the filter's state<br/>
+	if ( wpss_getcookie() )<br/>
+	{<br/>
+		// filter is On<br/>
+		... treatment here<br/>
+	}<br/>
+	else<br/>
+	{<br/>
+		// filter is Off<br/>
+		... treatment there<br/>
+	}<br/>
+ }<br/>
+?&gt;<br/>
+</p>
+
+<h4>= What about support? =</h4>
+
+<p>I can't spend as much times as I should in order to support plainly this plugin, so use them at your own risk and do not wait for quick answers to inquiries neither for updates on a regular basis. Fell free anyhow to use the forums as I will try and look there from time to time.</p>
+
+<h3>== Screenshots ==</h3>
+<p>Coming soon</p>
+
+<h3>== Upgrade Notice==</h3>
+
+<h4>= Cache =</h4>
+
+<p>Do not forget to empty your cache after upgrading.<br/>
+</p>
+
+<h4>= Filenames changes =</h4>
+
+<p>Since V0.3, filenames have changed to reflect the WordPress repository rules (wp-safe-search instead of wp-safesearch).</p>
+<p>To upgrade to vX.X from v0.3, please:<br/>
+* deactivate plugin,<br/>
+* delete plugin files either through admin panel or directly through FTP,<br/>
+* reinstall plugin.<br/>
+</p>
+
+<h3>== Changelog ==</h3>
+
+<h4>= 0.6 =</h4>
+<p>* filenames changed for reflecting WP repositery rules<br/>
+</p>
+	
+<h4>= 0.3 =</h4>
+<p>* cache plugins support added<br/>
+</p>
+	
+<h4>= 0.2 =</h4>
+<p>* support for WPTouch added<br/>
+</p>
+
+<h4>= 0.1 =</h4>
+<p>* beta release<br/>
+</p>
+
+</body>
+</html>

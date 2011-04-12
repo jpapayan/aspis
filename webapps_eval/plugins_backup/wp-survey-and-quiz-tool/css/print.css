@@ -1,0 +1,21 @@
+div#wphead {
+ display:none;
+}
+
+div#footer {
+ display:none;
+}
+div#adminmenu {
+ display:none;
+}
+div#screen-meta {
+ display:none;
+}
+
+div#wpbody {
+ display:block;
+}
+
+div.wrap {
+ display:block;
+}

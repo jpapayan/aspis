@@ -1,0 +1,17 @@
+>functions
+/home/papajohn/public_html/wp_edited/wp-content/plugins/embedded-video-with-link/embedded-video.phpAAA
+/home/papajohn/public_html/wp_edited/wp-content/plugins/embedded-video-with-link/embedded-video-popup.phpAAA
+add_magic_quotes
+edited_setup
+embedded_video_mcebutton
+embedded_video_mceplugin
+embeddedvideo_add_options_panel
+embeddedvideo_initialize
+embeddedvideo_mceinit
+embeddedvideo_option_page
+embeddedvideo_plugin
+embeddedvideo_plugin_callback
+embeddedvideo_script
+esc_sql
+>classes
+wpdb

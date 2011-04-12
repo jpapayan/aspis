@@ -1,0 +1,205 @@
+>functions
+chooser
+	array
+		&array
+ff
+	array
+		array
+ftainted
+	array &
+	array &
+	array
+		array
+funtainted
+		array
+funtainted
+	array &
+	array &
+	array
+		array
+funtainted2
+		array
+gg
+	array
+	array
+		array
+hh
+	array &
+	array
+		&array
+hh2
+	array
+	array
+		array
+ii
+		array
+ss
+		array
+zz
+	array
+		array
+zz2
+	array &
+	array
+		array
+>methods
+aaa
+	array
+		array
+clA
+	array
+		array
+clB
+	array
+		array
+fexternal
+		array
+finternal
+	array
+		array
+finternalobject
+	array
+		array
+freceiver
+	array
+	array
+		array
+fref
+	array &
+		array
+gref
+		array
+hi
+		array
+set
+	array
+		array
+setvalues
+	array
+		array
+ss (  )
+Aspis generated prototype (array)
+ii (  )
+Aspis generated prototype (array)
+ff ( array param )
+Aspis generated prototype (array)
+hh ( array &param, array param )
+Aspis generated prototype (&array)
+hh2 ( array param, array param )
+Aspis generated prototype (array)
+gg ( array param, array param )
+Aspis generated prototype (array)
+zz ( array param )
+Aspis generated prototype (array)
+zz2 ( array &param, array param )
+Aspis generated prototype (array)
+method clA ( array param )
+Aspis generated prototype (array)
+method finternal ( array param )
+Aspis generated prototype (array)
+method finternalobject ( array param )
+Aspis generated prototype (array)
+method fexternal (  )
+Aspis generated prototype (array)
+method freceiver ( array param, array param )
+Aspis generated prototype (array)
+method setvalues ( array param )
+Aspis generated prototype (array)
+method clB ( array param )
+Aspis generated prototype (array)
+method finternal ( array param )
+Aspis generated prototype (array)
+method finternalobject ( array param )
+Aspis generated prototype (array)
+method fexternal (  )
+Aspis generated prototype (array)
+method freceiver ( array param, array param )
+Aspis generated prototype (array)
+method setvalues ( array param )
+Aspis generated prototype (array)
+funtainted (  )
+Aspis generated prototype (array)
+ss (  )
+Aspis generated prototype (array)
+ii (  )
+Aspis generated prototype (array)
+ff ( array param )
+Aspis generated prototype (array)
+hh ( array &param, array param )
+Aspis generated prototype (&array)
+hh2 ( array param, array param )
+Aspis generated prototype (array)
+gg ( array param, array param )
+Aspis generated prototype (array)
+zz ( array param )
+Aspis generated prototype (array)
+zz2 ( array &param, array param )
+Aspis generated prototype (array)
+method clA ( array param )
+Aspis generated prototype (array)
+method finternal ( array param )
+Aspis generated prototype (array)
+method finternalobject ( array param )
+Aspis generated prototype (array)
+method fexternal (  )
+Aspis generated prototype (array)
+method freceiver ( array param, array param )
+Aspis generated prototype (array)
+method setvalues ( array param )
+Aspis generated prototype (array)
+method clB ( array param )
+Aspis generated prototype (array)
+method finternal ( array param )
+Aspis generated prototype (array)
+method finternalobject ( array param )
+Aspis generated prototype (array)
+method fexternal (  )
+Aspis generated prototype (array)
+method freceiver ( array param, array param )
+Aspis generated prototype (array)
+method setvalues ( array param )
+Aspis generated prototype (array)
+funtainted (  )
+Aspis generated prototype (array)
+ss (  )
+Aspis generated prototype (array)
+ii (  )
+Aspis generated prototype (array)
+ff ( array param )
+Aspis generated prototype (array)
+hh ( array &param, array param )
+Aspis generated prototype (&array)
+hh2 ( array param, array param )
+Aspis generated prototype (array)
+gg ( array param, array param )
+Aspis generated prototype (array)
+zz ( array param )
+Aspis generated prototype (array)
+zz2 ( array &param, array param )
+Aspis generated prototype (array)
+method clA ( array param )
+Aspis generated prototype (array)
+method finternal ( array param )
+Aspis generated prototype (array)
+method finternalobject ( array param )
+Aspis generated prototype (array)
+method fexternal (  )
+Aspis generated prototype (array)
+method freceiver ( array param, array param )
+Aspis generated prototype (array)
+method setvalues ( array param )
+Aspis generated prototype (array)
+method clB ( array param )
+Aspis generated prototype (array)
+method finternal ( array param )
+Aspis generated prototype (array)
+method finternalobject ( array param )
+Aspis generated prototype (array)
+method fexternal (  )
+Aspis generated prototype (array)
+method freceiver ( array param, array param )
+Aspis generated prototype (array)
+method setvalues ( array param )
+Aspis generated prototype (array)
+funtainted (  )
+Aspis generated prototype (array)

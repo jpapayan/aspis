@@ -1,0 +1,8 @@
+a:7:{i:0;s:83:"/home/papajohn/public_html/webappstests/original/pgen/stats.txt (90% 500): 44.92ms
+";i:1;s:27:"Array (90% 500): 466.821ms
+";i:2;s:84:"/home/papajohn/public_html/webappstests/original/dbgen/stats.txt (90% 500): 0.373ms
+";i:3;s:25:"Array (90% 500): 1.296ms
+";i:4;s:82:"/home/papajohn/public_html/webappstests/original/wp/stats.txt (90% 500): 65.989ms
+";i:5;s:72:"/home/papajohn/public_html/webappstests/edited/wp/stats.txt (90% 1): ms
+";i:6;s:89:"/home/papajohn/public_html/webappstests/edited/wp_partial/stats.txt (90% 500): 143.795ms
+";}

@@ -1,0 +1,61 @@
+/*
+	myLinksDump Plugin Happy Robbit Style.
+	Version: 1.0
+	Copyright © 2009 - 2011
+	Designed By :Web.Riot.ir
+	M. Ali. Taebi
+	http://pat.riot.ir
+	Email:taebi.ali@gmail.com
+*/
+
+
+.ldWrapper ul li:before{
+	content:' '!important;
+	}
+.ldWrapper ul {
+	margin-right:0px !important;
+	}
+.ldWrapper ul li {
+	list-style:none !important;
+	padding-bottom:5px !important;
+	border-bottom:0px dashed gray;
+	color:gray !important;
+	}
+.ldWrapper ul li a,
+.ldWrapper ul li  a:visited {
+	color:#BB3300;
+	text-decoration:none;
+	}
+.ldWrapper ul li  a:hover{
+	color:#FF753F;
+	}
+#ldLink {
+	background-image:url(../images/icon_arrow_sm2.gif);
+	background-repeat:no-repeat;
+	background-position:center right;
+	padding-right:13px !important;	
+	}
+#ldTitle {  
+	border:1px solid #DDDDDD;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding:0px 5px 0px 5px;
+	width:80%;
+	margin-top:-12px !important;
+	background-color:#F9F9F9;
+	padding-bottom:2px !important;
+	}
+.ldWrapper {
+	padding:4px;
+	border:1px solid #DDDDDD;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;	
+	}
+	
+	.ldDescriptionW{
+	 font-size: 0.8em;
+	 line-height: 13px;
+	 text-align: justify;
+	}

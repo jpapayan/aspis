@@ -1,0 +1,4 @@
+a:3:{i:0;s:26:"Array (90% 542): 346.38ms
+";i:1;s:81:"/home/papajohn/public_html/webappstests/original/wp/stats.txt (90% 500): 42.93ms
+";i:2;s:90:"/home/papajohn/public_html/webappstests/edited/wp_partial/stats.txt (90% 1000): 120.144ms
+";}

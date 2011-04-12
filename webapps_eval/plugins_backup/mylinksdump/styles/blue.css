@@ -1,0 +1,41 @@
+﻿.ldWrapper{
+ direction:rtl;
+ padding: 0px 10px 5px 10px; 
+ font-family:Tahoma,Arial,Times New Roman;
+ font-size:0.9em;
+ font-weight:normal;
+}
+
+.ldWrapper h3{
+ text-align:center;
+ font-weight:bold;
+}
+
+.ldWrapper ul{
+ padding:0 6px 10px 6px;
+}
+
+.ldWrapper ul li{
+ list-style-type: none;
+ vertical-align:middle;
+}
+
+.ldWrapper ul li a{
+ font-weight:normal;
+ color:navy;
+}
+
+.dateTitleArea {
+ padding:7px;
+ text-align:center;
+ background-repeat: no-repeat;
+ background-position: top center;
+ margin:5px;
+}
+
+.dateTitleArea span{
+ color: #2E91C6;
+ font-size: 8pt;
+ font-weight: bold;
+}
+

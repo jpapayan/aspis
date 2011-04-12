@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="79">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="PhpParserC" root=".">
+      <df name="exploits">
+      </df>
+      <df name="misc">
+      </df>
+      <df name="notes">
+      </df>
+      <df name="php_function_headers">
+      </df>
+      <df name="phplib">
+      </df>
+      <df name="taint_propagation">
+      </df>
+      <df name="TestScripts">
+        <df name="TestResults">
+        </df>
+      </df>
+      <df name="webappstests">
+        <df name="edited">
+          <df name="dbgen">
+          </df>
+          <df name="pgen">
+          </df>
+          <df name="wp">
+            <df name="wp-admin">
+              <df name="css">
+              </df>
+              <df name="images">
+              </df>
+              <df name="import">
+              </df>
+              <df name="includes">
+              </df>
+              <df name="js">
+              </df>
+              <df name="maint">
+              </df>
+            </df>
+            <df name="wp-content">
+              <df name="plugins">
+                <df name="embedded-video-with-link">
+                  <df name="img">
+                  </df>
+                  <df name="langs">
+                  </df>
+                </df>
+              </df>
+              <df name="themes">
+                <df name="classic">
+                </df>
+                <df name="default">
+                  <df name="images">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="wp-includes">
+              <df name="images">
+                <df name="crystal">
+                </df>
+                <df name="smilies">
+                </df>
+                <df name="wlw">
+                </df>
+              </df>
+              <df name="js">
+                <df name="codepress">
+                  <df name="engines">
+                  </df>
+                  <df name="images">
+                  </df>
+                  <df name="languages">
+                  </df>
+                </df>
+                <df name="crop">
+                </df>
+                <df name="imgareaselect">
+                </df>
+                <df name="jcrop">
+                </df>
+                <df name="jquery">
+                </df>
+                <df name="scriptaculous">
+                </df>
+                <df name="swfupload">
+                  <df name="plugins">
+                  </df>
+                </df>
+                <df name="thickbox">
+                </df>
+                <df name="tinymce">
+                  <df name="langs">
+                  </df>
+                  <df name="plugins">
+                    <df name="directionality">
+                    </df>
+                    <df name="fullscreen">
+                    </df>
+                    <df name="inlinepopups">
+                      <df name="skins">
+                        <df name="clearlooks2">
+                          <df name="img">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                    <df name="media">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="paste">
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="safari">
+                    </df>
+                    <df name="spellchecker">
+                      <df name="classes">
+                        <df name="utils">
+                        </df>
+                      </df>
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="includes">
+                      </df>
+                    </df>
+                    <df name="tabfocus">
+                    </df>
+                    <df name="wordpress">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                    </df>
+                    <df name="wpeditimage">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="wpgallery">
+                      <df name="img">
+                      </df>
+                    </df>
+                  </df>
+                  <df name="themes">
+                    <df name="advanced">
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                      <df name="skins">
+                        <df name="default">
+                          <df name="img">
+                          </df>
+                        </df>
+                        <df name="o2k7">
+                          <df name="img">
+                          </df>
+                        </df>
+                        <df name="wp_theme">
+                          <df name="img">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                  <df name="utils">
+                  </df>
+                </df>
+              </df>
+              <df name="pomo">
+              </df>
+              <df name="Text">
+                <df name="Diff">
+                  <df name="Engine">
+                  </df>
+                  <df name="Renderer">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="wp_partial">
+            <df name="wp-admin">
+              <df name="css">
+              </df>
+              <df name="images">
+              </df>
+              <df name="import">
+              </df>
+              <df name="includes">
+              </df>
+              <df name="js">
+              </df>
+              <df name="maint">
+              </df>
+            </df>
+            <df name="wp-content">
+              <df name="plugins">
+                <df name="embedded-video-with-link">
+                  <df name="img">
+                  </df>
+                  <df name="langs">
+                  </df>
+                </df>
+              </df>
+              <df name="themes">
+                <df name="classic">
+                </df>
+                <df name="default">
+                  <df name="images">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="wp-includes">
+              <df name="images">
+                <df name="crystal">
+                </df>
+                <df name="smilies">
+                </df>
+                <df name="wlw">
+                </df>
+              </df>
+              <df name="js">
+                <df name="codepress">
+                  <df name="engines">
+                  </df>
+                  <df name="images">
+                  </df>
+                  <df name="languages">
+                  </df>
+                </df>
+                <df name="crop">
+                </df>
+                <df name="imgareaselect">
+                </df>
+                <df name="jcrop">
+                </df>
+                <df name="jquery">
+                </df>
+                <df name="scriptaculous">
+                </df>
+                <df name="swfupload">
+                  <df name="plugins">
+                  </df>
+                </df>
+                <df name="thickbox">
+                </df>
+                <df name="tinymce">
+                  <df name="langs">
+                  </df>
+                  <df name="plugins">
+                    <df name="directionality">
+                    </df>
+                    <df name="fullscreen">
+                    </df>
+                    <df name="inlinepopups">
+                      <df name="skins">
+                        <df name="clearlooks2">
+                          <df name="img">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                    <df name="media">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="paste">
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="safari">
+                    </df>
+                    <df name="spellchecker">
+                      <df name="classes">
+                        <df name="utils">
+                        </df>
+                      </df>
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="includes">
+                      </df>
+                    </df>
+                    <df name="tabfocus">
+                    </df>
+                    <df name="wordpress">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                    </df>
+                    <df name="wpeditimage">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="wpgallery">
+                      <df name="img">
+                      </df>
+                    </df>
+                  </df>
+                  <df name="themes">
+                    <df name="advanced">
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                      <df name="skins">
+                        <df name="default">
+                          <df name="img">
+                          </df>
+                        </df>
+                        <df name="o2k7">
+                          <df name="img">
+                          </df>
+                        </df>
+                        <df name="wp_theme">
+                          <df name="img">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                  <df name="utils">
+                  </df>
+                </df>
+              </df>
+              <df name="pomo">
+              </df>
+              <df name="Text">
+                <df name="Diff">
+                  <df name="Engine">
+                  </df>
+                  <df name="Renderer">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="original">
+          <df name="dbgen">
+          </df>
+          <df name="pgen">
+          </df>
+          <df name="wp">
+            <df name="wp-admin">
+              <df name="css">
+              </df>
+              <df name="images">
+              </df>
+              <df name="import">
+              </df>
+              <df name="includes">
+              </df>
+              <df name="js">
+              </df>
+              <df name="maint">
+              </df>
+            </df>
+            <df name="wp-content">
+              <df name="plugins">
+                <df name="embedded-video-with-link">
+                  <df name="img">
+                  </df>
+                  <df name="langs">
+                  </df>
+                </df>
+              </df>
+              <df name="themes">
+                <df name="classic">
+                </df>
+                <df name="default">
+                  <df name="images">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="wp-includes">
+              <df name="images">
+                <df name="crystal">
+                </df>
+                <df name="smilies">
+                </df>
+                <df name="wlw">
+                </df>
+              </df>
+              <df name="js">
+                <df name="codepress">
+                  <df name="engines">
+                  </df>
+                  <df name="images">
+                  </df>
+                  <df name="languages">
+                  </df>
+                </df>
+                <df name="crop">
+                </df>
+                <df name="imgareaselect">
+                </df>
+                <df name="jcrop">
+                </df>
+                <df name="jquery">
+                </df>
+                <df name="scriptaculous">
+                </df>
+                <df name="swfupload">
+                  <df name="plugins">
+                  </df>
+                </df>
+                <df name="thickbox">
+                </df>
+                <df name="tinymce">
+                  <df name="langs">
+                  </df>
+                  <df name="plugins">
+                    <df name="directionality">
+                    </df>
+                    <df name="fullscreen">
+                    </df>
+                    <df name="inlinepopups">
+                      <df name="skins">
+                        <df name="clearlooks2">
+                          <df name="img">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                    <df name="media">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="paste">
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="safari">
+                    </df>
+                    <df name="spellchecker">
+                      <df name="classes">
+                        <df name="utils">
+                        </df>
+                      </df>
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="includes">
+                      </df>
+                    </df>
+                    <df name="tabfocus">
+                    </df>
+                    <df name="wordpress">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                    </df>
+                    <df name="wpeditimage">
+                      <df name="css">
+                      </df>
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                    </df>
+                    <df name="wpgallery">
+                      <df name="img">
+                      </df>
+                    </df>
+                  </df>
+                  <df name="themes">
+                    <df name="advanced">
+                      <df name="img">
+                      </df>
+                      <df name="js">
+                      </df>
+                      <df name="skins">
+                        <df name="default">
+                          <df name="img">
+                          </df>
+                        </df>
+                        <df name="o2k7">
+                          <df name="img">
+                          </df>
+                        </df>
+                        <df name="wp_theme">
+                          <df name="img">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                  <df name="utils">
+                  </df>
+                </df>
+              </df>
+              <df name="pomo">
+              </df>
+              <df name="Text">
+                <df name="Diff">
+                  <df name="Engine">
+                  </df>
+                  <df name="Renderer">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <in>ast.c</in>
+      <in>ast.h</in>
+      <in>ast_array.c</in>
+      <in>ast_array.h</in>
+      <in>ast_improver.c</in>
+      <in>ast_improver.h</in>
+      <in>ast_parser.c</in>
+      <in>ast_parser.h</in>
+      <in>ast_transformer.c</in>
+      <in>ast_transformer.h</in>
+      <in>file_structures.c</in>
+      <in>file_structures.h</in>
+      <in>my_main.c</in>
+      <in>my_main.h</in>
+      <in>php_parser.tab.c</in>
+      <in>php_parser.tab.h</in>
+      <in>php_scanner.lex.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+      <itemPath>Makefile-PhpParserC.mk</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile-PhpParserC.mk</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+        <cppRequired>true</cppRequired>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>$(MAKE) -f Makefile</buildCommand>
+          <cleanCommand>$(MAKE) -f Makefile clean</cleanCommand>
+          <executablePath>./php_parser</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>/usr/include</pElem>
+            </incDir>
+          </cTool>
+          <ccTool>
+            <incDir>
+              <pElem>/usr/local/include </pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="ast.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="ast_array.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="ast_array.h" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="ast_parser.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="ast_transformer.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="ast_transformer.h" ex="true" tool="3" flavor="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

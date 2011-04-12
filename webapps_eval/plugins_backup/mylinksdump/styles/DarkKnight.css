@@ -1,0 +1,49 @@
+/*
+	myLinksDump Plugin Dark Knight Style.
+	Version: 1.0
+	Copyright © 2009 - 2011
+	Designed By :Web.Riot.ir
+	M. Ali. Taebi
+	http://pat.riot.ir
+	Email:taebi.ali@gmail.com
+*/
+
+.ldWrapper {
+	background-color:#23282D;
+	padding:5px!important;
+	border:1px solid silver;
+	-moz-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	padding-bottom:10px!important;
+	}
+#ldTitle {	
+	color:#FFAB19;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:18px;
+	cursor:pointer;
+	border:1px solid #23282D;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding:0 10px 0 10px!important;
+	margin:-13px -5px 0 0!important;
+	background-color:#23282D;
+	width:60%;
+	}
+.ldWrapper ul {
+	margin-right:0px!important;
+	}
+.ldWrapper ul li {
+	list-style:circle!important;
+	margin-right:15px!important;
+	}
+.ldWrapper ul li:before{
+	content:' '!important;
+	}
+.ldWrapper ul li a,
+.ldWrapper ul li a:visited {
+	color:silver;
+	text-decoration:none;
+	}

@@ -1,0 +1,132 @@
+>functions
+chooser
+	array
+		&array
+ffftainted
+		array
+fffuntainted
+		array
+ftainted
+	array &
+	array &
+	array
+		array
+funtainted
+	array &
+	array &
+	array
+		array
+funtainted2
+		array
+>methods
+aaa
+	array
+		array
+finternal
+		array
+fref
+	array &
+		array
+gref
+		array &
+hi
+		array
+set
+	array
+		array
+method set ( array param )
+Aspis generated prototype (array)
+method hi (  )
+Aspis generated prototype (array)
+method set ( array param )
+Aspis generated prototype (array)
+method hi (  )
+Aspis generated prototype (array)
+funtainted ( array &param, array &param, array param )
+Aspis generated prototype (array)
+funtainted2 (  )
+Aspis generated prototype (array)
+ftainted ( array &param, array &param, array param )
+Aspis generated prototype (array)
+chooser ( array param )
+Aspis generated prototype (&array)
+method fref ( array &param, array param )
+Aspis generated prototype (array)
+method gref ( array param )
+Aspis generated prototype (&array)
+method finternal (  )
+Aspis generated prototype (array)
+method fref ( array &param, array param )
+Aspis generated prototype (array)
+method gref ( array param )
+Aspis generated prototype (&array)
+method finternal (  )
+Aspis generated prototype (array)
+ffftainted (  )
+Aspis generated prototype (array)
+fffuntainted (  )
+Aspis generated prototype (array)
+method set ( array param )
+Aspis generated prototype (array)
+method hi (  )
+Aspis generated prototype (array)
+method set ( array param )
+Aspis generated prototype (array)
+method hi (  )
+Aspis generated prototype (array)
+funtainted ( array &param, array &param, array param )
+Aspis generated prototype (array)
+funtainted2 (  )
+Aspis generated prototype (array)
+ftainted ( array &param, array &param, array param )
+Aspis generated prototype (array)
+chooser ( array param )
+Aspis generated prototype (&array)
+method fref ( array &param, array param )
+Aspis generated prototype (array)
+method gref ( array param )
+Aspis generated prototype (&array)
+method finternal (  )
+Aspis generated prototype (array)
+method fref ( array &param, array param )
+Aspis generated prototype (array)
+method gref ( array param )
+Aspis generated prototype (&array)
+method finternal (  )
+Aspis generated prototype (array)
+ffftainted (  )
+Aspis generated prototype (array)
+fffuntainted (  )
+Aspis generated prototype (array)
+method set ( array param )
+Aspis generated prototype (array)
+method hi (  )
+Aspis generated prototype (array)
+method set ( array param )
+Aspis generated prototype (array)
+method hi (  )
+Aspis generated prototype (array)
+funtainted ( array &param, array &param, array param )
+Aspis generated prototype (array)
+funtainted2 (  )
+Aspis generated prototype (array)
+ftainted ( array &param, array &param, array param )
+Aspis generated prototype (array)
+chooser ( array param )
+Aspis generated prototype (&array)
+method fref ( array &param, array param )
+Aspis generated prototype (array)
+method gref ( array param )
+Aspis generated prototype (&array)
+method finternal (  )
+Aspis generated prototype (array)
+method fref ( array &param, array param )
+Aspis generated prototype (array)
+method gref ( array param )
+Aspis generated prototype (&array)
+method finternal (  )
+Aspis generated prototype (array)
+ffftainted (  )
+Aspis generated prototype (array)
+fffuntainted (  )
+Aspis generated prototype (array)

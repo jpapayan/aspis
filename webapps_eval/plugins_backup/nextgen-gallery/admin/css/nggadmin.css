@@ -1,0 +1,447 @@
+/* 
+** NextGEN Gallery Style for Wordpress 2.9
+*/
+
+/* SETTINGS FOR Overview Gallery */
+
+#newversion {
+	border-color:#CCCCCC;
+	border-style:solid;
+	border-width:1px;
+	margin-right:7px;
+	margin-top:10px;
+	padding:2px;
+}
+
+.ngg-dashboard-widget ul.settings span {
+	padding-left : 10px;
+	color:#2583AD;
+	font-weight:bold;
+}
+
+.ngg-overview .postbox .handlediv {
+	float:right;
+	height:24px;
+	width:24px;
+}
+
+.warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    border: 1px solid;
+    margin: 5px 0px;
+    padding:5px;
+}
+
+#donator_message {
+	margin:5px 0 15px;
+	background-color:#BDE5F8;
+	border-color:#00529B;
+	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	border-style:solid;
+	border-width:1px;
+	margin:5px 15px 2px;
+	padding:0 0.6em;
+}
+
+#donator_message p{
+	line-height:1;
+	margin:0.5em 0;
+	padding:2px;
+	padding-bottom:10px;
+}
+
+#donator_message span{
+	padding-top:10px;
+	float:right;
+}
+/* SETTING FOR FLASH UPLOAD BUTTON */
+.swfupload {
+	position:absolute;
+	z-index:1;
+	vertical-align:top;
+}
+
+/* SETTINGS FOR THE OPTIONS TABLE */ 
+.ngg-options th {
+	width:22%;
+} 
+
+a.switch-expert {
+	text-decoration:none;
+}
+
+/* WATERMARK */
+#wm-preview {
+	float:right;
+	font-size:90%;
+	width:35%;
+	border-color:#EBEBEB rgb(204, 204, 204) rgb(204, 204, 204) rgb(235, 235, 235);
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-right:8px;
+	padding:2px;
+}
+#wm-preview h3{
+	background:#F9F9F9 none repeat scroll 0%;
+	font-size:14px;
+	font-weight:bold;
+	margin:0pt 0pt 10px;
+	padding:8px 5px;
+}
+
+#wm-position {
+	width:100%;
+	margin-left:40px;
+}
+
+.wm-table {
+	border-collapse:collapse;
+	margin-top:1em;
+	width: 60%;
+	clear:none;
+}
+.wm-table td {
+	border-bottom:8px solid #FFFFFF;
+	line-height:20px;
+	margin-bottom:9px;
+	padding:10px;
+}
+.wm-table th {
+	border-bottom:8px solid #FFFFFF;
+	padding:10px;
+	text-align:left;
+}
+.wm-table tr {
+	background:#F9F9F9 none repeat scroll 0%;
+}
+
+/* SETTINGS FOR MANAGE TABLE */
+
+div#poststuff #gallerydiv {
+	cursor:pointer;
+}
+
+p#ngg-inlinebutton {
+	float:right;
+	margin:0pt;
+	position:relative;
+	top:-25pt;
+}
+
+.ngg-tablenav .button-secondary {
+	padding:2px 8px;
+	vertical-align: top;
+}
+
+.fixed tbody th.column-cb {
+	padding:7px 0 22px;
+}
+.fixed .column-cb {
+	padding:0;
+	width:2.2em;
+}
+
+.fixed .column-thumbnail{
+	width:85px;
+}
+
+.fixed .column-thumbnail img{
+	max-height:80px;
+	max-width:80px;
+}
+
+.fixed .column-id {
+	width: 5em;
+}
+
+.fixed .column-exclude, .fixed .column-action, .fixed .column-delete {
+	width: 10%;
+}
+
+/* SETTINGS FOR PROGRESS BAR */
+
+div .progressborder {
+	border: 1px inset ; 
+	display: block; 
+	height: 20px; 
+	background-color: #464646; 
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+div .progressbar {
+	border: medium none ; 
+	display: block; 
+	height: 20px; 
+	background-color: #D54E21; 
+	width: 0%;
+}
+
+div .progressbar span {
+	display: inline; 
+	position: relative; 
+	color: white; 
+	font-weight: bold; 
+	padding-left: 5px;
+}
+
+
+.show_details
+{
+	height: 16px;
+	line-height: 20px; 
+	overflow: hidden;
+	min-width: 8em;
+	padding: 3px;
+	cursor:pointer;
+}
+
+.show_details span
+{
+	border-bottom:1px solid #999;
+	white-space:pre;
+}
+.show_details:hover 
+{
+	height: auto;
+	overflow: visible;
+	border: 1px solid #999;
+}
+
+ /* SETTINGS FOR ALBUM PAGE */
+
+.albumnav select[name="act_album"] {
+	width:150px;
+}
+
+.albumnav span {
+	padding-left: 50px;
+}
+
+div .groupItem
+{
+	cursor: move;
+	width: 295px;
+	padding: 5px;
+}
+
+div .innerhandle {
+	background-color:#FBFBFB;
+}
+
+.groupItem .item_top
+{
+	background-color:#2683AE;
+	color: #FFFFFF;
+	font-weight:bold;
+	line-height: 28px;
+	height: 28px;
+	padding: 0 5px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.groupItem .album_obj
+{
+	background-color:#D54E21;
+}
+
+.groupItem .item_top a
+{
+	color:#FFFFFF;
+	float:right;
+	text-decoration: none;
+}
+
+.groupItem .item_top a:hover
+{
+	color:#FFFFFF;
+}
+
+.itemContent {
+	border-color:#DFDFDF;
+	border-style:none solid solid;
+	border-width:0 1px 1px;
+	padding:2px 0 20px 2px;
+}
+
+.itemContent p {
+	border: 0;  
+	margin: 0;  
+	padding: 0;
+}
+
+.inlinepicture
+{
+	float:left;
+	display:inline;
+	margin:0pt;
+	padding:0pt 3px 1px;
+}
+
+.inlinepicture img
+{
+	margin:3px;
+	max-height:60px;
+}
+
+.sort_placeholder
+{
+	border:1px dashed #bba !important;
+	margin: 5px;
+	background: #F9F9F9;
+}
+
+.container {
+	margin-top: 10px;
+}
+
+.target-album {
+	margin:10px 685px 10px 10px;
+}
+
+.widget-right {
+	float:right;
+	margin:0pt 10px;
+	width:315px;
+}
+
+.widget-holder {
+	min-height: 400px;	
+	padding-top:1px;
+}
+
+.target {
+	background-color:#F1F1F1;
+}
+
+div.widget-top h3 {
+	text-align:center;
+	line-height:25px;
+	margin: 0;
+	padding: 5px 12px;
+	font-size: 13px;
+}
+
+div.widget-top {
+	text-shadow:0 1px 0 #FFFFFF;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	font-size: 13px;
+}
+
+
+/* SETTINGS FOR SORT GALLERY */
+
+#sortGallery {
+	position:relative;
+}
+
+p#sortButton{
+	margin:0;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.imageBox,.imageBoxHighlighted{
+	width:130px;	/* Total width of each image box */
+	height:160px;	/* Total height of each image box */
+	float:left;
+}
+.imageBox_theImage{
+	width:110px;	/* Width of image */
+	height:125px;	/* Height of image */
+	
+	background-position: center;
+	background-repeat: no-repeat;		
+	margin: 0 auto;
+	margin-bottom:2px;
+}
+
+.imageBox .imageBox_theImage{
+	border:1px solid #DDD;	/* Border color for not selected images */
+	padding:2px;
+}
+.imageBoxHighlighted .imageBox_theImage{
+	border:3px solid #316AC5;	/* Border color for selected image */
+	padding:0px;
+
+}
+.imageBoxHighlighted span{	/* Title of selected image */
+	background-color: #316AC5;
+	color:#FFFFFF;
+	padding:2px;
+}
+
+.imageBox_label{	/* Title of images - both selected and not selected */
+	text-align:center;
+	font-family: arial;
+	font-size:11px;		
+	padding-top:2px;
+	margin: 0 auto;
+}
+
+/* 
+DIV that indicates where the dragged image will be placed	
+*/
+
+#insertionMarker{
+	height:150px;
+	width:6px;
+	position:absolute;
+}
+
+#insertionMarkerLine{
+	width:6px;		/* No need to change this value */
+	height:145px;	/* To adjust the height of the div that indicates where the dragged image will be dropped */
+
+}
+	
+#insertionMarker img{
+	float:left;
+}
+
+/*
+DIV that shows the image as you drag it 
+*/
+
+#dragDropContent{
+
+	opacity:0.4;	/* 40 % opacity */
+	filter:alpha(opacity=40);	/* 40 % opacity */
+
+	/* 
+	No need to change these three values 
+	*/
+	position:absolute;
+	z-index:10;
+	display:none;
+		
+}	
+
+/* UPGRADE PAGE */
+
+.error_inline {
+	background:#FFEBE8 none repeat scroll 0%;
+	border:1px solid #CC0000;
+	margin:5px auto;
+	padding:10px;
+}
+
+/* ABOUT PAGE */ 
+.ngg-list {
+	font-size:11px; 
+	margin-left:15px;
+	list-style-position:inside;
+	list-style-type:disc;
+}

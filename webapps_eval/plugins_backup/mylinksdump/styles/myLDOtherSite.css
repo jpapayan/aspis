@@ -1,0 +1,35 @@
+.ldWrapper {
+background-color:#FFE9B9;
+border:1px solid #A6D3EC;
+color:#2E91C6;
+direction:rtl;
+font-family:Tahoma;
+font-size:9pt;
+padding:5px 10px 10px;
+text-align:right;
+width: 400px;
+margin:1px auto;
+line-height:17px;
+}
+
+.ldWrapper a{
+ text-decoration: none;
+ color: #004EEB;
+}
+
+.ldWrapper a:hover{
+ text-decoration: underline;
+}
+
+.ldWrapper span{
+color: #2E91C6;
+}
+
+#ldTitle {
+text-align:center;
+font-family: Times New Roman, Arial, Tahoma;
+font-weight: normal;
+font-size: 20px;
+margin: 3px 1px;
+color: black;
+}

@@ -1,0 +1,474 @@
+/*
+	Skin name: BBPress for WP Forum Server
+	Description: Similar look as the default bbPress theme
+	Author: Lucid Crew
+	Author url: http://www.lucidcrew.com
+	Version: 1.0
+*/
+#wpf-wrapper{
+	line-height: normal;
+	color: #000;
+}
+#wpf-wrapper table, #wpf-wrapper div, #wpf-wrapper h2, #wpf-wrapper h3, #wpf-wrapper h4, #wpf-wrapper form{
+	margin: 0;
+	padding: 0;
+}
+#wpf-wrapper small{
+	color: #333;
+	font: 9px Verdana,Arial,Helvetica,sans-serif;
+	display: block;
+}
+
+.wpf-table a, .wpf-post-table a, #wpf-wrapper p a, #wpf-wrapper span a{
+    color:#2E6E15;
+	text-decoration: none;
+}
+
+table.search td{
+	border: none;
+}
+#wpf-wrapper table ,
+#wpf-wrapper tr{
+	border: none
+}
+table.search{
+	background: #aaa;
+}
+
+ul#wpf-menu, ul.wpf-postmeta {
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+ul#wpf-menu li, .wpf-postmeta li{
+	list-style: none;
+	padding-right: 10px;
+	display: inline;
+}
+.wpf-table{
+	border-collapse: collapse;
+	border-width: 0;
+}
+.wpf-post-table{
+	border-collapse: collapse;
+	padding: 15px;
+	border-left: 1px solid #adadad;
+	border-right: 1px solid #adadad;
+	border-bottom: 1px solid #adadad;
+	background: #f6f6f6;
+}
+.wpf-table th, .wpf-post-table th, .wpf-table th a {
+	color: #000;
+	white-space: nowrap;
+	font:11px Verdana,Arial,Helvetica,sans-serif;
+	text-transform: uppercase;
+	background: #ddd;
+}
+.wpf-table th{
+	border-bottom: 1px solid #aaa;
+	padding: 5px 10px;
+}
+.forumsList th, .forumsList th a {
+	font: 22px Georgia,"Times New Roman",Times,serif;
+	background: none;
+	text-transform: none;
+	border-bottom: none;
+	padding-left: 0;
+}
+.wpf-post-table td{
+	padding: 5px;
+}
+
+.wpf-table td{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding: 5px;
+}
+.wpf-table textarea {
+	width: 98%;
+}
+th.forumIcon,
+td.forumIcon { /* temp hack:  no post icons for this theme */
+	background: red;
+	display: none;
+	width: 0!important;
+}
+ 
+#wpf-wrapper .wpf{
+
+}
+.wpf-table tr{
+	border-width: 0 0 0 0;
+}
+table#profileHeader,
+.wpf-table .alt{
+	background:#eee;
+}
+.sticky{
+	
+}
+#wpf-wrapper .sticky  a,
+#wpf-wrapper .sticky span a{
+	color: #000
+}
+td.wpf-meta{
+	border-bottom: 1px solid #adadad;
+	padding: 0;
+	margin: 0;
+}
+td.wpf-meta a{
+	font-weight: bold;
+}
+.wpf-small{
+	margin-bottom: 10px;
+}
+
+.wpf-table h2{
+	margin: 0;
+	padding: 0;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	color: #fff;
+}
+
+th.wpf-bright{
+	color: #000;
+}
+th.wpf-bright h3{
+	margin: 0;
+	padding: 0;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.wpf-avatar{
+	padding: 5px;
+}
+
+#wpf-wrapper a img, #wpf-wrapper img {
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+}
+.updated{
+	background: #fffbcc;
+	border: 1px solid #e6db55;
+	padding: 5px;
+	margin-bottom: 1em;
+}
+.
+#wpf-wrapper blockquote{
+	background: #d7daec;
+	border: 1px solid #6081a0;
+	padding-left: 5px;
+	margin: 0;
+}
+
+
+/* definitions for the main tab, active means the tab reflects which page is displayed */
+.maintab_first, .maintab_back, .maintab_last, .maintab_active_first, .maintab_active_back, .maintab_active_last
+{
+	color: white;
+	_text-transform: uppercase;
+	vertical-align: top;
+}
+.maintab_back, .maintab_active_back
+{
+	color: white;
+	text-decoration: none;
+	vertical-align: top;
+	padding: 2px 6px 6px 6px;
+	font-family: tahoma, sans-serif;
+}
+.maintab_first
+{
+	background: url(images/maintab_first.gif) left bottom no-repeat;
+	width: 10px;
+}
+.maintab_back
+{
+	background: url(images/maintab_back.gif) left bottom repeat-x;
+}
+.maintab_last
+{
+	background: url(images/maintab_last.gif) left bottom no-repeat;
+	width: 8px;
+}
+.maintab_active_first
+{
+	background: url(images/maintab_active_first.gif) left bottom no-repeat;
+	width: 6px;
+}
+.maintab_active_back
+{
+	background: url(images/maintab_active_back.gif) left bottom repeat-x;
+}
+.maintab_active_last
+{
+	background: url(images/maintab_active_last.gif) left bottom no-repeat;
+	width: 8px;
+}
+
+/* how links behave in main tab. */
+#wpf-wrapper .maintab_back a:link , #wpf-wrapper .maintab_back a:visited, #wpf-wrapper .maintab_active_back a:link , #wpf-wrapper .maintab_active_back a:visited
+{
+	color: white;
+	text-decoration: none;
+}
+
+.maintab_back a:hover, .maintab_active_back a:hover
+{
+	color: #e0e0ff;
+	text-decoration: none;
+	
+}
+
+
+pre.code{
+	width: 700px;
+	background: #eee;
+	border: solid 1px #ccc;
+	padding: 5px;
+	overflow: auto;
+	font-size: 85%;
+}
+
+
+#trail{
+	margin-top: 20px;
+}
+
+
+#wpf-wrapper 
+#wpf-info{
+	text-align:center; 
+	padding:5px; 
+	border:1px solid #adadad;
+	margin-top:15px;
+	background: #f6f6f6;
+}
+#wpf-wrapper{
+		font-size: 90%;
+
+}
+td, th{
+	vertical-align: top;
+}
+th{
+	vertical-align: middle;
+}
+table.wpf-table tr:hover  {
+background: #E4F3E1;
+}
+
+span.new {
+    background:url("images/icons.png") no-repeat scroll -84px -41px transparent;
+    display:block;
+    height:9px;
+    text-indent:-999em;
+    width:23px;
+}
+span.post_sticky {
+    background:url("images/icons.png") no-repeat scroll -236px -38px transparent;
+    display:block;
+    height:18px;
+    text-indent:-999em;
+    width:21px;
+}
+span.normal_post {
+    background:url("images/icons.png") no-repeat scroll -203px -41px transparent;
+    display:block;
+    height:15px;
+    width:13px;
+}
+#content span.xx {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -181px -81px transparent;
+    height:19px;
+    width:20px;
+    float:left;
+    padding-right:10px;
+}
+#content span.quote {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -10px -81px transparent;
+    height:15px;
+    width:15px;
+    float:left;
+    padding-right:5px;
+}
+span.delete {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -138px -15px transparent;
+    height:18px;
+    width:17px;
+    float:left;
+    padding-right:5px;
+}
+span.modify {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -10px -39px transparent;
+    height:18px;
+    width:18px;
+    float:left;
+    padding-right:5px;
+}
+span.forum_on {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -327px -41px transparent;
+    height:30px;
+    width:30px;
+    float:left;
+}
+span.forum_off {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -277px -41px transparent;
+    height:30px;
+    width:30px;
+    float:left;
+}
+span.new_some {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -165px -41px transparent;
+    height:18px;
+    width:18px;
+    float:left;
+    padding-right:5px;
+}
+span.new_none {
+    display:block;
+    background:url("images/icons.png") no-repeat scroll -127px -41px transparent;
+    height:18px;
+    width:18px;
+    float:left;
+    padding-right:5px;
+}
+#content .legend_width {
+    width:90px;
+    padding:6px 10px 0 5px;
+}
+span.upshrink {
+    background:url("images/icons.png") no-repeat scroll -79px -81px transparent;
+    display:block;
+    height:13px;
+    width:13px;
+}
+span.b {
+    background:url("images/icons.png") no-repeat scroll -10px -15px transparent;
+    display:block;
+    width:12px;
+    height:11px;
+    float:left;
+    margin-right:3px;
+}
+span.i {
+    background:url("images/icons.png") no-repeat scroll -41px -15px transparent;
+    display:block;
+    width:9px;
+    height:11px;
+    float:left;
+    margin-right:3px;
+}
+span.u {
+    background:url("images/icons.png") no-repeat scroll -70px -15px transparent;
+    display:block;
+    width:12px;
+    height:14px;
+    float:left;
+    margin-right:3px;
+}
+span.code {
+    background:url("images/icons.png") no-repeat scroll -103px -15px transparent;
+    display:block;
+    width:15px;
+    height:13px;
+    float:left;
+    margin-right:3px;
+}
+span.quote_form {
+    background:url("images/icons.png") no-repeat scroll -44px -81px transparent;
+    display:block;
+    width:15px;
+    height:15px;
+    float:left;
+    margin-right:3px;
+}
+span.list {
+    background:url("images/icons.png") no-repeat scroll -356px -15px transparent;
+    display:block;
+    width:11px;
+    height:13px;
+    float:left;
+    margin-right:3px;
+}
+span.li {
+    background:url("images/icons.png") no-repeat scroll -320px -15px transparent;
+    display:block;
+    width:16px;
+    height:7px;
+    float:left;
+    margin-top:3px;
+    margin-right:3px;
+}
+span.url {
+    background:url("images/icons.png") no-repeat scroll -146px -81px transparent;
+    display:block;
+    width:16px;
+    height:16px;
+    float:left;
+    margin-right:3px;
+}
+span.img {
+    background:url("images/icons.png") no-repeat scroll -247px -15px transparent;
+    display:block;
+    width:13px;
+    height:14px;
+    float:left;
+    margin-right:3px;
+}
+span.email {
+    background:url("images/icons.png") no-repeat scroll -175px -15px transparent;
+    display:block;
+    width:16px;
+    height:16px;
+    float:left;
+}
+span.info {
+    background:url("images/icons.png") no-repeat scroll -281px -15px transparent;
+    display:block;
+    width:19px;
+    height:16px;
+}
+span.upshrink2 {
+    background:url("images/icons.png") no-repeat scroll -112px -81px transparent;
+    display:block;
+    width:13px;
+    height:13px;
+}
+span.my_hot_post {
+    background:url("images/icons.png") no-repeat scroll -211px -14px transparent;
+    display:block;
+    width:16px;
+    height:17px;
+}
+span.hot_post {
+    background:url("images/icons.png") no-repeat scroll -211px -15px transparent;
+    display:block;
+    width:16px;
+    height:15px;
+}
+
+/* latest activity widget */
+#latest_activity ul li {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+#trail a.ico_feed {
+	background-image:url("images/icons/feed_16.png");
+	width:16px;
+	height:16px;
+	float: right;
+	text-indent: -999em;
+}

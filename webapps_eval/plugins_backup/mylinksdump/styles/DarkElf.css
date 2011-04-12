@@ -1,0 +1,54 @@
+/*
+	myLinksDump Plugin Dark ElfStyle.
+	Version: 1.0
+	Copyright © 2009 - 2011
+	Designed By :Web.Riot.ir
+	M. Ali. Taebi
+	http://pat.riot.ir
+	Email:taebi.ali@gmail.com
+*/
+
+
+.ldWrapper {
+	background-color:#262626;
+	padding:5px!important;
+	border:1px solid silver;
+	-moz-border-radius: 9px;
+	-khtml-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	padding-bottom:10px!important;
+	}
+#ldTitle {	
+	color:#262626;
+	text-align:center;
+	font-family:tahoma;
+	font-weight:normal;
+	font-size:11px;
+	cursor:pointer;
+	border:1px solid #F9F9F9;
+	border-top:0px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding:5px 10px 5px 10px!important;
+	margin:-13px Auto 0 Auto!important;
+	background-color:#F9F9F9;
+	width:60%;
+	}
+.ldWrapper ul {
+	margin-right:0px!important;
+	}
+.ldWrapper ul li {
+	color:white!important;
+	list-style:circle!important;
+	margin-right:15px!important;
+	}
+.ldWrapper ul li:before{
+	content:' '!important;
+	}
+.ldWrapper ul li a,
+.ldWrapper ul li a:hover,
+.ldWrapper ul li a:visited {
+	text-decoration:none;
+	color:silver;
+	}

@@ -1,0 +1,1022 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: StatPressCN in italiano\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-13 10:43+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Gianni Diurno (aka gidibao) <gidibao[at]gmail[dot]com>\n"
+"Language-Team: Gianni Diurno | gidibao.net <gidibao@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_htmla_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: statpresscn.php:79
+#: statpresscn.php:81
+msgid "StatPressCN"
+msgstr "StatPressCN"
+
+#: statpresscn.php:83
+msgid "StatPressCN Details"
+msgstr "StatPressCN Dettagli"
+
+#: statpresscn.php:83
+msgid "Details"
+msgstr "Dettagli"
+
+#: statpresscn.php:84
+msgid "StatPressCN Spy"
+msgstr "StatPressCN Spy"
+
+#: statpresscn.php:84
+#: statpresscn.php:1436
+msgid "Spy"
+msgstr "Spy"
+
+#: statpresscn.php:85
+msgid "StatPressCN Friends"
+msgstr "Amici StatPressCN"
+
+#: statpresscn.php:85
+#: statpresscn.php:1496
+msgid "Friends"
+msgstr "Amici"
+
+#: statpresscn.php:86
+msgid "StatPressCN Mobiler"
+msgstr "StatPressCN mobile"
+
+#: statpresscn.php:86
+msgid "Mobiler"
+msgstr "Telefonia mobile"
+
+#: statpresscn.php:88
+msgid "StatPressCN 404"
+msgstr "StatPressCN 404"
+
+#: statpresscn.php:88
+#: statpresscn.php:1624
+msgid "404"
+msgstr "404"
+
+#: statpresscn.php:90
+msgid "StatPressCN Search"
+msgstr "StatPressCN ricerca"
+
+#: statpresscn.php:90
+#: statpresscn.php:1652
+#: statpresscn.php:1691
+#: statpresscn.php:1816
+#: statpresscn.php:1867
+msgid "Search"
+msgstr "Ricerca"
+
+#: statpresscn.php:92
+msgid "StatPressCN Export"
+msgstr "Esporta StatPressCN"
+
+#: statpresscn.php:92
+#: statpresscn.php:796
+msgid "Export"
+msgstr "Esporta"
+
+#: statpresscn.php:97
+msgid "StatPressCN BanIP DIY"
+msgstr "StatPressCN BanIP"
+
+#: statpresscn.php:97
+#: statpresscn.php:116
+msgid "BanIP DIY"
+msgstr "Escludi IP (fai da te)"
+
+#: statpresscn.php:100
+msgid "StatPressCN Define IP"
+msgstr "StatPressCN Definizione IP"
+
+#: statpresscn.php:100
+msgid "DefIP DIY"
+msgstr "Escludi IP (fai da te)"
+
+#: statpresscn.php:103
+msgid "StatPressCN Spider DIY"
+msgstr "StatPressCN spider"
+
+#: statpresscn.php:103
+#: statpresscn.php:275
+msgid "Spider DIY"
+msgstr "Spider (fai da te)"
+
+#: statpresscn.php:105
+msgid "StatPressCN Options"
+msgstr "Opzioni StatPressCN"
+
+#: statpresscn.php:105
+msgid "Options"
+msgstr "Opzioni"
+
+#: statpresscn.php:107
+msgid "StatPressCN StatUpdate"
+msgstr "Aggiornamento statistiche StatPressCN"
+
+#: statpresscn.php:107
+msgid "StatUpdate"
+msgstr "Aggiorna statistiche"
+
+#: statpresscn.php:109
+msgid "StatPressCN Debug"
+msgstr "StatPressCN info debug"
+
+#: statpresscn.php:109
+msgid "Debug"
+msgstr "Debug"
+
+#: statpresscn.php:110
+msgid "StatPressCN Support"
+msgstr "Supporto per StatPressCN"
+
+#: statpresscn.php:110
+#: statpresscn.php:571
+msgid "Support"
+msgstr "Supporto"
+
+#: statpresscn.php:129
+#: statpresscn.php:619
+msgid "Saved"
+msgstr "Le opzioni sono state salvate"
+
+#: statpresscn.php:347
+msgid "Define IP"
+msgstr "Definisci IP"
+
+#: statpresscn.php:432
+msgid "Debug Info"
+msgstr "Info debug"
+
+#: statpresscn.php:573
+msgid "Thank you for using StatPressCN for visit stats."
+msgstr "Grazie per l'utilizzo di StatPressCN per le tue statistiche."
+
+#: statpresscn.php:574
+msgid "Developing page"
+msgstr "Pagina aggiornamenti"
+
+#: statpresscn.php:575
+msgid "you can make suggestions for the plugin there. Everything is welcomed. May you happy!"
+msgstr "invia qui i tuoi suggerimenti per il plugin. Chiunque é il benvenuto. Buon blogging!"
+
+#: statpresscn.php:637
+msgid "Frontend Setting"
+msgstr "Impostazione frontend"
+
+#: statpresscn.php:639
+msgid "Show HotDepth on the head"
+msgstr "Mostra HotDepth in cima"
+
+#: statpresscn.php:649
+msgid "Show related post at the tail"
+msgstr "Mostra in coda l'articolo correlato"
+
+#: statpresscn.php:656
+msgid "Show spy on widget, default number is 8"
+msgstr "Mostra nel widget la funzione spy. Il numero predefinito é 8"
+
+#: statpresscn.php:657
+msgid "Not show StatPressCN's credit on widget"
+msgstr "Non mostrare il credito a StatPressCN nel widget"
+
+#: statpresscn.php:660
+msgid "Backend Setting"
+msgstr "Impostazione backend"
+
+#: statpresscn.php:661
+msgid "Days in Overview graph"
+msgstr "Giorni nel grafico generale"
+
+#: statpresscn.php:669
+msgid "Number in Spy"
+msgstr "Numero voci in Spy"
+
+#: statpresscn.php:678
+msgid "Number in Friends"
+msgstr "Numero voci in Amici"
+
+#: statpresscn.php:685
+msgid "left details page stat period setting is "
+msgstr "dettaglio impostazione pagina"
+
+#: statpresscn.php:687
+#: statpresscn.php:3111
+msgid "month"
+msgstr "mese"
+
+#: statpresscn.php:688
+msgid "weeks"
+msgstr "settimane"
+
+#: statpresscn.php:689
+#: statpresscn.php:3110
+msgid "week"
+msgstr "settimana"
+
+#: statpresscn.php:690
+msgid "day"
+msgstr "giorno"
+
+#: statpresscn.php:694
+msgid "Functions Extended"
+msgstr "Estensione delle funzioni"
+
+#: statpresscn.php:696
+msgid "Show Spider DIY on menu"
+msgstr "Mostra nel menu la funzione spider"
+
+#: statpresscn.php:697
+msgid "Show BanIP DIY on menu"
+msgstr "Mostra nel menu la funzione escludi IP"
+
+#: statpresscn.php:700
+msgid "Show Export on menu"
+msgstr "Mostra nel menu esporta"
+
+#: statpresscn.php:701
+msgid "Show StatUpdate on menu"
+msgstr "Mostra nel menu le statistiche"
+
+#: statpresscn.php:704
+msgid "Show 404 on menu"
+msgstr "Mostra nel menu 404"
+
+#: statpresscn.php:705
+msgid "Show Define IP on menu"
+msgstr "Mostra nel menu definisci IP"
+
+#: statpresscn.php:707
+msgid "System Setting"
+msgstr "Impostazione sistema"
+
+#: statpresscn.php:709
+msgid "Automatically delete records if the size of table is bigger than "
+msgstr "Cancella in automatico i dati se la dimensione della tabella fosse superiore a"
+
+#: statpresscn.php:721
+#: statpresscn.php:2025
+msgid "M"
+msgstr "M"
+
+#: statpresscn.php:722
+msgid "Also collect spiders visits"
+msgstr "Colleziona inoltre le visite degli spider"
+
+#: statpresscn.php:724
+msgid "Collect data about logged users, too."
+msgstr "Colleziona i dati anche per gli utenti colegati."
+
+#: statpresscn.php:727
+msgid "But, dont collect me. "
+msgstr "Ma non includere me."
+
+#: statpresscn.php:731
+msgid "The user "
+msgstr "L'utente"
+
+#: statpresscn.php:737
+msgid "is not being collected now."
+msgstr "non é stato incluso."
+
+#: statpresscn.php:744
+msgid "IP Info Query Tools"
+msgstr "Strumenti per info IP Query"
+
+#: statpresscn.php:751
+msgid "Minimum capability to view stats"
+msgstr "Requisiti minimi per la visualizzazione delle statistiche"
+
+#: statpresscn.php:755
+#: statpresscn.php:1460
+#: statpresscn.php:1552
+msgid "more info"
+msgstr "ulteriori informazioni"
+
+#: statpresscn.php:760
+msgid "Delete options when deactivating"
+msgstr "Cancella le opzioni quando disattivi"
+
+#: statpresscn.php:761
+#: statpresscn.php:765
+msgid "Warning"
+msgstr "Attenzione"
+
+#: statpresscn.php:761
+msgid "Options or setting will be reset to default when StatpressCN being deactivated"
+msgstr "Le opzioni e le impostazioni saranno ripristinate alle predefinite qualora il plugin StatpressCN venisse disattivato"
+
+#: statpresscn.php:764
+msgid "Delete table when deactivating"
+msgstr "Svuota la tabella quando disattivi"
+
+#: statpresscn.php:765
+msgid "All record will be deleted when StatpressCN being deactivated, including the table' structure"
+msgstr "Tutti i dati verranno cancellati nel momento in cui StatpressCN sarà disattivato (inclusa la struttura della tabella)"
+
+#: statpresscn.php:768
+msgid "Save options"
+msgstr "Salva le opzioni"
+
+#: statpresscn.php:791
+msgid "Export stats to text file"
+msgstr "Esporta le statistiche a file di testo"
+
+#: statpresscn.php:793
+#: statpresscn.php:1289
+#: statpresscn.php:1364
+#: statpresscn.php:3107
+msgid "From"
+msgstr "Da"
+
+#: statpresscn.php:794
+msgid "To"
+msgstr "A"
+
+#: statpresscn.php:795
+msgid "Fields delimiter"
+msgstr "limite campi"
+
+#: statpresscn.php:842
+msgid "Overview"
+msgstr "Generale"
+
+#: statpresscn.php:845
+msgid "Total"
+msgstr "Totale"
+
+#: statpresscn.php:847
+msgid "Last year"
+msgstr "Lo scorso anno"
+
+#: statpresscn.php:848
+msgid "This year"
+msgstr "Anno corrente"
+
+#: statpresscn.php:849
+msgid "Target This year"
+msgstr "Riferito a questo anno"
+
+#: statpresscn.php:851
+msgid "Last month"
+msgstr "Mese scorso"
+
+#: statpresscn.php:852
+msgid "This month"
+msgstr "Questo mese"
+
+#: statpresscn.php:853
+msgid "Target This month"
+msgstr "Riferito a questo mese"
+
+#: statpresscn.php:854
+msgid "Yesterday"
+msgstr "Ieri"
+
+#: statpresscn.php:855
+msgid "Today"
+msgstr "Oggi"
+
+#: statpresscn.php:861
+msgid "Visitors"
+msgstr "Visitatori"
+
+#: statpresscn.php:956
+msgid "Pageviews"
+msgstr "Pagine visualizzate"
+
+#: statpresscn.php:1040
+#: statpresscn.php:1400
+msgid "Spiders"
+msgstr "Spider"
+
+#: statpresscn.php:1124
+#: statpresscn.php:1348
+#: statpresscn.php:1397
+msgid "Feeds"
+msgstr "Feed"
+
+#: statpresscn.php:1289
+msgid "Last hits"
+msgstr "Ultimi contatti"
+
+#: statpresscn.php:1289
+#: statpresscn.php:1316
+#: statpresscn.php:1332
+#: statpresscn.php:1348
+#: statpresscn.php:1364
+msgid "Time"
+msgstr "Ora"
+
+#: statpresscn.php:1289
+#: statpresscn.php:1316
+#: statpresscn.php:1332
+#: statpresscn.php:1348
+#: statpresscn.php:1364
+msgid "IP|Visitor"
+msgstr "IP|Visitatore"
+
+#: statpresscn.php:1289
+#: statpresscn.php:1873
+msgid "Page"
+msgstr "Pagina"
+
+#: statpresscn.php:1289
+#: statpresscn.php:1348
+#: statpresscn.php:1409
+#: statpresscn.php:1601
+msgid "OS"
+msgstr "OS"
+
+#: statpresscn.php:1289
+#: statpresscn.php:1348
+#: statpresscn.php:1406
+#: statpresscn.php:1598
+#: statpresscn.php:1645
+msgid "Browser"
+msgstr "Browser"
+
+#: statpresscn.php:1316
+msgid "Last search terms"
+msgstr "Ultimi termini di ricerca"
+
+#: statpresscn.php:1316
+msgid "Terms"
+msgstr "Termini"
+
+#: statpresscn.php:1316
+msgid "Engine"
+msgstr "Motore"
+
+#: statpresscn.php:1316
+#: statpresscn.php:1332
+msgid "Result"
+msgstr "Risultato"
+
+#: statpresscn.php:1327
+#: statpresscn.php:1343
+#: statpresscn.php:1348
+msgid "page viewed"
+msgstr "pagina visualizzata"
+
+#: statpresscn.php:1332
+msgid "Last referrers"
+msgstr "Ultimi referenti"
+
+#: statpresscn.php:1332
+msgid "URL"
+msgstr "URL"
+
+#: statpresscn.php:1348
+msgid "Last feed"
+msgstr "Ultimo feed"
+
+#: statpresscn.php:1364
+msgid "Last agents"
+msgstr "Ultimi agents"
+
+#: statpresscn.php:1364
+#: statpresscn.php:1640
+msgid "Agent"
+msgstr "Agent"
+
+#: statpresscn.php:1388
+#: statpresscn.php:1586
+msgid "Top pages"
+msgstr "Le pagine più richieste"
+
+#: statpresscn.php:1391
+#: statpresscn.php:1592
+msgid "Top search terms"
+msgstr "I maggiori termini di ricerca"
+
+#: statpresscn.php:1394
+#: statpresscn.php:1589
+msgid "Top referrer"
+msgstr "Massimo referente"
+
+#: statpresscn.php:1403
+#: statpresscn.php:1595
+#: statpresscn.php:1643
+msgid "Search engine"
+msgstr "Motore di ricerca"
+
+#: statpresscn.php:1412
+#: statpresscn.php:1604
+msgid "Countries (city)"
+msgstr "Nazione (città)"
+
+#: statpresscn.php:1415
+msgid "Top days"
+msgstr "I giorni più attivi"
+
+#: statpresscn.php:1418
+#: statpresscn.php:1607
+msgid "Top Days - Unique visitors"
+msgstr "I giorni più attivi - Visitatori unici"
+
+#: statpresscn.php:1421
+#: statpresscn.php:1610
+msgid "Top Days - Pageviews"
+msgstr "I giorni più attivi - Pagine visualizzate"
+
+#: statpresscn.php:1424
+#: statpresscn.php:1613
+msgid "Top IPs - Pageviews"
+msgstr "IP più attivi - pagine visualizzate"
+
+#: statpresscn.php:1475
+#: statpresscn.php:1477
+#: statpresscn.php:1567
+#: statpresscn.php:1569
+msgid "arrived from"
+msgstr "arrivato da"
+
+#: statpresscn.php:1475
+#: statpresscn.php:1567
+msgid "searching"
+msgstr "in ricerca"
+
+#: statpresscn.php:1477
+#: statpresscn.php:1569
+msgid "there"
+msgstr "ci sono"
+
+#: statpresscn.php:1541
+msgid "has left"
+msgstr "ha lasciato"
+
+#: statpresscn.php:1543
+msgid "comments"
+msgstr "commenti"
+
+#: statpresscn.php:1543
+msgid "comment"
+msgstr "commento"
+
+#: statpresscn.php:1545
+msgid "and the latest is"
+msgstr "e l'ultimo é"
+
+#: statpresscn.php:1547
+msgid "at"
+msgstr "@"
+
+#: statpresscn.php:1549
+msgid "has visited"
+msgstr "ha visitato"
+
+#: statpresscn.php:1551
+msgid "pages"
+msgstr "pagine"
+
+#: statpresscn.php:1551
+msgid "page"
+msgstr "pagina"
+
+#: statpresscn.php:1551
+msgid "and the latest"
+msgstr "e l'ultimo"
+
+#: statpresscn.php:1551
+msgid "are at below"
+msgstr "sono qui sotto"
+
+#: statpresscn.php:1551
+msgid "is at below"
+msgstr "é qui sotto"
+
+#: statpresscn.php:1638
+msgid "Date"
+msgstr "Data"
+
+#: statpresscn.php:1639
+msgid "URL Requested"
+msgstr "URL richiesti"
+
+#: statpresscn.php:1641
+msgid "Referrer"
+msgstr "Referente"
+
+#: statpresscn.php:1642
+msgid "Search terms"
+msgstr "Termini della ricerca"
+
+#: statpresscn.php:1644
+msgid "Operative system"
+msgstr "Sistema operativo"
+
+#: statpresscn.php:1646
+msgid "Spider"
+msgstr "Spider"
+
+#: statpresscn.php:1648
+msgid "Visitor"
+msgstr "Visitatore"
+
+#: statpresscn.php:1649
+msgid "StatusCode"
+msgstr "Status codice"
+
+#: statpresscn.php:1657
+msgid "Field"
+msgstr "Campo"
+
+#: statpresscn.php:1664
+msgid "Group by"
+msgstr "Raggruppato per"
+
+#: statpresscn.php:1665
+msgid "Sort by"
+msgstr "Disposto per"
+
+#: statpresscn.php:1666
+msgid "if contains"
+msgstr "qualora contenesse"
+
+#: statpresscn.php:1676
+msgid "sort by count if grouped"
+msgstr "disposto per totale se raggruppato"
+
+#: statpresscn.php:1677
+msgid "include spiders/crawlers/bot"
+msgstr "inclusi spiders/crawlers/bot "
+
+#: statpresscn.php:1678
+msgid "include feed"
+msgstr "incluso feed"
+
+#: statpresscn.php:1685
+#: statpresscn.php:3105
+msgid "Limit results to"
+msgstr "Linita i risultati a"
+
+#: statpresscn.php:1748
+msgid "Results"
+msgstr "Risultati"
+
+#: statpresscn.php:1755
+msgid "Count"
+msgstr "Totale"
+
+#: statpresscn.php:1793
+#: statpresscn.php:1795
+#: statpresscn.php:1852
+msgid "Home"
+msgstr "Home"
+
+#: statpresscn.php:1799
+#: statpresscn.php:1854
+msgid "Category"
+msgstr "Categoria"
+
+#: statpresscn.php:1808
+#: statpresscn.php:1810
+#: statpresscn.php:1862
+#: statpresscn.php:1864
+msgid "Tag"
+msgstr "Tag"
+
+#: statpresscn.php:1813
+#: statpresscn.php:1856
+msgid "Calendar"
+msgstr "Calendario"
+
+#: statpresscn.php:1815
+#: statpresscn.php:1858
+msgid "Archive"
+msgstr "Archivio"
+
+#: statpresscn.php:1821
+#: statpresscn.php:1823
+msgid "Trackback"
+msgstr "Trackback"
+
+#: statpresscn.php:1829
+#: statpresscn.php:1831
+msgid "Feed"
+msgstr "Feed"
+
+#: statpresscn.php:2023
+msgid "there remains"
+msgstr "rimangono"
+
+#: statpresscn.php:2024
+msgid "records to the capacity limit"
+msgstr "i record hanno raggiunto il limite della dimensione"
+
+#: statpresscn.php:2026
+msgid "records"
+msgstr "record"
+
+#: statpresscn.php:2053
+msgid "recently"
+msgstr "recente"
+
+#: statpresscn.php:2053
+#: statpresscn.php:2078
+#: statpresscn.php:3106
+msgid "Visits"
+msgstr "Visite"
+
+#: statpresscn.php:2078
+msgid "all stats days"
+msgstr "tutti i giorni"
+
+#: statpresscn.php:2365
+msgid "related post"
+msgstr "articolo correlato"
+
+#: statpresscn.php:2526
+msgid "Updating table's struct: "
+msgstr "Struttura della tabella in aggiornamento: "
+
+#: statpresscn.php:2528
+#: statpresscn.php:2543
+#: statpresscn.php:2589
+#: statpresscn.php:3222
+#: statpresscn.php:3236
+msgid "done"
+msgstr "fatto"
+
+#: statpresscn.php:2542
+msgid "evil ip"
+msgstr "ip maligni"
+
+#: statpresscn.php:2543
+msgid "items have been deleted"
+msgstr "i termini sono stati cancellati"
+
+#: statpresscn.php:2553
+msgid "Updating Feeds"
+msgstr "Aggiornamento dei feed"
+
+#: statpresscn.php:2594
+msgid "Updating OSes"
+msgstr "Aggiornamento dei sistemi operativi"
+
+#: statpresscn.php:2604
+#: statpresscn.php:2620
+#: statpresscn.php:2635
+#: statpresscn.php:2654
+#: statpresscn.php:2670
+#: statpresscn.php:2686
+#: statpresscn.php:2702
+msgid " are updated"
+msgstr " sono aggiornati"
+
+#: statpresscn.php:2610
+msgid "Updating Browsers"
+msgstr "Aggiornamento dei browser"
+
+#: statpresscn.php:2625
+msgid "Updating Spiders"
+msgstr "Aggiornamento degli spider"
+
+#: statpresscn.php:2627
+#: statpresscn.php:2643
+msgid " sets is set to blank! "
+msgstr " le impostazioni sono settate su blank!"
+
+#: statpresscn.php:2641
+msgid "Updating Search engines"
+msgstr "Aggiornamento dei motori di ricerca"
+
+#: statpresscn.php:2645
+#: statpresscn.php:2661
+#: statpresscn.php:2677
+#: statpresscn.php:2715
+msgid " are select-ed"
+msgstr " sono selezionati"
+
+#: statpresscn.php:2659
+msgid "Updating sets for ip info : "
+msgstr "Dati info ip in aggiornamento : "
+
+#: statpresscn.php:2675
+msgid "Updating sets whose ip info is null: "
+msgstr "Dati in aggiornamento info ip parziali:"
+
+#: statpresscn.php:2691
+msgid "Updating sets whose ip is named in defip.dat: "
+msgstr "Aggiornamento impostazioni per ip presente in defip.dat:"
+
+#: statpresscn.php:2707
+msgid "Deleting sets whose statuscode is 404: "
+msgstr "Cancellare le impostazioni il cui stato del codice sia 404:"
+
+#: statpresscn.php:2709
+msgid "invalid url requested"
+msgstr "richiesto url non valido"
+
+#: statpresscn.php:2710
+#: statpresscn.php:2722
+msgid " are deleted"
+msgstr " sono cancellati"
+
+#: statpresscn.php:2713
+msgid "Cleaning spam commenters: "
+msgstr "Cancellazione commentatori spam:"
+
+#: statpresscn.php:2721
+msgid "spamer"
+msgstr "spammer"
+
+#: statpresscn.php:2732
+msgid "Updated"
+msgstr "Aggiornato"
+
+#: statpresscn.php:2750
+msgid "Update all sets for spider"
+msgstr "Aggiorna dati spider"
+
+#: statpresscn.php:2751
+msgid "Update all sets based longth you configure"
+msgstr "Aggiorna dati configurazione"
+
+#: statpresscn.php:2754
+msgid "Update all sets for banip"
+msgstr "Aggiorna dati IP bloccati"
+
+#: statpresscn.php:2755
+msgid "Update all sets for urlrequested"
+msgstr "Aggiorna dati URL richiesti"
+
+#: statpresscn.php:2758
+msgid "Update all sets for O.S."
+msgstr "Aggiorna dati sistemi operativi"
+
+#: statpresscn.php:2759
+msgid "Update all sets for browser"
+msgstr "Aggiorna dati browser"
+
+#: statpresscn.php:2762
+msgid "Update all sets for search engine"
+msgstr "Aggiorna dati motori di ricerca"
+
+#: statpresscn.php:2763
+msgid "Update all sets for feed"
+msgstr "Aggiorna dati feed"
+
+#: statpresscn.php:2766
+msgid "Update all sets for ip info"
+msgstr "Aggiorna dati info IP"
+
+#: statpresscn.php:2767
+msgid "Update sets partly, whose ip info is null"
+msgstr "Aggiorna impostazioni parziali e dati info IP"
+
+#: statpresscn.php:2770
+msgid "Delete all 404 visits"
+msgstr "Cancella tutte le visite 404"
+
+#: statpresscn.php:2771
+msgid "Update sets partly, whose name is null"
+msgstr "Aggiornamento parziale impostazioni a valore zero"
+
+#: statpresscn.php:2773
+msgid "Update stat data"
+msgstr "Aggiorna dati statistica"
+
+#: statpresscn.php:2785
+msgid "At time"
+msgstr "Alla volta"
+
+#: statpresscn.php:2786
+msgid "there has"
+msgstr "ci sono"
+
+#: statpresscn.php:2787
+msgid "sets been deleted"
+msgstr "i dati sono stati cancellati"
+
+#: statpresscn.php:2788
+msgid "because"
+msgstr "perché"
+
+#: statpresscn.php:2836
+msgid "Hot"
+msgstr "Hot"
+
+#: statpresscn.php:3052
+msgid "Title:"
+msgstr "Titolo:"
+
+#: statpresscn.php:3055
+msgid "Body:"
+msgstr "Body:"
+
+#: statpresscn.php:3075
+msgid "Powered by"
+msgstr "Fornito da"
+
+#: statpresscn.php:3075
+msgid "Whitime"
+msgstr "orario"
+
+#: statpresscn.php:3104
+msgid "Title"
+msgstr "Titolo"
+
+#: statpresscn.php:3109
+msgid "Stats on"
+msgstr "Statistiche per"
+
+#: statpresscn.php:3112
+#: statpresscn.php:3113
+msgid "months"
+msgstr "mesi"
+
+#: statpresscn.php:3114
+msgid "year"
+msgstr "anno"
+
+#: statpresscn.php:3115
+msgid "ago to now"
+msgstr "fa ad oggi"
+
+#: statpresscn.php:3169
+msgid "Updating URLes"
+msgstr "aggiornamento degli URL"
+
+#: statpresscn.php:3181
+msgid "select-ed"
+msgstr "selezionato"
+
+#: statpresscn.php:3205
+#: statpresscn.php:3220
+msgid "sets are updated"
+msgstr "le impostazioni sono state aggiornate"
+
+#: statpresscn.php:3220
+msgid "The permalink structure is set to default"
+msgstr "La struttura del permalink é impostata alle predefinite"
+
+#: statpresscn.php:3230
+msgid "Delete sets that have spider if needed"
+msgstr "Cancellare le impostazioni che hanno degli spider (se desiderato)"
+
+#: statpresscn.php:3233
+msgid "spider not allow to record"
+msgstr "spider non permette il record"
+
+#: statpresscn.php:3279
+msgid "table size limited"
+msgstr "limite dimensione tabella "
+
+#: statpresscn.php:3311
+msgid "as many as you can"
+msgstr "tutti quelli che puoi"
+
+#: statpresscn.php:3343
+msgid "StatPressCN table size"
+msgstr "Dimensione tabella StatPressCN"
+
+#: statpresscn.php:3345
+msgid "Query count"
+msgstr "Conteggio query"
+
+#~ msgid "Never delete!"
+#~ msgstr "Non cancellare mai!"
+
+#~ msgid "Delete sets if needed"
+#~ msgstr "Cancella le impostazioni  (se necessario)"
+
+#~ msgid "IP"
+#~ msgstr "IP"
+
+#~ msgid "StatPressCN current time"
+#~ msgstr "Ora corrente StatPressCN"
+
+#~ msgid "RSS2 url"
+#~ msgstr "RSS2 url"
+
+#~ msgid "Show post's HotDepth"
+#~ msgstr "Mostra HotDepth per gli articoli"
+
+#~ msgid "What"
+#~ msgstr "Quale"
+
+#~ msgid "Domain"
+#~ msgstr "Dominio"
+
+#~ msgid "Support by"
+#~ msgstr "Supportato da"
+
+#~ msgid "Last spiders"
+#~ msgstr "最近爬虫"
+
+#~ msgid "Google Images catched *"
+#~ msgstr "发现来自Google图像搜索#"
+
+#~ msgid "Google Cache catched *"
+#~ msgstr "发现来自Google缓存的搜索#"

@@ -1,0 +1,1029 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: StatPressCN in portugues\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-13 10:43+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: heart5 <baiyefeng@gmail.com>\n"
+"Language-Team: josé Moreira | http://bordejar.com/ <ze.moreira@netcabo.pt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: PORTUGAL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: E:\\documents\\NetBeansProjects\\wordpress\\wp-content\\plugins\\statpresscn\n"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:79
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:81
+msgid "StatPressCN"
+msgstr "StatPressCN"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:83
+msgid "StatPressCN Details"
+msgstr "StatPressCN Dettagli"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:83
+msgid "Details"
+msgstr "Detalhes"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:84
+msgid "StatPressCN Spy"
+msgstr "StatPressCN spia"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:84
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1436
+msgid "Spy"
+msgstr "Spy"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:85
+msgid "StatPressCN Friends"
+msgstr "Amigos StatPressCN"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:85
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1496
+msgid "Friends"
+msgstr "Amigos"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:86
+msgid "StatPressCN Mobiler"
+msgstr "StatPressCN mobile"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:86
+msgid "Mobiler"
+msgstr "Telemóvel"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:88
+msgid "StatPressCN 404"
+msgstr "StatPressCN 404"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:88
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1624
+msgid "404"
+msgstr "404"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:90
+msgid "StatPressCN Search"
+msgstr "StatPressCN ricerca"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:90
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1652
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1691
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1816
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1867
+msgid "Search"
+msgstr "Procura"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:92
+msgid "StatPressCN Export"
+msgstr "Exporta StatPressCN"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:92
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:796
+msgid "Export"
+msgstr "Exporta"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:97
+msgid "StatPressCN BanIP DIY"
+msgstr "StatPressCN BanIP"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:97
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:116
+msgid "BanIP DIY"
+msgstr "Escluir IP (manual)"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:100
+msgid "StatPressCN Define IP"
+msgstr "StatPressCN Definição IP"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:100
+msgid "DefIP DIY"
+msgstr "Definir IP (manual)"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:103
+msgid "StatPressCN Spider DIY"
+msgstr "StatPressCN spider"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:103
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:275
+msgid "Spider DIY"
+msgstr "Excluir Spider (manual)"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:105
+msgid "StatPressCN Options"
+msgstr "Opções StatPressCN"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:105
+msgid "Options"
+msgstr "Opções"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:107
+msgid "StatPressCN StatUpdate"
+msgstr "Actualização das estatísticas StatPressCN"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:107
+msgid "StatUpdate"
+msgstr "Actualizar estatísticas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:109
+#, fuzzy
+msgid "StatPressCN Debug"
+msgstr "StatPressCN info debug"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:109
+#, fuzzy
+msgid "Debug"
+msgstr "Info debug"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:110
+msgid "StatPressCN Support"
+msgstr "Suporte para StatPressCN"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:110
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:571
+msgid "Support"
+msgstr "Suporte"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:129
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:619
+msgid "Saved"
+msgstr "As opções foram salvas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:347
+msgid "Define IP"
+msgstr "Definir IP"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:432
+msgid "Debug Info"
+msgstr "Info debug"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:573
+msgid "Thank you for using StatPressCN for visit stats."
+msgstr "Obrigado por usar StatPressCN para as suas estatísticas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:574
+msgid "Developing page"
+msgstr "Página de desenvolvimento"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:575
+msgid "you can make suggestions for the plugin there. Everything is welcomed. May you happy!"
+msgstr "Envia as tuas sugestões sobre o plugin. Todos são bem vindos!"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:637
+msgid "Frontend Setting"
+msgstr "Configuração frontend"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:639
+msgid "Show HotDepth on the head"
+msgstr "Mostrar HotDepth no cabeçalho"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:649
+msgid "Show related post at the tail"
+msgstr "Mostrar lista de artigos relacionados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:656
+msgid "Show spy on widget, default number is 8"
+msgstr "Mostrar no widget a função spia. O número predefinido é 8"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:657
+msgid "Not show StatPressCN's credit on widget"
+msgstr "Não exibir o  crédito StatPressCN no widget"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:660
+msgid "Backend Setting"
+msgstr "Configuração backend"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:661
+msgid "Days in Overview graph"
+msgstr "Dias no gráfico geral"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:669
+msgid "Number in Spy"
+msgstr "Número dados em Spy"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:678
+msgid "Number in Friends"
+msgstr "Número dados em Amigos"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:685
+msgid "left details page stat period setting is "
+msgstr "detalhes de configuração da página"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:687
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3111
+msgid "month"
+msgstr "mês"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:688
+msgid "weeks"
+msgstr "semanas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:689
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3110
+msgid "week"
+msgstr "semana"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:690
+msgid "day"
+msgstr "dia"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:694
+msgid "Functions Extended"
+msgstr "Extensões das funções"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:696
+msgid "Show Spider DIY on menu"
+msgstr "Mostrar no menú a função spider"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:697
+msgid "Show BanIP DIY on menu"
+msgstr "Mostrar no menú a função IP excluido"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:700
+msgid "Show Export on menu"
+msgstr "Mostrar no menú a função exporta"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:701
+msgid "Show StatUpdate on menu"
+msgstr "Mostrar no menú a função estatística"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:704
+msgid "Show 404 on menu"
+msgstr "Mostrar nol menú 404"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:705
+msgid "Show Define IP on menu"
+msgstr "Mostrar no menú definir IP"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:707
+msgid "System Setting"
+msgstr "Configuração do sistema"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:709
+#, fuzzy
+msgid "Automatically delete records if the size of table is bigger than "
+msgstr "Apagar automaticamente visitas com mais de"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:721
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2025
+msgid "M"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:722
+msgid "Also collect spiders visits"
+msgstr "Guarda dados dos spiders"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:724
+msgid "Collect data about logged users, too."
+msgstr "Recolher dados sobre utilizadores ligados."
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:727
+msgid "But, dont collect me. "
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:731
+msgid "The user "
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:737
+msgid "is not being collected now."
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:744
+msgid "IP Info Query Tools"
+msgstr "Ferramentas para info IP Query"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:751
+msgid "Minimum capability to view stats"
+msgstr "Requisitos mínimos para visualizar estatísticas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:755
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1460
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1552
+msgid "more info"
+msgstr "mais informações"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:760
+msgid "Delete options when deactivating"
+msgstr "Apagar opções quando desactivar"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:761
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:765
+msgid "Warning"
+msgstr "Atenção"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:761
+msgid "Options or setting will be reset to default when StatpressCN being deactivated"
+msgstr "As opções e configurações serão as predefinidas por StatpressCN, caso o plugin seja desactivado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:764
+msgid "Delete table when deactivating"
+msgstr "Apagar tabela quando desactivado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:765
+msgid "All record will be deleted when StatpressCN being deactivated, including the table' structure"
+msgstr "Todos os dados serão apagados quando StatpressCN for desactivado (incluindo a estrutura da tabela)"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:768
+msgid "Save options"
+msgstr "Salvar as opções"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:791
+msgid "Export stats to text file"
+msgstr "Exporta para ficheiro texto"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:793
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3107
+msgid "From"
+msgstr "De"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:794
+msgid "To"
+msgstr "Para"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:795
+msgid "Fields delimiter"
+msgstr "limite dos campos"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:842
+msgid "Overview"
+msgstr "Geral"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:845
+msgid "Total"
+msgstr "Total"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:847
+msgid "Last year"
+msgstr "Ano passado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:848
+msgid "This year"
+msgstr "Este ano"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:849
+msgid "Target This year"
+msgstr "Previsão para este ano"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:851
+msgid "Last month"
+msgstr "Mês passado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:852
+msgid "This month"
+msgstr "Este mês"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:853
+msgid "Target This month"
+msgstr "Previsão este mês"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:854
+msgid "Yesterday"
+msgstr "Ontem"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:855
+msgid "Today"
+msgstr "Hoje"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:861
+msgid "Visitors"
+msgstr "Visitantes"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:956
+msgid "Pageviews"
+msgstr "Páginas vistas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1040
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1400
+msgid "Spiders"
+msgstr "Spider"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1124
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1397
+msgid "Feeds"
+msgstr "Feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+msgid "Last hits"
+msgstr "Última visualização"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+msgid "Time"
+msgstr "Data"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+msgid "IP|Visitor"
+msgstr "IP|Visitante"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1873
+msgid "Page"
+msgstr "Página"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1409
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1601
+msgid "OS"
+msgstr "OS"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1289
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1406
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1598
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1645
+msgid "Browser"
+msgstr "Browser"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+msgid "Last search terms"
+msgstr "Últimos termos procurados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+msgid "Terms"
+msgstr "Termos"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+msgid "Engine"
+msgstr "Motor"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1316
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+msgid "Result"
+msgstr "Resultado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1327
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1343
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+msgid "page viewed"
+msgstr "página vista"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+msgid "Last referrers"
+msgstr "Última referência"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1332
+msgid "URL"
+msgstr "URL"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1348
+msgid "Last feed"
+msgstr "Último feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+msgid "Last agents"
+msgstr "Últimos agentes"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1364
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1640
+msgid "Agent"
+msgstr "Agente"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1388
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1586
+msgid "Top pages"
+msgstr "As páginas mais solicitadas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1391
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1592
+msgid "Top search terms"
+msgstr "Os termos mais procurados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1394
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1589
+msgid "Top referrer"
+msgstr "Referência top"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1403
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1595
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1643
+msgid "Search engine"
+msgstr "Motor de busca"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1412
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1604
+msgid "Countries (city)"
+msgstr "Países (cidades)"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1415
+msgid "Top days"
+msgstr "Os dias mais activos"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1418
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1607
+msgid "Top Days - Unique visitors"
+msgstr "Os dias mais activos - Visitantes únicos"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1421
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1610
+msgid "Top Days - Pageviews"
+msgstr "Os dias mais activos - Página visualizadas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1424
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1613
+msgid "Top IPs - Pageviews"
+msgstr "IP mais activos - páginas visualizadas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1475
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1477
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1567
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1569
+msgid "arrived from"
+msgstr "vindo de"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1475
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1567
+msgid "searching"
+msgstr "procurando"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1477
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1569
+msgid "there"
+msgstr "aqui"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1541
+msgid "has left"
+msgstr "deixou"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1543
+msgid "comments"
+msgstr "comentários"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1543
+msgid "comment"
+msgstr "comentário"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1545
+msgid "and the latest is"
+msgstr "e o último é"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1547
+msgid "at"
+msgstr "@"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1549
+msgid "has visited"
+msgstr "visitou"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "pages"
+msgstr "páginas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "page"
+msgstr "página"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "and the latest"
+msgstr "e o último"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "are at below"
+msgstr "estão aqui em baixo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1551
+msgid "is at below"
+msgstr "está aqui em baixo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1638
+msgid "Date"
+msgstr "Data"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1639
+msgid "URL Requested"
+msgstr "URL solicitada"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1641
+msgid "Referrer"
+msgstr "Referência"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1642
+msgid "Search terms"
+msgstr "Termos da procura"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1644
+msgid "Operative system"
+msgstr "Sistema operativo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1646
+msgid "Spider"
+msgstr "Spider"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1648
+msgid "Visitor"
+msgstr "Visitante"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1649
+msgid "StatusCode"
+msgstr "Código de estado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1657
+msgid "Field"
+msgstr "Campo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1664
+msgid "Group by"
+msgstr "Agrupado por"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1665
+msgid "Sort by"
+msgstr "Disposto por"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1666
+msgid "if contains"
+msgstr "contendo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1676
+msgid "sort by count if grouped"
+msgstr "disposto por total se agrupado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1677
+msgid "include spiders/crawlers/bot"
+msgstr "incluir spiders/crawlers/bot "
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1678
+msgid "include feed"
+msgstr "incluir feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1685
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3105
+msgid "Limit results to"
+msgstr "Limitar os resulltados a "
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1748
+msgid "Results"
+msgstr "Resultados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1755
+msgid "Count"
+msgstr "Totais"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1793
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1795
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1852
+msgid "Home"
+msgstr "Home"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1799
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1854
+msgid "Category"
+msgstr "Categoria"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1808
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1810
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1862
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1864
+msgid "Tag"
+msgstr "Tag"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1813
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1856
+msgid "Calendar"
+msgstr "Calendário"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1815
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1858
+msgid "Archive"
+msgstr "Arquivo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1821
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1823
+msgid "Trackback"
+msgstr "Trackback"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1829
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:1831
+msgid "Feed"
+msgstr "Feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2023
+#, fuzzy
+msgid "there remains"
+msgstr "aqui"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2024
+msgid "records to the capacity limit"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2026
+msgid "records"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2053
+msgid "recently"
+msgstr "recentemente"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2053
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2078
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3106
+msgid "Visits"
+msgstr "Visitas"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2078
+msgid "all stats days"
+msgstr "Todos os dias"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2365
+msgid "related post"
+msgstr "post relacionado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2526
+msgid "Updating table's struct: "
+msgstr "Estrutura da tabela em actualização: "
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2528
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2543
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2589
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3222
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3236
+msgid "done"
+msgstr "Feito"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2542
+msgid "evil ip"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2543
+msgid "items have been deleted"
+msgstr "Itens foram apagados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2553
+msgid "Updating Feeds"
+msgstr "Actualização dos feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2594
+msgid "Updating OSes"
+msgstr "Actualização do sistema operativo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2604
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2620
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2635
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2654
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2670
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2686
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2702
+msgid " are updated"
+msgstr " estão actualizados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2610
+msgid "Updating Browsers"
+msgstr "Actualização do browser"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2625
+msgid "Updating Spiders"
+msgstr "Actualização dos spider"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2627
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2643
+msgid " sets is set to blank! "
+msgstr " dados em branco!"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2641
+msgid "Updating Search engines"
+msgstr "Actualização dos motores de busca"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2645
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2661
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2677
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2715
+msgid " are select-ed"
+msgstr " foram seleccionados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2659
+msgid "Updating sets for ip info : "
+msgstr "Dados info Ip em actualização : "
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2675
+msgid "Updating sets whose ip info is null: "
+msgstr "Actualizando dados cuja ip info é nula:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2691
+msgid "Updating sets whose ip is named in defip.dat: "
+msgstr "Actualizando dados para ip definido em defip.dat:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2707
+msgid "Deleting sets whose statuscode is 404: "
+msgstr "Apagando os dados com código 404:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2709
+msgid "invalid url requested"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2710
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2722
+msgid " are deleted"
+msgstr " foram apagados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2713
+msgid "Cleaning spam commenters: "
+msgstr "Apagar comentários de spam:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2721
+#, fuzzy
+msgid "spamer"
+msgstr "página"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2732
+msgid "Updated"
+msgstr "Actualizado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2750
+msgid "Update all sets for spider"
+msgstr "Actualizar todos os dados spider"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2751
+msgid "Update all sets based longth you configure"
+msgstr "Actualizar todos os dados configurados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2754
+msgid "Update all sets for banip"
+msgstr "Actualizar todos os dados IP bloqueados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2755
+msgid "Update all sets for urlrequested"
+msgstr "Actualizar todos os dados URL pedida"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2758
+msgid "Update all sets for O.S."
+msgstr "Actualizar todos os dados Sistema Operativo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2759
+msgid "Update all sets for browser"
+msgstr "Actualizar todos os dados do browser"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2762
+msgid "Update all sets for search engine"
+msgstr "Actualizar todos os dados Motores de busca"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2763
+msgid "Update all sets for feed"
+msgstr "Actualizar todos os dados feed"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2766
+msgid "Update all sets for ip info"
+msgstr "Actualiza todos os dados info IP"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2767
+msgid "Update sets partly, whose ip info is null"
+msgstr "Actualiza todos os dados onde info IP é nula"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2770
+msgid "Delete all 404 visits"
+msgstr "Apagar todas as visitas 404"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2771
+msgid "Update sets partly, whose name is null"
+msgstr "Actualizar parcialmente os dados cuja valor é nulo"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2773
+msgid "Update stat data"
+msgstr "Actualizar todos os dados estatísticos"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2785
+msgid "At time"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2786
+#, fuzzy
+msgid "there has"
+msgstr "aqui"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2787
+#, fuzzy
+msgid "sets been deleted"
+msgstr "Itens foram apagados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2788
+msgid "because"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:2836
+msgid "Hot"
+msgstr "Hot"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3052
+msgid "Title:"
+msgstr "Título:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3055
+msgid "Body:"
+msgstr "Corpo:"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3075
+msgid "Powered by"
+msgstr "Produzido por"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3075
+msgid "Whitime"
+msgstr "Horário"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3104
+msgid "Title"
+msgstr "Título"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3109
+msgid "Stats on"
+msgstr "Estatísticas por"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3112
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3113
+msgid "months"
+msgstr "meses"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3114
+msgid "year"
+msgstr "ano"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3115
+msgid "ago to now"
+msgstr "até agora"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3169
+msgid "Updating URLes"
+msgstr "Actualiza todos os dados URL"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3181
+msgid "select-ed"
+msgstr "seleccionado"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3205
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3220
+msgid "sets are updated"
+msgstr "dados actualizados"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3220
+msgid "The permalink structure is set to default"
+msgstr "A estrutura do permalink está configurada nas pre-definições"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3230
+msgid "Delete sets that have spider if needed"
+msgstr "Apagar dados do spider (se necessário)"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3233
+msgid "spider not allow to record"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3279
+msgid "table size limited"
+msgstr ""
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3311
+msgid "as many as you can"
+msgstr "tantas quantas possíveis"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3343
+msgid "StatPressCN table size"
+msgstr "Tamanho da tabela StatPressCN"
+
+#: E:\documents\NetBeansProjects\wordpress\wp-content\plugins\statpresscn/statpresscn.php:3345
+msgid "Query count"
+msgstr "Contagem query"
+
+#~ msgid "Never delete!"
+#~ msgstr "Nunca apagar"
+
+#~ msgid "Delete sets if needed"
+#~ msgstr "Apagar dados (se necessário)"
+
+#~ msgid "IP"
+#~ msgstr "IP"
+
+#~ msgid "StatPressCN current time"
+#~ msgstr "Ora corrente StatPressCN"
+
+#~ msgid "RSS2 url"
+#~ msgstr "RSS2 url"
+
+#~ msgid "Show post's HotDepth"
+#~ msgstr "Mostra HotDepth per gli articoli"
+
+#~ msgid "What"
+#~ msgstr "Quale"
+
+#~ msgid "Domain"
+#~ msgstr "Dominio"
+
+#~ msgid "Support by"
+#~ msgstr "Supportato da"
+
+#~ msgid "Last spiders"
+#~ msgstr "最近爬虫"
+
+#~ msgid "Google Images catched *"
+#~ msgstr "发现来自Google图像搜索#"
+
+#~ msgid "Google Cache catched *"
+#~ msgstr "发现来自Google缓存的搜索#"

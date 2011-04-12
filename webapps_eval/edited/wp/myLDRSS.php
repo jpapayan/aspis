@@ -1,0 +1,32 @@
+<?php require_once('AspisMain.php'); ?><?php
+require_once ("wp-load.php");
+$inc_url = array('wp-content/plugins/myLinksDump/inc/rss_generator.inc.php',false);
+require_once deAspis(($inc_url));
+global $wpdb;
+$table = concat2($wpdb[0]->prefix,"links_dump");
+$ld_number_of_links = array(15,false);
+$sql_query = $wpdb[0]->prepare(concat(concat2(concat1(" SELECT * FROM ",$table)," WHERE approval='1' ORDER BY link_id DESC LIMIT "),$ld_number_of_links));
+$ret_links = $wpdb[0]->get_results($sql_query,array(ARRAY_A,false));
+$rss_channel = array(new rssGenerator_channel(),false);
+$rss_channel[0]->atomLinkHref = array('',false);
+$rss_channel[0]->title = get_option(array('ld_linkdump_title',false));
+$rss_channel[0]->link = concat(concat2(get_settings(array('siteurl',false)),'/'),get_page_uri(get_option(array('ld_archive_pid',false))));
+$rss_channel[0]->description = get_option(array('ld_linkdump_rss_desc',false));
+$rss_channel[0]->language = get_option(array('rss_language',false));
+$rss_channel[0]->generator = array('myLinksDump Plug-In',false);
+$rss_channel[0]->managingEditor = get_option(array('admin_email',false));
+$rss_channel[0]->webMaster = get_option(array('admin_email',false));
+foreach ( $ret_links[0] as $ldlink  )
+{$item = array(new rssGenerator_item(),false);
+$item[0]->title = $ldlink[0]['title'];
+$item[0]->description = $ldlink[0]['description'];
+$item[0]->link = concat(concat2(get_settings(array('siteurl',false)),"/myLDlinker.php?url="),$ldlink[0]['link_id']);
+$item[0]->guid = concat(concat2(get_settings(array('siteurl',false)),"/myLDlinker.php?url="),$ldlink[0]['link_id']);
+$item[0]->pubDate = attAspis(date(("D, d M Y H:i:s O"),deAspis($ldlink[0]['date_added'])));
+arrayAssignAdd($rss_channel[0]->items[0][],addTaint($item));
+}$rss_feed = array(new rssGenerator_rss(),false);
+$rss_feed[0]->encoding = array('UTF-8',false);
+$rss_feed[0]->version = array('2.0',false);
+header(('Content-Type: text/xml'));
+echo AspisCheckPrint($rss_feed[0]->createFeed($rss_channel));
+;

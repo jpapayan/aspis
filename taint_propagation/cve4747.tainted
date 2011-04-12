@@ -1,0 +1,12 @@
+>functions
+/home/papajohn/public_html/wp_edited/wp-content/plugins/wordpress-processing-embed/wordpress_processing_embed.php
+/home/papajohn/public_html/wp_edited/wp-content/plugins/wordpress-processing-embed/data/popup.php
+add_magic_quotes
+addJarMime
+edited_setup
+embed_applet
+esc_sql
+pembed_ap
+>classes
+ProcessingEmbed
+wpdb

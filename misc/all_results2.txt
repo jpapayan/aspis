@@ -1,0 +1,3 @@
+a:2:{i:0;s:84:"/home/papajohn/public_html/webappstests/original/dbgen/stats.txt (90% 500): 0.376ms
+";i:1;s:26:"Array (90% 1000): 1.296ms
+";}
