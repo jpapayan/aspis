@@ -1,3 +1,0 @@
-/home/papajohn/public_html/wp_edited/wp-content/plugins/embedded-video-with-link/embedded-video.php
-/home/papajohn/public_html/wp_edited/wp-content/plugins/embedded-video-with-link/embedded-video-popup.php
-/home/papajohn/public_html/wp_edited/wp-content/plugins/embedded-video-with-link/list_all_php.txt
