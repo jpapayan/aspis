@@ -95,7 +95,7 @@ int file_containts_name(char** flist, int fbase, int fcount, int fmax, const cha
         if (strcmp(flist[0], str)==0) return 0;
         else return -1;
     }
-    int my_count = (fcount - fbase) / 2 + fbase;
+    int my_count = (fcount - fbase) / 2 + fbase; //the middle element in the range
     int res = strcmp(flist[my_count], str);
     if (res == 0) return my_count;
     else if (fcount - fbase <= 1) {

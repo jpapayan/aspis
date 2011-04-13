@@ -66,7 +66,7 @@ char *path_join(char * p1,char * p2) {
     }
     else {
         if (p2[0]!='/') p1=strcat_malloc(p1,"/");
-        ret=strcat_malloc(ret,p2);
+        ret=strcat_malloc(p1,p2);
     }
     return ret;
 }

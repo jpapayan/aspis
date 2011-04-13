@@ -31,8 +31,10 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in TestScripts/test_toy.php -out TestResults</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in test/test_toy_assign.php -out tests/results</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" in tests/test_partial_basic_p1.php -out tests/results -taints taint_propagation/test_partial_basic_p1.tainted -prototypes taint_propagation/test_partial_basic_p1.prototypes</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_partial_basic_p1.php -out tests/results -taints taint_propagation/test_partial_basic_p1.tainted -prototypes taint_propagation/test_partial_basic_p1.prototypes</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results</runcommand>
+        <runcommand>"${OUTPUT_PATH}" -in tests/test_partial_basic_p1.php -out tests/results -taints taint_propagation/test_partial_basic_p1.tainted -prototypes taint_propagation/test_partial_basic_p1.prototypes</runcommand>
         <rundir>/data/Dropbox/php/aspis</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

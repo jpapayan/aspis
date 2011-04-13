@@ -150,11 +150,17 @@ if __name__ == '__main__':
     ###now let's run the tests
     test_no = 0
     if (file == ""):
-        for infile in glob.glob(os.path.join(path, '*.php')):
-            if infile.find("test") > -1: #and infile.find("_partial_")> -1:
-                print "======================================="
-                print "Test " + str( +  + test_no) + ": " + infile
-                results[string_prune(infile, '/')] = do_test(path, infile, "","")
+        ending='*.inc'
+        while ending!="done":
+            for infile in glob.glob(os.path.join(path, ending)):
+                if infile.find("test") > -1: 
+                    print "======================================="
+                    print "Test " + str( +  + test_no) + ": " + infile
+                    results[string_prune(infile, '/')] = do_test(path, infile, "","")
+            if (ending=="*.inc"):
+                ending="*.php"
+            else:
+                ending="done"
         succeed_count = 0
         print "========================="
         for key in results.keys():

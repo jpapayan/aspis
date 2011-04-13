@@ -2493,7 +2493,7 @@ void untainted_rewrite_function_name(astp * tree,int total_parameters) {
         save_function_name(t->text);
     }
     if ( file_containts_name(functions_overriden_partial_list, 0, functions_overriden_partial_count,
-                    functions_overriden_count, t->text) != -1) {
+                    functions_overriden_partial_count, t->text) != -1) {
         t->text = strcat_malloc("AspisUntainted_", t->text);
     }
 }

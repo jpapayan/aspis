@@ -89,18 +89,16 @@ void copy_includes(char *aspis_home) {
    if (system(p)==-1) die();
    
    if (taintspath == NULL) {
-        char *p=path_join(copy,"phplib/AspisMain.php ");
+        p=path_join(copy,"phplib/AspisMain.php ");
         p=strcat_malloc(p,outpath);
         if (system(p) == -1) die();
     }
-   else {
-       p=path_join(outpath,"AspisMain.php");
-       p = strcat_malloc("mv AspisMainEdited.php ", p);
-       if (system(p) == -1) die();
-   }
-   
-   printf("All included files copied to (%s)\n",outpath);
-
+    else {
+        p=path_join(outpath,"AspisMain.php");
+        p = strcat_malloc("mv AspisMainEdited.php ", p);
+        if (system(p) == -1) die();
+    }
+    printf("All included files copied to (%s)\n",outpath);
 }
 char * get_filename_only(char * path) {
     char *res;
