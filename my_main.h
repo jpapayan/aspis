@@ -1,16 +1,10 @@
 #ifndef _MY_MAIN_H
 #define	_MY_MAIN_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
+#include "ast.h"
+    
 int my_main(int,char **, char**,char** , char**,char**, char**);
-
-
-#ifdef	__cplusplus
-}
-#endif
+void process_tree(char *, char*,  char *, char*, char*, astp );
 
 #endif	/* _MY_MAIN_H */
 

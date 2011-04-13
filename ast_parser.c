@@ -1,13 +1,12 @@
 //#include "ast.h"
 #define PRINT_TOKENS 0
 #include "php_parser.tab.h"
-#include "ast_transformer.h"
-#include "ast_improver.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int script_stage=0;
+extern int COLLECT_INFO;
+extern int script_stage;
 int T_NULL_print=0;
 
 
@@ -22,7 +21,6 @@ void ast_print_bfs(FILE *out,astp tree) {
     switch (tree->type) {
       case T_INLINE_HTML:
       case T_INLINE_HTML_EQUALS:
-	//printf("script_stage=%d\n",script_stage);
 	if (script_stage==0) {
 	   script_stage=1;
 	   print_node_generic(out,tree,tree->text);
@@ -30,13 +28,10 @@ void ast_print_bfs(FILE *out,astp tree) {
            else fprintf(out,"<?= ");
 	}
 	else if (script_stage==1) {
-           //printf("total_children=%d\n",tree->total_children);
 	   fprintf(out,"?>");
 	   print_node_generic(out,tree,tree->text);
-	   //if (tree->total_children!=0) {
-              if (tree->type==T_INLINE_HTML) fprintf(out,"<?php ");
-              else fprintf(out,"<?= ");
-	   //}
+           if (tree->type == T_INLINE_HTML) fprintf(out, "<?php ");
+           else fprintf(out, "<?= ");
 	}
 	break;
       case T_ARTIFICIAL:
@@ -456,75 +451,5 @@ void print_node_whitespace(FILE * out,astp tree,char * name) {
       ast_print_bfs(out,tree->parameters[i]); 
     }
   }
-}
-
-void process_tree(char *aspis_home, char* outpath, char * taintspath, char* prototypespath, char *filename, astp tree) {
-    FILE * fout = NULL;
-    if (outpath != NULL) {
-        fout = fopen(outpath, "w");
-        if (fout == NULL) {
-            die("Cannot write to output");
-        }
-    } else fout = stdout;
-
-    if (!is_online) {
-        printf("\n\n==========================\n");
-        printf("|       Parsing AST      |\n");
-        printf("==========================\n\n");
-    }
-    if (tree->type != T_INLINE_HTML && tree->type != T_INLINE_HTML_EQUALS) {
-        astp p = ast_new(T_INLINE_HTML, "");
-        ast_add_child(p, tree);
-        tree = p;
-    }
-    if (!is_online) ast_print_bfs(stdout, tree);
-
-    if (!is_online) {
-        printf("\n\n==========================\n");
-        printf("|     Transforming AST     |\n");
-        printf("==========================\n\n");
-    }
-    astp functions_used;
-    ast_transform(stdout,aspis_home, taintspath, prototypespath, filename, &tree, &functions_used);
-
-    if (!is_online) {
-        printf("\n\n==========================\n");
-        printf("|      Improving AST      |\n");
-        printf("==========================\n\n");
-    }
-    ast_improve(stdout, &tree);
-
-    if (!is_online) {
-        printf("\n\n==========================\n");
-        printf("|         Final AST         |\n");
-        printf("==========================\n\n");
-    }
-    script_stage = 0;
-    ast_print_bfs(fout, tree);
-
-    if (!is_online) {
-        printf("\n\n==========================\n");
-        printf("| Built-in  Functions used |\n");
-        printf("==========================\n\n");
-    }
-    script_stage = 0;
-    FILE * fused=fopen("/data/Dropbox/php/svn_local/php/PhpParserC/fused.txt","a");
-    ast_print_bfs(fused, functions_used);
-    fclose(fused);
-
-
-   //let's output the result
-   if (fout!=stdout && !is_online ) {
-       fflush(fout);
-       close(fout);
-       printf("File (%s) closed\n",outpath);
-       char str[1000];
-       sprintf(str,"cat %s",outpath);
-       printf("--------->%s\n",str);
-       if (system(str)==-1) die();
-       printf("\n----------\n");
-   }
-   else printf("Did not print the result.\n");
-   
 }
 

@@ -6,11 +6,17 @@
 #include <sys/stat.h>
 #include "ast.h"
 #include <unistd.h>
+#include "php_parser.tab.h"
+#include "ast_transformer.h"
+#include "ast_improver.h"
+
+int COLLECT_INFO=0;
 
 char * outpath=NULL;
 char * outfile=NULL;
 char * taintspath=NULL;
 char * infile=NULL;
+char * fused=NULL;
 
 void print_usage() {
    printf("Usage: ./aspis \n"
@@ -18,7 +24,8 @@ void print_usage() {
            "[-out \\path\\to\\output\\DIR\\]\n\t*the dir where the ouput will be placed\n"
            "[-mode online]\n\t*set when PHP Aspis is invoked at runtime, useless otherwise\n"
            "[-taints file]\n\t*Partial tracking: what is tainted\n"
-           "[-prototypes file]\n\t*Partial tracking: all function prototypes\n");
+           "[-prototypes file]\n\t*Partial tracking: all function prototypes\n"
+           "[-fused on]\b\t*Append to fused.txt the PHP lib functions used by the script\n");
    exit(1);
 }
 //Locates an input parameter inside argv
@@ -112,7 +119,7 @@ char * get_filename_only(char * path) {
 int my_main(int argc, char* argv[],char** aspis_home, char** outfilepath_ex, char** taintsfilepath_ex, char** prototypesfilepath, char** filename) {
     int i;
     printf(">>Parameters used:\n");
-    for (i = 0; i < argc; i++) printf("\t%d. %s\n", i, argv[i]);
+    for (i = 0; i < argc; i++)  printf("\t%d. %s\n", i, argv[i]);
     
     //read the configuration parameters from the arguments
     char * m = locate_param(argv, argc, "-mode");
@@ -121,6 +128,7 @@ int my_main(int argc, char* argv[],char** aspis_home, char** outfilepath_ex, cha
     outpath = locate_param(argv, argc, "-out");
     infile = locate_param(argv, argc, "-in");
     taintspath = locate_param(argv, argc, "-taints");
+    fused = locate_param(argv, argc, "-fused");
     *prototypesfilepath = locate_param(argv, argc, "-prototypes");
     *aspis_home=strcpy_malloc(getenv("ASPIS_HOME"));
     
@@ -134,9 +142,8 @@ int my_main(int argc, char* argv[],char** aspis_home, char** outfilepath_ex, cha
     
     //now set up the environment according to the arguments
     if (!setin(infile)) die(">>Cannot set the infile");
-
     *filename = infile;
-
+    if (fused!=NULL && strcmp(fused,"on")==0) COLLECT_INFO=1;
     if (outpath != NULL && !is_online) {
         //construct the output file name. This will have the same name as the input
         //file, but placed inside the outpath directory.
@@ -169,4 +176,79 @@ int my_main(int argc, char* argv[],char** aspis_home, char** outfilepath_ex, cha
     *outfilepath_ex = outfile;
     *taintsfilepath_ex = taintspath;
     return 0;
+}
+
+int script_stage=0;
+/* 
+ * The main routine that takes the parse tree and coordinates all processing
+ */
+void process_tree(char *aspis_home, char* outpath, char * taintspath, char* prototypespath, char *filename, astp tree) {
+    FILE * fout = NULL;
+    if (outpath != NULL) {
+        fout = fopen(outpath, "w");
+        if (fout == NULL) {
+            die("Cannot write to output");
+        }
+    } else fout = stdout;
+
+    if (!is_online) {
+        printf("\n\n==========================\n");
+        printf("|       Parsing AST      |\n");
+        printf("==========================\n\n");
+    }
+    if (tree->type != T_INLINE_HTML && tree->type != T_INLINE_HTML_EQUALS) {
+        astp p = ast_new(T_INLINE_HTML, "");
+        ast_add_child(p, tree);
+        tree = p;
+    }
+    if (!is_online) ast_print_bfs(stdout, tree);
+
+    if (!is_online) {
+        printf("\n\n==========================\n");
+        printf("|     Transforming AST     |\n");
+        printf("==========================\n\n");
+    }
+    astp functions_used;
+    ast_transform(stdout,aspis_home, taintspath, prototypespath, filename, &tree, &functions_used);
+
+    if (!is_online) {
+        printf("\n\n==========================\n");
+        printf("|      Improving AST      |\n");
+        printf("==========================\n\n");
+    }
+    ast_improve(stdout, &tree);
+
+    if (!is_online) {
+        printf("\n\n==========================\n");
+        printf("|         Final AST         |\n");
+        printf("==========================\n\n");
+    }
+    script_stage = 0;
+    ast_print_bfs(fout, tree);
+
+    if (!is_online) {
+        printf("\n\n==========================\n");
+        printf("| Built-in  Functions used |\n");
+        printf("==========================\n\n");
+    }
+    script_stage = 0;
+    if (COLLECT_INFO) {
+        FILE * fused = fopen("fused.txt", "a");
+        ast_print_bfs(fused, functions_used);
+        fclose(fused);
+    }
+
+   //let's output the result
+   if (fout!=stdout && !is_online ) {
+       fflush(fout);
+       fclose(fout);
+       printf("File (%s) closed\n",outpath);
+       char str[1000];
+       sprintf(str,"cat %s",outpath);
+       printf("--------->%s\n",str);
+       if (system(str)==-1) die();
+       printf("\n----------\n");
+   }
+   else printf("Did not print the result.\n");
+   
 }

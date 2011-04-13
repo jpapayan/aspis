@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 const int PROTECT_CHARS=1;
-const int COLLECT_INFO=0;
+extern int COLLECT_INFO;
 
 int is_global_scope_untainted=1;
 int is_everything_untainted=0; //make all functions/classes untainted

@@ -68,9 +68,7 @@ char *path_join(char * p1,char * p2) {
         if (p2[0]!='/') p1=strcat_malloc(p1,"/");
         ret=strcat_malloc(ret,p2);
     }
-    printf("concat: %s\n",ret);
     return ret;
-    
 }
 
 

@@ -1,5 +1,7 @@
-#include <stdio.h>
+#ifndef _AST_H
+#define	_AST_H
 
+#include <stdio.h>
 int is_online;
 typedef struct astnode * astp;
 
@@ -36,3 +38,5 @@ void ast_remove_child(astp t,int i);
 void ast_clear_parameters(astp t);
 void ast_clear_children(astp t);
 astp ast_copy(astp );
+
+#endif	/* _AST_H */
