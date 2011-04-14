@@ -64,8 +64,8 @@ def execute(str):
     p.wait()
 
 def do_rewrite(in_filename,out_dir,taints,prototypes):
-        #print ".",
-        print in_filename
+        print ".",
+        #print in_filename
         sys.stdout.flush();
         cmd="aspis -in "+in_filename+ " -out "+out_dir+"/";
         if (taints!=""):
@@ -95,15 +95,16 @@ if __name__ == '__main__':
     print "==================================================="
 
     rootdir=get_param(sys.argv,"dir")
-    if len(sys.argv)%2!=1 or rootdir=="":
+    out=get_param(sys.argv,"out")
+    if len(sys.argv)%2!=1 or rootdir=="" or out=="":
         print len(sys.argv)
         usage()
         exit()
 
-    out=get_param(sys.argv,"out")
     taints=get_param(sys.argv,"taints")
     prototypes=get_param(sys.argv,"prototypes")
     fused=get_param(sys.argv,"fused")
+    
     print "-dir=\t"+rootdir;
     print "-out=\t"+out;
     print "-fused=\t"+fused+" [optional]"; 
@@ -114,9 +115,10 @@ if __name__ == '__main__':
     ####let's make PhpAspis
     execute("rm fused.txt");
     execute("rm do_rewrite_project.log");
-    p=Popen("make clean", shell=True)
+    aspis_home=os.environ.get("ASPIS_HOME")
+    p=Popen("make clean", shell=True, cwd=aspis_home)
     p.wait()
-    p=Popen("make", shell=True)
+    p=Popen("make", shell=True,cwd=aspis_home)
     p.wait()
     print "\nPhpAspis compiled, please ENTER to continue with rewritting\n(or CTRL-C me if compilation wasn't fine)..."
     xxx=raw_input()

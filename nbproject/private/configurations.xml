@@ -33,8 +33,9 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" in tests/test_partial_basic_p1.php -out tests/results -taints taint_propagation/test_partial_basic_p1.tainted -prototypes taint_propagation/test_partial_basic_p1.prototypes</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_partial_basic_p1.php -out tests/results -taints taint_propagation/test_partial_basic_p1.tainted -prototypes taint_propagation/test_partial_basic_p1.prototypes</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/wp-db.php -out tests/results -taints ../webapps_eval/taint_propagation/cve0641.tainted -prototypes ../webapps_eval/taint_propagation/cve0641.prototypes</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" -in tests/test_partial_basic_p1.php -out tests/results -taints taint_propagation/test_partial_basic_p1.tainted -prototypes taint_propagation/test_partial_basic_p1.prototypes</runcommand>
+        <runcommand>"${OUTPUT_PATH}" -in tests/wp-db.php -out tests/results -taints ../webapps_eval/taint_propagation/cve0641.tainted -prototypes ../webapps_eval/taint_propagation/cve0641.prototypes</runcommand>
         <rundir>/data/Dropbox/php/aspis</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

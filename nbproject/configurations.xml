@@ -2,6 +2,8 @@
 <configurationDescriptor version="79">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df name="PhpParserC" root=".">
+      <df name="dummy">
+      </df>
       <df name="misc">
       </df>
       <df name="notes">
@@ -10,7 +12,13 @@
       </df>
       <df name="phplib">
       </df>
-      <df name="taint_propagation">
+      <df name="results">
+        <in>AspisLibrary.php</in>
+        <in>AspisMain.php</in>
+        <in>AspisObject.php</in>
+        <in>AspisTaints.php</in>
+        <in>php_functions.txt</in>
+        <in>wp-db.php</in>
       </df>
       <in>ast.c</in>
       <in>ast.h</in>
