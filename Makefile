@@ -19,3 +19,12 @@ php_parser.tab.c php_parser.tab.h: php_parser.y
 
 clean:
 	rm php_parser.tab.c php_parser.tab.h php_scanner.lex.c php_parser.output aspis
+
+install: aspis 
+	echo "Installing PHPAspis in your home directory..."
+	-rm -rI ~/aspis_home
+	cp -r ${CURDIR} ~/aspis_home
+	echo "export PATH=$$PATH:~/aspis_home" >> ~/.profile
+	echo "export ASPIS_HOME=~/aspis_home" >> ~/.profile
+	echo "Done!"
+	

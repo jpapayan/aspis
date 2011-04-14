@@ -1,5 +1,5 @@
-import os.path
 #!/usr/bin/python
+import os.path
 # -*- coding: utf-8 -*-
 
 #This file automates transforming a generic PHP Project using Aspis.
