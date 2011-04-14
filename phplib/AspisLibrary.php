@@ -890,7 +890,7 @@ function Aspis_create_function($params,$code) {
         if (!$r) die("Could not create pipe $ASPIS_PIPE_RECEIVE\n");
     }
     if (!$r) die("Could not create pipe $ASPIS_PIPE\n");
-    exec("./aspis -in $ASPIS_PIPE_SEND -out $ASPIS_PIPE_RECEIVE -mode online >/dev/null &",$a);
+    exec("aspis -in $ASPIS_PIPE_SEND -out $ASPIS_PIPE_RECEIVE -mode online >/dev/null &",$a);
     $handle_send = fopen($ASPIS_PIPE_SEND, 'w');
     fwrite($handle_send, "<?php ".$code[0]);
     fclose($handle_send);

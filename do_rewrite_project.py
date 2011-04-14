@@ -64,9 +64,10 @@ def execute(str):
     p.wait()
 
 def do_rewrite(in_filename,out_dir,taints,prototypes):
-        print ".",
+        #print ".",
+        print in_filename
         sys.stdout.flush();
-        cmd="./aspis -in "+in_filename+ " -out "+out_dir+"/";
+        cmd="aspis -in "+in_filename+ " -out "+out_dir+"/";
         if (taints!=""):
            cmd+=" -taints "+taints;
         if (prototypes!=""):

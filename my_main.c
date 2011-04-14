@@ -20,12 +20,12 @@ char * fused=NULL;
 
 void print_usage() {
    printf("Usage: ./aspis \n"
-           "-in infile.php\n\t*the file to transform\n"
-           "[-out \\path\\to\\output\\DIR\\]\n\t*the dir where the ouput will be placed\n"
-           "[-mode online]\n\t*set when PHP Aspis is invoked at runtime, useless otherwise\n"
-           "[-taints file]\n\t*Partial tracking: what is tainted\n"
-           "[-prototypes file]\n\t*Partial tracking: all function prototypes\n"
-           "[-fused on]\b\t*Append to fused.txt the PHP lib functions used by the script\n");
+           "-in infile.php\n\tthe file to transform\n"
+           "[-out \\path\\to\\output\\DIR\\]\n\tthe dir where the ouput will be placed\n"
+           "[-mode online]\n\tset when PHP Aspis is invoked at runtime, useless otherwise\n"
+           "[-taints file]\n\tPartial tracking: what is tainted\n"
+           "[-prototypes file]\n\tPartial tracking: all function prototypes\n"
+           "[-fused on]\n\t*Append to fused.txt the PHP lib functions used by the script\n");
    exit(1);
 }
 //Locates an input parameter inside argv

@@ -49,40 +49,40 @@ def get_param(argv,param):
 
 def do_test(path, infile, taints, prototypes):
         ##cleanup
-        p=Popen("rm original.out", shell=True,cwd=path+"/..");
+        p=Popen("rm original.out", shell=True);
         p.wait()
-        p=Popen("rm edited.out", shell=True,cwd=path+"/..");
+        p=Popen("rm edited.out", shell=True);
         p.wait()
 
         ##Aspisize the input script
         in_filename=infile
-        out_dir=path+"results";
-        cmd="./aspis -in "+in_filename+ " -out "+out_dir;
+        out_dir=os.path.join(path,"results");
+        cmd="aspis -in "+in_filename+ " -out "+out_dir;
 
         if (taints!=""):
             cmd+=" -taints "+taints;
         elif (infile.find("_partial_")>-1):
             filename=os.path.basename(infile);
             filename=filename[0:filename.find(".")];
-            cmd+=" -taints taint_propagation/"+filename+".tainted";
+            cmd+=" -taints "+ os.path.join(path,"taint_propagation/")+filename+".tainted";
             print cmd;
         if (prototypes!=""):
             cmd+=" -prototypes "+prototypes;
         elif (infile.find("_partial_")>-1):
             filename=os.path.basename(infile);
             filename=filename[0:filename.find(".")];
-            cmd+=" -prototypes taint_propagation/"+filename+".prototypes";
+            cmd+=" -prototypes "+ os.path.join(path,"taint_propagation/")+filename+".prototypes";
             print cmd;
-        p=Popen(cmd, shell=True,cwd=path+"/..");
+        p=Popen(cmd, shell=True);
         p.wait()
 
         ##run the input script
-        p=Popen("php "+in_filename+" 'html&tag'"+" >original.out", shell=True,cwd=path+"/..");
+        p=Popen("php "+in_filename+" 'html&tag'"+" >original.out", shell=True);
         p.wait()
 
         ##run the edited script
         out_filename=out_dir+string_prune(infile,'/')
-        p=Popen("php "+out_filename+" 'html&tag'"+" >edited.out", shell=True,cwd=path+"/..");
+        p=Popen("php "+out_filename+" 'html&tag'"+" >edited.out", shell=True);
         p.wait()
 
         ##compare results
@@ -116,7 +116,7 @@ def do_test(path, infile, taints, prototypes):
 
 def usage():
     print "Please invoke the program correcly."
-    print "[-dir directory][-file file]"
+    print "[-dir directory][-file file][-taints file][-prototypes file]"
     sys.exit(1)
 
 if __name__ == '__main__':
@@ -129,18 +129,19 @@ if __name__ == '__main__':
         usage()
         exit()
     path=get_param(sys.argv,"dir")
-    if path=="":
-        print "No path provided."
+    file=get_param(sys.argv,"file")
+    if path=="" and file=="":
+        print "Please provide a -dir with the tests or a -file to test."
         usage()
         exit()
-    file=get_param(sys.argv,"file")
     taints=get_param(sys.argv,"taints")
     prototypes=get_param(sys.argv,"prototypes")
     
     ####let's make PhpAspis
-    p=Popen("make clean", shell=True,cwd=path+"/..")
+    aspis_home=os.environ.get("ASPIS_HOME")
+    p=Popen("make clean", shell=True, cwd=aspis_home)
     p.wait()
-    p=Popen("make", shell=True,cwd=path+"/..")
+    p=Popen("make", shell=True,cwd=aspis_home)
     p.wait()
     print "\nPhpAspis compiled, please ENTER to continue with testing\n(or CTRL-C me if compilation wasn't fine)..."
     xxx=raw_input()
@@ -181,16 +182,16 @@ if __name__ == '__main__':
         print "|| FAILED: " + str(len(results.keys())-succeed_count) + "/" + str(len(results.keys()))
         print "========================="
     else:
-        do_test(path, file,taints,prototypes)
+        do_test(path, file, taints, prototypes)
         print "\nORIGINAL FILE's OUTPUT:"
-        p=Popen("cat original.out", shell=True,cwd=path+"/..")
+        p=Popen("cat original.out", shell=True)
         p.wait()
         print "\nEDITED FILE's OUTPUT:"
-        p=Popen("cat edited.out", shell=True,cwd=path+"/..")
+        p=Popen("cat edited.out", shell=True)
         p.wait()
         print("\n")
-    p=Popen("rm original.out", shell=True,cwd=path+"/..");
+    p=Popen("rm original.out", shell=True);
     p.wait()
-    p=Popen("rm edited.out", shell=True,cwd=path+"/..");
+    p=Popen("rm edited.out", shell=True);
     p.wait()
 

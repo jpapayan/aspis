@@ -9,3 +9,6 @@ git push -u origin master
 =====================
 Environmental variables used:
 ASPIS_HOME: the installation dir of the project
+PATH: aspis must be in your path
+
+=====================
