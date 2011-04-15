@@ -427,7 +427,6 @@ taint_category_list * category_file_read(char * file) {
  * Returns -1 if the function is not a sanitisation function for any category.
  */
 int get_sanitisation_index(taint_category_list *tc, char * f) {
-    int i=0;
-    for (i=0; i<tc->count; i++) {}
+    for (int i=0; i<tc->count; i++) {}
     return -1;
 }

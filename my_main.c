@@ -10,6 +10,7 @@
 #include "ast_transformer.h"
 #include "ast_improver.h"
 
+int setin(char * );
 int COLLECT_INFO=0;
 
 char * outpath=NULL;

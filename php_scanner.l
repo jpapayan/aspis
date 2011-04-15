@@ -22,6 +22,7 @@
 /* $Id: php_lexer.l,v 1.1 2006/10/02 01:56:09 yijunsf Exp $ */
 
 #include "php_parser.tab.h"
+int setin(char * );
 const char * policysuffix="_policy";
 int getLineno(){
 	return yylineno;

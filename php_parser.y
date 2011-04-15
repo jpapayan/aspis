@@ -37,7 +37,7 @@
 #define YYERROR_VERBOSE 0 
 void yyerror(const char msg[]);
 extern int yylineno;
-
+int yylex(void); //to avoid a gcc warning
 char * aspis_home=NULL;
 char * outputfilepath=NULL;
 char * taintsfilepath=NULL;
