@@ -54,6 +54,8 @@ typedef struct {
 } taint_category_list;
 
 taint_category_list *category_file_read(char *);
+int category_find_index(taint_category_list *, char * );
+char * category_find_guard(taint_category_list *, char *);
 
 #endif	/* _FILE_STRUCTURES_H */
 

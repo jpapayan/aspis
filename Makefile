@@ -28,3 +28,7 @@ install: aspis
 	echo "export ASPIS_HOME=~/aspis_home" >> ~/.profile
 	echo "Done!"
 	
+tests: aspis
+	rm -rf tests/results
+	do_tests.py -dir tests
+	

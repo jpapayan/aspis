@@ -416,6 +416,7 @@ taint_category_list * category_file_read(char * file) {
             //add to the category list
             ret->count++;
             ret->categories=(taint_category **)realloc(ret->categories, ret->count*sizeof(taint_category *));
+            ret->categories[ret->count-1]=tc;
         }
     }
     
@@ -426,7 +427,26 @@ taint_category_list * category_file_read(char * file) {
  * Given a function name, returns the index of the taint category.
  * Returns -1 if the function is not a sanitisation function for any category.
  */
-int get_sanitisation_index(taint_category_list *tc, char * f) {
-    for (int i=0; i<tc->count; i++) {}
+int category_find_index(taint_category_list *tc_list, char * function) {
+    //linear search, I expect taint categories to be very sort.
+    for (int i=0; i<tc_list->count; i++) {
+        taint_category * tc = tc_list->categories[i];
+        for ( int j=0; j<tc->fcount; j++ ) {
+            if (strcmp(function,tc->flist[j])==0) return i;
+        }
+    }
     return -1;
 }
+
+char * category_find_guard(taint_category_list *tc_list, char * function) {
+    //linear search, I expect taint categories to be very sort.
+    for (int i=0; i<tc_list->count; i++) {
+        taint_category * tc = tc_list->categories[i];
+        for ( int j=0; j<tc->gcount; j++ ) {
+            if (strcmp(function,tc->glist[j]->name)==0) 
+                return strcpy_malloc(tc->glist[j]->sink);
+        }
+    }
+    return NULL;
+}
+
