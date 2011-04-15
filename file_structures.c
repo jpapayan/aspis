@@ -1,14 +1,15 @@
-#include "file_structures.h"
-#include "ast.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "file_structures.h"
+#include "ast.h"
+#include "my_main.h"
 
 /**
  * Reads all bult-in functions of php in an array. The file is sorted in the first place
  */
-void read_php_functions( char * file, char *** flist, int *fcount) {
+void function_file_read( char * file, char *** flist, int *fcount) {
     FILE * fp = fopen(file, "r");
     if (fp==NULL) die("Could not open file.");
     if (fp == NULL) die("Failed to read PHP built in functions list\n");
@@ -34,7 +35,7 @@ void read_php_functions( char * file, char *** flist, int *fcount) {
  * Reads all taints from the taint file in two arrays. The file is sorted
  * (per catrgory) in the first place
  */
-void read_php_taints(char * file, char *** flist, int *fcount,char *** clist, int *ccount) {
+void taint_file_read(char * file, char *** flist, int *fcount,char *** clist, int *ccount) {
     FILE * fp = fopen(file, "r");
     if (fp == NULL) die("Failed to read taints list\n");
     int cf=0;
@@ -89,7 +90,7 @@ void read_php_taints(char * file, char *** flist, int *fcount,char *** clist, in
 /**
  * Binary search of a single function name in the list
  */
-int file_containts_name(char** flist, int fbase, int fcount, int fmax, const char * str) {
+int list_search(char** flist, int fbase, int fcount, int fmax, const char * str) {
     if (fmax==0) return -1;
     if (fmax==1) {
         if (strcmp(flist[0], str)==0) return 0;
@@ -105,10 +106,10 @@ int file_containts_name(char** flist, int fbase, int fcount, int fmax, const cha
         i = strcmp(flist[fcount], str);
         if (i == 0) return fcount;
         else return -1;
-    } else if (res < 0) return file_containts_name(flist, my_count, fcount, fmax, str);
-    else if (res > 0) return file_containts_name(flist, fbase, my_count, fmax, str);
+    } else if (res < 0) return list_search(flist, my_count, fcount, fmax, str);
+    else if (res > 0) return list_search(flist, fbase, my_count, fmax, str);
 }
-int file_printall(char** flist, int fcount) {
+int list_print(char** flist, int fcount) {
     int i=0;
 
     for (i=0;i<fcount;i++) {
@@ -126,7 +127,7 @@ int file_printall(char** flist, int fcount) {
  * ...
  * \t\treturntype
  */
-void function_prototypes_read(char * file, prototype ** plist, int *pcount) {
+void prototypes_file_read(char * file, prototype ** plist, int *pcount) {
     FILE * fp = fopen(file, "r");
     if (fp == NULL) die("Failed to read PHP function proptypes\n");
     char line[200];
@@ -170,7 +171,7 @@ void function_prototypes_read(char * file, prototype ** plist, int *pcount) {
     *plist=list;
     fclose(fp);
 }
-void user_function_prototypes_read_functions(char * file, prototype ** plist, int *pcount) {
+void uprototypes_read_functions(char * file, prototype ** plist, int *pcount) {
     FILE * fp = fopen(file, "r");
     if (fp == NULL) die("Failed to read PHP user function proptypes\n");
     char line[200];
@@ -216,7 +217,7 @@ void user_function_prototypes_read_functions(char * file, prototype ** plist, in
     *plist=list;
     fclose(fp);
 }
-void user_function_prototypes_read_methods(char * file, prototype ** plist, int *pcount) {
+void uprototypes_read_methods(char * file, prototype ** plist, int *pcount) {
     FILE * fp = fopen(file, "r");
     if (fp == NULL) die("Failed to read PHP user method proptypes\n");
     char line[200];
@@ -266,7 +267,8 @@ void user_function_prototypes_read_methods(char * file, prototype ** plist, int 
     *plist=list;
     fclose(fp);
 }
-void function_prototypes_printall(prototype * plist, int pcount) {
+
+void prototypes_print(prototype * plist, int pcount) {
     int i=0;
     for (i=0;i<pcount;i++) {
         printf("Prototype: %s\n",plist[i].name);
@@ -277,7 +279,7 @@ void function_prototypes_printall(prototype * plist, int pcount) {
         }
     }
 }
-int function_prototypes_find_prototype(prototype * plist, int pcount, char* function) {
+int prototypes_find(prototype * plist, int pcount, char* function) {
     int i=0;
     int res=-1;
     for (i=0;i<pcount;i++) {
@@ -290,13 +292,13 @@ int function_prototypes_find_prototype(prototype * plist, int pcount, char* func
     }
     return res;
 }
-int function_prototypes_total_parameters(prototype * plist, int pcount, char* function) {
-    int index=function_prototypes_find_prototype(plist,pcount,function);
+int prototype_total_parameters(prototype * plist, int pcount, char* function) {
+    int index=prototypes_find(plist,pcount,function);
     if (index>-1) return plist[index].parameters.total_parameters;
     else return -1;
 }
-char * function_prototypes_parameter_type(prototype *plist, int pcount, char* function, int pnum, int ptotal) {
-    int index=function_prototypes_find_prototype(plist,pcount,function);
+char * prototype_parameter_type(prototype *plist, int pcount, char* function, int pnum, int ptotal) {
+    int index=prototypes_find(plist,pcount,function);
     int total_parameters;
     if (index>-1) {
         total_parameters=plist[index].parameters.total_parameters;
@@ -323,9 +325,9 @@ char * function_prototypes_parameter_type(prototype *plist, int pcount, char* fu
     }
     return strcpy_malloc("");
 }
-int function_prototypes_has_ref_param(prototype *plist, int pcount, char* function) {
+int prototype_has_ref_param(prototype *plist, int pcount, char* function) {
     int res=0;
-    int index=function_prototypes_find_prototype(plist,pcount,function);
+    int index=prototypes_find(plist,pcount,function);
     if (index>-1) {
         int i=0;
         for (i=0;i<plist[index].parameters.total_parameters;i++) {
@@ -337,11 +339,12 @@ int function_prototypes_has_ref_param(prototype *plist, int pcount, char* functi
     }
     return res;
 }
-char * function_prototypes_return_type(prototype * plist, int pcount, char* function) {
-    int index=function_prototypes_find_prototype(plist,pcount,function);
+char * prototype_return_type(prototype * plist, int pcount, char* function) {
+    int index=prototypes_find(plist,pcount,function);
     if (index>-1) return strcpy_malloc(plist[index].return_type);
     else return strcpy_malloc("");
 }
+
 int is_scalar(char * type) {
   return strstr(type,"int")!=NULL || strstr(type,"bool")!=NULL || strstr(type,"string")!=NULL
             || strstr(type,"resource")!=NULL || strstr(type,"float")!=NULL;
@@ -357,4 +360,74 @@ int is_callback(char * type) {
 }
 int is_object(char * type) {
   return strstr(type,"object")!=NULL;
+}
+
+//taint category functions
+taint_category_list * category_file_read(char * file) {
+    taint_category_list *ret=(taint_category_list *)malloc(sizeof(taint_category_list));
+    ret->count=0;
+    ret->categories=NULL;
+    FILE * fp = fopen(file, "r");
+    if (fp == NULL) die("Failed to read the taint category file provided\n");
+    char line[200];
+    while (fscanf(fp, "%s\n", (char*) line)>0) { //category loop
+        if (strcmp(line,"begin")==0) {
+            taint_category *tc=(taint_category *)malloc(sizeof(taint_category));
+            tc->glist=NULL;
+            tc->gcount=0;
+            tc->flist=NULL;
+            tc->fcount=0;
+            int reading_sanitisation=0;
+            int reading_guards=0;
+            while (1) { 
+                if (fscanf(fp,"%s\n",(char *)line)==0) break;
+                if (strcmp(line,"end")==0) break;
+                else if (strcmp(line,">sanitisation")==0) {
+                    reading_sanitisation=1; 
+                    continue;
+                }
+                else if (strcmp(line,">guards")==0) {
+                    reading_sanitisation=0;
+                    reading_guards=1;
+                    continue;
+                }
+                
+                if (reading_sanitisation) { 
+                    tc->fcount++;
+                    tc->flist=(char **)realloc(tc->flist, tc->fcount * (sizeof(char *)) );
+                    if (tc->flist == NULL) die("realloc failed\n");
+                    tc->flist[tc->fcount-1]=strcpy_malloc(line);
+                }
+                else if (reading_guards) { 
+                    char *tok1=strtok((char *)line,"->");
+                    char *tok2=strtok((char *)NULL,"->");
+                    if (tok1!=NULL && tok2!=NULL) {
+                        guard * g=(guard *)malloc(sizeof(guard));
+                        g->name = strcpy_malloc(tok1);
+                        g->sink = strcpy_malloc(tok2);
+                        tc->gcount++;
+                        tc->glist=(guard **)realloc(tc->glist, tc->gcount * (sizeof(guard *)) );
+                        if (tc->glist == NULL) die("realloc failed\n");
+                        tc->glist[tc->gcount-1]=g;
+                    }
+                    else die("Invalid guard in the category file");
+                }
+            }
+            //add to the category list
+            ret->count++;
+            ret->categories=(taint_category **)realloc(ret->categories, ret->count*sizeof(taint_category *));
+        }
+    }
+    
+    fclose(fp);
+    return ret;
+}
+/* 
+ * Given a function name, returns the index of the taint category.
+ * Returns -1 if the function is not a sanitisation function for any category.
+ */
+int get_sanitisation_index(taint_category_list *tc, char * f) {
+    int i=0;
+    for (i=0; i<tc->count; i++) {}
+    return -1;
 }

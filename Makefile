@@ -1,4 +1,4 @@
-GCCPARAMS = -g
+GCCPARAMS = -g -std=gnu99
 YACC = bison
 LEX  = flex
 RE2C = re2c

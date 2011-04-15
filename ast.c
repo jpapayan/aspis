@@ -1,14 +1,10 @@
-#include "ast.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "ast.h"
+#include "my_main.h"
 
 int print=0;
-void die(const char *name)
-{
-	perror(name);
-	exit(-1);
-}
 //takes 2 strings and concats them to a new string.
 char * strcat_malloc(const char * s1,const char * s2) {
    if (print) { printf("strcat_malloc..."); fflush(stdout);}

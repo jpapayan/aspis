@@ -1,10 +1,12 @@
-#include "php_parser.tab.h"
-#include "ast_transformer.h"
-#include "file_structures.h"
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "php_parser.tab.h"
+#include "ast_transformer.h"
+#include "my_main.h"
+#include "file_structures.h"
 
 const int PROTECT_CHARS=1;
 extern int COLLECT_INFO;
@@ -41,6 +43,7 @@ prototype * user_functions_prototypes=NULL;
 int user_functions_prototypes_count=0;
 prototype * user_methods_prototypes=NULL;
 int user_methods_prototypes_count=0;
+taint_category_list *taint_categories;
 
 // this holds the name of the file where defined functions are logged.
 char *prototypes_log_filename=NULL;
@@ -67,7 +70,7 @@ void ast_edit_bfs(FILE *, astp* );
  */
 int is_tainted_function(char * f) {
     if (functions_tainted_list==NULL) return 1;
-    int r= file_containts_name(functions_tainted_list,0,functions_tainted_count,functions_tainted_count,f)!=-1;
+    int r= list_search(functions_tainted_list,0,functions_tainted_count,functions_tainted_count,f)!=-1;
     return r;
 }
 /*
@@ -75,7 +78,7 @@ int is_tainted_function(char * f) {
  */
 int is_tainted_class(char * f) {
     if (classes_tainted_list==NULL) return 1;
-    int r= file_containts_name(classes_tainted_list,0,classes_tainted_count,classes_tainted_count,f)!=-1;
+    int r= list_search(classes_tainted_list,0,classes_tainted_count,classes_tainted_count,f)!=-1;
     return r;
 }
 /*
@@ -1191,16 +1194,16 @@ void save_function_name(char * f) {
  */
 void rewrite_function_name(astp * tree,int total_parameters) {
     astp t=*tree;
-    if (file_containts_name(functions_list,0,functions_count,functions_count,t->text)!=-1) {
+    if (list_search(functions_list,0,functions_count,functions_count,t->text)!=-1) {
         save_function_name(t->text);
     }
     if (is_partial_enabled &&
-            file_containts_name(functions_overriden_partial_list,0,functions_overriden_partial_count,
+            list_search(functions_overriden_partial_list,0,functions_overriden_partial_count,
             functions_overriden_partial_count,t->text)!=-1) {
            t->text = strcat_malloc("AspisTainted_", t->text);
     }
     else {
-        if (file_containts_name(functions_overriden_list, 0, functions_overriden_count,
+        if (list_search(functions_overriden_list, 0, functions_overriden_count,
                 functions_overriden_count, t->text) != -1) {
             if (strcmp(t->text, "array_multisort") == 0) {
                 t->text = strcat_malloc("Aspis_", t->text);
@@ -1230,7 +1233,7 @@ void rewrite_function_call(astp * tree) {
         }
         rewrite_function_name(tree,total_params); //the rewritten name will never match the following
         int tainted_calls_untainted=is_partial_enabled && (is_tainted && !is_tainted_function(t->text) && !COLLECT_INFO);
-        int library_call=file_containts_name(functions_list,0,functions_count,functions_count,t->text)!=-1;
+        int library_call=list_search(functions_list,0,functions_count,functions_count,t->text)!=-1;
         if (strstr(t->text,"Aspis")!=NULL) {
             tainted_calls_untainted=0;
             library_call=0;
@@ -1239,13 +1242,13 @@ void rewrite_function_call(astp * tree) {
             if (!is_language_construct) {
                 //dereference aspides from each parameter
                 tnull = t->parameters[0]->parameters[0];
-                if (library_call) findex = function_prototypes_find_prototype(functions_prototypes, functions_prototypes_count, t->text);
-                else findex = function_prototypes_find_prototype(user_functions_prototypes, user_functions_prototypes_count, t->text);
+                if (library_call) findex = prototypes_find(functions_prototypes, functions_prototypes_count, t->text);
+                else findex = prototypes_find(user_functions_prototypes, user_functions_prototypes_count, t->text);
                 //iterate through all parameters, act accordingly
                 for (i = 0; i < tnull->total_parameters; i++) {
                     char * type;
-                    if (library_call) type = function_prototypes_parameter_type(functions_prototypes, functions_prototypes_count, t->text, i, tnull->total_parameters);
-                    else type = function_prototypes_parameter_type(user_functions_prototypes, user_functions_prototypes_count, t->text, i, tnull->total_parameters);
+                    if (library_call) type = prototype_parameter_type(functions_prototypes, functions_prototypes_count, t->text, i, tnull->total_parameters);
+                    else type = prototype_parameter_type(user_functions_prototypes, user_functions_prototypes_count, t->text, i, tnull->total_parameters);
                     astp p = tnull->parameters[i];
 
                     //subsequent param
@@ -1313,9 +1316,9 @@ void rewrite_function_call(astp * tree) {
                     char * str=strcat_malloc("Function call rewritting failed to locate a function prototype that should be known: ",t->text);
                     printf("------Dying:-------\n");
                     printf("Library Call: %d\n",library_call);
-                    findex = function_prototypes_find_prototype(functions_prototypes, functions_prototypes_count, t->text);
+                    findex = prototypes_find(functions_prototypes, functions_prototypes_count, t->text);
                     printf("Built in Functions Index: %d\n",findex);
-                    findex = function_prototypes_find_prototype(user_functions_prototypes, user_functions_prototypes_count, t->text);
+                    findex = prototypes_find(user_functions_prototypes, user_functions_prototypes_count, t->text);
                     printf("Application Functions Index: %d\n",findex);
                     die(str);
                 }
@@ -1354,10 +1357,10 @@ void rewrite_function_call(astp * tree) {
             }
             else {
                 if (library_call) {
-                    char * rettype = function_prototypes_return_type(functions_prototypes, functions_prototypes_count, t->text);
+                    char * rettype = prototype_return_type(functions_prototypes, functions_prototypes_count, t->text);
                     attach_aspis_wtype(tree, rettype, t->text);
                 } else {
-                    char * rettype = function_prototypes_return_type(user_functions_prototypes, user_functions_prototypes_count, t->text);
+                    char * rettype = prototype_return_type(user_functions_prototypes, user_functions_prototypes_count, t->text);
                     attach_aspis_wwarning_wtype(tree, rettype);
                 }
             }
@@ -2341,13 +2344,13 @@ void rewrite_method_call(astp *tree) {
     printf("}\n");
     fflush(stdout);
     astp tnull = parameters->parameters[0];
-    int findex = function_prototypes_find_prototype(user_methods_prototypes, user_methods_prototypes_count, method);
+    int findex = prototypes_find(user_methods_prototypes, user_methods_prototypes_count, method);
     //iterate through all parameters, act accordingly
     int ref_params[10]; //stores indexes of the call's ref parameters
     int ref_params_index=0;
     for (i = 0; i < tnull->total_parameters; i++) {
         char * type;
-        type = function_prototypes_parameter_type(user_methods_prototypes, user_methods_prototypes_count, method, i, tnull->total_parameters);
+        type = prototype_parameter_type(user_methods_prototypes, user_methods_prototypes_count, method, i, tnull->total_parameters);
         astp pa = tnull->parameters[i];
 
         //subsequent param
@@ -2429,8 +2432,8 @@ void rewrite_variable_method_call(astp *tree) {
     }
     if (lastp->type==T_OBJECT_OPERATOR && strcmp(t->text,"$this")!=0 && lastp->parameters[0]->type==T_STRING_METHOD) {
         int i;
-        int exists_ref=function_prototypes_has_ref_param(user_methods_prototypes,user_methods_prototypes_count,lastp->parameters[0]->text) 
-             || is_ref(function_prototypes_return_type(user_methods_prototypes,user_methods_prototypes_count,lastp->parameters[0]->text));
+        int exists_ref=prototype_has_ref_param(user_methods_prototypes,user_methods_prototypes_count,lastp->parameters[0]->text) 
+             || is_ref(prototype_return_type(user_methods_prototypes,user_methods_prototypes_count,lastp->parameters[0]->text));
         if (exists_ref) rewrite_method_call(tree);
         
         if (!is_online) {
@@ -2489,10 +2492,10 @@ void both_returns_by_ref(astp * tree) {
  */
 void untainted_rewrite_function_name(astp * tree,int total_parameters) {
     astp t=*tree;
-    if (file_containts_name(functions_list,0,functions_count,functions_count,t->text)!=-1) {
+    if (list_search(functions_list,0,functions_count,functions_count,t->text)!=-1) {
         save_function_name(t->text);
     }
-    if ( file_containts_name(functions_overriden_partial_list, 0, functions_overriden_partial_count,
+    if ( list_search(functions_overriden_partial_list, 0, functions_overriden_partial_count,
                     functions_overriden_partial_count, t->text) != -1) {
         t->text = strcat_malloc("AspisUntainted_", t->text);
     }
@@ -2507,7 +2510,7 @@ void untainted_rewrite_function_name(astp * tree,int total_parameters) {
 void untainted_fix_function_wglobals(astp *tree) {
     die("DIED: \"untainted_fix_function_wglobals\" not used any more\n");
     astp t=*tree;
-    int library_call=file_containts_name(functions_list,0,functions_count,functions_count,t->text)!=-1;
+    int library_call=list_search(functions_list,0,functions_count,functions_count,t->text)!=-1;
     int push_call=strcmp(t->text,"AspisPushRefParam")==0;
     if (!t->rewritten && imported_globals_index>0 && !library_call && !push_call) {
         astp fparams=t->parameters[0]->parameters[0];
@@ -2736,11 +2739,11 @@ void untainted_remove_ref_objects(astp *tree) {
             if (!is_language_construct) {
                 //dereference aspides from each parameter
                 tnull = t->parameters[0]->parameters[0];
-                findex = function_prototypes_find_prototype(user_functions_prototypes, user_functions_prototypes_count, t->text);
+                findex = prototypes_find(user_functions_prototypes, user_functions_prototypes_count, t->text);
                 //iterate through all parameters, act accordingly
                 for (i = 0; i < tnull->total_parameters; i++) {
                     char * type;
-                    type = function_prototypes_parameter_type(user_functions_prototypes, user_functions_prototypes_count, t->text, i, tnull->total_parameters);
+                    type = prototype_parameter_type(user_functions_prototypes, user_functions_prototypes_count, t->text, i, tnull->total_parameters);
                     astp p = tnull->parameters[i];
 
                     //subsequent param
@@ -2787,11 +2790,11 @@ void untainted_rewrite_function_call(astp * tree) {
             if (!is_language_construct) {
                 //dereference aspides from each parameter
                 tnull = t->parameters[0]->parameters[0];
-                findex = function_prototypes_find_prototype(user_functions_prototypes, user_functions_prototypes_count, t->text);
+                findex = prototypes_find(user_functions_prototypes, user_functions_prototypes_count, t->text);
                 //iterate through all parameters, act accordingly
                 for (i = 0; i < tnull->total_parameters; i++) {
                     char * type;
-                    type = function_prototypes_parameter_type(user_functions_prototypes, user_functions_prototypes_count, t->text, i, tnull->total_parameters);
+                    type = prototype_parameter_type(user_functions_prototypes, user_functions_prototypes_count, t->text, i, tnull->total_parameters);
                     astp p = tnull->parameters[i];
 
                     //subsequent param
@@ -2872,7 +2875,7 @@ void untainted_rewrite_function_call(astp * tree) {
             }
             else {
                 fixed_globals=1;
-                char * rettype=function_prototypes_return_type(user_functions_prototypes, user_functions_prototypes_count, t->text);
+                char * rettype=prototype_return_type(user_functions_prototypes, user_functions_prototypes_count, t->text);
                 dereference_aspis_wwarning_wtype(tree,rettype);
             }
             if (temp->total_parameters == 1) ast_add_parameter(*tree, temp->parameters[0]);
@@ -3861,23 +3864,33 @@ void edit_node_generic(FILE * out, astp * tree, char * name) {
     }
 }
 
-void ast_transform(FILE * out,char * aspis_home, char * taints, char * prototypes, char * filename, astp * tree, astp * functions) {
+void ast_transform(FILE * out,
+        char * aspis_home, 
+        char * taints, 
+        char * prototypes, 
+        char * categories,
+        char * filename, 
+        astp * tree, 
+        astp * functions) {
     //read the various lists of php functions
-    read_php_functions( path_join(aspis_home, "phplib/php_functions.txt"), &functions_list, &functions_count);
-    read_php_functions( path_join(aspis_home, "phplib/php_functions_overriden.txt"), &functions_overriden_list, &functions_overriden_count);
-    read_php_functions( path_join(aspis_home, "phplib/php_functions_overriden_partial.txt"), &functions_overriden_partial_list, &functions_overriden_partial_count);
-    function_prototypes_read( path_join(aspis_home, "phplib/php_functions_reference_sorted_easy.txt"), &functions_prototypes,&functions_prototypes_count);
+    function_file_read( path_join(aspis_home, "phplib/php_functions.txt"), &functions_list, &functions_count);
+    function_file_read( path_join(aspis_home, "phplib/php_functions_overriden.txt"), &functions_overriden_list, &functions_overriden_count);
+    function_file_read( path_join(aspis_home, "phplib/php_functions_overriden_partial.txt"), &functions_overriden_partial_list, &functions_overriden_partial_count);
+    prototypes_file_read( path_join(aspis_home, "phplib/php_functions_reference_sorted_easy.txt"), &functions_prototypes,&functions_prototypes_count);
 
     if (taints!=NULL && !COLLECT_INFO) {
         is_partial_enabled=1;
         taints_filename=strcpy_malloc(taints);
-        read_php_taints(taints, &functions_tainted_list, &functions_tainted_count, &classes_tainted_list, &classes_tainted_count);
+        taint_file_read(taints, &functions_tainted_list, &functions_tainted_count, &classes_tainted_list, &classes_tainted_count);
         is_global_scope_untainted = !is_tainted_function(filename);
     }
     if (prototypes!=NULL && !COLLECT_INFO) {
-        user_function_prototypes_read_functions(prototypes, &user_functions_prototypes, &user_functions_prototypes_count);
-        user_function_prototypes_read_methods(prototypes, &user_methods_prototypes, &user_methods_prototypes_count);
+        uprototypes_read_functions(prototypes, &user_functions_prototypes, &user_functions_prototypes_count);
+        uprototypes_read_methods(prototypes, &user_methods_prototypes, &user_methods_prototypes_count);
         has_user_prototypes=1;
+    }
+    if (categories!=NULL) {
+        taint_categories=category_file_read(categories);
     }
     
     if (COLLECT_INFO) {

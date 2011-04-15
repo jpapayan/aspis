@@ -4,9 +4,9 @@
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include "ast.h"
 #include <unistd.h>
 #include "php_parser.tab.h"
+#include "ast.h"
 #include "ast_transformer.h"
 #include "ast_improver.h"
 
@@ -27,6 +27,11 @@ void print_usage() {
            "[-prototypes file]\n\tPartial tracking: all function prototypes\n"
            "[-fused on]\n\t*Append to fused.txt the PHP lib functions used by the script\n");
    exit(1);
+}
+void die(const char *name)
+{
+	perror(name);
+	exit(-1);
 }
 //Locates an input parameter inside argv
 char * locate_param(char *argv[],int argc,char * param) {
@@ -74,29 +79,29 @@ void copy_includes(char *aspis_home) {
    
    char *p=path_join(copy,"phplib/AspisObject.php ");
    p=strcat_malloc(p,outpath);
-   if (system(p)==-1) die();
+   if (system(p)==-1) die("copy_includes failed");
    
    p=path_join(copy,"phplib/AspisTaints.php ");
    p=strcat_malloc(p,outpath);
-   if (system(p)==-1) die();
+   if (system(p)==-1) die("copy_includes failed");
    
    p=path_join(copy,"phplib/AspisLibrary.php ");
    p=strcat_malloc(p,outpath);
-   if (system(p)==-1) die();
+   if (system(p)==-1) die("copy_includes failed");
    
    p=path_join(copy,"phplib/php_functions.txt ");
    p=strcat_malloc(p,outpath);
-   if (system(p)==-1) die();
+   if (system(p)==-1) die("copy_includes failed");
    
    if (taintspath == NULL) {
         p=path_join(copy,"phplib/AspisMain.php ");
         p=strcat_malloc(p,outpath);
-        if (system(p) == -1) die();
+        if (system(p) == -1) die("copy_includes failed");
     }
     else {
         p=path_join(outpath,"AspisMain.php");
         p = strcat_malloc("mv AspisMainEdited.php ", p);
-        if (system(p) == -1) die();
+        if (system(p) == -1) die("copy_includes failed");
     }
     printf("All included files copied to (%s)\n",outpath);
 }
@@ -114,7 +119,13 @@ char * get_filename_only(char * path) {
 /*
  * Parsing of console arguments. Plus, copying of the php aspis lib to the output
  */
-int my_main(int argc, char* argv[],char** aspis_home, char** outfilepath_ex, char** taintsfilepath_ex, char** prototypesfilepath, char** filename) {
+int my_main(int argc, char* argv[],
+        char** aspis_home,
+        char** outfilepath_ex,
+        char** taintsfilepath_ex,
+        char** prototypesfilepath,
+        char** categoriesfilepath,
+        char** filename) {
     int i;
     printf(">>Parameters used:\n");
     for (i = 0; i < argc; i++)  printf("\t%d. %s\n", i, argv[i]);
@@ -125,9 +136,10 @@ int my_main(int argc, char* argv[],char** aspis_home, char** outfilepath_ex, cha
     else is_online = 0;
     outpath = locate_param(argv, argc, "-out");
     infile = locate_param(argv, argc, "-in");
-    taintspath = locate_param(argv, argc, "-taints");
     fused = locate_param(argv, argc, "-fused");
+    taintspath = locate_param(argv, argc, "-taints");
     *prototypesfilepath = locate_param(argv, argc, "-prototypes");
+    *categoriesfilepath = locate_param(argv, argc, "-categories");
     *aspis_home=strcpy_malloc(getenv("ASPIS_HOME"));
     
     //stop if help was requested or if we had an invalid configuration    
@@ -147,7 +159,7 @@ int my_main(int argc, char* argv[],char** aspis_home, char** outfilepath_ex, cha
         //file, but placed inside the outpath directory.
         struct stat st;
         if (stat(outpath, &st) != 0) {
-            if (mkdir(outpath, 0777)) die();
+            if (mkdir(outpath, 0777)) die("cannot create an outpath");
         }
 
         char * tok;
@@ -180,7 +192,12 @@ int script_stage=0;
 /* 
  * The main routine that takes the parse tree and coordinates all processing
  */
-void process_tree(char *aspis_home, char* outpath, char * taintspath, char* prototypespath, char *filename, astp tree) {
+void process_tree(char *aspis_home, char* outpath,
+        char * taintspath,
+        char* prototypespath,
+        char * categories,
+        char *filename,
+        astp tree) {
     FILE * fout = NULL;
     if (outpath != NULL) {
         fout = fopen(outpath, "w");
@@ -207,7 +224,7 @@ void process_tree(char *aspis_home, char* outpath, char * taintspath, char* prot
         printf("==========================\n\n");
     }
     astp functions_used;
-    ast_transform(stdout,aspis_home, taintspath, prototypespath, filename, &tree, &functions_used);
+    ast_transform(stdout,aspis_home, taintspath, prototypespath, categories, filename, &tree, &functions_used);
 
     if (!is_online) {
         printf("\n\n==========================\n");
@@ -244,7 +261,7 @@ void process_tree(char *aspis_home, char* outpath, char * taintspath, char* prot
        char str[1000];
        sprintf(str,"cat %s",outpath);
        printf("--------->%s\n",str);
-       if (system(str)==-1) die();
+       if (system(str)==-1) die("cat failed?!");
        printf("\n----------\n");
    }
    else printf("Did not print the result.\n");

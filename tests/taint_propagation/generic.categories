@@ -1,1 +1,13 @@
- 
+begin
+>sanitisation
+htmlentities
+>guards
+echo->AspisCheckPrint
+print->AspisCheckPrint
+end
+
+begin
+>sanitisation
+>guards
+mysql_query->AspisCheckSQL
+end

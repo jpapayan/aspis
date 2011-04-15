@@ -12,14 +12,6 @@
       </df>
       <df name="phplib">
       </df>
-      <df name="results">
-        <in>AspisLibrary.php</in>
-        <in>AspisMain.php</in>
-        <in>AspisObject.php</in>
-        <in>AspisTaints.php</in>
-        <in>php_functions.txt</in>
-        <in>wp-db.php</in>
-      </df>
       <in>ast.c</in>
       <in>ast.h</in>
       <in>ast_array.c</in>
