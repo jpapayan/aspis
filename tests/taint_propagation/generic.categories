@@ -1,6 +1,9 @@
 begin
 >sanitisation
+addslashes
+fsanitizer
 htmlentities
+htmlspecialchars
 >guards
 echo->AspisCheckPrint
 print->AspisCheckPrint

@@ -1077,7 +1077,6 @@ function AspisNewKnownProxy($obj,$taintedToUntainted) {
     //the taint of the created ibject was unknown statically
     return new AspisProxy($obj,$taintedToUntainted);
 }
-
 function AspisEmptyTaints($isTainted) {
     global $ASPIS_CATEGORIES_TOTAL;
     $res=array();

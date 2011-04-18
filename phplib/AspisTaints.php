@@ -4,6 +4,18 @@ if( isset( $ASPIS_DEF_TAINTS ) ) return;
 $ASPIS_DEF_TAINTS = 1;
 
 //New style taint-as arrays
+function AspisKillTaint( $string, $i ) {
+    $ret=$string;
+    if (is_array($string[1])) {
+        $c=0;
+        foreach ($string[1] as $taint) {
+            if ($c==$i) AspisLibClearTaint($ret[1][$c]);
+            $c++;
+        }
+    }
+    return $ret;
+    
+}
 function AspisLibCollapseTaint(&$taint) { //by ref
     if ( $taint===false || $taint===true) {
         return; //no need to change anything
@@ -145,187 +157,98 @@ function AspisLibMakeUseSQLI($taint,$data) {
     return $res;
 }
 
-//Old style taint-as-objects
-$XSSTaintClass="AspisXSSCharacterTaint";
-$SQLTaintClass="AspisSQLCharacterTaint";
-abstract class AspisTaint {
-    public abstract function getTaintOf($index); 
-    public abstract function merge($me,$that); //myself with that taint
-    public abstract function makeUse($data);
-    public abstract function clear(); //I am not tainted any more
-    public abstract function collapse(); //I have been transformed
-    public abstract function copy();
-    public abstract function isTainted(); //used in logging, return true if there is sth tainted
-}
-abstract class AspisCharacterTaint extends AspisTaint {
-    public $taint;
-    public function  __construct($isTainted="") {
-        if ($isTainted==="" || $isTainted===false) $this->taint=$isTainted;
-        else $this->taint=array(true);
-    }
-    public function getTaintOf($i) {
-        if (!is_array($this->taint)) {
-            if ($this->taint) {
-                $class=get_class($this);
-                return new $class(true);
-            }
-            else return false;
-        }
-        else {
-            $keys=array_keys($this->taint);
-            foreach ($this->taint as $k=>$v) { //let's hope this is ordered...
-                //this array must have at least one element
-                if ($i<$k) break;
-                $prev=$v;
-            }
-            if ($prev) {
-                $class=get_class($this);
-                return new $class(true);
-            }
-            else return false;
-        }
-    }
-    public function merge($me,$that) {
-        if ($that===false) {
-            if (is_array($this->taint)) $this->taint[strlen($me)]=$that;
-            //else leave it as it is, untainted str attached to untainted str.
-            return $this;
-        }
-        if (!($this instanceof $that)) die("merge() must be called with the same type of Taint Objects");
 
-        //optimize for the common case
-        if ( ($this->taint===false && $that->taint===false) ||
-             ($this->taint===true && $that->taint===true) ) {
-            return $this; //no need to change anything
+/*
+ * Helper function, used to collapse all taints when a string is altered by an internal function
+ */
+function AspisCollapsedTaintCopy($string,$removeIndex=-1) {
+    $ret=array ($string[0]);
+    if ($string[1]===false) $ret[1]=false;
+    else {
+        $ret[1]=array();
+        $c=0;
+        foreach ($string[1] as $taint) {
+            $ret[1][$c] = $taint;
+            AspisLibCollapseTaint($ret[1][$c]);
+            $c++;
         }
-        else {
-            //the result here must be an array
-            if (!is_array($this->taint)) {
-                $taint=array($this->taint);
-            }
-            else {
-                $taint=$this->taint; //copy of the taint array
-            }
-            if (!is_array($that->taint)) {
-                $mylen=strlen($me);
-                $taint[$mylen]=$that->taint;
-            }
-            else {
-                $mylen=strlen($me);
-                foreach ($that->taint as $k=>$v) $taint[$k+$mylen]=$v;
-            }
-            $this->taint=$taint;
-        }
-        return $this;
-        
     }
-    public function clear() {
-        $this->taint=false;
-        return $this;
-    }
-    public function collapse() {
-        if ( $this->taint===false || $this->taint===true) {
-            return; //no need to change anything
+    return $ret;
+}
+function AspisTaintCopy($string) {
+    return $string;
+}
+function AspisCollapsedTaintBareCopy($taint,$removeIndex=-1) {
+    if ($taint===false) $ret=false;
+    else {
+        $ret=array();
+        $c=0;
+        foreach ($taint as $t) {
+            $ret[$c] = $t;
+            AspisLibCollapseTaint($ret[$c]);
+            $c++;
         }
-        else {
-            //the result here is tainted iff there is one single tainted element
-            $isTainted=false;
-            foreach ($this->taint as $v) {
-                if ($v) {
-                    $isTainted=true;
-                    break;
+    }
+    return $ret;
+}
+function AspisTaintBareCopy($taint) {
+    return $taint;
+}
+/*
+ * Rreturns the taint at a given positition that spans len characters.
+ */
+function AspisTaintAt($taint,$pos,$len=-1) {
+    if (is_array($taint)) {
+        $res=array();
+        foreach ($taint as $t) { //foreach taint category
+            if (!is_array($t)) {
+                $res[]=$t;
+                continue;
+            }
+            $category=array();
+            $started=false;
+            foreach ($t as $k=>$v) {
+                if (!$started) {
+                    if ($pos>$k) {
+                        $last=$v;
+                        continue;
+                    }
+                    else if ($pos==$k) {
+                        $started=true;
+                        $category[0]=$v;
+                    }
+                    else {
+                        $started=true;
+                        $category[0]=$last;
+                        if ($len==-1 || $k-$pos<$len) $category[$k-$pos]=$v;
+                    }
+                }
+                else {
+                    if ($len!=-1 && $k-$pos>$len) break;
+                    else $category[$k-$pos]=$v;
                 }
             }
-            $this->taint=$isTainted;
-        }
-        return $this;
-    }
-    public function copy() {
-        $cl=get_class($this);
-        $ret=new $cl;
-        $ret->taint=$this->taint; //array is copied by value
-        return $ret;
-    }
-    public function isTainted() {
-        if ($this->taint===false) return false;
-        if ($this->taint===true) return true;
-        foreach ($this->taint as $t) {
-            if ($t===true) return true;
-        }
-        return false;
-    }
-}
-
-class AspisXSSCharacterTaint extends AspisCharacterTaint {
-    public function makeUse($data) {
-        //calls htmletities() in all tainted substrings
-        $res="";
-        if ($this->taint===false) $res=$data; 
-        else if ($this->taint===true) {
-            //$res=htmlentities($data);
-            $res=($data);
-        }
-        else {
-            $temp_taint=false;
-            $temp_str="";
-            $temp_index=0;
-            foreach ($this->taint as $i=>$t) {
-               if ($i>0) {
-                   $temp_str=substr($data,$temp_index,$i-$temp_index);
-                   if ($temp_taint) {
-                       //$res.=htmlentities($temp_str);
-                       $res.=($temp_str);
-                   }
-                   else $res.=$temp_str;
-               }
-               $temp_taint=$t;
-               $temp_index=$i;
-            }
-            $temp_str=substr($data,$temp_index); //the last element
-            if ($temp_taint) {
-                //$res.=htmlentities($temp_str);
-                $res.=($temp_str);
-            }
-            else $res.=$temp_str;
+            $res[]=$category;
         }
         return $res;
     }
-
+    else return $taint;
 }
-class AspisSQLCharacterTaint extends AspisCharacterTaint {
-    public function makeUse($data) {
-        //calls mysql_real_escape_string() in all tainted substrings
-        $res;
-        if ($this->taint===false) $res=$data;
-        else if ($this->taint===true) {
-            //$res=mysql_real_escape_string($data);
-            $res=($data);
-        }
-        else {
-            $temp_taint=false;
-            $temp_str="";
-            $temp_index=0;
-            foreach ($this->taint as $i=>$t) {
-               if ($i>0) {
-                   $temp_str=substr($data,$temp_index,$i-$temp_index);
-                   if ($temp_taint) {
-                       //$res.=mysql_real_escape_string($temp_str);
-                       $res.=($temp_str);
-                   }
-                   else $res.=$temp_str;
-               }
-               $temp_taint=$t;
-               $temp_index=$i;
-            }
-            $temp_str=substr($data,$temp_index); //the last element
-            if ($temp_taint) {
-                //$res.=mysql_real_escape_string($temp_str);
-                $res.=($temp_str);
-            }
-            else $res.=$temp_str;
-        }
-        return $res;
+function AspisCollapsedTaintMerge($taint1,$taint2) {
+    $result=array();
+    for ($c=0 ; $c<count($taint1) ; $c++) {
+       if (is_array($taint1[$c])) AspisLibCollapseTaint($taint1[$c]);
+       if (is_array($taint2[$c])) AspisLibCollapseTaint($taint2[$c]);
+       $result[]= ($taint1[$c]==true || $taint2[$c]==true);
     }
+    return $result;
 }
+function AspisTaintMerge($o1,$o2) {
+    return false;
+}
+function AspisTaintReverse($o1) {
+    return false;
+}
+
 
 ?>

@@ -1373,6 +1373,31 @@ void rewrite_function_call(astp * tree) {
     }
 }
 /*
+ * Calls to sanitisation functions should be enclosed in AspisKillTaint(f(),i);
+ */
+void rewrite_sanitiser_call(astp * tree) {
+    astp t=*tree;
+    if ( t->type!=T_STRING_FUNCTION ) return;
+    char * fname=strcpy_malloc(t->text);
+    char * initial=strtok(fname,"_");
+    if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"_");
+    int i=category_find_index(taint_categories,fname);
+    if (i==-1) return;
+    
+    char * i_str=(char *)malloc(5*sizeof(char));
+    snprintf(i_str,4,"%d",i);
+    astp p=ast_new(T_DNUMBER,i_str);
+    astp c=ast_new_wparam(T_ARTIFICIAL,",",p);
+    astp par=ast_new_wparams(T_ARTIFICIAL,"(",t,c);
+    astp f=ast_new_wparam(T_STRING_FUNCTION,"AspisKillTaint",par);
+    *tree=f;
+    
+    p->rewritten=1;
+    c->rewritten=1;
+    par->rewritten=1;
+    f->rewritten=1;
+}
+/*
  * All assingments to arrays must be checked for string/char assingments at runtime
  * I.e. $s="123"; $s[1]=$c; must become arrayAssign($s,1,$c);
  */
@@ -3541,6 +3566,7 @@ void ast_edit_bfs(FILE *out, astp* tree) {
             case T_EXIT:
                 edit_node_generic(out, tree, NULL);
                 rewrite_function_call(tree);
+                rewrite_sanitiser_call(tree);
                 break;
                 /*
                 NOTE: this rewritting fails when empty is directly called on

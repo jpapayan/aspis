@@ -4,99 +4,6 @@ $ASPIS_DEF_LIB = 1;
 $ASPIS_PIPE_SEND="/tmp/aspis_pipe_from_php";
 $ASPIS_PIPE_RECEIVE="/tmp/aspis_pipe_from_parser";
 define("dummy","dummy");
-/*
- * Helper function, used to collapse all taints when a string is altered by an internal function
- */
-function AspisCollapsedTaintCopy($string,$removeIndex=-1) {
-    $ret=array ($string[0]);
-    if ($string[1]===false) $ret[1]=false;
-    else {
-        $ret[1]=array();
-        $c=0;
-        foreach ($string[1] as $taint) {
-            $ret[1][$c] = $taint;
-            if ($c!==$removeIndex) AspisLibCollapseTaint($ret[1][$c]);
-            else AspisLibClearTaint($ret[1][$c]);
-            $c++;
-        }
-    }
-    return $ret;
-}
-function AspisTaintCopy($string) {
-    return $string;
-}
-function AspisCollapsedTaintBareCopy($taint,$removeIndex=-1) {
-    if ($taint===false) $ret=false;
-    else {
-        $ret=array();
-        $c=0;
-        foreach ($taint as $t) {
-            $ret[$c] = $t;
-            if ($c!==$removeIndex) AspisLibCollapseTaint($ret[$c]);
-            else AspisLibClearTaint($ret[$c]);
-            $c++;
-        }
-    }
-    return $ret;
-}
-function AspisTaintBareCopy($taint) {
-    return $taint;
-}
-/*
- * Rreturns the taint at a given positition that spans len characters.
- */
-function AspisTaintAt($taint,$pos,$len=-1) {
-    if (is_array($taint)) {
-        $res=array();
-        foreach ($taint as $t) { //foreach taint category
-            if (!is_array($t)) {
-                $res[]=$t;
-                continue;
-            }
-            $category=array();
-            $started=false;
-            foreach ($t as $k=>$v) {
-                if (!$started) {
-                    if ($pos>$k) {
-                        $last=$v;
-                        continue;
-                    }
-                    else if ($pos==$k) {
-                        $started=true;
-                        $category[0]=$v;
-                    }
-                    else {
-                        $started=true;
-                        $category[0]=$last;
-                        if ($len==-1 || $k-$pos<$len) $category[$k-$pos]=$v;
-                    }
-                }
-                else {
-                    if ($len!=-1 && $k-$pos>$len) break;
-                    else $category[$k-$pos]=$v;
-                }
-            }
-            $res[]=$category;
-        }
-        return $res;
-    }
-    else return $taint;
-}
-function AspisCollapsedTaintMerge($taint1,$taint2) {
-    $result=array();
-    for ($c=0 ; $c<count($taint1) ; $c++) {
-       if (is_array($taint1[$c])) AspisLibCollapseTaint($taint1[$c]);
-       if (is_array($taint2[$c])) AspisLibCollapseTaint($taint2[$c]);
-       $result[]= ($taint1[$c]==true || $taint2[$c]==true);
-    }
-    return $result;
-}
-function AspisTaintMerge($o1,$o2) {
-    return false;
-}
-function AspisTaintReverse($o1) {
-    return false;
-}
 
 function Aspis_abs($a) {
     $a[0]=abs($a[0]);
@@ -1809,25 +1716,13 @@ function Aspis_xml_set_unparsed_entity_decl_handler($parser, $handler) {
     return array(xml_set_unparsed_entity_decl_handler($parser[0],$handler[0]),false);
 }
 
-//taint altering functions
+//usual sanitisers
 function Aspis_htmlentities ( $string , $flags = dummy , $charset =dummy, $double_encode =dummy ) {
     if ($flags===dummy) $s=htmlentities($string[0]);
     else if ($charset===dummy) $s=htmlentities($string[0],$flags[0]);
     else if ($double_encode===dummy) $s=htmlentities($string[0],$flags[0],$charset[0]);
     else $s=htmlentities($string[0],$flags[0],$charset[0],$double_encode[0]);
-    $ret=array ($s);
-    if ($string[1]===false) $ret[1]=false;
-    else {
-        $ret[1]=array();
-        $c=0;
-        foreach ($string[1] as $taint) {
-            $ret[1][$c] = $taint;
-            if ($c==0) AspisLibClearTaint($ret[1][$c]);
-            else AspisLibCollapseTaint($ret[1][$c]);
-            $c++;
-        }
-    }
-    return $ret;
+    return array($s, AspisCollapsedTaintBareCopy($string[1]));
 }
 function Aspis_htmlspecialchars( $string , $flags = dummy , $charset =dummy, $double_encode =dummy ) {
     if ($flags===dummy) $s=htmlspecialchars($string[0]);
@@ -1837,37 +1732,24 @@ function Aspis_htmlspecialchars( $string , $flags = dummy , $charset =dummy, $do
     return array ($s,AspisCollapsedTaintBareCopy($string[1],0));
 }
 function Aspis_mysql_real_escape_string ( $unescaped_string , $link_identifier=dummy) {
-    $ret=array();
     if ($link_identifier==dummy) {
-        $ret[0]=mysql_real_escape_string($unescaped_string[0]);
+        $ret=mysql_real_escape_string($unescaped_string[0]);
     }
-    else $ret[0]=mysql_real_escape_string($unescaped_string[0],$link_identifier[0]);
-    if ($unescaped_string[1]===false) $ret[1]=false;
-    else {
-        $ret[1]=array();
-        $c=0;
-        foreach ($unescaped_string[1] as $taint) {
-            $ret[1][$c] = $taint;
-            if ($c==1) AspisLibClearTaint($ret[1][$c]);
-            else AspisLibCollapseTaint($ret[1][$c]);
-            $c++;
-        }
-    }
-    return $ret;
+    else $ret=mysql_real_escape_string($unescaped_string[0],$link_identifier[0]);
+    return array($ret,AspisCollapsedTaintBareCopy($unescaped_string[1]));
 }
 function Aspis_addslashes($str) {
-   $str[0]=addslashes($str[0]);
-   //return AspisCollapsedTaintCopy($str,1);
-   return $str;
+   $ret=addslashes($str[0]);
+   return array($ret,AspisCollapsedTaintBareCopy($str[1]));
 }
 function Aspis_exit($str=dummy) {
     if ($str!==dummy) {
-        echo AspisCheckPrint($str);
+        echo deAspisRC($str);
     }
     exit();
 }
 
-//taint checking functions
+//usual sinks
 function Aspis_mysql_query ($query , $link_identifier =dummy) {
     $q;
     if ($query[1]===false) $q=$query[0];
