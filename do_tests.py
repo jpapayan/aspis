@@ -47,7 +47,7 @@ def get_param(argv,param):
     return ""
 
 
-def do_test(path, infile, taints, prototypes):
+def do_test(path, infile, taints, prototypes, categories):
         ##cleanup
         p=Popen("rm original.out", shell=True);
         p.wait()
@@ -57,7 +57,7 @@ def do_test(path, infile, taints, prototypes):
         ##Aspisize the input script
         in_filename=infile
         out_dir=os.path.join(path,"results");
-        cmd="aspis -in "+in_filename+ " -out "+out_dir;
+        cmd="aspis -in "+in_filename+ " -out "+out_dir + " -categories "+categories;
 
         if (taints!=""):
             cmd+=" -taints "+taints;
@@ -130,6 +130,7 @@ if __name__ == '__main__':
         exit()
     path=get_param(sys.argv,"dir")
     file=get_param(sys.argv,"file")
+    categories=get_param(sys.argv,"categories")
     if path=="" and file=="":
         print "Please provide a -dir with the tests or a -file to test."
         usage()
@@ -157,7 +158,7 @@ if __name__ == '__main__':
                 if infile.find("test") > -1: 
                     print "======================================="
                     print "Test " + str( +  + test_no) + ": " + infile
-                    results[string_prune(infile, '/')] = do_test(path, infile, "","")
+                    results[string_prune(infile, '/')] = do_test(path, infile, "","", categories)
             if (ending=="*.inc"):
                 ending="*.php"
             else:
@@ -182,7 +183,7 @@ if __name__ == '__main__':
         print "|| FAILED: " + str(len(results.keys())-succeed_count) + "/" + str(len(results.keys()))
         print "========================="
     else:
-        do_test(path, file, taints, prototypes)
+        do_test(path, file, taints, prototypes, categories)
         print "\nORIGINAL FILE's OUTPUT:"
         p=Popen("cat original.out", shell=True)
         p.wait()

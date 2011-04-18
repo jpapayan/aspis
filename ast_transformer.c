@@ -1216,8 +1216,8 @@ void rewrite_function_name(astp * tree,int total_parameters) {
 }
 /*
  * Function calls on built in functions must have their args dereferenced.
- * TODO: according to the function, a different runtime routine must be called
- * that will propagate taints accordingly.
+ * Additionally, for builtin functions with ref arguments, I use the AspisInternalFunnctionCall
+ * wrapper. This makes sure that the ref arguments are altered after the call returns.
  */
 void rewrite_function_call(astp * tree) {
     astp t=*tree;
@@ -3871,7 +3871,7 @@ void ast_transform(FILE * out,
         char * categories,
         char * filename, 
         astp * tree, 
-        astp * functions) {
+        astp * functions ) {
     //read the various lists of php functions
     function_file_read( path_join(aspis_home, "phplib/php_functions.txt"), &functions_list, &functions_count);
     function_file_read( path_join(aspis_home, "phplib/php_functions_overriden.txt"), &functions_overriden_list, &functions_overriden_count);

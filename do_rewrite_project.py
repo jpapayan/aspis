@@ -63,11 +63,11 @@ def execute(str):
     p=Popen(str, shell=True)
     p.wait()
 
-def do_rewrite(in_filename,out_dir,taints,prototypes):
+def do_rewrite(in_filename,out_dir,taints,prototypes, categories):
         print ".",
         #print in_filename
         sys.stdout.flush();
-        cmd="aspis -in "+in_filename+ " -out "+out_dir+"/";
+        cmd="aspis -in "+in_filename+ " -out "+out_dir+"/"+" -categories "+categories;
         if (taints!=""):
            cmd+=" -taints "+taints;
         if (prototypes!=""):
@@ -103,6 +103,7 @@ if __name__ == '__main__':
 
     taints=get_param(sys.argv,"taints")
     prototypes=get_param(sys.argv,"prototypes")
+    categories=get_param(sys.argv,"categories")
     fused=get_param(sys.argv,"fused")
     
     print "-dir=\t"+rootdir;
@@ -140,7 +141,7 @@ if __name__ == '__main__':
             ext = get_file_extension(infile);
             if (ext == "php" or ext == "PHP" or ext == "inc" or ext == "INC" ):
                 counter_edits+=1;
-                if (do_rewrite(os.path.join(root,infile), nroot, taints, prototypes)):
+                if (do_rewrite(os.path.join(root,infile), nroot, taints, prototypes, categories)):
                     counter_success+=1
                 else:
                     failed.append(os.path.join(root,infile));

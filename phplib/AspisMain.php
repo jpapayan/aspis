@@ -1147,7 +1147,6 @@ $_GET=array(0=>$_GET,false);
 $_POST=array(0=>$_POST,false);
 $_FILES=array(0=>$_FILES,false);
 if (isset ($_REQUEST)) $_REQUEST=array(0=>$_REQUEST,false);
-//$_SESSION=array(0=>$_SESSION,false);
 if (isset ($_ENV)) $_ENV=array(0=>$_ENV,false);
 $_COOKIE=array(0=>$_COOKIE,false);
 $AspisGlobalsUntainted=array();

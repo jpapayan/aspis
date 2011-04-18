@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -9,6 +10,8 @@
 #include "ast.h"
 #include "ast_transformer.h"
 #include "ast_improver.h"
+#include "file_structures.h"
+
 
 int setin(char * );
 int COLLECT_INFO=0;
@@ -22,6 +25,7 @@ char * fused=NULL;
 void print_usage() {
    printf("Usage: ./aspis \n"
            "-in infile.php\n\tthe file to transform\n"
+           "-categories catfile\n\tthe taint categories to track\n"
            "[-out \\path\\to\\output\\DIR\\]\n\tthe dir where the ouput will be placed\n"
            "[-mode online]\n\tset when PHP Aspis is invoked at runtime, useless otherwise\n"
            "[-taints file]\n\tPartial tracking: what is tainted\n"
@@ -57,25 +61,39 @@ char * get_taints_filename(char *fn) {
     cwd = strcat_malloc(cwd, "\"");
     return cwd;
 }
-void add_runtime_variables(char *aspis_home, int collect_info){
-    if (taintspath != NULL) {
-        char* p=strcat_malloc("cp ",aspis_home);
-        p=path_join(p,"phplib/AspisMain.php AspisMainEdited.php");
-        if (system(p) == -1)  die("cant copy AspisMain.php");
-        FILE * fp = fopen("AspisMainEdited.php", "a");
+
 /*
-        if (collect_info) {
-            fprintf(fp,"$ASPIS_INFO_COLLECT=true;\n");
-        }
-        else {
-            fprintf(fp,"$ASPIS_INFO_COLLECT=false;\n");
-        }
-*/
-        fprintf(fp,"$aspis_taint_details_path=%s\n?>\n",get_taints_filename(taintspath));
-        fclose(fp);
+ * Edits the AspisMain.php file at runtime and adds a few extra configuration
+ * variables, e.g. the number of taint categories to instantiate.
+ */
+void add_runtime_variables(char *aspis_home, char* categories_file, int collect_info) {
+    FILE * fp = fopen("AspisMainTemp.php", "a");
+    fprintf(fp, "<?php\n");
+    fprintf(fp, "//code generated at runtime from my_main.c:add_runtime_variables\n");
+    //fprintf(fp, "$ASPIS_CATEGORIES_FILE=\"AspisActive.categories\";\n");
+    
+    fprintf(fp, "$ASPIS_CATEGORIES_FILE=dirname(__FILE__).\"/AspisActive.categories\";\n");
+    fprintf(fp, "$ASPIS_CATEGORIES_TOTAL=%i;\n", category_file_count(categories_file));
+    if (taintspath != NULL) {
+        
+        /*
+                if (collect_info) {
+                    fprintf(fp,"$ASPIS_INFO_COLLECT=true;\n");
+                }
+                else {
+                    fprintf(fp,"$ASPIS_INFO_COLLECT=false;\n");
+                }
+         */
+        fprintf(fp, "$aspis_taint_details_path=%s;\n", get_taints_filename(taintspath));
     }
+    fprintf(fp, "?>\n");
+    fclose(fp);
+    char* p = strcat_malloc("cat AspisMainTemp.php ", aspis_home);
+    p = path_join(p, "phplib/AspisMain.php > AspisMainEdited.php");
+    if (system(p) == -1) die("cant generate AspisMainEdited.php");
+    if (system("rm AspisMainTemp.php") == -1) die("cant delete AspisMainTemp.php");
 }
-void copy_includes(char *aspis_home) {
+void copy_includes(char *aspis_home, char * categories_file) {
    char* copy=strcat_malloc("cp ",aspis_home);
    
    char *p=path_join(copy,"phplib/AspisObject.php ");
@@ -94,17 +112,15 @@ void copy_includes(char *aspis_home) {
    p=strcat_malloc(p,outpath);
    if (system(p)==-1) die("copy_includes failed");
    
-   if (taintspath == NULL) {
-        p=path_join(copy,"phplib/AspisMain.php ");
-        p=strcat_malloc(p,outpath);
-        if (system(p) == -1) die("copy_includes failed");
-    }
-    else {
-        p=path_join(outpath,"AspisMain.php");
-        p = strcat_malloc("mv AspisMainEdited.php ", p);
-        if (system(p) == -1) die("copy_includes failed");
-    }
-    printf("All included files copied to (%s)\n",outpath);
+   p = path_join(outpath, "AspisMain.php");
+   p = strcat_malloc("mv AspisMainEdited.php ", p);
+   if (system(p) == -1) die("copy_includes failed");
+   
+   copy=strcat_malloc("cp ",categories_file);
+   p=strcat_malloc(copy," ");
+   p=strcat_malloc(p,outpath);
+   p=path_join(p,"AspisActive.categories");
+   if (system(p)==-1) die("Copying of the categories file failed");
 }
 char * get_filename_only(char * path) {
     char *res;
@@ -149,6 +165,8 @@ int my_main(int argc, char* argv[],
             if (!is_online) print_usage();
             else exit(1);
     }
+    if (*categoriesfilepath==NULL) die("I need a category file.");
+    if (infile==NULL) die("I need a file to transform.");
     if (*aspis_home==NULL) die("ASPIS_HOME environmental variable is not set.");
     
     //now set up the environment according to the arguments
@@ -175,8 +193,8 @@ int my_main(int argc, char* argv[],
         if (outfile[strlen(outfile - 1)] != '/') strcat(outfile, "/");
         strcat(outfile, name);
         
-        add_runtime_variables(*aspis_home,0);
-        copy_includes(*aspis_home);
+        add_runtime_variables(*aspis_home, *categoriesfilepath, 0);
+        copy_includes(*aspis_home,*categoriesfilepath);
     } else outfile = outpath;
     if (!is_online) {
         printf("Input File: %s\nOutput Dir:%s\nOutput File:%s\n", infile, outpath, outfile);

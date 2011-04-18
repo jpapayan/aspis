@@ -423,6 +423,17 @@ taint_category_list * category_file_read(char * file) {
     fclose(fp);
     return ret;
 }
+int category_file_count(char * file) {
+    int res=0;
+    FILE * fp = fopen(file, "r");
+    if (fp == NULL) die("Failed to read the taint category file provided\n");
+    char line[200];
+    while (fscanf(fp, "%s\n", (char*) line)>0) { //category loop
+        if (strcmp(line,"begin")==0) res++;
+    }
+    fclose(fp);
+    return res;
+}
 /* 
  * Given a function name, returns the index of the taint category.
  * Returns -1 if the function is not a sanitisation function for any category.
@@ -437,7 +448,6 @@ int category_find_index(taint_category_list *tc_list, char * function) {
     }
     return -1;
 }
-
 char * category_find_guard(taint_category_list *tc_list, char * function) {
     //linear search, I expect taint categories to be very sort.
     for (int i=0; i<tc_list->count; i++) {
