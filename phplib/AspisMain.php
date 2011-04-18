@@ -1079,14 +1079,13 @@ function AspisNewKnownProxy($obj,$taintedToUntainted) {
 }
 
 function AspisEmptyTaints($isTainted) {
+    global $ASPIS_CATEGORIES_TOTAL;
     $res=array();
     if ($isTainted==="" || $isTainted===false) {
-        $res[]=$isTainted; //XSS
-        $res[]=$isTainted; //SQLI
+        for ($i=0;$i<$ASPIS_CATEGORIES_TOTAL;$i++) $res[]=false; 
     }
     else {
-        $res[]=array(true); //XSS
-        $res[]=array(true); //SQLI
+        for ($i=0;$i<$ASPIS_CATEGORIES_TOTAL;$i++) $res[]=array(true); 
     }
     return $res;
 }
