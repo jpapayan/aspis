@@ -5,8 +5,9 @@ fsanitizer
 htmlentities
 htmlspecialchars
 >guards
-echo->AspisCheckPrint
-print->AspisCheckPrint
+echo->AspisPrintGuard
+fsink->AspisPrintGuard
+print->AspisPrintGuard
 end
 
 begin

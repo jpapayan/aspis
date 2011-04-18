@@ -12,4 +12,15 @@ $v="Hello dear: ".$argv[1];
 $v= fsanitizer($v);
 echo $v."\n";
 
+function fsink($s) {
+    echo $s."\n";
+}
+function eee($s) {
+    return $s;
+}
+
+$v="Hello dear: ".$argv[1];
+fsink($v);
+fclose(eee($v));
+
 ?>

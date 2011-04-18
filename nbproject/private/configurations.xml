@@ -36,8 +36,9 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/wp-db.php -out tests/results -taints ../webapps_eval/taint_propagation/cve0641.tainted -prototypes ../webapps_eval/taint_propagation/cve0641.prototypes</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results -categories tests/generic.categories</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results -categories tests/taint_propagation/generic.categories</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_categories_simple.php -out tests/results/ -categories tests/taint_propagation/generic.categories</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results -categories tests/taint_propagation/generic.categories</runcommand>
+        <runcommand>"${OUTPUT_PATH}" -in tests/test_categories_simple.php -out tests/results/ -categories tests/taint_propagation/generic.categories</runcommand>
         <rundir>/data/Dropbox/php/aspis</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

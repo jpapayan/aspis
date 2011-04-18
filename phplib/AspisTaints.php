@@ -250,5 +250,24 @@ function AspisTaintReverse($o1) {
     return false;
 }
 
+//Experimental Guards
+function AspisCheckPrint($obj) {
+    $ret;
+    if ($obj==NULL) return NULL;
+    global $ASPIS_INFO_COLLECT;
+    if ($ASPIS_INFO_COLLECT) {
+        AspisLogExamine($obj);
+    }
+    if ($obj[1]===false) $ret=$obj[0];
+    else  $ret=AspisLibMakeUseXSS($obj[1][0], $obj[0]);
+    return $ret;
+}
+
+function AspisPrintGuard($obj) {
+    //I am free to ignore other taint categories as I know the context of this guard
+    $ret=$obj;
+    if ($obj!=NULL && $obj[1]!==false) $ret=array(AspisLibMakeUseXSS($obj[1][0], $obj[0]),false);
+    return $ret;
+}
 
 ?>

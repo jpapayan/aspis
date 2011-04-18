@@ -370,22 +370,6 @@ function wrapException($e) {
     else return array($e,false);
 }
 /*
- * This function is called on the argument of "echo". Must check taint.
- */
-function AspisCheckPrint($obj) {
-//    echo "checkPrint taint is:";
-//    var_dump($obj[1]);
-    $ret;
-    if ($obj==NULL) return NULL;
-    global $ASPIS_INFO_COLLECT;
-    if ($ASPIS_INFO_COLLECT) {
-        AspisLogExamine($obj);
-    }
-    if ($obj[1]===false) $ret=$obj[0];
-    else  $ret=AspisLibMakeUseXSS($obj[1][0], $obj[0]);
-    return $ret;
-}
-/*
  * This is called in array definitions, to attach to the $value
  * the taint of the $key. Stored temporarily there
  */

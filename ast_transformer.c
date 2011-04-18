@@ -1380,7 +1380,7 @@ void rewrite_sanitiser_call(astp * tree) {
     if ( t->type!=T_STRING_FUNCTION ) return;
     char * fname=strcpy_malloc(t->text);
     char * initial=strtok(fname,"_");
-    if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"_");
+    if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
     int i=category_find_index(taint_categories,fname);
     if (i==-1) return;
     
@@ -1394,6 +1394,47 @@ void rewrite_sanitiser_call(astp * tree) {
     
     p->rewritten=1;
     c->rewritten=1;
+    par->rewritten=1;
+    f->rewritten=1;
+}
+/*
+ * Calls to sinks should have their first argument passed to the guard.
+ * E.g. sink($a) must become sink(guard($a))
+ */
+void rewrite_sink_call(astp * tree) {
+    astp t=*tree;
+    if ( t->type==T_ARRAY_ASPIS || strstr(t->text,"attAspis")!=NULL ) {
+        t=t->parameters[0]->parameters[0];
+    }
+    //now t points the to the function call
+    char * fname=strcpy_malloc(t->text);
+    char * initial=strtok(fname,"_");
+    if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
+    
+    char *guard=category_find_guard(taint_categories,fname);
+    if (guard==NULL) return;
+    
+    //now I have to attach a call to the guard before the first param
+    //careful to put the call inside any potential deAspis() of the first param.
+    
+    astp paren=t->parameters[0];
+    if (paren->total_parameters==0) return; //call with no arguments passed
+    if (paren->parameters[0]->type!=T_NULL || paren->parameters[0]->total_parameters==0) return;
+    astp tnull=paren->parameters[0];
+    astp first_param=tnull->parameters[0];
+    int has_deAspis=0;
+    if (strstr(first_param->text,"deAspis")!=NULL) {
+        has_deAspis=1;
+        first_param=first_param->parameters[0]->parameters[0];
+    }
+    
+    
+    astp par=ast_new_wparam(T_ARTIFICIAL,"(",first_param);
+    astp f=ast_new_wparam(T_STRING_FUNCTION,guard,par);
+    
+    if (has_deAspis) tnull->parameters[0]->parameters[0]->parameters[0]=f;
+    else tnull->parameters[0]=f;
+    
     par->rewritten=1;
     f->rewritten=1;
 }
@@ -3567,6 +3608,7 @@ void ast_edit_bfs(FILE *out, astp* tree) {
                 edit_node_generic(out, tree, NULL);
                 rewrite_function_call(tree);
                 rewrite_sanitiser_call(tree);
+                rewrite_sink_call(tree);
                 break;
                 /*
                 NOTE: this rewritting fails when empty is directly called on
