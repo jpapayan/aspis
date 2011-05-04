@@ -1426,11 +1426,9 @@ void rewrite_sink_call(astp * tree) {
     if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
     
     char *guard=category_find_guard(taint_categories,fname);
-/*
     if (t->type==T_EXIT && guard==NULL) {
         guard=category_find_guard(taint_categories,ALL_PRINTS);
     } 
-*/
     if (guard==NULL) return;
     
     //now I have to attach a call to the guard before the first param
@@ -2552,9 +2550,14 @@ void rewrite_equals_tag(astp *tree) {
         
         astp after_next=t->children[0]->children[0];
         ast_clear_children(next);
-        astp p = ast_new_wparam(T_ARTIFICIAL, "(", t->children[0]);
-        astp f = ast_new_wparam(T_STRING_FUNCTION, "AspisCheckPrint", p);
-        t->children[0]=f;
+        
+        char *guard=category_find_guard(taint_categories,ALL_PRINTS);
+        if (guard != NULL) {
+            astp p = ast_new_wparam(T_ARTIFICIAL, "(", t->children[0]);
+            astp f = ast_new_wparam(T_STRING_FUNCTION, guard, p);
+            t->children[0] = f;
+        }
+        dereference_aspis(&(t->children[0]));
         
         ast_add_child(t->children[0],after_next);
     }

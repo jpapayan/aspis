@@ -23,5 +23,8 @@ function eee($s) {
 $v="Hello dear: ".$argv[1];
 fsink($v);
 fclose(eee($v));
-exit($v."\n");
 ?>
+And In another block:
+<?= $v?>
+
+<?php exit($v."\n"); ?>
