@@ -405,10 +405,8 @@ function restoreTaint(&$obj,&$taint) {
     else $ret[1]=false;
     $obj=$ret;
 }
-/*
- * All calls of type $var($param...) will be translated to AspisDynamicCall($var,$param)
- * This will lookup $var in the list of built in functions and decide how to call it.
- */
+
+//These functions read lists of functions, useful in dynamic function calls
 $built_in_functions;
 function load_functions() {
     global $built_in_functions;
@@ -433,6 +431,83 @@ function load_functions() {
     }
 
 }
+$taint_categories=array();
+function load_taint_categories() {
+    global $taint_categories;
+    $read_file=true;
+    if (isset($_SERVER[0]['HTTP_USER_AGENT'])) {
+        $taint_categories = zend_shm_cache_fetch('taint_categories');
+        if ($taint_categories !== false) {
+            $read_file=false;
+        }
+    }
+    if ($read_file) {
+        global $ASPIS_CATEGORIES_FILE;
+        $file=file($ASPIS_CATEGORIES_FILE,FILE_USE_INCLUDE_PATH | FILE_IGNORE_NEW_LINES);
+        for ($i=0 ; $i< count($file); $i++ ) {
+            $line=$file[$i];
+            if ($line=="begin") {
+                $tc=array(array(),array());
+                $reading_sanitisation=0;
+                $reading_guards=0;
+                while (1) {
+                    $line=$file[++$i];
+                    if ($line=="end") break;
+                    else if ($line == ">sanitisation") {
+                        $reading_sanitisation=1;
+                        continue;
+                    } else if ($line == ">guards") {
+                        $reading_sanitisation=0;
+                        $reading_guards=1;
+                        continue;
+                    }
+                    if ($reading_sanitisation) {
+                        $tc[0][$line]=1;
+                    } else if ($reading_guards) {
+                        $tok1=strtok($line, "->");
+                        $tok2=strtok("->");
+                        if ($tok1 != "" && $tok2 != "") {
+                            $tc[1][$tok1]=$tok2;
+                        }
+                        else
+                            die("Invalid guard in the category file");
+                    }
+                }
+                $taint_categories[]=$tc;
+            }
+        }
+        if (isset($_SERVER[0]['HTTP_USER_AGENT'])) {
+            zend_shm_cache_store('taint_categories', $taint_categories, 24 * 3600);
+        }
+    }
+}
+function AspisIsSanitiser($function) {
+    global $taint_categories;
+    if (empty($taint_categories)) {
+        load_taint_categories();
+    }
+    for ($i = 0; $i < count($taint_categories); $i++) {
+        if (isset($taint_categories[$i][0][$function])) return $i;
+    }
+    return -1;
+}
+function AspisFindGuard($function) {
+    global $taint_categories;
+    if (empty($taint_categories)) {
+        load_taint_categories();
+    }
+    for ($i=0; $i<count($taint_categories); $i++) {
+        if (isset($taint_categories[$i][1][$function])) {
+            return $taint_categories[$i][1][$function];
+        }
+    }
+    return "";
+}
+/*
+ * All calls of type $var($param...) will be translated to AspisDynamicCall($var,$param)
+ * This will lookup $var in the list of built in functions and decide how to call it.
+ * This will also look for a potential sanitisation/sink call and act accordingly.
+ */
 function AspisDynamicCall() {
    global $built_in_functions;
    if (empty($built_in_functions)) {
@@ -451,8 +526,21 @@ function AspisDynamicCall() {
        return attAspisRC(call_user_func_array($f_name,$f_params));
    }
    else {
-       return call_user_func_array($f_name,$f_params);
-   }
+        $guard = AspisFindGuard($f_name);
+        if ($guard != "") {
+            if (isset($f_params[0])) {
+                $f_params[0]=$guard($f_params[0]);
+            }
+            return call_user_func_array($f_name, $f_params);
+        } else {
+            $ret = call_user_func_array($f_name, $f_params);
+            $i = AspisIsSanitiser($f_name);
+            if ($i != -1) {
+                $ret = AspisKillTaint($ret, $i);
+            }
+            return $ret;
+        }
+    }
 }
 function AspisTaintedDynamicCall() {
    $f_params=func_get_args();
@@ -480,7 +568,22 @@ function AspisTaintedDynamicCall() {
        }
        return attAspisRCO(call_user_func_array($f_name,$f_params));
    }
-   return call_user_func_array($f_name,$f_params);
+   else {
+        $guard = AspisFindGuard($f_name);
+        if ($guard != "") {
+            if (isset($f_params[0])) {
+                $f_params[0]=$guard($f_params[0]);
+            }
+            return call_user_func_array($f_name, $f_params);
+        } else {
+            $ret = call_user_func_array($f_name, $f_params);
+            $i = AspisIsSanitiser($f_name);
+            if ($i != -1) {
+                $ret = AspisKillTaint($ret, $i);
+            }
+            return $ret;
+        }
+    }
 }
 function AspisUntaintedDynamicCall() {
    $f_params=func_get_args();

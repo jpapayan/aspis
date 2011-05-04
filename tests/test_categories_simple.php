@@ -23,6 +23,11 @@ function eee($s) {
 $v="Hello dear: ".$argv[1];
 fsink($v);
 fclose(eee($v));
+
+$f="fsink";
+$f($v);
+$f="fsanitizer";
+$f($v);
 ?>
 And In another block:
 <?= $v?>
