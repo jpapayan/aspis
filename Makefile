@@ -1,8 +1,6 @@
 GCCPARAMS = -g -std=gnu99
 YACC = bison
 LEX  = flex
-RE2C = re2c
-RE2C_FLAGS= -i
 
 .PHONY : default
 
@@ -28,7 +26,9 @@ install: aspis
 	echo "export ASPIS_HOME=~/aspis_home" >> ~/.profile
 	echo "Done!"
 	
-tests: aspis
+tests:
+	#TODO: fix the tests target
 	rm -rf tests/results
-	do_tests.py -dir tests
+	do_tests.py -dir tests -categories tests/taint_propagation/generic.categories -out tests/results/
+
 	

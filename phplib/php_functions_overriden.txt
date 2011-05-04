@@ -52,7 +52,6 @@ ereg_replace
 escapeshellarg
 escapeshellcmd
 exec
-exit
 explode
 file
 floatval

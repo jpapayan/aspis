@@ -70,12 +70,9 @@ void add_runtime_variables(char *aspis_home, char* categories_file, int collect_
     FILE * fp = fopen("AspisMainTemp.php", "a");
     fprintf(fp, "<?php\n");
     fprintf(fp, "//code generated at runtime from my_main.c:add_runtime_variables\n");
-    //fprintf(fp, "$ASPIS_CATEGORIES_FILE=\"AspisActive.categories\";\n");
-    
     fprintf(fp, "$ASPIS_CATEGORIES_FILE=dirname(__FILE__).\"/AspisActive.categories\";\n");
     fprintf(fp, "$ASPIS_CATEGORIES_TOTAL=%i;\n", category_file_count(categories_file));
     if (taintspath != NULL) {
-        
         /*
                 if (collect_info) {
                     fprintf(fp,"$ASPIS_INFO_COLLECT=true;\n");

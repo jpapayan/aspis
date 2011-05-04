@@ -13,7 +13,8 @@ $v= fsanitizer($v);
 echo $v."\n";
 
 function fsink($s) {
-    echo $s."\n";
+    echo $s."\n", " from amazing world!\n";
+    print $s."\n";
 }
 function eee($s) {
     return $s;
@@ -22,5 +23,5 @@ function eee($s) {
 $v="Hello dear: ".$argv[1];
 fsink($v);
 fclose(eee($v));
-
+exit($v."\n");
 ?>

@@ -8,6 +8,7 @@
 #include "my_main.h"
 #include "file_structures.h"
 
+char *ALL_PRINTS="prints";
 const int PROTECT_CHARS=1;
 extern int COLLECT_INFO;
 
@@ -1060,27 +1061,35 @@ void rewrite_foreach(astp* tree) {
     
 }
 /*
- * Before echoing, I must check taints and take the original objects out
- * of their Aspides.
+ * Echo must have its parameters' Aspides removed. Additionally, potential
+ * guard calls must be added.
  */
 void rewrite_echo(astp* tree) {
+    char *guard=category_find_guard(taint_categories,"echo");
+    if (guard==NULL) guard=category_find_guard(taint_categories,ALL_PRINTS);
     astp tnull=(*tree)->parameters[0];
     if (!tnull->rewritten) {
         if (tnull->total_parameters>0) {
-           astp p=ast_new_wparam(T_ARTIFICIAL,"(",tnull->parameters[0]);
-           astp f=ast_new_wparam(T_STRING_FUNCTION,"AspisCheckPrint",p);
-           tnull->parameters[0]=f;
-           f->rewritten=1;
-           p->rewritten=1;
+            if (guard != NULL) {
+                astp p = ast_new_wparam(T_ARTIFICIAL, "(", tnull->parameters[0]);
+                astp f = ast_new_wparam(T_STRING_FUNCTION, guard, p);
+                tnull->parameters[0] = f;
+                f->rewritten=1;
+                p->rewritten=1;
+            }
+            dereference_aspis(&(tnull->parameters[0]));
         }
         int i=1;
         for (i=1;i<tnull->total_parameters;i++) {
-            astp ip=tnull->parameters[i]->parameters[0];
-            astp p=ast_new_wparam(T_ARTIFICIAL,"(",ip);
-            astp f=ast_new_wparam(T_STRING_FUNCTION,"AspisCheckPrint",p);
-            tnull->parameters[i]->parameters[0]=f;
-            f->rewritten=1;
-            p->rewritten=1;
+            if (guard != NULL) {
+                astp ip = tnull->parameters[i]->parameters[0];
+                astp p = ast_new_wparam(T_ARTIFICIAL, "(", ip);
+                astp f = ast_new_wparam(T_STRING_FUNCTION, guard, p);
+                tnull->parameters[i]->parameters[0] = f;
+                f->rewritten = 1;
+                p->rewritten = 1;
+            }
+            dereference_aspis(&(tnull->parameters[i]->parameters[0]));
         }
         tnull->rewritten=1;
         (*tree)->rewritten=1;
@@ -1091,11 +1100,16 @@ void rewrite_echo(astp* tree) {
  */
 void rewrite_print(astp* tree) {
     astp t=(*tree);
+    char *guard=category_find_guard(taint_categories,"print");
+    if (guard==NULL) guard=category_find_guard(taint_categories,ALL_PRINTS);
     if (!t->rewritten && t->total_parameters > 0) {
-        astp p = ast_new_wparam(T_ARTIFICIAL, "(", t->parameters[0]);
-        astp f = ast_new_wparam(T_STRING_FUNCTION, "AspisCheckPrint", p);
-        t->parameters[0] = f;
-        t->rewritten = 1;
+        if (guard != NULL) {
+            astp p = ast_new_wparam(T_ARTIFICIAL, "(", t->parameters[0]);
+            astp f = ast_new_wparam(T_STRING_FUNCTION, guard, p);
+            t->parameters[0] = f;
+            t->rewritten = 1;
+        }
+        dereference_aspis(&(t->parameters[0]));
     }
 }
 /*
@@ -1412,11 +1426,15 @@ void rewrite_sink_call(astp * tree) {
     if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
     
     char *guard=category_find_guard(taint_categories,fname);
+/*
+    if (t->type==T_EXIT && guard==NULL) {
+        guard=category_find_guard(taint_categories,ALL_PRINTS);
+    } 
+*/
     if (guard==NULL) return;
     
     //now I have to attach a call to the guard before the first param
     //careful to put the call inside any potential deAspis() of the first param.
-    
     astp paren=t->parameters[0];
     if (paren->total_parameters==0) return; //call with no arguments passed
     if (paren->parameters[0]->type!=T_NULL || paren->parameters[0]->total_parameters==0) return;
@@ -1427,7 +1445,6 @@ void rewrite_sink_call(astp * tree) {
         has_deAspis=1;
         first_param=first_param->parameters[0]->parameters[0];
     }
-    
     
     astp par=ast_new_wparam(T_ARTIFICIAL,"(",first_param);
     astp f=ast_new_wparam(T_STRING_FUNCTION,guard,par);

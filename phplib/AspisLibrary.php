@@ -1742,12 +1742,6 @@ function Aspis_addslashes($str) {
    $ret=addslashes($str[0]);
    return array($ret,AspisCollapsedTaintBareCopy($str[1]));
 }
-function Aspis_exit($str=dummy) {
-    if ($str!==dummy) {
-        echo deAspisRC($str);
-    }
-    exit();
-}
 
 //usual sinks
 function Aspis_mysql_query ($query , $link_identifier =dummy) {
