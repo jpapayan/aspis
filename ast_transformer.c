@@ -369,6 +369,8 @@ void dereference_aspis_from_parameter_nofunction(astp *tree,int param) {
         t->rewritten = 1;
     }
 }
+
+/***************Rewriting routines start here**********************/
 /**
  * Attached an Aspis around numbers
  * */
@@ -1414,6 +1416,7 @@ void rewrite_sanitiser_call(astp * tree) {
 /*
  * Calls to sinks should have their first argument passed to the guard.
  * E.g. sink($a) must become sink(guard($a))
+ * NOTE: this is also used for method calls.
  */
 void rewrite_sink_call(astp * tree) {
     astp t=*tree;
@@ -1433,7 +1436,11 @@ void rewrite_sink_call(astp * tree) {
     
     //now I have to attach a call to the guard before the first param
     //careful to put the call inside any potential deAspis() of the first param.
-    astp paren=t->parameters[0];
+    astp paren=NULL;
+    if (t->total_parameters>0) paren=t->parameters[0];
+    else if (t->total_children>0) paren=t->children[0];
+    else return;
+    
     if (paren->total_parameters==0) return; //call with no arguments passed
     if (paren->parameters[0]->type!=T_NULL || paren->parameters[0]->total_parameters==0) return;
     astp tnull=paren->parameters[0];
@@ -2366,7 +2373,9 @@ void rewrite_global(astp *tree) {
     
 }
 /*
- * Replaces aspisdummy calls with AspisReferenceMethodCall
+ * Replaces aspisdummy calls with AspisReferenceMethodCall. Used only by
+ * rewrite_variable_method_call() below when there is a (statically known)
+ * method call with ref parameters.
  * * NOTE: this function is also used for untainted rewritting!
  */
 void rewrite_method_call(astp *tree) {
@@ -2384,20 +2393,7 @@ void rewrite_method_call(astp *tree) {
     if (function->total_parameters>0) second_arrow=function->parameters[function->total_parameters-1];
     if (second_arrow==NULL || second_arrow->type!=T_OBJECT_OPERATOR) second_arrow=NULL;
     if (second_arrow!=NULL) ast_remove_parameter(function,function->total_parameters-1);
-/*
-    printf("t:");
-    ast_print_bfs(stdout,t);
-    printf("\n");
-    printf("function %d:",function->total_children);
-    ast_print_bfs(stdout,function);
-    printf("\n");
-    if (second_arrow!=NULL) {
-        printf("second arrow:");
-        ast_print_bfs(stdout,second_arrow);
-        printf("\n");
-    }
-    fflush(stdout);
-*/
+
     astp parameters;
     if (function->total_children!=0) {
         parameters=function->children[function->total_children-1];
@@ -2486,31 +2482,34 @@ void rewrite_method_call(astp *tree) {
  * Rewritting uses the AspisReferenceMethodCall helper function at runtime.
  * NOTE: this function is also used for untainted rewritting!
  */
-void rewrite_variable_method_call(astp *tree) {
+void rewrite_variable_method_call(astp *tree, int is_tainted) {
     astp t=*tree;
     if (!is_online) printf("rewrite_variable_method_call on (%s)\n",t->text);
     if (strcmp(t->text,"deAspis")==0) {
         //this means that we have a chained call -rewrite the subcall
-        rewrite_variable_method_call(&(t->parameters[0]->parameters[0]->parameters[0]));
+        rewrite_variable_method_call(&(t->parameters[0]->parameters[0]->parameters[0]), is_tainted);
         //but continue with the current call
     }
     else if (strcmp(t->text,"aspisdummy")==0) {
-        printf("variable_method call:");
-        ast_print_bfs(stdout,t);
-        printf("\n");                             //paren         t_null         next function
-        rewrite_variable_method_call(&(t->parameters[0]->parameters[0]->parameters[0]));
+        rewrite_variable_method_call(&(t->parameters[0]->parameters[0]->parameters[0]), is_tainted);
     }
-    if (t->total_parameters==0) {
-        if (!is_online) printf("no parameters found at all \n");
-        return ;
-    }
+    if (t->total_parameters==0) return;
+    
     astp lastp=t->parameters[t->total_parameters-1];
-    astp afterlastp=NULL;
-    if (lastp->total_parameters>0) afterlastp=lastp->parameters[lastp->total_parameters-1];
-    else {
+    if (lastp->total_parameters==0) {
         if (!is_online)  printf("no parameters found after: (%s)\n",lastp->text);
         return ;
     }
+    
+    //if the method is a sink, the first parameter must be guarded
+    if (is_tainted && lastp->type==T_OBJECT_OPERATOR && lastp->parameters[0]->type==T_STRING_METHOD) {
+        char *guard=category_find_guard(taint_categories,lastp->parameters[0]->text);
+        if (guard!=NULL) {
+            rewrite_sink_call(&(lastp->parameters[0]));
+        }
+    }
+
+    //now do the usual rewriting for reference parameters    
     if (lastp->type==T_OBJECT_OPERATOR && strcmp(t->text,"$this")!=0 && lastp->parameters[0]->type==T_STRING_METHOD) {
         int i;
         int exists_ref=prototype_has_ref_param(user_methods_prototypes,user_methods_prototypes_count,lastp->parameters[0]->text) 
@@ -3452,7 +3451,7 @@ void ast_untainted_edit_bfs(FILE *out, astp* tree) {
             case T_VARIABLE:
                 untainted_edit_node_generic(out, tree, NULL);
                 untainted_rewrite_variable_object_access(tree); //break chains w aspisdummy()
-                rewrite_variable_method_call(tree); //this may replace aspisdummys for methods with references
+                rewrite_variable_method_call(tree,0); //this may replace aspisdummys for methods with references
                 untainted_delete_dummies(tree); //but if not, aspisdummy() is irrelevant
                 untainted_rewrite_superglobal_read(tree); //it may also be a superglobal
                 break;
@@ -3603,7 +3602,7 @@ void ast_edit_bfs(FILE *out, astp* tree) {
                 log_superglobal(tree);
                 rewrite_variable_object_access(tree);
                 rewrite_variable_array_access(tree);
-                rewrite_variable_method_call(tree);
+                rewrite_variable_method_call(tree,1);
                 break;
             case T_OBJECT_OPERATOR:
                 edit_node_generic(out, tree, NULL);

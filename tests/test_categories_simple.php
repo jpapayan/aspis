@@ -32,4 +32,20 @@ $f($v);
 And In another block:
 <?= $v?>
 
+<?php 
+class fclass {
+    var $a="stpid";
+    function fsink($s, $aa,$ab) {
+        echo $s, " from class world!\n";
+        print $s."\n";
+    }
+}
+
+$c=new fclass();
+$c->fsink($c->a,2,3);
+$c->fsink(1,2,3);
+
+?>
+
 <?php exit($v."\n"); ?>
+

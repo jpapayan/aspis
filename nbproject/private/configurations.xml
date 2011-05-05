@@ -27,8 +27,6 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" -in TestScripts/test_toy.php -out TestResults</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in test/test_toy_assign.php -out tests/results</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" in tests/test_partial_basic_p1.php -out tests/results -taints taint_propagation/test_partial_basic_p1.tainted -prototypes taint_propagation/test_partial_basic_p1.prototypes</runcommandpicklistitem>
@@ -37,8 +35,10 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results -categories tests/generic.categories</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_toy_assign.php -out tests/results -categories tests/taint_propagation/generic.categories</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_categories_simple.php -out tests/results/ -categories tests/taint_propagation/generic.categories</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -dir tests -file tests/test_categories_simple.php -categories tests/taint_propagation/generic.categories -out tests/results/</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -in tests/test_categories_simple.php -categories tests/taint_propagation/generic.categories -out tests/results/</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" -in tests/test_categories_simple.php -out tests/results/ -categories tests/taint_propagation/generic.categories</runcommand>
+        <runcommand>"${OUTPUT_PATH}" -in tests/test_categories_simple.php -categories tests/taint_propagation/generic.categories -out tests/results/</runcommand>
         <rundir>/data/Dropbox/php/aspis</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
