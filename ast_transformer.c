@@ -2477,6 +2477,33 @@ void rewrite_method_call(astp *tree) {
     *tree=result;
 }
 /*
+ * Adds KillTaint to method calls that are detected elsewere to be sanitisers
+ * Here, I blindly assume that *tree points to such a call.
+ */
+void rewrite_sanitiser_method_call(astp *tree, int i) {
+    if (i<0) return;
+    
+    astp t=*tree;
+    astp temp=ast_new(T_NULL,NULL);
+    for (int j=0;j<t->total_children;j++) ast_add_child(temp,t->children[j]);
+    ast_clear_children(t);
+    
+    char * i_str = (char *) malloc(5 * sizeof (char));
+    snprintf(i_str, 4, "%d", i);
+    astp p = ast_new(T_DNUMBER, i_str);
+    astp c = ast_new_wparam(T_ARTIFICIAL, ",", p);
+    astp par = ast_new_wparams(T_ARTIFICIAL, "(", t, c);
+    astp f = ast_new_wparam(T_STRING_FUNCTION, "AspisKillTaint", par);
+    *tree = f;
+    
+    p->rewritten = 1;
+    c->rewritten = 1;
+    par->rewritten = 1;
+    f->rewritten = 1;
+    
+    for (int j=0;j<temp->total_children;j++) ast_add_child(f,temp->children[j]);
+}
+/*
  * if partial taint tracking is on, all method calls with ref parameters must be
  * rewritten. That s because the proxy objexts cannot propagate references.
  * Rewritting uses the AspisReferenceMethodCall helper function at runtime.
@@ -2529,6 +2556,15 @@ void rewrite_variable_method_call(astp *tree, int is_tainted) {
             printf("\n");
         }
     }
+    
+    //if the method is a sanitizer, kill the taint of the result
+    if (is_tainted && lastp->type==T_OBJECT_OPERATOR && lastp->parameters[0]->type==T_STRING_METHOD) {
+        int i=category_find_index(taint_categories,lastp->parameters[0]->text);
+        if (i!=-1) {
+            rewrite_sanitiser_method_call(tree,i);
+        }
+    }
+    
 }
 /*
  * When the tag <?= ?> is used, it means that I have to remove the Aspis

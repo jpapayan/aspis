@@ -4,8 +4,10 @@ addslashes
 fsanitizer
 htmlentities
 htmlspecialchars
+msanitiser
 >guards
 fsink->AspisPrintGuard
+msink->AspisPrintGuard
 prints->AspisPrintGuard
 end
 

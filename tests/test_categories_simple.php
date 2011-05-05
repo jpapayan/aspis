@@ -35,15 +35,20 @@ And In another block:
 <?php 
 class fclass {
     var $a="stpid";
-    function fsink($s, $aa,$ab) {
+    function msink($s, $aa,$ab) {
         echo $s, " from class world!\n";
         print $s."\n";
+        return $this;
+    }
+    function msanitiser($s) {
+        return $s;
     }
 }
 
 $c=new fclass();
-$c->fsink($c->a,2,3);
-$c->fsink(1,2,3);
+$c->msink($c->a,2,3);
+$ret=$c->msink(1,2,3)->msink(1,2,3)->msanitiser("sanitised 12");
+echo "$ret\n";
 
 ?>
 
