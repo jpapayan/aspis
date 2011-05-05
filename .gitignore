@@ -1,0 +1,8 @@
+aspis
+do_rewrite_project.log
+php_parser.output
+php_parser.tab.c
+php_parser.tab.h
+php_scanner.lex.c
+tests/results/
+/nbproject/private/
