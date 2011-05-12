@@ -1,14 +1,126 @@
-PHP Aspis README File
-=====================
+PHP Aspis: Taint tracking for PHP via source rewriting.
+===============================================================================
 
 To Add to github:
 
 git remote add origin git@github.com:jpapayan/aspis.git
 git push -u origin master
 
-=====================
-Environmental variables used:
-ASPIS_HOME: the installation dir of the project
-PATH: aspis must be in your path
+===============================================================================
 
-=====================
+PHP Aspis provides transparent protection against injection attacks using taint
+tracking at the source code level. Please, do not proceed without reading the
+USENIX WebApps 2011 paper titled "PHP Aspis: Using Partial Taint Tracking To
+Protect Against Injection Attacks". It contains everything you need to know in
+order to understand what this prototype does. Google the title and you will find 
+the pdf.
+
+Bewarned: this is a proof-of-concept research prototype.
+
+===============================================================================
+
+Dependencies
+
+PHP Aspis is a C/Flex/Bison project so build-essential/bison/flex should be
+enough under Ubuntu. It's also good to have Python (I use 2.7.1) and PHP (I use
+5.3.5).
+
+
+===============================================================================
+
+Installation
+
+$ git clone git://github.com/jpapayan/aspis.git ~/aspis_home
+
+$ cd ~/aspis_home
+
+$ make
+
+Make sure that $ASPIS_HOME points to the repo dir and that the repo dir is in
+your $PATH before continuing.
+
+===============================================================================
+
+Basic Usage
+
+Type 
+
+$ aspis
+
+to get a list of the parameters that PHP Aspis requires. You definitely need to
+pass a PHP file to parse (-in) and a file with the taint category definitions
+(-categories). For the second, have a look in 
+tests/taint_propagation/generic.categories
+to see an example of such a file. The output must be a dir and can be specified
+with -out (by default "results"). In the output dir, PHP Aspis will generate the
+transformed file (same name as the input file) and it will also copy the runtime
+library that the transformed application will require to execute.
+
+Example:
+
+$ cd ~/aspis_home
+$ echo echo "<?php echo \"Hello PHP Aspis\n\";?>" > my_test.php
+$ aspis -in my_test.php -categories tests/taint_propagation/generic.categories
+        -out my_results
+$ php my_test.php
+$ php my_results/my_test.php
+
+If everything is ok, the two PHP invocations should generate the same output.
+
+===============================================================================
+
+Tests
+
+The purpose of PHP Aspis is to generate scripts that behave almost identically
+to the original script (minus any differences due to sanitisation of course).
+Given the extensive transformations applied, this is often a challenge.
+During development, a test suit under "tests" was used that contains about 80
+php scripts. These should generate the same output before and after the
+transformation.
+
+To help automate things, the python script do_tests.py can take one (or more)
+php files, transform them, and then test if their output is the same before and
+after the transformation.
+
+So, repeat what the previous example did, but with a file from the test suite:
+
+$ cd ~/aspis_home
+$ do_tests.py -dir tests 
+              -file tests/test_categories_simple.php 
+              -categories tests/taint_propagation/generic.categories 
+              -out tests/results/
+
+This will invoke make, and verify that aspis works correctly with the file
+specified. To run all the tests in the test suite repeat the previous without
+the -file parameter:
+
+$ do_tests.py -dir tests 
+              -categories tests/taint_propagation/generic.categories 
+              -out tests/results/
+
+Almost all of them should succeed. Try again if some fail, a few will only
+work the second time (ie they include() files that transform in the first try).
+Note: A couple of them still break PHP Aspis.
+
+===============================================================================
+
+Transforming PHP Projects
+
+Transforming files one by one is not enough. So, PHP Aspis comes with a second 
+python script "do_project.py". This recursively iterates in a directory,
+invokes PHP Aspis in all the php scripts it finds and outputs the result.
+Hopefully, it returns a transformed project dir, ready to be deployed. So, 
+assuming that you have an application under ~/public_html/app, you may do:
+
+$ do_project.py -dir ~/public_html/app
+                -out ~/public_html/app_aspis 
+                -categories tests/taint_propagation/generic.categories
+
+This should parse successfully all of the files, segmentation faults are a bad
+sign. Try then to see if app_aspis works as intented!
+
+===============================================================================
+
+Partial Taint Tracking
+
+===============================================================================

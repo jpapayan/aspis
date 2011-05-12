@@ -1396,6 +1396,7 @@ void rewrite_sanitiser_call(astp * tree) {
     if ( t->type!=T_STRING_FUNCTION ) return;
     char * fname=strcpy_malloc(t->text);
     char * initial=strtok(fname,"_");
+    if (initial==NULL) return;
     if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
     int i=category_find_index(taint_categories,fname);
     if (i==-1) return;
@@ -1426,6 +1427,7 @@ void rewrite_sink_call(astp * tree) {
     //now t points the to the function call
     char * fname=strcpy_malloc(t->text);
     char * initial=strtok(fname,"_");
+    if (initial==NULL) return;
     if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
     
     char *guard=category_find_guard(taint_categories,fname);

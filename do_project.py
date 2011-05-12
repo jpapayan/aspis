@@ -73,7 +73,7 @@ def do_rewrite(in_filename,out_dir,taints,prototypes, categories):
         if (prototypes!=""):
            cmd+=" -prototypes "+prototypes;
         #Keep all output in a log file for debugging.
-        cmd+=" >do_rewrite_project.log";
+        cmd+=" >do_project.log";
         execute(cmd);
         out_file=os.path.join(out_dir, get_filename(in_filename));
         ret=os.path.isfile(out_file);
@@ -84,9 +84,8 @@ def do_rewrite(in_filename,out_dir,taints,prototypes, categories):
 
 def usage():
     print "Please invoke the script correctly."
-    print "-dir directory -out directory [-fused on]"
-    print "[-taints taintsfile -prototypes prototypesfile]"
-    print "Type \"$aspis help\" for info."
+    print "-dir directory -out directory -categories categoriesfile"
+    print " [-fused on][-taints taintsfile][-prototypes prototypesfile]"
     sys.exit(1)
 
 if __name__ == '__main__':
@@ -97,7 +96,6 @@ if __name__ == '__main__':
     rootdir=get_param(sys.argv,"dir")
     out=get_param(sys.argv,"out")
     if len(sys.argv)%2!=1 or rootdir=="" or out=="":
-        print len(sys.argv)
         usage()
         exit()
 
@@ -108,6 +106,7 @@ if __name__ == '__main__':
     
     print "-dir=\t"+rootdir;
     print "-out=\t"+out;
+    print "-catgs=\t"+categories;
     print "-fused=\t"+fused+" [optional]"; 
     print "-tnts=\t"+taints+" [optional]";
     print "-prot=\t"+prototypes+" [optional]";

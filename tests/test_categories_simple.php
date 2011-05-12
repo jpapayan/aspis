@@ -1,4 +1,9 @@
 <?php
+function __($a) {
+    echo $a."\n";
+}
+__("Hello!");
+
 $v="Hello dear: ".$argv[1];
 $v= strtoupper($v);
 $v= htmlentities($v);
