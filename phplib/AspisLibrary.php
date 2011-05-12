@@ -229,13 +229,53 @@ function Aspis_array_walk(&$arr, $cb, $data=NULL) {
                    $key=array($key,false); //use the taint of the key
                }
                if ($data!==NULL) {
-                   if (is_string($cb)) $ret=$cb($value,$key,$data);
-                   else if (is_object($cb[0])) $ret=$cb[0]->$cb[1]($value,$key,$data);
+                   if (is_string($cb)) {
+                       $guard = AspisFindGuard($cb);
+                       if ($guard!="" && isset($value)) {
+                           $value = $guard($value);
+                       }
+                       $ret=$cb($value,$key,$data);
+                       $i = AspisIsSanitiser($cb);
+                       if ($i != -1) {
+                           $ret = AspisKillTaint($ret, $i);
+                       }
+                   }
+                   else if (is_object($cb[0])) {
+                       $guard = AspisFindGuard($cb[1]);
+                       if ($guard!="" && isset($value)) {
+                           $value = $guard($value);
+                       }
+                       $ret=$cb[0]->$cb[1]($value,$key,$data);
+                       $i = AspisIsSanitiser($cb[1]);
+                       if ($i != -1) {
+                           $ret = AspisKillTaint($ret, $i);
+                       }
+                   }
                    else die("Aspis_array_walk does not support this type of callback");
                }
                else {
-                   if (is_string($cb)) $ret=$cb($value,$key);
-                   else if (is_object($cb[0])) $ret=$cb[0]->$cb[1]($value,$key);
+                   if (is_string($cb)) {
+                       $guard = AspisFindGuard($cb);
+                       if ($guard!="" && isset($value)) {
+                           $value = $guard($value);
+                       }
+                       $ret=$cb($value,$key);
+                       $i = AspisIsSanitiser($cb);
+                       if ($i != -1) {
+                           $ret = AspisKillTaint($ret, $i);
+                       }
+                   }
+                   else if (is_object($cb[0])) {
+                       $guard = AspisFindGuard($cb[1]);
+                       if ($guard!="" && isset($value)) {
+                           $value = $guard($value);
+                       }
+                       $ret=$cb[0]->$cb[1]($value,$key);
+                       $i = AspisIsSanitiser($cb[1]);
+                       if ($i != -1) {
+                           $ret = AspisKillTaint($ret, $i);
+                       }
+                   }
                    else die("Aspis_array_walk does not support this type of callback");
                }
                $value[2]=$tmp; //restore the taint of the key, as it may have changed
@@ -258,26 +298,65 @@ function AspisTainted_array_walk(&$arr, $cb, $data=NULL) {
        //the function is tainted
        $nfunction=function (&$value,$key,$data=NULL) use ($cb) {
                    //TODO: it only works when $cb is a string, not a class method.
-                   if (isset($value[2])) {
-                       $tmp=$value[2];
-                       $key=array($key,AspisTaintBareCopy($tmp)); //use the taint of the key
-                   }
-                   else {
-                       $tmp=false;
-                       $key=array($key,false); //use the taint of the key
-                   }
-                   if ($data!==NULL) {
-                       if (is_string($cb)) $ret=$cb($value,$key,$data);
-                       else if (is_object($cb[0])) $ret=$cb[0]->$cb[1]($value,$key,$data);
-                       else die("AspisTainted_array_walk does not support this type of callback");
-                   }
-                   else {
-                       if (is_string($cb)) $ret=$cb($value,$key);
-                       else if (is_object($cb[0])) $ret=$cb[0]->$cb[1]($value,$key);
-                       else die("AspisTainted_array_walk does not support this type of callback");
-                   }
-                   $value[2]=$tmp; //restore the taint of the key, as it may have changed
-               };
+                    if (isset($value[2])) {
+                        $tmp = $value[2];
+                        $key = array($key, AspisTaintBareCopy($tmp)); //use the taint of the key
+                    } else {
+                        $tmp = false;
+                        $key = array($key, false); //use the taint of the key
+                    }
+                    if ($data !== NULL) {
+                        if (is_string($cb)) {
+                            $guard = AspisFindGuard($cb);
+                            if ($guard != "" && isset($value)) {
+                                $value = $guard($value);
+                            }
+                            $ret = $cb($value, $key, $data);
+                            $i = AspisIsSanitiser($cb);
+                            if ($i != -1) {
+                                $ret = AspisKillTaint($ret, $i);
+                            }
+                        } else if (is_object($cb[0])) {
+                            $guard = AspisFindGuard($cb[1]);
+                            if ($guard != "" && isset($value)) {
+                                $value = $guard($value);
+                            }
+                            $ret = $cb[0]->$cb[1]($value, $key, $data);
+                            $i = AspisIsSanitiser($cb[1]);
+                            if ($i != -1) {
+                                $ret = AspisKillTaint($ret, $i);
+                            }
+                        }
+                        else
+                            die("AspisTainted_array_walk does not support this type of callback");
+                    }
+                    else {
+                        if (is_string($cb)) {
+                            $guard = AspisFindGuard($cb);
+                            if ($guard != "" && isset($value)) {
+                                $value = $guard($value);
+                            }
+                            $ret = $cb($value, $key);
+                            $i = AspisIsSanitiser($cb);
+                            if ($i != -1) {
+                                $ret = AspisKillTaint($ret, $i);
+                            }
+                        } else if (is_object($cb[0])) {
+                            $guard = AspisFindGuard($cb[1]);
+                            if ($guard != "" && isset($value)) {
+                                $value = $guard($value);
+                            }
+                            $ret = $cb[0]->$cb[1]($value, $key);
+                            $i = AspisIsSanitiser($cb[1]);
+                            if ($i != -1) {
+                                $ret = AspisKillTaint($ret, $i);
+                            }
+                        }
+                        else
+                            die("AspisTainted_array_walk does not support this type of callback");
+                    }
+                    $value[2] = $tmp; //restore the taint of the key, as it may have changed
+                };
        if ($data===NULL) return array(array_walk($arr[0],$nfunction),false);
        else return array(array_walk($arr[0],$nfunction,$data),false);
 
@@ -390,8 +469,20 @@ function Aspis_call_user_func() {
    }
    else {
        array_shift($params);
-       $ret=call_user_func_array(deAspisCallback($name),$params);
+       $f_name=deAspisCallback($name);
+       
+       $guard = AspisFindGuard($f_name);
+       if ($guard != "") {
+           if (isset($params[0])) {
+               $params[0] = $guard($params[0]);
+           }
+       }
+       $ret=call_user_func_array($f_name,$params);
        if ($ret===FALSE) $ret=array($ret,false);
+       $i = AspisIsSanitiser($f_name);
+       if ($i != -1) {
+            $ret = AspisKillTaint($ret, $i);
+       }
        return $ret;
    }
 }
@@ -433,8 +524,15 @@ function AspisTainted_call_user_func() {
    }
    else {
        array_shift($params);
+
+       $guard = AspisFindGuard($name);
+       if ($guard != "" && isset($params[0])) $params[0] = $guard($params[0]);
+       
        $ret=call_user_func_array($name,$params);
        if ($ret===FALSE) $ret=array($ret,false);
+       
+       $i = AspisIsSanitiser($name);
+       if ($i != -1) $ret = AspisKillTaint($ret, $i);
        return $ret;
    }
 }
@@ -669,8 +767,16 @@ function Aspis_call_user_func_array($name,$params) {
        foreach ($params[0] as &$p) {
            $params_ref[]=&$p;
        }
-       $ret=call_user_func_array(deAspisCallback($name),$params_ref);
+       
+       $name=deAspisCallback($name);
+       $guard = AspisFindGuard($name);
+       if ($guard != "" && isset($params[0][0])) $params[0][0] = $guard($params[0][0]);
+       
+       $ret=call_user_func_array($name,$params_ref);
        if ($ret===FALSE) $ret=array($ret,false);
+       
+       $i = AspisIsSanitiser($name);
+       if ($i != -1) $ret = AspisKillTaint($ret, $i);
        return $ret;
    }
 }
@@ -718,8 +824,16 @@ function AspisTainted_call_user_func_array($name,$params) {
        foreach ($params[0] as &$p) {
            $params_ref[]=&$p;
        }
+       
+       $guard = AspisFindGuard($name);
+       if ($guard != "" && isset($params_ref[0])) $params_ref[0] = &$guard($params_ref[0]);
+       
        $ret=call_user_func_array($name,$params_ref);
        if ($ret===FALSE) $ret=array($ret,false);
+       
+       $i = AspisIsSanitiser($name);
+       if ($i != -1) $ret = AspisKillTaint($ret, $i);
+       
        return $ret;
    }
 }
