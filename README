@@ -123,4 +123,24 @@ sign. Try then to see if app_aspis works as intented!
 
 Partial Taint Tracking
 
+In order to achieve partial taint tracking, all binaries should be called with
+an additional two parameters:
+
+[-taints taintsfile]
+This first file specifies the contexts that should be considered tainted. You
+can add [function names or script names] and then [class names]. Alphabetical 
+"strcmp" order is required for both subcategories. See the various *.tainted
+files under /tests/taint_propagation for inspiration.
+PS. Leave the categories >functions and >classes there, the parsing routines are
+    not particularly smart.
+
+[-prototypes protoypesfile]
+This file lists all the function/methods used by the transformed application.
+For each of them, it specifies the parameters that are passed by reference. This
+is necessary to enable PHP Aspis to adapt function parameters between tracking
+and non tracking code.
+
+
+
+
 ===============================================================================

@@ -1,5 +1,5 @@
 aspis
-do_rewrite_project.log
+do_project.log
 php_parser.output
 php_parser.tab.c
 php_parser.tab.h
