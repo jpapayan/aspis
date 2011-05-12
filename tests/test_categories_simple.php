@@ -46,10 +46,18 @@ class fclass {
 }
 
 $c=new fclass();
+
+//static method calls
 $c->msink($c->a,2,3);
 $ret=$c->msink(1,2,3)->msink(1,2,3)->msanitiser("sanitised 12");
 echo "$ret\n";
 
+//synamic method calls
+$f="msink";
+$s="msanitiser";
+$c->$f($c->a,2,3);
+$ret=$c->$s("sanitised 13");
+echo "$ret\n";
 ?>
 
 <?php exit($v."\n"); ?>

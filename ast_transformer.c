@@ -2477,7 +2477,7 @@ void rewrite_method_call(astp *tree) {
     *tree=result;
 }
 /*
- * Adds KillTaint to method calls that are detected elsewere to be sanitisers
+ * Adds AspisKillTaint to method calls that are detected elsewere to be sanitisers.
  * Here, I blindly assume that *tree points to such a call.
  */
 void rewrite_sanitiser_method_call(astp *tree, int i) {

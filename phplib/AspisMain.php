@@ -486,6 +486,8 @@ function AspisIsSanitiser($function) {
     if (empty($taint_categories)) {
         load_taint_categories();
     }
+    
+    if (is_array($function)) $function=$function[1]; //ignore the class
     for ($i = 0; $i < count($taint_categories); $i++) {
         if (isset($taint_categories[$i][0][$function])) return $i;
     }
@@ -496,6 +498,8 @@ function AspisFindGuard($function) {
     if (empty($taint_categories)) {
         load_taint_categories();
     }
+    
+    if (is_array($function)) $function=$function[1]; //ignore the class
     for ($i=0; $i<count($taint_categories); $i++) {
         if (isset($taint_categories[$i][1][$function])) {
             return $taint_categories[$i][1][$function];
@@ -527,6 +531,7 @@ function AspisDynamicCall() {
    }
    else {
         $guard = AspisFindGuard($f_name);
+//        echo "Guard: $guard\n";
         if ($guard != "") {
             if (isset($f_params[0])) {
                 $f_params[0]=$guard($f_params[0]);
@@ -535,6 +540,7 @@ function AspisDynamicCall() {
         } else {
             $ret = call_user_func_array($f_name, $f_params);
             $i = AspisIsSanitiser($f_name);
+//            echo "IsSanitiser: $i\n";
             if ($i != -1) {
                 $ret = AspisKillTaint($ret, $i);
             }
