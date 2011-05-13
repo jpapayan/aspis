@@ -62,7 +62,7 @@ library that the transformed application will require to execute.
 Example:
 
 $ cd ~/aspis_home
-$ echo echo "<?php echo \"Hello PHP Aspis\n\";?>" > my_test.php
+$ echo "<?php echo \"Hello PHP Aspis\n\";?>" > my_test.php
 $ aspis -in my_test.php -categories tests/taint_propagation/generic.categories
         -out my_results
 $ php my_test.php
@@ -166,7 +166,7 @@ $ aspis_project.py -dir ~/public_html/app -fused on
 This will invoke PHP Aspis for all project files and it will generate in the 
 current dir two files:
 --current.prototypes
-This is the the file you looked for.
+This is the the file you are after.
 --fused.txt
 This is a list of PHP lib functions (not sorted, see misc/fused_sort.php) that
 the application is using. This is very useful to limit the number of

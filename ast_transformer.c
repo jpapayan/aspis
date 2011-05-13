@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdbool.h>
 #include "php_parser.tab.h"
 #include "ast_transformer.h"
 #include "my_main.h"
@@ -1067,8 +1068,8 @@ void rewrite_foreach(astp* tree) {
  * guard calls must be added.
  */
 void rewrite_echo(astp* tree) {
-    char *guard=category_find_guard(taint_categories,"echo");
-    if (guard==NULL) guard=category_find_guard(taint_categories,ALL_PRINTS);
+    char *guard=category_find_sink_guard(taint_categories,"echo");
+    if (guard==NULL) guard=category_find_sink_guard(taint_categories,ALL_PRINTS);
     astp tnull=(*tree)->parameters[0];
     if (!tnull->rewritten) {
         if (tnull->total_parameters>0) {
@@ -1102,8 +1103,8 @@ void rewrite_echo(astp* tree) {
  */
 void rewrite_print(astp* tree) {
     astp t=(*tree);
-    char *guard=category_find_guard(taint_categories,"print");
-    if (guard==NULL) guard=category_find_guard(taint_categories,ALL_PRINTS);
+    char *guard=category_find_sink_guard(taint_categories,"print");
+    if (guard==NULL) guard=category_find_sink_guard(taint_categories,ALL_PRINTS);
     if (!t->rewritten && t->total_parameters > 0) {
         if (guard != NULL) {
             astp p = ast_new_wparam(T_ARTIFICIAL, "(", t->parameters[0]);
@@ -1430,9 +1431,9 @@ void rewrite_sink_call(astp * tree) {
     if (initial==NULL) return;
     if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
     
-    char *guard=category_find_guard(taint_categories,fname);
+    char *guard=category_find_sink_guard(taint_categories,fname);
     if (t->type==T_EXIT && guard==NULL) {
-        guard=category_find_guard(taint_categories,ALL_PRINTS);
+        guard=category_find_sink_guard(taint_categories,ALL_PRINTS);
     } 
     if (guard==NULL) return;
     
@@ -2532,7 +2533,7 @@ void rewrite_variable_method_call(astp *tree, int is_tainted) {
     
     //if the method is a sink, the first parameter must be guarded
     if (is_tainted && lastp->type==T_OBJECT_OPERATOR && lastp->parameters[0]->type==T_STRING_METHOD) {
-        char *guard=category_find_guard(taint_categories,lastp->parameters[0]->text);
+        char *guard=category_find_sink_guard(taint_categories,lastp->parameters[0]->text);
         if (guard!=NULL) {
             rewrite_sink_call(&(lastp->parameters[0]));
         }
@@ -2588,7 +2589,7 @@ void rewrite_equals_tag(astp *tree) {
         astp after_next=t->children[0]->children[0];
         ast_clear_children(next);
         
-        char *guard=category_find_guard(taint_categories,ALL_PRINTS);
+        char *guard=category_find_sink_guard(taint_categories,ALL_PRINTS);
         if (guard != NULL) {
             astp p = ast_new_wparam(T_ARTIFICIAL, "(", t->children[0]);
             astp f = ast_new_wparam(T_STRING_FUNCTION, guard, p);
@@ -3431,6 +3432,36 @@ int untainted_rewrite_class_definition(FILE * out,astp *tree) {
     is_tainted_cl=is_tainted_cl_tmp;
     return 1;
 }
+/*
+ * Calls to functions marked as sensitive sources should be enclosed in 
+ * calls to the specified guards.
+ */
+void untainted_rewrite_source_call(astp * tree) {
+    astp t=*tree;
+    bool is_masked=false;
+    if ( strstr(t->text,"deAspis")!=NULL ) {
+        t=t->parameters[0]->parameters[0];
+        is_masked=true;
+    }
+    //now t points the to the function call
+    
+    if ( t->type!=T_STRING_FUNCTION ) return;
+    char * fname=strcpy_malloc(t->text);
+    char * initial=strtok(fname,"_");
+    if (initial==NULL) return;
+    if (strcmp(initial,"Aspis")==0) fname=strtok(NULL,"");
+    
+    char *guard=category_find_source_guard(taint_categories,fname);
+    if (guard==NULL) return;
+    
+    astp par=ast_new_wparam(T_ARTIFICIAL,"(",t);
+    astp f=ast_new_wparam(T_STRING_FUNCTION,guard,par);
+    if (is_masked) (*tree)->parameters[0]->parameters[0]=f;
+    else *tree=f;
+    
+    par->rewritten=1;
+    f->rewritten=1;
+}
 
 /**********Recursive control functions***********************************/
 void ast_untainted_edit_bfs(FILE *out, astp* tree) {
@@ -3450,6 +3481,7 @@ void ast_untainted_edit_bfs(FILE *out, astp* tree) {
             case T_STRING_FUNCTION:
                 untainted_edit_node_generic(out, tree, NULL);
                 untainted_rewrite_function_call(tree);
+                untainted_rewrite_source_call(tree);
                 break;
             case T_GLOBAL:
                 untainted_rewrite_global(tree);

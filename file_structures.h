@@ -46,6 +46,8 @@ typedef struct {
     int fcount;
     guard** glist;
     int gcount;
+    guard** slist;
+    int scount;
 } taint_category;
 
 typedef struct {
@@ -56,7 +58,8 @@ typedef struct {
 taint_category_list *category_file_read(char *);
 int category_file_count(char *);
 int category_find_index(taint_category_list *, char * );
-char * category_find_guard(taint_category_list *, char *);
+char * category_find_sink_guard(taint_category_list *, char *);
+char * category_find_source_guard(taint_category_list *, char *);
 
 #endif	/* _FILE_STRUCTURES_H */
 

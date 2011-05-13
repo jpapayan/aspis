@@ -5,10 +5,12 @@ fsanitizer
 htmlentities
 htmlspecialchars
 msanitiser
->guards
+>sinks
 fsink->AspisPrintGuard
 msink->AspisPrintGuard
 prints->AspisPrintGuard
+>sources
+fsource->AspisPrintGuard
 end
 
 begin

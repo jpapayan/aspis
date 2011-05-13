@@ -379,8 +379,11 @@ taint_category_list * category_file_read(char * file) {
             tc->gcount=0;
             tc->flist=NULL;
             tc->fcount=0;
+            tc->slist=NULL;
+            tc->scount=0;
             int reading_sanitisation=0;
-            int reading_guards=0;
+            int reading_sinks=0;
+            int reading_sources=0;
             while (1) { 
                 if (fscanf(fp,"%s\n",(char *)line)==0) break;
                 if (strcmp(line,"end")==0) break;
@@ -388,9 +391,15 @@ taint_category_list * category_file_read(char * file) {
                     reading_sanitisation=1; 
                     continue;
                 }
-                else if (strcmp(line,">guards")==0) {
+                else if (strcmp(line,">sinks")==0) {
                     reading_sanitisation=0;
-                    reading_guards=1;
+                    reading_sinks=1;
+                    continue;
+                }
+                else if (strcmp(line,">sources")==0) {
+                    reading_sanitisation=0;
+                    reading_sinks=0;
+                    reading_sources=1;
                     continue;
                 }
                 
@@ -400,17 +409,24 @@ taint_category_list * category_file_read(char * file) {
                     if (tc->flist == NULL) die("realloc failed\n");
                     tc->flist[tc->fcount-1]=strcpy_malloc(line);
                 }
-                else if (reading_guards) { 
+                else if (reading_sinks || reading_sources) { 
                     char *tok1=strtok((char *)line,"->");
                     char *tok2=strtok((char *)NULL,"->");
                     if (tok1!=NULL && tok2!=NULL) {
                         guard * g=(guard *)malloc(sizeof(guard));
                         g->name = strcpy_malloc(tok1);
                         g->sink = strcpy_malloc(tok2);
-                        tc->gcount++;
-                        tc->glist=(guard **)realloc(tc->glist, tc->gcount * (sizeof(guard *)) );
-                        if (tc->glist == NULL) die("realloc failed\n");
-                        tc->glist[tc->gcount-1]=g;
+                        if (reading_sinks) {
+                            tc->gcount++;
+                            tc->glist = (guard **) realloc(tc->glist, tc->gcount * (sizeof (guard *)));
+                            if (tc->glist == NULL) die("realloc failed\n");
+                            tc->glist[tc->gcount - 1] = g;
+                        } else if (reading_sources) {
+                            tc->scount++;
+                            tc->slist = (guard **) realloc(tc->glist, tc->scount * (sizeof (guard *)));
+                            if (tc->slist == NULL) die("realloc failed\n");
+                            tc->slist[tc->scount - 1] = g;
+                        }
                     }
                     else die("Invalid guard in the category file");
                 }
@@ -451,15 +467,28 @@ int category_find_index(taint_category_list *tc_list, char * function) {
     }
     return -1;
 }
-char * category_find_guard(taint_category_list *tc_list, char * function) {
+char * category_find_guard(taint_category_list *tc_list, char * function, int is_sink) {
     //linear search, I expect taint categories to be very sort.
     for (int i=0; i<tc_list->count; i++) {
         taint_category * tc = tc_list->categories[i];
-        for ( int j=0; j<tc->gcount; j++ ) {
-            if (strcmp(function,tc->glist[j]->name)==0) 
-                return strcpy_malloc(tc->glist[j]->sink);
+        if (is_sink) {
+            for (int j = 0; j < tc->gcount; j++) {
+                if (strcmp(function, tc->glist[j]->name) == 0)
+                    return strcpy_malloc(tc->glist[j]->sink);
+            }
+        }
+        else {
+            for (int j = 0; j < tc->scount; j++) {
+                if (strcmp(function, tc->slist[j]->name) == 0)
+                    return strcpy_malloc(tc->slist[j]->sink);
+            }
         }
     }
     return NULL;
 }
-
+char * category_find_sink_guard(taint_category_list *tc_list, char * function) {
+    return category_find_guard(tc_list,function,1);
+}
+char * category_find_source_guard(taint_category_list *tc_list, char * function) {
+    return category_find_guard(tc_list,function,0);
+}

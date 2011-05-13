@@ -449,25 +449,32 @@ function load_taint_categories() {
             if ($line=="begin") {
                 $tc=array(array(),array());
                 $reading_sanitisation=0;
-                $reading_guards=0;
+                $reading_sinks=0;
+                $reading_sources=0;
                 while (1) {
                     $line=$file[++$i];
                     if ($line=="end") break;
                     else if ($line == ">sanitisation") {
                         $reading_sanitisation=1;
                         continue;
-                    } else if ($line == ">guards") {
+                    } else if ($line == ">sinks") {
                         $reading_sanitisation=0;
-                        $reading_guards=1;
+                        $reading_sinks=1;
+                        continue;
+                    } else if ($line == ">sources") {
+                        $reading_sanitisation=0;
+                        $reading_sinks=0;
+                        $reading_sources=1;
                         continue;
                     }
                     if ($reading_sanitisation) {
                         $tc[0][$line]=1;
-                    } else if ($reading_guards) {
+                    } else if ($reading_sinks || $reading_sources) {
                         $tok1=strtok($line, "->");
                         $tok2=strtok("->");
                         if ($tok1 != "" && $tok2 != "") {
-                            $tc[1][$tok1]=$tok2;
+                            if ($reading_sinks) $tc[1][$tok1]=$tok2;
+                            else if ($reading_sources) $tc[2][$tok1]=$tok2;
                         }
                         else
                             die("Invalid guard in the category file");
