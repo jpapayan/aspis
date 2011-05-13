@@ -162,19 +162,20 @@ int my_main(int argc, char* argv[],
             if (!is_online) print_usage();
             else exit(1);
     }
-    if (*categoriesfilepath==NULL) die("I need a category file.");
+    if (fused!=NULL && strcmp(fused,"on")==0) COLLECT_INFO=1;
+    
+    if (*categoriesfilepath==NULL && !COLLECT_INFO) die("I need a category file.");
     if (infile==NULL) die("I need a file to transform.");
     if (*aspis_home==NULL) die("ASPIS_HOME environmental variable is not set.");
     
     //now set up the environment according to the arguments
     if (!setin(infile)) die(">>Cannot set the infile");
     *filename = infile;
-    if (fused!=NULL && strcmp(fused,"on")==0) COLLECT_INFO=1;
     if (outpath != NULL && !is_online) {
         //construct the output file name. This will have the same name as the input
         //file, but placed inside the outpath directory.
         struct stat st;
-        if (stat(outpath, &st) != 0) {
+        if (!COLLECT_INFO && stat(outpath, &st) != 0) {
             if (mkdir(outpath, 0777)) die("cannot create an outpath");
         }
 
@@ -190,8 +191,10 @@ int my_main(int argc, char* argv[],
         if (outfile[strlen(outfile - 1)] != '/') strcat(outfile, "/");
         strcat(outfile, name);
         
-        add_runtime_variables(*aspis_home, *categoriesfilepath, 0);
-        copy_includes(*aspis_home,*categoriesfilepath);
+        if (!COLLECT_INFO) {
+           add_runtime_variables(*aspis_home, *categoriesfilepath, 0);
+           copy_includes(*aspis_home,*categoriesfilepath);
+        }
     } else outfile = outpath;
     if (!is_online) {
         printf("Input File: %s\nOutput Dir:%s\nOutput File:%s\n", infile, outpath, outfile);
@@ -215,7 +218,7 @@ void process_tree(char *aspis_home, char* outpath,
         char *filename,
         astp tree) {
     FILE * fout = NULL;
-    if (outpath != NULL) {
+    if (outpath != NULL && !COLLECT_INFO) {
         fout = fopen(outpath, "w");
         if (fout == NULL) {
             die("Cannot write to output");
@@ -255,7 +258,7 @@ void process_tree(char *aspis_home, char* outpath,
         printf("==========================\n\n");
     }
     script_stage = 0;
-    ast_print_bfs(fout, tree);
+    if (!COLLECT_INFO) ast_print_bfs(fout, tree);
 
     if (!is_online) {
         printf("\n\n==========================\n");
@@ -280,6 +283,5 @@ void process_tree(char *aspis_home, char* outpath,
        if (system(str)==-1) die("cat failed?!");
        printf("\n----------\n");
    }
-   else printf("Did not print the result.\n");
    
 }

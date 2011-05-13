@@ -122,15 +122,22 @@ sign. Try then to see if app_aspis works as intented!
 ===============================================================================
 
 Partial Taint Tracking
+----------------------
 
 In order to achieve partial taint tracking, all binaries should be called with
 an additional two parameters:
 
+$ do_project.py -dir ~/public_html/app
+                -out ~/public_html/app_aspis 
+                -categories tests/taint_propagation/generic.categories
+                -taints ~/app.tainted
+                -prototypes ~/app.prototypes
+
 [-taints taintsfile]
-This first file specifies the contexts that should be considered tainted. You
-can add [function names or script names] and then [class names]. Alphabetical 
-"strcmp" order is required for both subcategories. See the various *.tainted
-files under /tests/taint_propagation for inspiration.
+This first file specifies the contexts that should be considered tainted. In 
+that file, you can add [function names or script names] and then [class names].
+Alphabetical "strcmp" order is required for both subcategories. See the various 
+*.tainted files under /tests/taint_propagation for inspiration.
 PS. Leave the categories >functions and >classes there, the parsing routines are
     not particularly smart.
 
@@ -140,6 +147,16 @@ For each of them, it specifies the parameters that are passed by reference. This
 is necessary to enable PHP Aspis to adapt function parameters between tracking
 and non tracking code.
 
+
+Function Lists
+--------------
+
+PHP Aspis can generate the prototypes file for you. To do so, use the 
+"-fused on" parameter:
+
+$ do_project.py -dir ~/public_html/app -fused on
+
+This will invoke PHP Aspis in all project files
 
 
 

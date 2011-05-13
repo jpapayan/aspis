@@ -4014,13 +4014,12 @@ void ast_transform(FILE * out,
         uprototypes_read_methods(prototypes, &user_methods_prototypes, &user_methods_prototypes_count);
         has_user_prototypes=1;
     }
-    if (categories!=NULL) {
-        taint_categories=category_file_read(categories);
-    }
+    
+    taint_categories=category_file_read(categories);
     
     if (COLLECT_INFO) {
-        if (prototypes != NULL) prototypes_log_filename = prototypes;
-        else prototypes_log_filename = "current.prototypes";
+        /*if (prototypes != NULL) prototypes_log_filename = prototypes;
+        else*/ prototypes_log_filename = "current.prototypes";
     }
 
     if (!is_online) {

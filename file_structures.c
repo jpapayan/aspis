@@ -367,7 +367,9 @@ taint_category_list * category_file_read(char * file) {
     taint_category_list *ret=(taint_category_list *)malloc(sizeof(taint_category_list));
     ret->count=0;
     ret->categories=NULL;
+    if (file==NULL) return ret;
     FILE * fp = fopen(file, "r");
+    
     if (fp == NULL) die("Failed to read the taint category file provided\n");
     char line[200];
     while (fscanf(fp, "%s\n", (char*) line)>0) { //category loop
@@ -425,6 +427,7 @@ taint_category_list * category_file_read(char * file) {
 }
 int category_file_count(char * file) {
     int res=0;
+    if (file==NULL) return res;
     FILE * fp = fopen(file, "r");
     if (fp == NULL) die("Failed to read the taint category file provided\n");
     char line[200];

@@ -63,58 +63,82 @@ def execute(str):
     p=Popen(str, shell=True)
     p.wait()
 
-def do_rewrite(in_filename,out_dir,taints,prototypes, categories):
+def do_rewrite(in_filename, out_dir, taints, prototypes, categories, fused):
         print ".",
         #print in_filename
         sys.stdout.flush();
-        cmd="aspis -in "+in_filename+ " -out "+out_dir+"/"+" -categories "+categories;
+        cmd="aspis -in "+in_filename;
+        if out_dir!="":
+           cmd+=" -out "+out_dir +"/"
+        if categories!="":
+           cmd+=" -categories "+categories;
         if (taints!=""):
            cmd+=" -taints "+taints;
         if (prototypes!=""):
            cmd+=" -prototypes "+prototypes;
+        if (fused=="on"):
+           cmd+=" -fused on ";
         #Keep all output in a log file for debugging.
         cmd+=" >do_project.log";
         execute(cmd);
         out_file=os.path.join(out_dir, get_filename(in_filename));
-        ret=os.path.isfile(out_file);
-        if (not ret):
-            print "FAILED: "+cmd;
-            sys.exit();
-        return ret;
+        if (fused!="on"):
+           ret=os.path.isfile(out_file);
+           if (not ret):
+               print "FAILED: "+cmd;
+               sys.exit();
+           return ret;
+        return "";
 
 def usage():
     print "Please invoke the script correctly."
     print "-dir directory -out directory -categories categoriesfile"
-    print " [-fused on][-taints taintsfile][-prototypes prototypesfile]"
+    print " [-taints taintsfile][-prototypes prototypesfile]"
+    print "-dir directory -fused on"
     sys.exit(1)
 
 if __name__ == '__main__':
     print "==================================================="
     print "|          PhpAspis Rewrite FULL PROJECT           |"
     print "==================================================="
-
+    
+    if len(sys.argv)%2!=1:
+       usage()
+       exit()
+    
     rootdir=get_param(sys.argv,"dir")
+    fused=get_param(sys.argv,"fused")
     out=get_param(sys.argv,"out")
-    if len(sys.argv)%2!=1 or rootdir=="" or out=="":
-        usage()
-        exit()
+    categories=get_param(sys.argv,"categories")
+    
+    if fused!="on":
+       if rootdir=="" or out=="" or categories=="":
+          usage()
+          exit()
+    else:
+       if rootdir=="":
+          usage()
+          exit()
 
     taints=get_param(sys.argv,"taints")
     prototypes=get_param(sys.argv,"prototypes")
-    categories=get_param(sys.argv,"categories")
-    fused=get_param(sys.argv,"fused")
     
-    print "-dir=\t"+rootdir;
-    print "-out=\t"+out;
-    print "-catgs=\t"+categories;
-    print "-fused=\t"+fused+" [optional]"; 
-    print "-tnts=\t"+taints+" [optional]";
-    print "-prot=\t"+prototypes+" [optional]";
+    if (fused!="on"):
+       print "-dir=\t"+rootdir;
+       print "-out=\t"+out;
+       print "-catgs=\t"+categories;
+       print "-tnts=\t"+taints+" [optional]";
+       print "-prot=\t"+prototypes+" [optional]";
+    else:
+       print "-dir=\t"+rootdir;
+       print "-out=\t"+out;
+       print "-fused=\t"+fused; 
     print "==================================================="
     
     ####let's make PhpAspis
     execute("rm fused.txt");
-    execute("rm do_rewrite_project.log");
+    execute("rm current.prototypes");
+    execute("rm do_project.log");
     aspis_home=os.environ.get("ASPIS_HOME")
     p=Popen("make clean", shell=True, cwd=aspis_home)
     p.wait()
@@ -133,18 +157,19 @@ if __name__ == '__main__':
     failed=[];
     for root, subFolders, files in os.walk(rootdir):
         nroot=root.replace(rootdir,out,1);
-        p=Popen("mkdir "+nroot, shell=True)
-        p.wait()
+        if (fused!="on"):
+           p=Popen("mkdir "+nroot, shell=True)
+           p.wait()
         for infile in files:
             counter+=1
             ext = get_file_extension(infile);
             if (ext == "php" or ext == "PHP" or ext == "inc" or ext == "INC" ):
                 counter_edits+=1;
-                if (do_rewrite(os.path.join(root,infile), nroot, taints, prototypes, categories)):
+                if (do_rewrite(os.path.join(root,infile), nroot, taints, prototypes, categories, fused)):
                     counter_success+=1
                 else:
                     failed.append(os.path.join(root,infile));
-            else:
+            elif (fused!="on"):
                 execute("cp "+os.path.join(root,infile)+" "+os.path.join(nroot,infile));
         #break
     res_counter=0
