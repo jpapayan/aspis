@@ -79,7 +79,7 @@ def do_rewrite(in_filename, out_dir, taints, prototypes, categories, fused):
         if (fused=="on"):
            cmd+=" -fused on ";
         #Keep all output in a log file for debugging.
-        cmd+=" >do_project.log";
+        cmd+=" >aspis_project.log";
         execute(cmd);
         out_file=os.path.join(out_dir, get_filename(in_filename));
         if (fused!="on"):
@@ -137,6 +137,7 @@ if __name__ == '__main__':
     
     ####let's make PhpAspis
     execute("rm fused.txt");
+    execute("rm current.prototypest");
     execute("rm current.prototypes");
     execute("rm do_project.log");
     aspis_home=os.environ.get("ASPIS_HOME")
@@ -176,13 +177,19 @@ if __name__ == '__main__':
     for root, subFolders, files in os.walk(out):
         for infile in files:
             res_counter+=1
-
-    root_dir=get_dir(out);
-    print "========================="
-    print "|| generated  files: " + str(counter_success) +"/"+str(counter_edits)
-    for file in failed:
-        print "||               failed:   "+file
-    print "|| total      files: " + str(counter)
-    print "|| resulting  files: " + str(res_counter)
-    print "|| folder: " + rootdir
-    print "========================="
+    if fused!="on":
+       root_dir=get_dir(out);
+       print "========================="
+       print "|| generated  files: " + str(counter_success) +"/"+str(counter_edits)
+       for file in failed:
+          print "||               failed:   "+file
+       print "|| total      files: " + str(counter)
+       print "|| resulting  files: " + str(res_counter)
+       print "|| folder: " + rootdir
+       print "========================="
+    else:
+       execute("aspis_prototypes.php current.prototypest current.prototypes");
+       print "========================="
+       print "Results:"
+       print "   fused.txt:           a list of PHP functions used"
+       print "   current.prototypes:  a prototypes file for this application"

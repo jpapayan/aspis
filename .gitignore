@@ -5,6 +5,7 @@ php_parser.tab.c
 php_parser.tab.h
 php_scanner.lex.c
 fused.txt
+current.prototypest
 current.prototypes
 tests/results/
 /nbproject

@@ -20,6 +20,7 @@ Bewarned: this is a proof-of-concept research prototype.
 ===============================================================================
 
 Dependencies
+------------
 
 PHP Aspis is a C/Flex/Bison project so build-essential/bison/flex should be
 enough under Ubuntu. It's also good to have Python (I use 2.7.1) and PHP (I use
@@ -29,6 +30,7 @@ enough under Ubuntu. It's also good to have Python (I use 2.7.1) and PHP (I use
 ===============================================================================
 
 Installation
+------------
 
 $ git clone git://github.com/jpapayan/aspis.git ~/aspis_home
 
@@ -42,6 +44,7 @@ your $PATH before continuing.
 ===============================================================================
 
 Basic Usage
+-----------
 
 Type 
 
@@ -70,6 +73,7 @@ If everything is ok, the two PHP invocations should generate the same output.
 ===============================================================================
 
 Tests
+-----
 
 The purpose of PHP Aspis is to generate scripts that behave almost identically
 to the original script (minus any differences due to sanitisation of course).
@@ -78,14 +82,14 @@ During development, a test suit under "tests" was used that contains about 80
 php scripts. These should generate the same output before and after the
 transformation.
 
-To help automate things, the python script do_tests.py can take one (or more)
+To help automate things, the python script aspis_tests.py can take one (or more)
 php files, transform them, and then test if their output is the same before and
 after the transformation.
 
 So, repeat what the previous example did, but with a file from the test suite:
 
 $ cd ~/aspis_home
-$ do_tests.py -dir tests 
+$ aspis_tests.py -dir tests 
               -file tests/test_categories_simple.php 
               -categories tests/taint_propagation/generic.categories 
               -out tests/results/
@@ -94,7 +98,7 @@ This will invoke make, and verify that aspis works correctly with the file
 specified. To run all the tests in the test suite repeat the previous without
 the -file parameter:
 
-$ do_tests.py -dir tests 
+$ aspis_tests.py -dir tests 
               -categories tests/taint_propagation/generic.categories 
               -out tests/results/
 
@@ -105,6 +109,7 @@ Note: A couple of them still break PHP Aspis.
 ===============================================================================
 
 Transforming PHP Projects
+-------------------------
 
 Transforming files one by one is not enough. So, PHP Aspis comes with a second 
 python script "do_project.py". This recursively iterates in a directory,
@@ -112,12 +117,14 @@ invokes PHP Aspis in all the php scripts it finds and outputs the result.
 Hopefully, it returns a transformed project dir, ready to be deployed. So, 
 assuming that you have an application under ~/public_html/app, you may do:
 
-$ do_project.py -dir ~/public_html/app
+$ aspis_project.py -dir ~/public_html/app
                 -out ~/public_html/app_aspis 
                 -categories tests/taint_propagation/generic.categories
 
 This should parse successfully all of the files, segmentation faults are a bad
-sign. Try then to see if app_aspis works as intented!
+sign. Try then to see if app_aspis works as intented! Note that this script is
+appending the individual aspis' output to a file called aspis_project.log. 
+If you see a segmentation fault, this may be useful.
 
 ===============================================================================
 
@@ -127,7 +134,7 @@ Partial Taint Tracking
 In order to achieve partial taint tracking, all binaries should be called with
 an additional two parameters:
 
-$ do_project.py -dir ~/public_html/app
+$ aspis_project.py -dir ~/public_html/app
                 -out ~/public_html/app_aspis 
                 -categories tests/taint_propagation/generic.categories
                 -taints ~/app.tainted
@@ -152,12 +159,18 @@ Function Lists
 --------------
 
 PHP Aspis can generate the prototypes file for you. To do so, use the 
-"-fused on" parameter:
+"-fused on" parameter when you call aspis_project.py:
 
-$ do_project.py -dir ~/public_html/app -fused on
+$ aspis_project.py -dir ~/public_html/app -fused on
 
-This will invoke PHP Aspis in all project files
-
+This will invoke PHP Aspis for all project files and it will generate in the 
+current dir two files:
+--current.prototypes
+This is the the file you looked for.
+--fused.txt
+This is a list of PHP lib functions (not sorted, see misc/fused_sort.php) that
+the application is using. This is very useful to limit the number of
+interceptors that you may want to write. Otherwise, you can ignore it.
 
 
 ===============================================================================

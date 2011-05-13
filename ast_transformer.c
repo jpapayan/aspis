@@ -4019,7 +4019,7 @@ void ast_transform(FILE * out,
     
     if (COLLECT_INFO) {
         /*if (prototypes != NULL) prototypes_log_filename = prototypes;
-        else*/ prototypes_log_filename = "current.prototypes";
+        else*/ prototypes_log_filename = "current.prototypest";
     }
 
     if (!is_online) {

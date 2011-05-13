@@ -1,5 +1,8 @@
-<?php
-$file=file("current.prototypes");
+#!/usr/bin/php
+<?php 
+if (!isset($argv[1]) || !file_exists($argv[1])) die("Please supply an IN file\n");
+if (!isset($argv[2])) die("Please supply an OUT file\n");
+$file=file($argv[1]);
 $couples=array();
 $couples_methods=array();
 $i=0;
@@ -111,7 +114,7 @@ function print_array($header,$out,$couples) {
 }
 
 //processed output
-$out = fopen('current_sorted_easy.prototypes', 'w');
+$out = fopen($argv[2], 'w');
 print_array(">functions\n",$out,$couples);
 print_array(">methods\n",$out,$couples_methods);
 fclose($out);

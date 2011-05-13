@@ -1,9 +1,0 @@
- ip108@deogol:/data/Dropbox/php/svn_local/php/PhpParserC$ python doTests.py -dir TestScripts/ -file TestScripts/test_partial_basic_p1.php -taints taint_propagation/current.tainted -prototypes taint_propagation/current.prototypes 
-
-ip108@deogol:/data/Dropbox/php/svn_local/php/PhpParserC$ python doRewriteProjectAll.py -dir ~/public_html/wp_edited/ -out ~/public_html/wp_rewritten1/
-
-ip108@deogol:/data/Dropbox/php/svn_local/php/PhpParserC/taint_propagation$ php calc_taint_graph.php m_1291121209 /data/Dropbox/php/svn_local/php/PhpParserC/TestScripts/TestResults/
-ip108@deogol:/data/Dropbox/php/svn_local/php/PhpParserC/taint_propagation$ mv m_1291121209.tainted current.tainted
-
-ip108@deogol:/data/Dropbox/php/svn_local/php/PhpParserC/taint_propagation$ php sort.php
- 
