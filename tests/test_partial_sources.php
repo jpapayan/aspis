@@ -17,4 +17,8 @@ $o=new ctainted();
 $v=$o->msource();
 echo $v;
 
+$n="fsource";
+$v=$n();
+echo $v;
+
 ?>
