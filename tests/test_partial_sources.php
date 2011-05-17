@@ -21,4 +21,9 @@ $n="fsource";
 $v=$n();
 echo $v;
 
+$o=new ctainted();
+$n="msource";
+$v=$o->$n();
+echo $v;
+
 ?>

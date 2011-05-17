@@ -630,10 +630,7 @@ function AspisUntaintedDynamicCall() {
        if ($guard!="") $ret=$guard($ret);
        return deAspisRCO($ret);
    }
-   $ret=call_user_func_array($f_name,$f_params);
-   $guard=AspisFindSourceGuard($f_name);
-   if ($guard!="") $ret=$guard($ret);
-   return $ret;
+   return call_user_func_array($f_name,$f_params);
 }
 
 //these are needed to store REFERENCES to the function's ref parameters
