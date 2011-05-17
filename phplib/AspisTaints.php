@@ -262,7 +262,6 @@ function AspisCheckPrint($obj) {
     else  $ret=AspisLibMakeUseXSS($obj[1][0], $obj[0]);
     return $ret;
 }
-
 function AspisPrintGuard($obj) {
     //I am free to ignore other taint categories as I know the context of this guard
     $ret=$obj;

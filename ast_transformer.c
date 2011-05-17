@@ -2419,10 +2419,6 @@ void rewrite_method_call(astp *tree) {
     astp c=ast_new_wparam(T_ARTIFICIAL,",",function);
     ast_add_parameter(p,c);
     //now fix the parameters
-    printf("parameters: {");
-    ast_print_bfs(stdout,parameters);
-    printf("}\n");
-    fflush(stdout);
     astp tnull = parameters->parameters[0];
     int findex = prototypes_find(user_methods_prototypes, user_methods_prototypes_count, method);
     //iterate through all parameters, act accordingly

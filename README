@@ -1,4 +1,4 @@
-PHP Aspis: Taint tracking for PHP via source rewriting.
+PHP Aspis: Taint tracking for PHP via source-to-source rewriting
 ===============================================================================
 
 To Add to github:
@@ -174,3 +174,13 @@ interceptors that you may want to write. Otherwise, you can ignore it.
 
 
 ===============================================================================
+
+FAQ:
+
+Q: Where do I put my Guards?
+A: First, they can be functions of the original application. This is recommended
+as then they can be Aspis-agnostic. Moreover, if partial taint tracking is used,
+guards must be marked as tainted contexts.
+Alternatively, append them in any of the php files under "phplib" (eg phplib/
+AspisTaints.php). Again, your guards should handle values that are
+aspis-transformed.

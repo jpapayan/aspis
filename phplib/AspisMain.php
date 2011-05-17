@@ -500,7 +500,7 @@ function AspisIsSanitiser($function) {
     }
     return -1;
 }
-function AspisFindGuard($function) {
+function AspisFindGuard($function,$category_index=1) {
     global $taint_categories;
     if (empty($taint_categories)) {
         load_taint_categories();
@@ -508,12 +508,19 @@ function AspisFindGuard($function) {
     
     if (is_array($function)) $function=$function[1]; //ignore the class
     for ($i=0; $i<count($taint_categories); $i++) {
-        if (isset($taint_categories[$i][1][$function])) {
-            return $taint_categories[$i][1][$function];
+        if (isset($taint_categories[$i][$category_index][$function])) {
+            return $taint_categories[$i][$category_index][$function];
         }
     }
     return "";
 }
+function AspisFindSinkGuard($function) {
+   return AspisFindGuard($function,1);
+}
+function AspisFindSourceGuard($function) {
+   return AspisFindGuard($function,2);
+}
+
 /*
  * All calls of type $var($param...) will be translated to AspisDynamicCall($var,$param)
  * This will lookup $var in the list of built in functions and decide how to call it.
@@ -537,7 +544,7 @@ function AspisDynamicCall() {
        return attAspisRC(call_user_func_array($f_name,$f_params));
    }
    else {
-        $guard = AspisFindGuard($f_name);
+        $guard = AspisFindSinkGuard($f_name);
 //        echo "Guard: $guard\n";
         if ($guard != "") {
             if (isset($f_params[0])) {
@@ -582,7 +589,7 @@ function AspisTaintedDynamicCall() {
        return attAspisRCO(call_user_func_array($f_name,$f_params));
    }
    else {
-        $guard = AspisFindGuard($f_name);
+        $guard = AspisFindSinkGuard($f_name);
         if ($guard != "") {
             if (isset($f_params[0])) {
                 $f_params[0]=$guard($f_params[0]);

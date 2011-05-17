@@ -85,6 +85,8 @@ class AspisProxy implements Iterator {
             }
             else {
                 $res=call_user_func(array($this->obj, $name));
+                $guard=AspisFindSourceGuard($name);
+                if ($guard != "") { $res = $guard($res); }
                 $res=deAspisWarningRC($res);
             }
         }
@@ -97,6 +99,8 @@ class AspisProxy implements Iterator {
             else {
                foreach ($arguments as &$v) $v=attAspisRCO($v);
                $res=call_user_func_array(array($this->obj, $name),$arguments);
+               $guard=AspisFindSourceGuard($name);
+               if ($guard != "") { $res = $guard($res); }
                $res=deAspisWarningRC($res);
             }
         }

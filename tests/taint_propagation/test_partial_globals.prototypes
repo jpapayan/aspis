@@ -42,19 +42,5 @@ otainted
 	array
 		array
 >methods
-aaa
-	array
-		array
-finternal
-		array
-fref
-	array &
-		array
-gref
-		array &
-hi
-	array
-		array
-set
-	array
+msource
 		array

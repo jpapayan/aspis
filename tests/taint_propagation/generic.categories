@@ -11,6 +11,7 @@ msink->AspisPrintGuard
 prints->AspisPrintGuard
 >sources
 fsource->AspisPrintGuard
+msource->AspisPrintGuard
 end
 
 begin
