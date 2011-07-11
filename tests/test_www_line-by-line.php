@@ -21,8 +21,13 @@
 ------------------------------------------------------------------------------*/
 
 
-  
-$file=fopen('/home/papajohn/public_html/phpparser/dummy.txt','r');
+$home=getenv("ASPIS_HOME");
+if ($home[strlen($home)-1]=='/') $readme=$home."README";
+else $readme=$home."/README";
+echo "file:$readme\n";
+$file=fopen($readme,'r');
+
+if ($file==FALSE) exit("cannot find file");
 ?>
   
 but well, here you go ...
@@ -37,7 +42,7 @@ but well, here you go ...
  
 function getLine($file)
 {
-
+   $buffer="";
    // iterate over each character in line.
    while (!feof($file))
    {
